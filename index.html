@@ -17,75 +17,115 @@
 
   <main class="flex-grow-1">
 
-    <!-- Compact intro strip — not a marketing hero -->
-    <section class="py-4 border-bottom">
+    <!-- Cover: intro card + nav grid -->
+    <section class="py-5">
       <div class="container">
-        <div class="d-flex align-items-center gap-3">
-          <img src="assets/img/logo.svg" alt="" width="48" height="48" aria-hidden="true">
-          <div>
-            <h1 class="h3 mb-1">Yakka Works</h1>
-            <p class="mb-0 text-secondary-emphasis">
-              TheoTown plugins, Kustom setups, and the tools and docs that go with them.
+        <div class="row g-4">
+
+          <!-- Intro card -->
+          <div class="col-12 col-lg-6">
+            <div class="yk-intro-card p-4 p-lg-5">
+              <img src="assets/img/logo.svg" alt="" width="56" height="56" class="mb-3" aria-hidden="true">
+              <h1 class="h3 mb-2">Yakka Works</h1>
+              <p class="text-secondary-emphasis mb-0">
+                TheoTown plugins, Kustom setups, and the tools and docs that go with them —
+                all in one place.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nav grid: 4x1 mobile, 2x2 desktop -->
+          <div class="col-12 col-lg-6">
+            <div class="yk-nav-grid">
+
+              <a href="store/index.html" class="card border text-decoration-none text-body">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <i class="bi bi-bag fs-3 text-primary mb-2" aria-hidden="true"></i>
+                  <h2 class="h6 card-title mb-1">Store</h2>
+                  <p class="card-text text-secondary small mb-0">Free content & commissions</p>
+                </div>
+              </a>
+
+              <a href="tools/index.html" class="card border text-decoration-none text-body">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <i class="bi bi-tools fs-3 text-primary mb-2" aria-hidden="true"></i>
+                  <h2 class="h6 card-title mb-1">Tools</h2>
+                  <p class="card-text text-secondary small mb-0">Build plugins easily</p>
+                </div>
+              </a>
+
+              <a href="library/index.html" class="card border text-decoration-none text-body">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <i class="bi bi-book fs-3 text-primary mb-2" aria-hidden="true"></i>
+                  <h2 class="h6 card-title mb-1">Library</h2>
+                  <p class="card-text text-secondary small mb-0">Docs, tutorials & tips</p>
+                </div>
+              </a>
+
+              <a href="blogs/index.html" class="card border text-decoration-none text-body">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <i class="bi bi-journal-text fs-3 text-primary mb-2" aria-hidden="true"></i>
+                  <h2 class="h6 card-title mb-1">Blogs</h2>
+                  <p class="card-text text-secondary small mb-0">Announcements & news</p>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick about -->
+    <section class="py-5 border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="h4 mb-3">About Yakka Works</h2>
+            <p class="text-secondary-emphasis mb-0">
+              Yakka Works is an independent brand building plugins for TheoTown and setups
+              for Kustom (KWGT, KLWP, KLCK). This site brings together everything the
+              team has published — plugins, tools, documentation, and updates — in one
+              central place.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Direct navigation — this IS the homepage content -->
-    <section class="py-5">
+    <!-- Metrics -->
+    <section class="yk-metrics py-4">
       <div class="container">
-        <div class="row g-3">
-
-          <div class="col-md-6 col-lg-3">
-            <a href="store/index.html" class="card h-100 border text-decoration-none text-body">
-              <div class="card-body">
-                <i class="bi bi-bag fs-3 text-primary mb-2 d-block" aria-hidden="true"></i>
-                <h2 class="h5 card-title">Store</h2>
-                <p class="card-text text-secondary small mb-0">
-                  Explore our free and accessible TheoTown and Kustom content, as well as custom commission information.
-                </p>
-              </div>
-            </a>
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3">
+            <div class="yk-metric-value">1.7M+</div>
+            <div class="yk-metric-label">Total downloads</div>
           </div>
-
-          <div class="col-md-6 col-lg-3">
-            <a href="tools/index.html" class="card h-100 border text-decoration-none text-body">
-              <div class="card-body">
-                <i class="bi bi-tools fs-3 text-primary mb-2 d-block" aria-hidden="true"></i>
-                <h2 class="h5 card-title">Tools</h2>
-                <p class="card-text text-secondary small mb-0">
-                  Tools to make TheoTown plugins very easily.
-                </p>
-              </div>
-            </a>
+          <div class="col-6 col-lg-3">
+            <div class="yk-metric-value">2020</div>
+            <div class="yk-metric-label">Established</div>
           </div>
-
-          <div class="col-md-6 col-lg-3">
-            <a href="library/index.html" class="card h-100 border text-decoration-none text-body">
-              <div class="card-body">
-                <i class="bi bi-book fs-3 text-primary mb-2 d-block" aria-hidden="true"></i>
-                <h2 class="h5 card-title">Library</h2>
-                <p class="card-text text-secondary small mb-0">
-                  Documentation, tutorials, and tips for TheoTown plugins, iterated and translated by Yakka Works.
-                </p>
-              </div>
-            </a>
+          <div class="col-6 col-lg-3">
+            <div class="yk-metric-value">Jul 2023</div>
+            <div class="yk-metric-label">Featured creator</div>
           </div>
-
-          <div class="col-md-6 col-lg-3">
-            <a href="blogs/index.html" class="card h-100 border text-decoration-none text-body">
-              <div class="card-body">
-                <i class="bi bi-journal-text fs-3 text-primary mb-2 d-block" aria-hidden="true"></i>
-                <h2 class="h5 card-title">Blogs</h2>
-                <p class="card-text text-secondary small mb-0">
-                  Get the latest info on announcements, news, and more from Yakka Works.
-                </p>
-              </div>
-            </a>
+          <div class="col-6 col-lg-3">
+            <div class="yk-metric-value">Trusted</div>
+            <div class="yk-metric-label">Dev's trusted creator</div>
           </div>
-
         </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="yk-cta py-5">
+      <div class="container text-center">
+        <h2 class="h4 mb-2">Need something custom, or just want to reach out?</h2>
+        <p class="mb-4">We're reachable by email for commissions, questions, or feedback.</p>
+        <a href="mailto:yakkaworks@gmail.com" class="btn btn-light">
+          <i class="bi bi-envelope me-2"></i>yakkaworks@gmail.com
+        </a>
       </div>
     </section>
 
@@ -97,4 +137,4 @@
   <script src="assets/js/path-utils.js"></script>
   <script src="assets/js/components.js"></script>
 </body>
-</html>
+  </html>
