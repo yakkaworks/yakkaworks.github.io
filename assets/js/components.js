@@ -117,7 +117,7 @@
     // NOTE: Social/contact URLs below use the usernames specified in the
     // brand brief (yakkaworks on each platform). Replace SOCIAL_EMAIL with
     // the real contact address once confirmed — no address was provided.
-    var SOCIAL_EMAIL = ''; // TODO: set real contact email
+    var SOCIAL_EMAIL = 'yakkaworks@gmail.com'; // TODO: set real contact email
 
     return (
       '<footer class="yk-footer py-4 mt-auto">' +
