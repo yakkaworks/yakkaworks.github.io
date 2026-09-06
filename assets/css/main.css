@@ -64,9 +64,9 @@ img {
 }
 
 .list-group-item.active {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  color: #fff;
+  --bs-list-group-active-bg: var(--bs-primary);
+  --bs-list-group-active-border-color: var(--bs-primary);
+  --bs-list-group-active-color: #fff;
 }
 
 .list-group-item-action:hover,
