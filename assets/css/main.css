@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=M+PLUS+1+Code:wght@400;500;600;700&display=swap');
+
+:root {
+  --bs-primary: #4d8b31;
+  --bs-primary-rgb: 77, 139, 49;
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: #3d6f27;
+  --bs-link-color-rgb: var(--bs-primary-rgb);
+
+  --bs-body-font-family: 'M PLUS Rounded 1c', sans-serif;
+  --bs-font-monospace: 'M PLUS 1 Code', monospace;
+  --yw-heading-font: 'M PLUS 1 Code', monospace;
+
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+  --bs-border-radius-xl: 0;
+  --bs-border-radius-xxl: 0;
+  --bs-border-radius-pill: 0;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: var(--yw-heading-font);
+  letter-spacing: -0.01em;
+}
+
+.btn,
+.card,
+.form-control,
+.form-select,
+.offcanvas,
+.dropdown-menu,
+.list-group-item,
+img {
+  border-radius: 0 !important;
+}

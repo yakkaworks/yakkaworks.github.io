@@ -1,0 +1,69 @@
+.yw-error-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.yw-error-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(12px) brightness(0.55);
+  transform: scale(1.1);
+}
+
+.yw-error-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.yw-error-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  max-width: 480px;
+}
+
+.yw-error-code {
+  font-family: var(--yw-heading-font);
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.yw-error-title {
+  font-family: var(--yw-heading-font);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.yw-error-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.yw-error-btn {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+}
+
+.yw-error-btn:hover,
+.yw-error-btn:focus-visible {
+  background-color: #3d6f27;
+  border-color: #3d6f27;
+    }
