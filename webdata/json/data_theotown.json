@@ -1,28 +1,15 @@
 [
   {
     "slug": "example-plugin-one",
-    "title": "Example Plugin One",
+    "title": "Placeholder",
     "Date": "24-08-2026",
-    "Thumbnails": "assets/img/example-plugin-one.jpg",
-    "Description": "Placeholder description for a TheoTown plugin. Replace with real catalogue data.",
+    "Thumbnails": "assets/img/preview.jpg",
+    "Description": "This is an example data,real one are coming soon. :3",
     "Version": "1.2.0",
     "category": ["Residential", "Modern"],
     "urls": {
-      "download": "webdata/downloadables/example-plugin-one.zip",
-      "Details": "store/example-plugin-one.html"
-    }
-  },
-  {
-    "slug": "example-plugin-two",
-    "title": "Example Plugin Two",
-    "Date": "10-05-2026",
-    "Thumbnails": "assets/img/example-plugin-two.jpg",
-    "Description": "Placeholder description for a second TheoTown plugin, used to verify filtering behaves correctly.",
-    "Version": "2.0.1",
-    "category": ["Commercial"],
-    "urls": {
-      "download": "webdata/downloadables/example-plugin-two.zip",
-      "Details": "store/example-plugin-two.html"
+      "download": "#",
+      "Details": "#"
     }
   }
 ]
