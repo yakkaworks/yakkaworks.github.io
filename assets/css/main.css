@@ -62,3 +62,21 @@ img {
   border-color: var(--bs-primary);
   color: #fff;
 }
+
+.list-group-item.active {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+  background-color: color-mix(in srgb, var(--bs-primary) 12%, var(--bs-body-bg));
+  color: var(--bs-body-color);
+}
+
+.list-group-item-action:hover i,
+.list-group-item-action:focus i,
+.list-group-item.active i {
+  color: inherit;
+}
