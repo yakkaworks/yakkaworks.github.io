@@ -39,3 +39,26 @@ h1, h2, h3, h4, h5, h6,
 img {
   border-radius: 0 !important;
 }
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #3d6f27;
+  border-color: #3d6f27;
+}
+
+.btn-outline-secondary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
