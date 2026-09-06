@@ -1,0 +1,25 @@
+.yw-tool-card {
+  border: 1px solid var(--bs-border-color);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.yw-tool-card-title {
+  font-family: var(--yw-heading-font);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.yw-tool-card-desc {
+  font-size: 0.875rem;
+  color: var(--bs-secondary-color);
+  margin: 0;
+  flex: 1;
+}
+
+.yw-tool-card .btn {
+  border-radius: 0;
+  align-self: flex-start;
+  }
