@@ -263,3 +263,24 @@ h1, h2, h3, h4, h5, h6,
 .yk-cta a.btn-light {
   color: var(--yk-brand);
 }
+
+/* ==========================================================================
+   Store
+   ========================================================================== */
+
+.yk-store-card .card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.yk-card-meta {
+  font-family: var(--yk-font-heading);
+}
+
+.yk-card-desc {
+  color: var(--bs-body-color);
+}
+
+.yk-store-filters .form-label {
+  color: var(--bs-secondary-color);
+}
