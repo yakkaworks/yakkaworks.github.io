@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "getting-started",
+    "title": "Getting Started with TheoTown Plugins",
+    "category": ["Guides"],
+    "Date": "10-01-2026",
+    "Thumbnails": "assets/img/placeholder.jpg",
+    "urls": {
+      "Details": "library/getting-started.html"
+    }
+  },
+  {
+    "slug": "plugin-structure",
+    "title": "Understanding Plugin File Structure",
+    "category": ["Guides"],
+    "Date": "22-01-2026",
+    "urls": {
+      "Details": "library/plugin-structure.html"
+    }
+  },
+  {
+    "slug": "common-errors",
+    "title": "Common Errors and How to Fix Them",
+    "category": ["Troubleshooting"],
+    "Date": "05-02-2026",
+    "Thumbnails": "assets/img/placeholder.jpg",
+    "urls": {
+      "Details": "library/common-errors.html"
+    }
+  }
+]
