@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "welcome-to-the-new-site",
+    "title": "Welcome to the New Yakka Works Website",
+    "category": ["Announcements"],
+    "Date": "06-09-2026",
+    "Thumbnails": "assets/img/placeholder.jpg",
+    "urls": {
+      "Details": "blogs/welcome-to-the-new-site.html"
+    }
+  },
+  {
+    "slug": "kustom-presets-launch",
+    "title": "Kustom Presets Are Now Live",
+    "category": ["Updates"],
+    "Date": "20-08-2026",
+    "urls": {
+      "Details": "blogs/kustom-presets-launch.html"
+    }
+  }
+]
