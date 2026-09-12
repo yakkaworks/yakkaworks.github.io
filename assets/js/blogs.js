@@ -25,9 +25,8 @@ async function yw_loadBlogs() {
 
     status.textContent = '';
     const grouped = yw_groupByCategory(items);
-    container.innerHTML = Object.entries(grouped)
-      .map(([name, groupItems]) => yw_renderCategory(name, groupItems))
-      .join('');
+    yw_renderGrouped(grouped, container);
+    yw_attachShowMoreHandler(grouped, container);
   } catch (error) {
     yw_showBlogsError();
   }

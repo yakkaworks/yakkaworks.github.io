@@ -1,4 +1,7 @@
 const YW_LIBRARY_URL = '/webdata/json/data_library.json';
+const YW_PAGE_SIZE = 5;
+
+const yw_categoryState = {};
 
 function yw_groupByCategory(items) {
   const groups = {};
@@ -28,14 +31,36 @@ function yw_renderForumRow(item) {
 }
 
 function yw_renderCategory(name, items) {
+  const safeId = name.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+  const visibleCount = yw_categoryState[safeId] || YW_PAGE_SIZE;
+  const visibleItems = items.slice(0, visibleCount);
+  const hasMore = items.length > visibleCount;
+
   return `
     <section class="yw-forum-category">
       <h2 class="yw-forum-category-title">${name}</h2>
       <div class="yw-forum-list">
-        ${items.map(yw_renderForumRow).join('')}
+        ${visibleItems.map(yw_renderForumRow).join('')}
       </div>
+      ${hasMore ? `<button type="button" class="btn btn-outline-secondary btn-sm yw-forum-more" data-category="${safeId}">Show more</button>` : ''}
     </section>
   `;
+}
+
+function yw_renderGrouped(grouped, container) {
+  container.innerHTML = Object.entries(grouped)
+    .map(([name, groupItems]) => yw_renderCategory(name, groupItems))
+    .join('');
+}
+
+function yw_attachShowMoreHandler(grouped, container) {
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.yw-forum-more');
+    if (!btn) return;
+    const safeId = btn.dataset.category;
+    yw_categoryState[safeId] = (yw_categoryState[safeId] || YW_PAGE_SIZE) + YW_PAGE_SIZE;
+    yw_renderGrouped(grouped, container);
+  });
 }
 
 function yw_showLibraryError() {
@@ -63,9 +88,8 @@ async function yw_loadLibrary() {
 
     status.textContent = '';
     const grouped = yw_groupByCategory(items);
-    container.innerHTML = Object.entries(grouped)
-      .map(([name, groupItems]) => yw_renderCategory(name, groupItems))
-      .join('');
+    yw_renderGrouped(grouped, container);
+    yw_attachShowMoreHandler(grouped, container);
   } catch (error) {
     yw_showLibraryError();
   }
