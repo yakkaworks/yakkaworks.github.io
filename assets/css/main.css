@@ -191,9 +191,13 @@ main {
 
 @media (min-width: 992px) {
   .yw-navbar {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1rem;
+    transform: none;
+    width: auto;
+    max-width: none;
+    border-radius: var(--yw-radius-pill);
   }
 }
 
