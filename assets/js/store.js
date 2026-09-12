@@ -26,17 +26,92 @@ function yw_populateDomainSelect(domains) {
   select.innerHTML = domains.map((d) => `<option value="${d.file}">${d.label}</option>`).join('');
 }
 
+function yw_getHostLabel(url) {
+  try {
+    const hostname = new URL(url).hostname.replace(/^www\./, '');
+    const match = hostname.match(/([a-z0-9-]+)\.[a-z.]+$/i);
+    const name = match ? match[1] : hostname;
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  } catch (error) {
+    return 'Download';
+  }
+}
+
+function yw_normalizeDownloadUrls(download) {
+  if (!download) return [];
+  if (Array.isArray(download)) return download;
+  return [download];
+}
+
+function yw_renderDownloadModal(item, urls) {
+  const existing = document.getElementById('yw-download-modal');
+  if (existing) existing.remove();
+
+  const options = urls.map((url) => `
+    <a href="${url}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      ${yw_getHostLabel(url)}
+      <i class="bi bi-box-arrow-up-right"></i>
+    </a>
+  `).join('');
+
+  const modalHtml = `
+    <div class="modal fade" id="yw-download-modal" tabindex="-1" aria-labelledby="yw-download-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="yw-download-modal-label">Choose a download source</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="list-group list-group-flush">
+              ${options}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  const modalEl = document.getElementById('yw-download-modal');
+  const modal = new bootstrap.Modal(modalEl);
+  modal.show();
+  modalEl.addEventListener('hidden.bs.modal', () => modalEl.remove());
+}
+
+function yw_handleDownloadClick(event, slug) {
+  event.preventDefault();
+  const item = yw_storeItems.find((i) => i.slug === slug);
+  if (!item) return;
+
+  const urls = yw_normalizeDownloadUrls(item.urls && item.urls.download);
+
+  if (urls.length === 0) return;
+  if (urls.length === 1) {
+    window.location.href = urls[0];
+    return;
+  }
+
+  yw_renderDownloadModal(item, urls);
+}
+
 function yw_renderStoreCard(item) {
   const detailsUrl = item.urls && item.urls.Details ? `/${item.urls.Details}` : '#';
-  const downloadUrl = item.urls && item.urls.download ? `/${item.urls.download}` : '#';
   const thumb = item.Thumbnails || 'assets/img/placeholder.jpg';
   const isKustom = yw_currentDomainKey.toLowerCase().includes('kustom');
+  const hasPrice = typeof item.price === 'string' && item.price.trim() !== '';
+  const downloadUrls = yw_normalizeDownloadUrls(item.urls && item.urls.download);
+  const buttonLabel = hasPrice ? item.price : 'Download latest';
 
   const linksRow = isKustom
     ? `<a href="/store/theotown_install.html" class="yw-store-card-link">How to install</a>`
     : `<a href="/store/theotown_install.html" class="yw-store-card-link">How to install</a>
        <span class="yw-store-card-sep">•</span>
        <a href="/store/commisions.html" class="yw-store-card-link">Customize</a>`;
+
+  const downloadButton = downloadUrls.length > 1
+    ? `<button type="button" class="btn btn-primary btn-sm" data-download-slug="${item.slug}">${buttonLabel}</button>`
+    : `<a href="${downloadUrls[0] || '#'}" class="btn btn-primary btn-sm">${buttonLabel}</a>`;
 
   return `
     <div class="yw-store-card">
@@ -55,7 +130,7 @@ function yw_renderStoreCard(item) {
           ${linksRow}
         </div>
         <div class="yw-store-card-actions">
-          <a href="${downloadUrl}" class="btn btn-primary btn-sm">Download latest</a>
+          ${downloadButton}
           <a href="${detailsUrl}" class="btn btn-outline-secondary btn-sm">Details</a>
         </div>
       </div>
@@ -135,6 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('store-domain').addEventListener('change', (e) => yw_loadStoreDomain(e.target.value));
   document.getElementById('store-category').addEventListener('change', yw_applyStoreFilters);
   document.getElementById('store-search').addEventListener('input', yw_applyStoreFilters);
+
+  document.getElementById('store-grid').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-download-slug]');
+    if (!btn) return;
+    yw_handleDownloadClick(e, btn.dataset.downloadSlug);
+  });
 
   yw_initStore();
 });
