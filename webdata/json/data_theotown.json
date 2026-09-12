@@ -11,5 +11,32 @@
       "download": "#",
       "Details": "#"
     }
+  },
+  {
+    "slug": "example-plugin-two",
+    "title": "Placeholder",
+    "Date": "24-08-2026",
+    "Thumbnails": "assets/img/preview.jpg",
+    "Description": "This is an example data,real one are coming soon. :3",
+    "Version": "1.2.0",
+    "price":"$3.00",
+    "category": ["Residential", "Modern"],
+    "urls": {
+      "download": "#",
+      "Details": "#"
+    }
+  },
+  {
+    "slug": "example-plugin-three",
+    "title": "Placeholder",
+    "Date": "24-08-2026",
+    "Thumbnails": "assets/img/preview.jpg",
+    "Description": "This is an example data,real one are coming soon. :3",
+    "Version": "1.2.0",
+    "category": ["Residential", "Modern"],
+    "urls": {
+      "download": ["#","#","#"],
+      "Details": "#"
+    }
   }
 ]
