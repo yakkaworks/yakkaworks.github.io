@@ -13,11 +13,39 @@ function yw_parseInline(text) {
   return escaped;
 }
 
+function yw_escapeHtml(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+let yw_codeBlockCounter = 0;
+
+function yw_renderCodeBlock(lang, code) {
+  yw_codeBlockCounter += 1;
+  const id = `yw-code-${yw_codeBlockCounter}`;
+  const label = lang ? lang.toLowerCase() : 'text';
+
+  return `
+    <div class="yw-codeblock">
+      <div class="yw-codeblock-header">
+        <span class="yw-codeblock-lang">${yw_escapeHtml(label)}</span>
+        <button type="button" class="btn btn-sm yw-codeblock-copy" data-copy-target="${id}">Copy</button>
+      </div>
+      <pre class="yw-codeblock-pre"><code id="${id}">${yw_escapeHtml(code)}</code></pre>
+    </div>
+  `;
+}
+
 function yw_parseMarkdown(text) {
   const lines = text.split('\n');
   let html = '';
   let inList = false;
   let inQuote = false;
+  let inCode = false;
+  let codeLang = '';
+  let codeBuffer = [];
 
   function closeList() {
     if (inList) { html += '</ul>'; inList = false; }
@@ -27,6 +55,28 @@ function yw_parseMarkdown(text) {
   }
 
   lines.forEach((line) => {
+    const fenceMatch = line.match(/^```\s*([a-zA-Z0-9]*)\s*$/);
+
+    if (fenceMatch) {
+      if (inCode) {
+        html += yw_renderCodeBlock(codeLang, codeBuffer.join('\n'));
+        inCode = false;
+        codeLang = '';
+        codeBuffer = [];
+      } else {
+        closeList();
+        closeQuote();
+        inCode = true;
+        codeLang = fenceMatch[1];
+      }
+      return;
+    }
+
+    if (inCode) {
+      codeBuffer.push(line);
+      return;
+    }
+
     const trimmed = line.trim();
 
     if (trimmed === '') {
@@ -66,7 +116,36 @@ function yw_parseMarkdown(text) {
 
   closeList();
   closeQuote();
+
+  if (inCode) {
+    html += yw_renderCodeBlock(codeLang, codeBuffer.join('\n'));
+  }
+
   return html;
+}
+
+function yw_getSectionFromPath() {
+  const segments = window.location.pathname.split('/').filter(Boolean);
+  return segments.length > 0 ? segments[0] : '';
+}
+
+function yw_attachCodeCopyHandlers(container) {
+  container.querySelectorAll('.yw-codeblock-copy').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.copyTarget;
+      const codeEl = document.getElementById(targetId);
+      if (!codeEl) return;
+
+      navigator.clipboard.writeText(codeEl.textContent).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = original; }, 1500);
+      }).catch(() => {
+        btn.textContent = 'Failed';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+      });
+    });
+  });
 }
 
 async function yw_loadMarkdownInto(slug, mountId) {
@@ -100,6 +179,7 @@ async function yw_loadMarkdownInto(slug, mountId) {
     }
 
     mount.innerHTML = yw_parseMarkdown(text);
+    yw_attachCodeCopyHandlers(mount);
 
     if (usedFallback) {
       mount.insertAdjacentHTML('beforebegin', `
@@ -116,9 +196,4 @@ async function yw_loadMarkdownInto(slug, mountId) {
       </div>
     `);
   }
-}
-
-function yw_getSectionFromPath() {
-  const segments = window.location.pathname.split('/').filter(Boolean);
-  return segments.length > 0 ? segments[0] : '';
-        }
+                            }

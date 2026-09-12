@@ -115,3 +115,55 @@
   margin: 0 auto 1.5rem;
   border-radius: var(--yw-radius);
 }
+
+.yw-codeblock {
+  margin-bottom: 1rem;
+  border-radius: var(--yw-radius);
+  overflow: hidden;
+  background-color: var(--bs-dark-bg-subtle, #1a1a1a);
+}
+
+.yw-codeblock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.85rem;
+  background-color: var(--bs-tertiary-bg);
+}
+
+.yw-codeblock-lang {
+  font-family: var(--bs-font-monospace);
+  font-size: 0.75rem;
+  color: var(--bs-secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.yw-codeblock-copy {
+  background-color: transparent;
+  border: 1px solid var(--bs-border-color);
+  color: var(--bs-body-color);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.75rem;
+}
+
+.yw-codeblock-copy:hover,
+.yw-codeblock-copy:focus-visible {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+.yw-codeblock-pre {
+  margin: 0;
+  padding: 1rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.yw-codeblock-pre code {
+  font-family: var(--bs-font-monospace);
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  background: none;
+}
