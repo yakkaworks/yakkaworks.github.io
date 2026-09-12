@@ -73,9 +73,10 @@ async function yw_loadMarkdownInto(slug, mountId) {
   const mount = document.getElementById(mountId);
   if (!mount) return;
 
+  const section = yw_getSectionFromPath();
   const lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
-  const preferredPath = `/webdata/${lang}/${slug}.md`;
-  const fallbackPath = `/webdata/en/${slug}.md`;
+  const preferredPath = `/webdata/${lang}/${section}/${slug}.md`;
+  const fallbackPath = `/webdata/en/${section}/${slug}.md`;
 
   async function tryFetch(path) {
     const response = await fetch(path);
@@ -116,3 +117,8 @@ async function yw_loadMarkdownInto(slug, mountId) {
     `);
   }
 }
+
+function yw_getSectionFromPath() {
+  const segments = window.location.pathname.split('/').filter(Boolean);
+  return segments.length > 0 ? segments[0] : '';
+        }
