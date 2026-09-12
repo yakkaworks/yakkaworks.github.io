@@ -27,15 +27,15 @@ function yw_renderRecentCard(item) {
 
 function yw_renderRecentListRow(item) {
   const detailsUrl = item.urls && item.urls.Details ? `/${item.urls.Details}` : '#';
-  const thumb = item.Thumbnails ? `<img src="/${item.Thumbnails}" alt="" class="yw-forum-thumb">` : '';
+  const thumb = item.Thumbnails ? `<img src="/${item.Thumbnails}" alt="" class="yw-recent-list-thumb">` : '';
 
   return `
     <a href="${detailsUrl}" class="list-group-item list-group-item-action d-flex align-items-center gap-3">
-      ${thumb}
       <span class="d-flex flex-column">
         <span class="fw-medium">${item.title}</span>
         <small class="text-body-secondary">${item.Date || ''}</small>
       </span>
+      ${thumb}
     </a>
   `;
 }

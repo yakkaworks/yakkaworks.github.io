@@ -1,7 +1,7 @@
 .yw-cover {
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 9;
-  height: 100%;
   overflow: hidden;
   border-radius: var(--yw-radius-outer);
   background-color: var(--bs-tertiary-bg);
@@ -216,10 +216,19 @@
   color: var(--bs-secondary-color);
 }
 
-.yw-recent-list {
-  border-radius: var(--yw-radius);
-  overflow: hidden;
+.yw-recent-list-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  flex-shrink: 0;
+  order: 2;
+  margin-left: auto;
 }
+
+.yw-recent-list .list-group-item {
+  display: flex;
+  align-items: center;
+                                                                  }
 
 .yw-recent-empty {
   color: var(--bs-secondary-color);

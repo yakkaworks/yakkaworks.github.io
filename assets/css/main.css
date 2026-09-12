@@ -126,7 +126,7 @@ main {
   color: inherit;
 }
 
-/* Four-corner sets: only the outer edges of a grid get the larger radius */
+/* Four-corner sets: only the outer eedges of a grid get the larger radius */
 
 .yw-corner-set {
   display: grid;
