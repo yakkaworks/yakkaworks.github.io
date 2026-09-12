@@ -94,3 +94,24 @@
 .yw-article a:focus-visible {
   text-decoration: none;
 }
+
+.yw-article blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--bs-primary);
+  color: var(--bs-secondary-color);
+}
+
+.yw-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--yw-radius);
+  margin-bottom: 1rem;
+}
+
+.yw-md-warning,
+.yw-md-error {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--yw-radius);
+}
