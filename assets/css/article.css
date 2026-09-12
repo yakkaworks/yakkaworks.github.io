@@ -1,30 +1,35 @@
 .yw-article-header {
   max-width: 760px;
   margin: 0 auto;
-  padding: 2rem 1rem 0;
+  padding: 1rem 1rem 0;
+}
+
+@media (min-width: 992px) {
+  .yw-article-header {
+    padding: 1.5rem 1rem 0;
+  }
 }
 
 .yw-article-title {
-  font-family: var(--yw-heading-font);
   margin-bottom: 0.25rem;
 }
 
 .yw-article-effective {
   color: var(--bs-secondary-color);
   font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .yw-tldr {
   max-width: 760px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.75rem;
   padding: 1.25rem;
-  border: 1px solid var(--bs-border-color);
+  background-color: var(--bs-tertiary-bg);
+  border-radius: var(--yw-radius);
   border-left: 3px solid var(--bs-primary);
 }
 
 .yw-tldr h2 {
-  font-family: var(--yw-heading-font);
   font-size: 1rem;
   margin-bottom: 0.75rem;
 }
@@ -36,6 +41,7 @@
 
 .yw-tldr li {
   margin-bottom: 0.4rem;
+  color: var(--bs-secondary-color);
 }
 
 .yw-tldr li:last-child {
@@ -44,7 +50,7 @@
 
 .yw-read-note {
   max-width: 760px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.5rem;
   font-size: 0.9rem;
   color: var(--bs-secondary-color);
 }
@@ -57,9 +63,8 @@
 }
 
 .yw-article h2 {
-  font-family: var(--yw-heading-font);
   font-size: 1.3rem;
-  margin-top: 2.5rem;
+  margin-top: 2.25rem;
   margin-bottom: 1rem;
 }
 
@@ -69,6 +74,7 @@
 
 .yw-article p {
   margin-bottom: 1rem;
+  color: var(--bs-secondary-color);
 }
 
 .yw-article ul {
@@ -77,8 +83,14 @@
 
 .yw-article li {
   margin-bottom: 0.4rem;
+  color: var(--bs-secondary-color);
 }
 
 .yw-article a {
   color: var(--bs-primary);
+}
+
+.yw-article a:hover,
+.yw-article a:focus-visible {
+  text-decoration: none;
 }
