@@ -110,8 +110,8 @@ function yw_renderStoreCard(item) {
        <a href="/store/commisions.html" class="yw-store-card-link">Customize</a>`;
 
   const downloadButton = downloadUrls.length > 1
-    ? `<button type="button" class="btn btn-primary btn-sm" data-download-slug="${item.slug}">${buttonLabel}</button>`
-    : `<a href="${downloadUrls[0] || '#'}" class="btn btn-primary btn-sm">${buttonLabel}</a>`;
+  ? `<button type="button" class="btn btn-sm ${hasPrice ? 'yw-btn-accent' : 'btn-primary'}" data-download-slug="${item.slug}">${buttonLabel}</button>`
+  : `<a href="${downloadUrls[0] || '#'}" class="btn btn-sm ${hasPrice ? 'yw-btn-accent' : 'btn-primary'}">${buttonLabel}</a>`;
 
   return `
     <div class="yw-store-card">
