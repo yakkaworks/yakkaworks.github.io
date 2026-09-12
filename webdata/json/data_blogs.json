@@ -5,6 +5,7 @@
     "category": ["Announcements"],
     "Date": "06-09-2026",
     "Thumbnails": "assets/img/placeholder.jpg",
+    "Description": "Everything Yakka Works does now lives in one place instead of scattered across social media.",
     "urls": {
       "Details": "blogs/welcome-to-the-new-site.html"
     }
@@ -14,6 +15,9 @@
     "title": "Kustom Presets Are Now Live",
     "category": ["Updates"],
     "Date": "20-08-2026",
+    "Thumbnails": "assets/img/placeholder.jpg",
+    "Description": "Our first batch of Kustom presets for KWGT and KLWP is available now.",
+    "author": "Yakka",
     "urls": {
       "Details": "blogs/kustom-presets-launch.html"
     }

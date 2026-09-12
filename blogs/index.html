@@ -18,12 +18,27 @@
 
   <div id="navbar"></div>
 
-  <main class="container-fluid px-3 px-lg-4 py-4">
+  <main class="p-1 p-lg-3 my-3">
 
-    <header class="yw-page-header mt-3 mb-4">
+    <header class="yw-page-header mb-1 mb-lg-3">
       <h1 class="yw-page-title">Blogs</h1>
       <p class="yw-page-lede">Announcements, news, and updates from Yakka Works.</p>
     </header>
+
+    <div class="yw-store-controls mb-1 mb-lg-3">
+      <div class="row g-1 g-lg-3">
+        <div class="col-12 col-md-4">
+          <label for="library-category" class="form-label small">Category</label>
+          <select id="library-category" class="form-select">
+            <option value="">All categories</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-8">
+          <label for="library-search" class="form-label small">Search</label>
+          <input type="search" id="library-search" class="form-control" placeholder="Search blog posts">
+        </div>
+      </div>
+    </div>
 
     <div id="library-status" class="yw-store-status" role="status" aria-live="polite"></div>
 

@@ -1,9 +1,12 @@
 [
   {
     "title": "Example Tool",
+    "Date": "01-01-2026",
+    "Thumbnails": "assets/img/placeholder.jpg",
     "Description": "Placeholder description of what this tool would do.",
     "urls": {
       "link": "#"
-    }
+    },
+    "icon": "bi-code-slash"
   }
-    ]
+]

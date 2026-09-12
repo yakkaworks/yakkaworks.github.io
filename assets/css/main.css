@@ -106,6 +106,19 @@ main {
   border-radius: var(--yw-radius-pill);
 }
 
+.yw-btn-accent {
+  background-color: var(--yw-accent);
+  border-color: var(--yw-accent);
+  color: #1a1a1a;
+}
+
+.yw-btn-accent:hover,
+.yw-btn-accent:focus {
+  background-color: #e6741f;
+  border-color: #e6741f;
+  color: #1a1a1a;
+}
+
 /* List group active state, Bootstrap CDN vars must be set explicitly or load order wins */
 
 .list-group-item.active {

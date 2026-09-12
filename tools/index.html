@@ -18,16 +18,21 @@
 
   <div id="navbar"></div>
 
-  <main class="container-fluid px-3 px-lg-4 py-4">
+  <main class="p-1 p-lg-3 my-3">
 
-    <header class="yw-page-header mt-3 mb-4">
+    <header class="yw-page-header mb-1 mb-lg-3">
       <h1 class="yw-page-title">Tools</h1>
       <p class="yw-page-lede">Utilities that make creating TheoTown plugins easier.</p>
     </header>
 
+    <div class="yw-store-controls mb-1 mb-lg-3">
+      <label for="tools-search" class="form-label small">Search</label>
+      <input type="search" id="tools-search" class="form-control" placeholder="Search tools">
+    </div>
+
     <div id="tools-status" class="yw-store-status" role="status" aria-live="polite"></div>
 
-    <div id="tools-grid" class="yw-store-grid"></div>
+    <div id="tools-grid" class="row g-1 g-lg-3"></div>
 
   </main>
 
@@ -38,4 +43,4 @@
   <script src="/assets/js/tools.js"></script>
 
 </body>
-    </html>
+</html>
