@@ -88,3 +88,7 @@
 .yw-store-card-actions .btn {
   border-radius: 0;
 }
+
+.yw-store-card-actions button.btn {
+  border-radius: 0;
+}
