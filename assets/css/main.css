@@ -181,12 +181,27 @@ main {
   background-color: var(--yw-accent);
   }
 
+/* Navbar */
+
 .yw-navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1030;
+  background-color: var(--bs-primary);
+  width: 100%;
+  border-radius: 0 0 var(--yw-radius) var(--yw-radius);
+}
+
+.yw-navbar-inner {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.yw-navbar .navbar-brand,
+.yw-navbar-toggle {
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -201,10 +216,6 @@ main {
   }
 }
 
-.yw-offcanvas-spacer {
-  height: 0;
-}
-
 body {
   padding-top: 64px;
 }
@@ -212,9 +223,8 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 80px;
-  }
-}
 
+  }
 /* Footer */
 
 .yw-footer {
