@@ -62,7 +62,7 @@ function renderNavbar() {
       </div>
     </nav>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="yw-offcanvas" aria-labelledby="yw-offcanvas-label">
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="yw-offcanvas" aria-labelledby="yw-offcanvas-label">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="yw-offcanvas-label">Yakka Works</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
