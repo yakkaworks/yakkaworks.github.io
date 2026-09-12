@@ -5,6 +5,8 @@
     "category": ["Guides"],
     "Date": "10-01-2026",
     "Thumbnails": "assets/img/placeholder.jpg",
+    "Description": "A quick overview of what you need before making your first TheoTown plugin.",
+    "author": "Yakka",
     "urls": {
       "Details": "library/getting-started.html"
     }
@@ -14,6 +16,8 @@
     "title": "Understanding Plugin File Structure",
     "category": ["Guides"],
     "Date": "22-01-2026",
+    "Thumbnails": "assets/img/placeholder.jpg",
+    "Description": "How TheoTown plugin folders and files are organized, and why it matters.",
     "urls": {
       "Details": "library/plugin-structure.html"
     }
@@ -24,6 +28,8 @@
     "category": ["Troubleshooting"],
     "Date": "05-02-2026",
     "Thumbnails": "assets/img/placeholder.jpg",
+    "Description": "A running list of frequent plugin errors and what usually causes them.",
+    "author": "Guest Contributor",
     "urls": {
       "Details": "library/common-errors.html"
     }
