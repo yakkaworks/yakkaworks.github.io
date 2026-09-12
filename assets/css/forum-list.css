@@ -58,6 +58,15 @@
   color: var(--bs-body-color);
 }
 
+.yw-forum-row:first-child {
+  border-top-left-radius: var(--yw-radius-outer);
+  border-top-right-radius: var(--yw-radius-outer);
+}
+
+.yw-forum-row:last-child {
+  border-bottom-left-radius: var(--yw-radius-outer);
+  border-bottom-right-radius: var(--yw-radius-outer);
+}
 .yw-forum-row-thumb {
   width: 64px;
   height: 64px;
