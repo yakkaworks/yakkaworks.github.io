@@ -1,22 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=M+PLUS+1+Code:wght@400;500;600;700&display=swap');
 
 :root {
+  color-scheme: dark;
+
   --bs-primary: #4d8b31;
   --bs-primary-rgb: 77, 139, 49;
   --bs-link-color: var(--bs-primary);
-  --bs-link-hover-color: #3d6f27;
+  --bs-link-hover-color: #5fa53d;
   --bs-link-color-rgb: var(--bs-primary-rgb);
+
+  --yw-accent: #FF8427;
+  --yw-accent-rgb: 255, 132, 39;
 
   --bs-body-font-family: 'M PLUS Rounded 1c', sans-serif;
   --bs-font-monospace: 'M PLUS 1 Code', monospace;
   --yw-heading-font: 'M PLUS 1 Code', monospace;
 
-  --bs-border-radius: 0;
-  --bs-border-radius-sm: 0;
-  --bs-border-radius-lg: 0;
-  --bs-border-radius-xl: 0;
-  --bs-border-radius-xxl: 0;
-  --bs-border-radius-pill: 0;
+  --yw-radius: 24px;
+  --yw-radius-outer: 32px;
+  --yw-radius-pill: 999px;
+
+  --bs-border-radius: var(--yw-radius);
+  --bs-border-radius-sm: 16px;
+  --bs-border-radius-lg: var(--yw-radius);
+  --bs-border-radius-xl: var(--yw-radius-outer);
+  --bs-border-radius-xxl: var(--yw-radius-outer);
+  --bs-border-radius-pill: var(--yw-radius-pill);
 }
 
 body {
@@ -29,15 +38,24 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: -0.01em;
 }
 
-.btn,
-.card,
-.form-control,
-.form-select,
-.offcanvas,
-.dropdown-menu,
-.list-group-item,
-img {
-  border-radius: 0 !important;
+main {
+  padding: 0.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Buttons: standalone pill, precompiled Bootstrap CDN classes need explicit recolouring */
+
+.btn {
+  border-radius: var(--yw-radius-pill);
 }
 
 .btn-primary {
@@ -47,8 +65,8 @@ img {
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #3d6f27;
-  border-color: #3d6f27;
+  background-color: #5fa53d;
+  border-color: #5fa53d;
 }
 
 .btn-outline-secondary {
@@ -63,6 +81,33 @@ img {
   color: #fff;
 }
 
+/* Button groups: inactive buttons use standard radius, hover/active becomes pill */
+
+.yw-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+@media (min-width: 992px) {
+  .yw-btn-group {
+    gap: 1rem;
+  }
+}
+
+.yw-btn-group .btn {
+  border-radius: var(--yw-radius);
+  transition: border-radius 0.15s ease;
+}
+
+.yw-btn-group .btn:hover,
+.yw-btn-group .btn:focus-visible,
+.yw-btn-group .btn.active {
+  border-radius: var(--yw-radius-pill);
+}
+
+/* List group active state, Bootstrap CDN vars must be set explicitly or load order wins */
+
 .list-group-item.active {
   --bs-list-group-active-bg: var(--bs-primary);
   --bs-list-group-active-border-color: var(--bs-primary);
@@ -71,7 +116,7 @@ img {
 
 .list-group-item-action:hover,
 .list-group-item-action:focus {
-  background-color: color-mix(in srgb, var(--bs-primary) 12%, var(--bs-body-bg));
+  background-color: color-mix(in srgb, var(--bs-primary) 14%, var(--bs-body-bg));
   color: var(--bs-body-color);
 }
 
@@ -80,3 +125,58 @@ img {
 .list-group-item.active i {
   color: inherit;
 }
+
+/* Four-corner sets: only the outer edges of a grid get the larger radius */
+
+.yw-corner-set {
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--yw-radius-outer);
+}
+
+.yw-corner-set > * {
+  border-radius: 0;
+}
+
+/* Texture container: grayscale blurred background image, solid surface on top, sharp content */
+
+.yw-texture {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--yw-radius);
+}
+
+.yw-texture::before {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  background-image: var(--yw-texture-image, none);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1) blur(30px);
+  z-index: 0;
+}
+
+.yw-texture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bs-body-bg);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.yw-texture > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Accent colour, used sparingly */
+
+.yw-accent {
+  color: var(--yw-accent);
+}
+
+.yw-accent-bg {
+  background-color: var(--yw-accent);
+  }
