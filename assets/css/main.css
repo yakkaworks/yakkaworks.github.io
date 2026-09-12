@@ -187,6 +187,11 @@ main {
   background-color: var(--bs-primary);
   width: 100%;
   border-radius: 0 0 var(--yw-radius) var(--yw-radius);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
 }
 
 .yw-navbar-inner {
@@ -199,14 +204,24 @@ main {
   color: #fff;
 }
 
+body {
+  padding-top: 64px;
+}
+
 @media (min-width: 992px) {
   .yw-navbar {
     width: auto;
     max-width: 960px;
-    margin: 1rem auto 0;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: var(--yw-radius-pill);
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  body {
+    padding-top: 88px;
   }
 }
 
