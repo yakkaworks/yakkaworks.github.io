@@ -1,42 +1,379 @@
 [
   {
-    "slug": "example-plugin-one",
-    "title": "Placeholder",
-    "Date": "24-08-2026",
-    "Thumbnails": "assets/img/preview.jpg",
-    "Description": "This is an example data,real one are coming soon. :3",
-    "Version": "1.2.0",
-    "category": ["Residential", "Modern"],
+    "slug": "generic-road-train",
+    "title": "Generic Road Train",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/generic-road-train.jpg",
+    "Description": "Adds a variety of in-game trucks with two trailers (bi-trailers) and three trailers (tri-trailers), inspired by Australian road trains.",
+    "Version": "V11",
+    "category": ["Transport", "Trucks", "Road Vehicles"],
     "urls": {
-      "download": "#",
-      "Details": "#"
+      "download": "https://link-target.net/7333481/zeUqQX2ip1J9",
+      "Details": "store/generic-road-train.html"
     }
   },
   {
-    "slug": "example-plugin-two",
-    "title": "Placeholder",
-    "Date": "24-08-2026",
-    "Thumbnails": "assets/img/preview.jpg",
-    "Description": "This is an example data,real one are coming soon. :3",
-    "Version": "1.2.0",
-    "price":"$3.00",
-    "category": ["Residential", "Modern"],
+    "slug": "warehouse-shed-pack",
+    "title": "Warehouse & Shed Pack",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/warehouse-shed-pack.jpg",
+    "Description": "Contains about 32 variations of improved in-game warehouse buildings, along with roughly 1,400 randomly generated variations. Future updates may add more warehouses inspired by Cities: Skylines.",
+    "Version": "V1.6",
+    "category": ["Industrial", "Buildings", "Warehouses"],
     "urls": {
-      "download": "#",
-      "Details": "#"
+      "download": "https://link-target.net/7333481/SR0VXTvybeGn",
+      "Details": "store/warehouse-shed-pack.html"
     }
   },
   {
-    "slug": "example-plugin-three",
-    "title": "Placeholder",
-    "Date": "24-08-2026",
-    "Thumbnails": "assets/img/preview.jpg",
-    "Description": "This is an example data,real one are coming soon. :3",
-    "Version": "1.2.0",
-    "category": ["Residential", "Modern"],
+    "slug": "bus-tram-road",
+    "title": "Bus-Tram Road",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/bus-tram-road.jpg",
+    "Description": "Adds a simple road that allows both buses and trams to use it.",
+    "Version": "V5",
+    "category": ["Road", "Transport", "Public Transport"],
     "urls": {
-      "download": ["#","#","#"],
-      "Details": "#"
+      "download": "https://direct-link.net/7333481/xfAb2XtK4SZc",
+      "Details": "store/bus-tram-road.html"
+    }
+  },
+  {
+    "slug": "discord-background",
+    "title": "Discord Background",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/discord-background.jpg",
+    "Description": "Adds a simple Discord-colored background using in-game world textures.",
+    "Version": "9",
+    "category": ["Other", "Background", "Decoration"],
+    "urls": {
+      "download": "https://link-hub.net/7333481/aEB8tdRMsKro",
+      "Details": "store/discord-background.html"
+    }
+  },
+  {
+    "slug": "recycling-warehouse",
+    "title": "Recycling Warehouse",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/recycling-warehouse.jpg",
+    "Description": "Adds a functional Recycling Warehouse that promotes sustainability while generating monthly income. It features progressive income and capacity scaling that can be manually upgraded based on your city rank.",
+    "Version": "V10",
+    "category": ["Supply", "Waste Disposal", "Industrial"],
+    "urls": {
+      "download": "https://link-center.net/7333481/Q2l3oVEIfFZB",
+      "Details": "store/recycling-warehouse.html"
+    }
+  },
+  {
+    "slug": "just-waves",
+    "title": "Just Waves",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/just-waves.jpg",
+    "Description": "Adds beach waves as a decorative element. Rotation is not currently supported, although more features may be added in the future.",
+    "Version": "V3",
+    "category": ["Terrain", "Water", "Decoration"],
+    "urls": {
+      "download": "https://link-target.net/7333481/Z64CVGjCbBNr",
+      "Details": "store/just-waves.html"
+    }
+  },
+  {
+    "slug": "map-edge-pack",
+    "title": "Map Edge Pack",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/map-edge-pack.jpg",
+    "Description": "A decorative plugin that lets you create fake map edges on existing maps using fences and decals. It currently supports a single elevation level, with more potentially planned for the future.",
+    "Version": "V3",
+    "category": ["Decorations", "Terrain", "Fences"],
+    "urls": {
+      "download": "https://link-center.net/7333481/4BS8TFpsMAn9",
+      "Details": "store/map-edge-pack.html"
+    }
+  },
+  {
+    "slug": "swiss-alps-railway",
+    "title": "Swiss Alps Railway",
+    "Date": "07-09-2026",
+    "Thumbnails": "webdata/img/swiss-alps-railway.jpg",
+    "Description": "Adds a handful of Swiss Alps-themed trains.",
+    "Version": "V7",
+    "category": ["Transport", "Railway", "Trains"],
+    "urls": {
+      "download": "https://link-hub.net/7333481/tcTlXmLWoycL",
+      "Details": "store/swiss-alps-railway.html"
+    }
+  },
+  {
+    "slug": "arrow-remover",
+    "title": "Arrow Remover",
+    "Date": "08-08-2026",
+    "Thumbnails": "webdata/img/arrow-remover.jpg",
+    "Description": "Removes the default arrow markings from in-game one-way roads, alleys, and one-way bus roads for a cleaner and more minimalist appearance. It does not use plugin texture space, helping maintain compatibility and performance.",
+    "Version": "V",
+    "category": ["Road", "UI", "Visual"],
+    "urls": {
+      "download": "https://link-target.net/7333481/R9PS0eYsRd0u",
+      "Details": "store/arrow-remover.html"
+    }
+  },
+  {
+    "slug": "just-stairs",
+    "title": "Just Stairs",
+    "Date": "08-08-2026",
+    "Thumbnails": "webdata/img/just-stairs.jpg",
+    "Description": "Adds decals that turn sloped hills into stairs when placed on them. Other fence plugins can be used to add railings. It currently contains selected in-game decals.",
+    "Version": "V4",
+    "category": ["Terrain", "Stairs", "Decorations"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/X7WuYpz8wSET",
+      "Details": "store/just-stairs.html"
+    }
+  },
+  {
+    "slug": "invisible-intercity-connection",
+    "title": "Invisible InterCity Connection",
+    "Date": "08-08-2026",
+    "Thumbnails": "webdata/img/invisible-intercity-connection.jpg",
+    "Description": "Makes the intercity connection sign invisible.",
+    "Version": "V4",
+    "category": ["Other", "Intercity", "Visual"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/o9B6dxtWNU3z",
+      "Details": "store/invisible-intercity-connection.html"
+    }
+  },
+  {
+    "slug": "yakka-studio-office",
+    "title": "Yakka Studio Office",
+    "Date": "08-08-2026",
+    "Thumbnails": "webdata/img/yakka-studio-office.jpg",
+    "Description": "Adds an office building belonging to Yakka Studio.",
+    "Version": "V4",
+    "category": ["Commercial", "Buildings", "Office"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/iBz3itk8jMAg",
+      "Details": "store/yakka-studio-office.html"
+    }
+  },
+  {
+    "slug": "alternative-rank-names",
+    "title": "Alternative Rank Name's",
+    "Date": "08-08-2026",
+    "Thumbnails": "webdata/img/alternative-rank-names.jpg",
+    "Description": "A simple plugin that changes the names of the in-game city ranks.",
+    "Version": "V9",
+    "category": ["Other", "Interface", "Quality of Life"],
+    "urls": {
+      "download": "https://link-center.net/7333481/fPkRJMXV0trb",
+      "Details": "store/alternative-rank-names.html"
+    }
+  },
+  {
+    "slug": "tractor-road-train",
+    "title": "Tractor Road Train",
+    "Date": "08-08-2026",
+    "Thumbnails": "webdata/img/tractor-road-train.jpg",
+    "Description": "Adds tractors with multiple trailers, which can create additional traffic in your city. The plugin uses in-game textures.",
+    "Version": "V7",
+    "category": ["Transport", "Trucks", "Road Vehicles"],
+    "urls": {
+      "download": "https://link-target.net/7333481/aOta7jpBtrTr",
+      "Details": "store/tractor-road-train.html"
+    }
+  },
+  {
+    "slug": "actual-map-sizes",
+    "title": "Actual Map Sizes",
+    "Date": "04-04-2026",
+    "Thumbnails": "webdata/img/actual-map-sizes.jpg",
+    "Description": "A quality-of-life plugin that replaces the in-game map size text with more useful information, including tile size and region size values. It also simplifies map size labels to XS through 3XL.",
+    "Version": "1p",
+    "category": ["Other", "Quality of Life", "Interface"],
+    "urls": {
+      "download": "#",
+      "Details": "store/actual-map-sizes.html"
+    }
+  },
+  {
+    "slug": "pastel-ui",
+    "title": "Pastel UI",
+    "Date": "04-04-2026",
+    "Thumbnails": "webdata/img/pastel-ui.jpg",
+    "Description": "Changes the entire in-game UI with a Material-inspired design based on Material You. It uses a selected palette based on the game's existing colours rather than dynamically changing to specific colours.",
+    "Version": "1p",
+    "category": ["Other", "UI", "Material Design"],
+    "urls": {
+      "download": "https://link-target.net/7333481/PlFwev56wGbC",
+      "Details": "store/pastel-ui.html"
+    }
+  },
+  {
+    "slug": "indonesia-transport-pack",
+    "title": "Indonesia Transport Pack",
+    "Date": "08-01-2026",
+    "Thumbnails": "webdata/img/indonesia-transport-pack.jpg",
+    "Description": "A transportation package featuring Indonesian public transportation, including trains and buses with their supporting infrastructure. It also includes a complete road package with various road medians and markings, with more content planned for future updates.",
+    "Version": "8.4.1p",
+    "category": ["Transport", "Railway", "Buses", "Roads"],
+    "urls": {
+      "download": "#",
+      "Details": "store/indonesia-transport-pack.html"
+    }
+  },
+  {
+    "slug": "concrete-pylons",
+    "title": "Concrete Pylons",
+    "Date": "11-10-2025",
+    "Thumbnails": "webdata/img/concrete-pylons.jpg",
+    "Description": "Adds a concrete utility power pole. Its higher cost allows it to connect to neighbouring cities while providing a smaller radius and reduced power loss.",
+    "Version": "1p",
+    "category": ["Supply", "Energy", "Utilities"],
+    "urls": {
+      "download": "https://link-center.net/7333481/do8M1gIm2Rxk",
+      "Details": "store/concrete-pylons.html"
+    }
+  },
+  {
+    "slug": "invisible-rrr",
+    "title": "Invisible RRR",
+    "Date": "11-10-2025",
+    "Thumbnails": "webdata/img/invisible-rrr.jpg",
+    "Description": "Adds invisible roads, rails, and runways designed to work with plugins such as Advanced Road, Advanced Rails, and runway markings.",
+    "Version": "1p",
+    "category": ["Transport", "Roads", "Railway", "Runways"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/4qVg4nDZCBUr",
+      "Details": "store/invisible-rrr.html"
+    }
+  },
+  {
+    "slug": "lighter-rain",
+    "title": "Lighter Rain",
+    "Date": "11-10-2025",
+    "Thumbnails": "webdata/img/lighter-rain.jpg",
+    "Description": "Reduces the opacity of rain by 25%, making the rain effect lighter.",
+    "Version": "1p",
+    "category": ["Weather and Overlay", "Weather", "Visual"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/8EJh3M8f8OfV",
+      "Details": "store/lighter-rain.html"
+    }
+  },
+  {
+    "slug": "yakka-topics",
+    "title": "Yakka Topics",
+    "Date": "11-10-2025",
+    "Thumbnails": "webdata/img/yakka-topics.jpg",
+    "Description": "Adds 128 random topics that appear as text below the loading bar. It contains only code, uses no plugin texture space, and includes Indonesian translations for some topics.",
+    "Version": "3p",
+    "category": ["Other", "Loading Screen", "Quality of Life"],
+    "urls": {
+      "download": "https://link-target.net/7333481/b82tFj7rxyeM",
+      "Details": "store/yakka-topics.html"
+    }
+  },
+  {
+    "slug": "pyongyang-apartment",
+    "title": "Pyongyang Apartment",
+    "Date": "01-08-2025",
+    "Thumbnails": "webdata/img/pyongyang-apartment.jpg",
+    "Description": "A themed residential apartment pack inspired by real-life North Korean architecture seen in Pyongyang. It features 72 variations of a distinctive apartment style, with more variations planned for future updates.",
+    "Version": "2p",
+    "category": ["Residential", "Buildings", "Pyongyang", "Modern"],
+    "urls": {
+      "download": "https://link-target.net/7333481/Z3eq9CcKvqxp",
+      "Details": "store/pyongyang-apartment.html"
+    }
+  },
+  {
+    "slug": "diagonal-decals",
+    "title": "Diagonal Decals",
+    "Date": "01-08-2025",
+    "Thumbnails": "webdata/img/diagonal-decals.jpg",
+    "Description": "Adds diagonal versions of in-game decals, including regular and shore-side variants. They provide smoother transitions and more natural-looking terrain and coastline details while retaining the game's native visual style.",
+    "Version": "3p",
+    "category": ["Terrain", "Decorations", "Decals"],
+    "urls": {
+      "download": "https://link-center.net/7333481/5GL38Eapr12g",
+      "Details": "store/diagonal-decals.html"
+    }
+  },
+  {
+    "slug": "pedestrian-expansion",
+    "title": "Pedestrian Expansion",
+    "Date": "01-08-2025",
+    "Thumbnails": "webdata/img/pedestrian-expansion.jpg",
+    "Description": "Adds more variety to the pedestrians walking along sidewalks, making urban environments feel more lively and realistic. These pedestrians are part of the game's actual walking system rather than static decorative props.",
+    "Version": "1p",
+    "category": ["Packs", "Pedestrians", "City Life"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/xEuD1Ojc7uLs",
+      "Details": "store/pedestrian-expansion.html"
+    }
+  },
+  {
+    "slug": "clean-ui",
+    "title": "Clean UI",
+    "Date": "26-07-2025",
+    "Thumbnails": "webdata/img/clean-ui.jpg",
+    "Description": "Changes the in-game UI textures to give them a modern minimalist appearance inspired by Cities: Skylines II.",
+    "Version": "2p",
+    "category": ["Other", "UI", "Minimalist"],
+    "urls": {
+      "download": "https://link-target.net/7333481/t95xpfN8x1Er",
+      "Details": "store/clean-ui.html"
+    }
+  },
+  {
+    "slug": "oriental-ui",
+    "title": "Oriental UI",
+    "Date": "26-07-2025",
+    "Thumbnails": "webdata/img/oriental-ui.jpg",
+    "Description": "Changes the in-game UI textures to create a medieval RPG-inspired interface, giving TheoTown a more immersive historical appearance.",
+    "Version": "1.2p",
+    "category": ["Other", "UI", "Medieval"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/VyF1Ayw81f2J",
+      "Details": "store/oriental-ui.html"
+    }
+  },
+  {
+    "slug": "retaining-walls",
+    "title": "Retaining Walls",
+    "Date": "26-07-2025",
+    "Thumbnails": "webdata/img/retaining-walls.jpg",
+    "Description": "Adds a set of decals for hills, allowing you to create Japanese- or Swiss-style retaining walls. Two styles are currently available: grid and stripes.",
+    "Version": "1.1p",
+    "category": ["Decorations", "Terrain", "Retaining Walls"],
+    "urls": {
+      "download": "https://direct-link.net/7333481/5z5bsq3NSQHW",
+      "Details": "store/retaining-walls.html"
+    }
+  },
+  {
+    "slug": "prufers-tears",
+    "title": "Prüfer's Tears",
+    "Date": "26-07-2025",
+    "Thumbnails": "webdata/img/prufers-tears.jpg",
+    "Description": "A fan-made memorial monument dedicated to Schwi Dola from No Game No Life. The monument provides 250T monthly income with the upgrade.",
+    "Version": "1p",
+    "category": ["Award and Special", "Monument", "Anime"],
+    "urls": {
+      "download": "https://link-center.net/7333481/a0ebQyKmOQ3m",
+      "Details": "store/prufers-tears.html"
+    }
+  },
+  {
+    "slug": "bordered-intercity-connection",
+    "title": "Bordered InterCity Connection",
+    "Date": "26-07-2025",
+    "Thumbnails": "webdata/img/bordered-intercity-connection.jpg",
+    "Description": "Changes the neighbouring city road connection sign into a stripe on the road.",
+    "Version": "Not specified",
+    "category": ["Other", "Intercity", "Roads"],
+    "urls": {
+      "download": "#",
+      "Details": "store/bordered-intercity-connection.html"
     }
   }
-]
+    ]
