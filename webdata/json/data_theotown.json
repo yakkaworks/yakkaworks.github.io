@@ -241,16 +241,16 @@
   },
   {
     "slug": "indonesia-transport-pack",
-    "title": "Indonesia Transport Pack",
+    "title": "Indonesia Transport Pack (DEPRECATED!)",
     "Date": "08-01-2026",
     "Thumbnails": "webdata/img/indonesia-transport-pack.jpg",
-    "Description": "A transportation package featuring Indonesian public transportation, including trains and buses with their supporting infrastructure. It also includes a complete road package with various road medians and markings, with more content planned for future updates.",
+    "Description": "This plugin is deprecated,replaced with newer ones coming soon! \n A transportation package featuring Indonesian public transportation, including trains and buses with their supporting infrastructure. It also includes a complete road package with various road medians and markings, with more content planned for future updates.",
     "Version": "8.4.1p",
     "category": [
       "Transport, Airport, Roads"
     ],
     "urls": {
-      "download": "#",
+      "download": "https://direct-link.net/7333481/7UMhcm1VuEfd",
       "Details": "store/indonesia-transport-pack.html"
     }
   },
