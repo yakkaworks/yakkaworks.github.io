@@ -2,7 +2,7 @@ Ada dua metode untuk memasang plugin eksternal untuk TheoTown.
 
 > Tutorial ini khusus untuk Android.
 
-![Memasang melalui file manager bawaan TheoTown](webdata/img/store/in-game-ttinstall.jpg)
+![Memasang melalui file manager bawaan TheoTown](/webdata/img/store/in-game-ttinstall.jpg)
 
 **File manager bawaan game:**
 1. Klik ikon globe di kiri bawah layar setelah game selesai dimuat.
@@ -15,7 +15,7 @@ Ada dua metode untuk memasang plugin eksternal untuk TheoTown.
 
 **Catatan:** Kamu tidak perlu mengekstrak file ZIP pada versi TheoTown terbaru.
 
-![Memasang melalui ZArchiver](webdata/img/store/zarchiver-ttinstall.jpg)
+![Memasang melalui ZArchiver](/webdata/img/store/zarchiver-ttinstall.jpg)
 
 **Melalui aplikasi pihak ketiga (ZArchiver):**
 1. Tutorial ini khusus untuk file berformat `.ttplugin` atau `.plugin`. Untuk format lainnya, lihat bagian di bawah untuk cara mengonversinya.
