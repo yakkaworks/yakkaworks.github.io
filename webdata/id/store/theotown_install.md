@@ -2,7 +2,7 @@ Ada dua metode untuk memasang plugin eksternal untuk TheoTown.
 
 > Tutorial ini khusus untuk Android.
 
-![Memasang melalui file manager bawaan TheoTown](img/webdata/store/in-game-ttinstall.jpg)
+![Memasang melalui file manager bawaan TheoTown](webdata/img/store/in-game-ttinstall.jpg)
 
 **File manager bawaan game:**
 1. Klik ikon globe di kiri bawah layar setelah game selesai dimuat.
