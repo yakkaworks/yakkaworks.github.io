@@ -98,20 +98,25 @@ function yw_handleDownloadClick(event, slug) {
 function yw_renderStoreCard(item) {
   const detailsUrl = item.urls && item.urls.Details ? `/${item.urls.Details}` : '#';
   const thumb = item.Thumbnails || 'assets/img/placeholder.jpg';
-  const isKustom = yw_currentDomainKey.toLowerCase().includes('kustom');
+  const domainKey = yw_currentDomainKey.toLowerCase();
+  const isKustom = domainKey.includes('kustom');
+  const isMcb = domainKey.includes('mcb');
   const hasPrice = typeof item.price === 'string' && item.price.trim() !== '';
   const downloadUrls = yw_normalizeDownloadUrls(item.urls && item.urls.download);
   const buttonLabel = hasPrice ? item.price : 'Download latest';
 
-  const linksRow = isKustom
-    ? `<a href="/store/theotown_install.html" class="yw-store-card-link">How to install</a>`
-    : `<a href="/store/theotown_install.html" class="yw-store-card-link">How to install</a>
-       <span class="yw-store-card-sep">•</span>
-       <a href="/store/commisions.html" class="yw-store-card-link">Customize</a>`;
+  let linksRow = '';
+  if (!isMcb) {
+    linksRow = isKustom
+      ? `<a href="/store/theotown_install.html" class="yw-store-card-link">How to install</a>`
+      : `<a href="/store/theotown_install.html" class="yw-store-card-link">How to install</a>
+         <span class="yw-store-card-sep">•</span>
+         <a href="/store/commisions.html" class="yw-store-card-link">Customize</a>`;
+  }
 
   const downloadButton = downloadUrls.length > 1
-  ? `<button type="button" class="btn btn-sm ${hasPrice ? 'yw-btn-accent' : 'btn-primary'}" data-download-slug="${item.slug}">${buttonLabel}</button>`
-  : `<a href="${downloadUrls[0] || '#'}" class="btn btn-sm ${hasPrice ? 'yw-btn-accent' : 'btn-primary'}">${buttonLabel}</a>`;
+    ? `<button type="button" class="btn btn-sm ${hasPrice ? 'yw-btn-accent' : 'btn-primary'}" data-download-slug="${item.slug}">${buttonLabel}</button>`
+    : `<a href="${downloadUrls[0] || '#'}" class="btn btn-sm ${hasPrice ? 'yw-btn-accent' : 'btn-primary'}">${buttonLabel}</a>`;
 
   return `
     <div class="yw-store-card">
@@ -126,9 +131,7 @@ function yw_renderStoreCard(item) {
           <span>${item.Date || ''}</span>
         </div>
         <p class="yw-store-card-desc">${item.Description || ''}</p>
-        <div class="yw-store-card-links">
-          ${linksRow}
-        </div>
+        ${linksRow ? `<div class="yw-store-card-links">${linksRow}</div>` : ''}
         <div class="yw-store-card-actions">
           ${downloadButton}
           <a href="${detailsUrl}" class="btn btn-outline-secondary btn-sm">Details</a>
