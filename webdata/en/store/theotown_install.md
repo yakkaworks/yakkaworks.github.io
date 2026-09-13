@@ -2,7 +2,7 @@ There are two methods of installing external plugins for TheoTown.
 
 > Tutorial made specifically for Android.
 
-![Installing through TheoTown's in-game file manager](webdata/img/store/in-game-ttinstall.jpg)
+![Installing through TheoTown's in-game file manager](/webdata/img/store/in-game-ttinstall.jpg)
 
 **In-game file manager:**
 1. Click the globe icon on the bottom left of the screen once the game has loaded.
@@ -15,7 +15,7 @@ There are two methods of installing external plugins for TheoTown.
 
 **Note:** You don't need to extract ZIP files in the latest TheoTown versions.
 
-![Installing through ZArchiver](webdata/img/store/zarchiver-ttinstall.jpg)
+![Installing through ZArchiver](/webdata/img/store/zarchiver-ttinstall.jpg)
 
 **Through third-party apps (ZArchiver):**
 1. This tutorial is specifically for `.ttplugin` or `.plugin` files. For other formats, see below for how to convert them.
