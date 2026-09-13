@@ -16,8 +16,8 @@
   --bs-font-monospace: 'M PLUS 1 Code', monospace;
   --yw-heading-font: 'M PLUS 1 Code', monospace;
 
-  --yw-radius: 24px;
-  --yw-radius-outer: 32px;
+  --yw-radius: 16px;
+  --yw-radius-outer: 24px;
   --yw-radius-pill: 999px;
 
   --bs-border-radius: var(--yw-radius);
