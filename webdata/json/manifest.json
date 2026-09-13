@@ -3,6 +3,14 @@
     {
       "file": "data_theotown.json",
       "label": "TheoTown"
+    },
+    {
+      "file": "data_kustom.json",
+      "label": "Kustom"
+    },
+    {
+      "file": "data_mcb.json",
+      "label": "Minecraft (Bedrock)"
     }
   ]
 }
