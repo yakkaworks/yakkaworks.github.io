@@ -2,7 +2,7 @@ There are two methods of installing external plugins for TheoTown.
 
 > Tutorial made specifically for Android.
 
-![Installing through TheoTown's in-game file manager](img/webdata/store/in-game-ttinstall.jpg)
+![Installing through TheoTown's in-game file manager](webdata/img/store/in-game-ttinstall.jpg)
 
 **In-game file manager:**
 1. Click the globe icon on the bottom left of the screen once the game has loaded.
