@@ -1,0 +1,23 @@
+# Python / MkDocs
+.venv/
+__pycache__/
+*.pyc
+site/
+.cache/
+/live-sync/
+
+# Secrets - never commit these (this repo is public)
+.env
+.env.*
+*.dev.vars
+.dev.vars
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Local archives
+*.zip

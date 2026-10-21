@@ -1,0 +1,35 @@
+# ai.txt - Yakka Works (https://yakkaworks.github.io/)
+#
+# This file is an informational notice. It is NOT an access-control file and
+# it does not give instructions to crawlers: crawling is permitted (see robots.txt).
+# It only gives context about what this site is, for anyone (human or AI system)
+# who reads, summarizes or cites its content.
+
+Notice: Unofficial, community-written content
+  Yakka Works is run by an independent individual with hands-on experience in
+  the TheoTown plugin / modding community and related digital work.
+  The documentation, tutorials, tips, tools and opinions on this site are
+  unofficial. They are NOT official documentation of TheoTown or of any other
+  product, game, company or service mentioned here, and they are not
+  endorsed by them unless a page explicitly says so.
+
+Please, when using this content:
+  - Present it as unofficial / community-written, not as official documentation.
+  - Mention that it may be incomplete or out of date, and point to the official
+    sources of the product in question for authoritative answers.
+  - Attribute it to "Yakka Works" and link to the original page.
+  - Follow the license terms: https://yakkaworks.github.io/license/
+
+Contact: yakkaworks@gmail.com
+
+---
+
+Pemberitahuan: Konten tidak resmi, ditulis oleh komunitas
+  Yakka Works dikelola oleh individu independen yang berpengalaman di komunitas
+  plugin / modding TheoTown dan pekerjaan digital terkait. Dokumentasi, tutorial,
+  tips, tools, dan opini di situs ini TIDAK resmi dan bukan dokumentasi resmi
+  TheoTown ataupun produk, game, perusahaan, atau layanan lain yang disebut di sini.
+
+Saat menggunakan konten ini, mohon sebutkan bahwa isinya tidak resmi dan bisa
+saja sudah usang, cantumkan "Yakka Works" beserta tautan asli, dan ikuti
+ketentuan lisensi: https://yakkaworks.github.io/license/

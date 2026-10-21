@@ -1,0 +1,803 @@
+/* ==========================================================================
+   Yakka Works - brand + local fonts
+   Brand color: #4d8b31
+   ========================================================================== */
+
+/* --- Local fonts (docs/assets/fonts/) -------------------------------------
+   body.ttf      = Rounded M+ 1c Regular, trimmed to Latin (original is ~3.4 MB).
+   body-bold.ttf = Rounded M+ 1c Bold, trimmed to the exact same characters.
+   head.ttf      = M PLUS Code Latin, variable font (weight 100-700).
+   If you ever add characters to body.ttf, trim body-bold.ttf to the same set.
+   ------------------------------------------------------------------------ */
+@font-face {
+  font-family: "YW Body";
+  src: url("../fonts/body.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YW Body";
+  src: url("../fonts/body-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YW Header";
+  src: url("../fonts/head.ttf") format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --md-text-font: "YW Body";
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-header__title,
+.md-tabs__link,
+.md-nav__title,
+.yw-footer h2,
+.yw-footer__logo {
+  font-family: "YW Header", var(--md-text-font-family);
+}
+
+/* --- Brand colors ---------------------------------------------------------
+   #4d8b31 on white text is ~4.2:1 (large text / buttons OK, small text a bit
+   under WCAG AA). So: brand green for header, buttons and accents, a darker
+   green for small link text on light backgrounds, a lighter one in dark mode.
+   ------------------------------------------------------------------------ */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #4d8b31;
+  --md-primary-fg-color--light: #6aa84d;
+  --md-primary-fg-color--dark: #3b6a25;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.8);
+  --md-accent-fg-color: #3b6a25;
+  --md-accent-fg-color--transparent: rgba(59, 106, 37, 0.1);
+  --md-typeset-a-color: #3b6a25;
+
+  --yw-footer-bg: #e8ecea;
+  --yw-footer-fg: #30383b;
+  --yw-footer-link: #3b6a25;
+  --yw-banner-bg: #3b6a25;
+  --yw-panel-bg: #f1f3f2;
+  --yw-panel-bg-soft: #e8ecea;
+  --yw-panel-fg: #30383b;
+  --yw-panel-muted: #5f696d;
+  --yw-panel-shadow: 0 1px 2px rgba(20, 30, 25, 0.04);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3b6a25;
+  --md-primary-fg-color--light: #4d8b31;
+  --md-primary-fg-color--dark: #2c5019;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.8);
+  --md-accent-fg-color: #8fd16b;
+  --md-accent-fg-color--transparent: rgba(143, 209, 107, 0.1);
+  --md-typeset-a-color: #8fd16b;
+
+  --yw-footer-bg: #2a3034;
+  --yw-footer-fg: #e0e5e7;
+  --yw-footer-link: #8fd16b;
+  --yw-banner-bg: #3b6a25;
+  --yw-panel-bg: #2a3034;
+  --yw-panel-bg-soft: #242a2e;
+  --yw-panel-fg: #e0e5e7;
+  --yw-panel-muted: #aeb7bb;
+  --yw-panel-shadow: none;
+}
+
+/* Keep the orange logo transparent; the header title provides the clear wordmark. */
+.md-header__button.md-logo img {
+  box-sizing: border-box;
+  height: 1.65rem;
+  width: 1.65rem;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.md-tabs__link {
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+/* --- Footer ----------------------------------------------------------------- */
+.yw-footer {
+  background-color: var(--yw-footer-bg);
+  color: var(--yw-footer-fg);
+  border-top: 0;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.yw-footer a {
+  color: var(--yw-footer-link);
+  text-decoration: none;
+}
+
+.yw-footer a:hover,
+.yw-footer a:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.yw-footer__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.5rem 2rem;
+  padding: 2rem 0.8rem 1.5rem;
+}
+
+.yw-footer__banner {
+  background-color: var(--yw-banner-bg);
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.7rem 0.8rem;
+}
+
+.yw-footer__banner p {
+  margin: 0 auto;
+}
+
+.yw-footer__banner a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.yw-footer__banner .yw-footer__icon {
+  margin-right: 0.35rem;
+}
+
+.yw-footer__banner .yw-footer__icon svg {
+  display: inline-block;
+  vertical-align: -0.2em;
+}
+
+@media screen and (min-width: 60em) {
+  .yw-footer__inner {
+    grid-template-columns: 1.7fr 1fr 1fr;
+  }
+}
+
+.yw-footer h2 {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--yw-footer-fg);
+}
+
+.yw-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.yw-footer li + li {
+  margin-top: 0.35rem;
+}
+
+.yw-footer address {
+  font-style: normal;
+  opacity: 0.9;
+}
+
+.yw-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+.yw-footer__logo img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.yw-footer__brand address {
+  margin-top: 0.7rem;
+  max-width: 28rem;
+}
+
+.yw-footer__socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.yw-footer__icon svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.yw-footer__copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.8rem 0;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.yw-footer__copyright .md-grid {
+  padding: 0 0.8rem;
+}
+
+
+/* Summary block used by synced legal articles. */
+.yw-tldr {
+  margin: 1.25rem 0;
+  padding: 1rem 1.2rem;
+  border-inline-start: 0.25rem solid var(--md-primary-fg-color);
+  border-radius: 0.25rem;
+  background: var(--md-code-bg-color);
+}
+
+.yw-tldr > :first-child {
+  margin-top: 0;
+}
+
+.yw-tldr > :last-child {
+  margin-bottom: 0;
+}
+
+/* --- Static home page ----------------------------------------------------- */
+.md-content__inner:has(.yw-home) {
+  padding-top: 0.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.yw-home {
+  display: grid;
+  gap: 1rem;
+  color: var(--md-default-fg-color);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.yw-home h1,
+.yw-home h2,
+.yw-home p {
+  margin-top: 0;
+}
+
+.yw-home h2 {
+  margin-bottom: 0.55rem;
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.yw-home__top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 1fr);
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.yw-home__hero {
+  min-height: 14.5rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #252d31;
+  background-image: url("../img/cover.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.yw-home__hero-shade,
+.yw-home__contact-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.yw-home__hero-shade {
+  background: linear-gradient(180deg, rgba(12, 17, 18, 0.03) 10%, rgba(12, 17, 18, 0.14) 44%, rgba(12, 17, 18, 0.86) 100%);
+}
+
+.yw-home__hero-copy {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 1.15rem;
+}
+
+.yw-home__hero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: clamp(1.65rem, 3.1vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.yw-home__hero p {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+}
+
+.yw-home__nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.yw-home__nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 0;
+  gap: 0.35rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background: var(--yw-panel-bg);
+  color: var(--yw-panel-fg) !important;
+  text-decoration: none !important;
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.yw-home__nav-card:hover,
+.yw-home__nav-card:focus-visible {
+  background: var(--yw-panel-bg-soft);
+  transform: translateY(-1px);
+}
+
+.yw-home__nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 auto;
+  margin-bottom: 0.2rem;
+  background: #4d8b31;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+
+.yw-home__nav-icon svg {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+
+.yw-home__nav-title {
+  display: block;
+  font-family: "YW Header", var(--md-text-font-family);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.yw-home__nav-desc {
+  display: block;
+  color: var(--yw-panel-muted);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.yw-home__panel {
+  background: var(--yw-panel-bg);
+  border-radius: 0.25rem;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--yw-panel-shadow);
+}
+
+.yw-home__panel h2 {
+  color: var(--yw-panel-fg);
+}
+
+.yw-home__panel p {
+  margin-bottom: 0;
+  color: var(--yw-panel-muted);
+}
+
+.yw-home__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.yw-home__stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  min-width: 0;
+  min-height: 4.4rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.25rem;
+  background: var(--yw-panel-bg);
+  box-shadow: var(--yw-panel-shadow);
+}
+
+.yw-home__stat strong {
+  color: var(--md-accent-fg-color);
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.yw-home__stat span {
+  color: var(--yw-panel-muted);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.yw-home__more {
+  margin-top: 0.6rem !important;
+}
+
+.yw-home__more a {
+  color: var(--md-typeset-a-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.yw-home__more a:hover,
+.yw-home__more a:focus-visible {
+  text-decoration: underline;
+}
+
+.yw-home__contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 9.5rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.25rem;
+  background-color: #263238;
+  background-image: url("../img/cover.jpg");
+  background-position: center 55%;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.yw-home__contact-shade {
+  background: linear-gradient(90deg, rgba(20, 27, 30, 0.48), rgba(20, 27, 30, 0.74)), linear-gradient(0deg, rgba(20, 27, 30, 0.32), rgba(20, 27, 30, 0.22));
+}
+
+.yw-home__contact-copy {
+  position: relative;
+  z-index: 1;
+  padding: 1.2rem 1rem;
+}
+
+.yw-home__contact h2 {
+  margin: 0;
+  color: #fff;
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: clamp(1.1rem, 2.8vw, 1.65rem);
+  font-weight: 600;
+}
+
+.yw-home__contact p {
+  margin: 0.2rem 0 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.yw-home__contact a {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.25rem;
+  background: #4d8b31;
+  color: #fff !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.yw-home__contact a:hover,
+.yw-home__contact a:focus-visible {
+  background: #3b6a25;
+  text-decoration: underline;
+}
+
+/* --- About and legal editorial pages ------------------------------------ */
+.yw-editorial {
+  max-width: 54rem;
+  margin-inline: auto;
+  padding-bottom: 1.3rem;
+}
+
+.yw-editorial > h1:first-child {
+  margin-bottom: 0.3rem;
+  font-family: "YW Header", var(--md-text-font-family);
+  font-weight: 700;
+}
+
+.yw-editorial__lead {
+  max-width: 48rem;
+  margin: 0.25rem 0 1.25rem !important;
+  color: var(--md-default-fg-color--light);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.yw-editorial h2 {
+  margin-top: 1.8rem;
+  padding-bottom: 0.25rem;
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.yw-editorial h2:not(:first-child) {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.yw-editorial__facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0 1.8rem;
+}
+
+.yw-editorial__facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0.85rem 0.95rem;
+  border-radius: 0.25rem;
+  background: var(--yw-panel-bg);
+}
+
+.yw-editorial__facts strong {
+  color: var(--md-accent-fg-color);
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.yw-editorial__facts span {
+  color: var(--yw-panel-muted);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.yw-editorial__link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.yw-editorial__link-grid a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.25rem;
+  background: var(--yw-panel-bg);
+  color: var(--yw-panel-fg) !important;
+  text-decoration: none !important;
+  transition: background-color 140ms ease;
+}
+
+.yw-editorial__link-grid a:hover,
+.yw-editorial__link-grid a:focus-visible {
+  background: var(--yw-panel-bg-soft);
+}
+
+.yw-editorial__link-grid strong {
+  color: var(--md-typeset-a-color);
+  font-family: "YW Header", var(--md-text-font-family);
+  font-size: 0.95rem;
+}
+
+.yw-editorial__link-grid span {
+  color: var(--yw-panel-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.yw-editorial > .yw-tldr {
+  margin: 1.1rem 0 1rem;
+  padding: 1.05rem 1.2rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: var(--yw-panel-bg);
+  color: var(--yw-panel-fg);
+}
+
+.yw-editorial .yw-tldr > strong,
+.yw-editorial .yw-tldr > p:first-child {
+  color: var(--yw-panel-fg);
+  font-family: "YW Header", var(--md-text-font-family);
+}
+
+.yw-legal-note {
+  margin: 1.1rem 0 1.5rem;
+  padding: 0.85rem 1rem;
+  border-left: 0.2rem solid var(--md-accent-fg-color);
+  border-radius: 0.25rem;
+  background: var(--yw-panel-bg-soft);
+  color: var(--yw-panel-fg);
+  font-size: 0.88rem;
+}
+
+.yw-editorial .yw-tldr ul:last-child,
+.yw-editorial .yw-tldr p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer is deliberately neutral; green remains the interactive brand accent. */
+.md-footer {
+  background: var(--yw-footer-bg);
+}
+
+.yw-footer {
+  border-top: 0;
+  background: var(--yw-footer-bg);
+  color: var(--yw-footer-fg);
+}
+
+.yw-footer a {
+  color: var(--yw-footer-link);
+}
+
+.yw-footer__logo img {
+  object-fit: contain;
+  background: transparent;
+}
+
+@media screen and (max-width: 48em) {
+  .yw-home__top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .yw-home__hero {
+    min-height: 13.4rem;
+  }
+
+  .yw-home__nav {
+    grid-template-rows: none;
+    grid-auto-rows: minmax(6rem, auto);
+  }
+
+  .yw-home__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yw-home__stat {
+    min-height: 4.1rem;
+  }
+
+  .yw-editorial__facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .yw-editorial__facts > div {
+    padding: 0.65rem 0.7rem;
+  }
+
+  .yw-editorial__facts strong {
+    font-size: 1rem;
+  }
+
+  .yw-editorial__facts span {
+    font-size: 0.68rem;
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .yw-home__panel {
+    padding: 0.9rem;
+  }
+
+  .yw-home__nav-card {
+    padding: 0.7rem;
+  }
+
+  .yw-editorial__link-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+
+/* Commission price estimator */
+.yw-estimator {
+  --yw-estimator-line: var(--md-default-fg-color--lightest);
+  margin: 1.25rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--yw-estimator-line);
+  border-radius: 0.25rem;
+  background: var(--md-default-bg-color);
+}
+.yw-estimator__intro { margin-top: 0; }
+.yw-estimator__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.yw-estimator__field { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.yw-estimator__field label, .yw-estimator__check { font-weight: 600; font-size: 0.82rem; }
+.yw-estimator__field input, .yw-estimator__field select {
+  box-sizing: border-box; width: 100%; min-height: 2.5rem; padding: 0.45rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter); border-radius: 0.25rem;
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color); font: inherit;
+}
+.yw-estimator__check { display: flex; align-items: center; gap: 0.55rem; grid-column: 1 / -1; font-weight: 400; }
+.yw-estimator__check input { width: 1rem; height: 1rem; accent-color: var(--md-accent-fg-color); }
+.yw-estimator__note, .yw-estimator__disclaimer { font-size: 0.78rem; color: var(--md-default-fg-color--light); }
+.yw-estimator__note { margin: 1rem 0; }
+.yw-estimator__result {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem;
+  padding: 1rem; border-radius: 0.25rem; background: var(--md-code-bg-color);
+}
+.yw-estimator__result > div { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.yw-estimator__result-label { font-size: 0.75rem; color: var(--md-default-fg-color--light); }
+.yw-estimator__result strong { font-family: var(--md-code-font-family); font-size: clamp(1.05rem, 3.5vw, 1.5rem); overflow-wrap: anywhere; }
+.yw-estimator__breakdown { font-size: 0.75rem; margin: 0.8rem 0; }
+.yw-estimator__order { margin: 0.35rem 0 0; }
+@media (max-width: 36em) {
+  .yw-estimator { padding: 0.75rem; }
+  .yw-estimator__grid, .yw-estimator__result { grid-template-columns: minmax(0, 1fr); }
+  .yw-estimator__result { gap: 0.75rem; }
+}
+
+.yw-estimator__custom-warning {
+  margin: 0.85rem 0;
+  padding: 0.65rem 0.8rem;
+  border-inline-start: 0.2rem solid var(--md-accent-fg-color);
+  background: var(--md-code-bg-color);
+  font-size: 0.8rem;
+}
+
+
+/* Store table thumbnails: source images are authored at a 4:1 ratio. */
+.md-typeset table img.yw-store-thumbnail {
+  display: block;
+  width: 9rem;
+  height: 2.25rem;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+
+
+/* Product detail thumbnails use the same original 4:1 artwork as the Store tables. */
+.md-typeset img.yw-store-detail-thumbnail {
+  display: block;
+  width: 100%;
+  max-width: 48rem;
+  height: auto;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin: 0 0 1rem;
+}

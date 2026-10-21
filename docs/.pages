@@ -1,0 +1,9 @@
+# Top tabs, in order. "..." = the home page (index.md); the root legal pages
+# (about, terms, ...) are excluded from the nav in mkdocs.yml (not_in_nav) and
+# are linked from the footer only.
+nav:
+  - ...
+  - store
+  - library
+  - tools
+  - blogs

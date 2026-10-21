@@ -1,0 +1,187 @@
+site_name: Yakka Works
+site_description: Indie studio dari Banyuwangi - plugin TheoTown, tools, tutorial, dan karya digital lainnya.
+site_author: Yakka Works
+site_url: https://yakkaworks.github.io/
+use_directory_urls: true
+docs_dir: docs
+site_dir: site
+
+# Root legal pages live in the footer only, so keep them out of the nav warnings.
+not_in_nav: |
+  /about*.md
+  /terms*.md
+  /privacy*.md
+  /cookie*.md
+  /license*.md
+  /source*.md
+  /404*.md
+
+hooks:
+  - hooks/year.py
+  - hooks/plugin_order.py
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: id
+  font: false # no Google Fonts; local fonts are loaded from assets/fonts via extra.css
+  logo: assets/logo/logo.svg
+  favicon: assets/logo/logo-128.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+    - content.tooltips
+    - content.footnote.tooltips
+  palette:
+    # Automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Ganti ke mode terang
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Ganti ke mode gelap
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Ganti ke mode otomatis
+
+# No "nav:" here on purpose. The top tabs and ordering come from small ".pages"
+# files (awesome-pages): docs/.pages lists the 5 tabs, and each section folder has
+# its own .pages with its title. New .md files in those folders show up by themselves.
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - abbr
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: "#"
+      separator: "_"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix # about.md = Indonesian, about.en.md = English
+      fallback_to_default: true # no .en.md yet? the Indonesian page is shown under /en/
+      reconfigure_material: true
+      reconfigure_search: false
+      languages:
+        - locale: id
+          default: true
+          name: Bahasa Indonesia
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Beranda: Home
+            Toko: Store
+            Pustaka: Library
+            Alat: Tools
+            Blog: Blog
+            Memulai Pembuatan Plugin TheoTown: Getting Started with TheoTown Plugins
+            Sebelum memulai: Before you begin
+            Panduan pemula: Beginner guide
+            Bangunan: Buildings
+            Animasi: Animation
+            Transportasi: Transport
+            Sistem: System
+            Terrain dan lingkungan: Terrain and environment
+            Lain-lain: Miscellaneous
+            Sumber dari dalam game: In-game sources
+  - awesome-pages
+  - blog:
+      blog_dir: blogs
+      post_dir: "{blog}/posts"
+      post_url_format: "{date}/{slug}" # -> /blogs/2026/10/04/judul-post/
+      post_url_date_format: yyyy/MM/dd
+      post_date_format: long
+      archive: true
+      categories: true
+      pagination_per_page: 10
+  - redirects:
+      # Renamed or moved pages: "old/path.md": "new/path.md"  (old file must NOT exist anymore)
+      redirect_maps: {}
+
+extra_css:
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/commission-estimator.js
+
+extra:
+  generator: false
+  brand:
+    name: Yakka Works
+    since: 2020
+    address: |-
+      Yakka Works
+      RT 02/RW 02, Dusun Sidoluhur
+      Desa Sepanjang, Kecamatan Glenmore
+      Kabupaten Banyuwangi, Jawa Timur 68466
+      Indonesia
+    email: yakkaworks@gmail.com
+  socials:
+    - name: GitHub
+      icon: fontawesome/brands/github
+      link: https://github.com/yakkaworks
+    - name: YouTube
+      icon: fontawesome/brands/youtube
+      link: https://youtube.com/@yakkaworks
+    - name: Instagram
+      icon: fontawesome/brands/instagram
+      link: https://instagram.com/yakkaworks
+    - name: X
+      icon: fontawesome/brands/x-twitter
+      link: https://x.com/yakkaworks
+    - name: Discord
+      icon: fontawesome/brands/discord
+      link: https://discord.gg/kri-komunitas-random-indonesia-1130881761803518012
+    - name: WhatsApp Channel
+      icon: fontawesome/brands/whatsapp
+      link: https://whatsapp.com/channel/0029VaAOTmHFnSzBbVBAD32n
+    - name: Email
+      icon: material/email-outline
+      link: mailto:yakkaworks@gmail.com
+  # Banner shown at the top of the footer. Remove this block to hide the banner.
+  donate:
+    - name: Saweria
+      link: https://saweria.co/yakkaworks
+    - name: Patreon
+      link: https://www.patreon.com/yakkaworks

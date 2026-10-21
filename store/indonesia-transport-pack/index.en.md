@@ -1,0 +1,18 @@
+<img src="../../webdata/img/indonesia-transport-pack.jpg" alt="Indonesia Transport Pack (DEPRECATED!)" class="yw-store-detail-thumbnail" loading="lazy">
+
+# Indonesia Transport Pack (DEPRECATED!)
+
+**Version 8.4.3p · Updated 08-Jan-26**
+
+## Description
+
+This plugin is deprecated and will be replaced by newer ones. A transportation package featuring Indonesian public transportation, including trains and buses with supporting infrastructure, plus roads with various medians and markings.
+
+## Download
+
+- [Download 1](https://direct-link.net/7333481/7UMhcm1VuEfd)
+- [Download 2](https://link-hub.net/7333481/Bjvp9A20zPSU)
+
+---
+
+[Back to Store](../index.en.md)

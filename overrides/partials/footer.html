@@ -1,0 +1,76 @@
+{#-
+  Yakka Works footer. Order: donate banner > brand (+ address) > socials > legal > copyright.
+  Data comes from mkdocs.yml (extra.brand, extra.socials, extra.donate). Replaces Material's footer.
+-#}
+{% set lang = config.theme.language | default("id") %}
+{% set is_id = lang == "id" %}
+{% set prefix = "" if is_id else lang ~ "/" %}
+{% set brand = config.extra.brand %}
+{% set legal = [
+  ["about", "Tentang" if is_id else "About"],
+  ["terms", "Syarat & Ketentuan" if is_id else "Terms of Service"],
+  ["privacy", "Kebijakan Privasi" if is_id else "Privacy Policy"],
+  ["cookie", "Kebijakan Cookie" if is_id else "Cookie Policy"],
+  ["license", "Lisensi" if is_id else "License"],
+  ["source", "Sumber & Kredit" if is_id else "Source & Credits"]
+] %}
+
+<footer class="yw-footer" aria-label="Footer">
+
+  {% if config.extra.donate %}
+  <div class="yw-footer__banner">
+    <p class="md-grid">
+      <span class="yw-footer__icon">{% include ".icons/material/heart.svg" %}</span>
+      {{ "Dukung kreator dengan berdonasi lewat" if is_id else "Support the author by donating via" }}
+      {% for d in config.extra.donate %}
+        <a href="{{ d.link }}" target="_blank" rel="noopener">{{ d.name }}</a>
+        {%- if not loop.last %} {{ "atau" if is_id else "or" }} {% endif -%}
+      {% endfor %}.
+    </p>
+  </div>
+  {% endif %}
+
+  <div class="yw-footer__inner md-grid">
+
+    <section class="yw-footer__brand">
+      <a class="yw-footer__logo" href="{{ base_url }}/{{ prefix }}" aria-label="{{ brand.name }}">
+        {% if config.theme.logo %}
+          <img src="{{ config.theme.logo | url }}" alt="" width="40" height="40">
+        {% endif %}
+        <span>{{ brand.name }}</span>
+      </a>
+      <address>{% for line in brand.address.split('\n') %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</address>
+    </section>
+
+    <nav class="yw-footer__legal" aria-label="Legal">
+      <h2>Legal</h2>
+      <ul>
+        {% for item in legal %}
+          <li><a href="{{ base_url }}/{{ prefix }}{{ item[0] }}/">{{ item[1] }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <section class="yw-footer__socials">
+      <h2>{{ "Sosial & Kontak" if is_id else "Social & Contact" }}</h2>
+      <ul>
+        {% for s in config.extra.socials %}
+          <li>
+            <a href="{{ s.link }}" target="_blank" rel="noopener me" title="{{ s.name }}">
+              <span class="yw-footer__icon">{% include ".icons/" ~ s.icon ~ ".svg" %}</span>
+              <span>{{ s.name }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="yw-footer__copyright">
+    <div class="md-grid">
+      Copyright &copy; {{ brand.name }} {{ brand.since }}-{{ config.extra.year }}.
+      All rights reserved. In-game icons provided by TheoTown.
+    </div>
+  </div>
+</footer>

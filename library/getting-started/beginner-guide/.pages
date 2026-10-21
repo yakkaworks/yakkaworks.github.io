@@ -1,0 +1,5 @@
+title: Panduan pemula
+nav:
+  - ... | index.*md
+  - json-syntax-basics
+  - simple-plugin

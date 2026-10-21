@@ -1,0 +1,39 @@
+title: Toko
+nav:
+  - ... | index.*md
+  - commissions
+  - website-exclusive-plugins
+  - TheoTown Plugins:
+    - generic-road-train
+    - bus-tram-road
+    - swiss-alps-railway
+    - arrow-remover
+    - invisible-intercity-connection
+    - tractor-road-train
+    - indonesia-transport-pack
+    - invisible-rrr
+    - bordered-intercity-connection
+    - warehouse-shed-pack
+    - discord-background
+    - alternative-rank-names
+    - actual-map-sizes
+    - pastel-ui
+    - lighter-rain
+    - yakka-topics
+    - pedestrian-expansion
+    - clean-ui
+    - oriental-ui
+    - recycling-warehouse
+    - concrete-pylons
+    - just-waves
+    - just-stairs
+    - diagonal-decals
+    - map-edge-pack
+    - retaining-walls
+    - yakka-studio-office
+    - pyongyang-apartment
+    - prufers-tears
+  - TheoTown Maps:
+    - theotown-maps
+  - kustom
+  - minecraft
