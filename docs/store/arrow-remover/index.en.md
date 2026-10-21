@@ -1,4 +1,4 @@
-<img src="../../webdata/img/arrow-remover.jpg" alt="Arrow Remover" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/arrow-remover.jpg" alt="Arrow Remover" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Arrow Remover
 

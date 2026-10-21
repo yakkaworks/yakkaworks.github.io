@@ -1,4 +1,4 @@
-<img src="../../webdata/img/invisible-rrr.jpg" alt="Invisible RRR" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/invisible-rrr.jpg" alt="Invisible RRR" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Invisible RRR
 

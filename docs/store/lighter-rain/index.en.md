@@ -1,4 +1,4 @@
-<img src="../../webdata/img/lighter-rain.jpg" alt="Lighter Rain" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/lighter-rain.jpg" alt="Lighter Rain" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Lighter Rain
 

@@ -1,4 +1,4 @@
-<img src="../../webdata/img/discord-background.jpg" alt="Discord Background" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/discord-background.jpg" alt="Discord Background" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Discord Background
 

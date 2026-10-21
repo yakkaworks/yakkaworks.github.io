@@ -1,4 +1,4 @@
-<img src="../../webdata/img/oriental-ui.jpg" alt="Oriental UI" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/oriental-ui.jpg" alt="Oriental UI" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Oriental UI
 

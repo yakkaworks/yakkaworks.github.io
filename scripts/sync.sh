@@ -3,7 +3,7 @@ set -Eeuo pipefail
 . "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/_common.sh"
 trap 'yw_handle_error "$?" "$BASH_COMMAND"' ERR
 
-LIVE_BRANCH='weblive'
+LIVE_BRANCH='mkdocs-site-live'
 LIVE_REMOTE='https://github.com/yakkaworks/yakkaworks.github.io.git'
 LIVE_DIR="$YW_PROJECT_ROOT/live-sync"
 

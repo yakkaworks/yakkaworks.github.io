@@ -1,4 +1,4 @@
-<img src="../../webdata/img/diagonal-decals.jpg" alt="Diagonal Decals" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/diagonal-decals.jpg" alt="Diagonal Decals" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Diagonal Decals
 

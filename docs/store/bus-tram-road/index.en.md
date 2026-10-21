@@ -1,4 +1,4 @@
-<img src="../../webdata/img/bus-tram-road.jpg" alt="Bus-Tram Road" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/bus-tram-road.jpg" alt="Bus-Tram Road" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Bus-Tram Road
 

@@ -144,6 +144,7 @@ extra_css:
 
 extra_javascript:
   - assets/js/commission-estimator.js
+  - assets/js/json-uni-tool.js
 
 extra:
   generator: false

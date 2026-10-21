@@ -1,4 +1,4 @@
-<img src="../../webdata/img/clean-ui.jpg" alt="Clean UI" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/clean-ui.jpg" alt="Clean UI" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Clean UI
 

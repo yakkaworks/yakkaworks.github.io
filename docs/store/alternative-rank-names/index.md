@@ -1,4 +1,4 @@
-<img src="../../webdata/img/alternative-rank-names.jpg" alt="Alternative Rank Name's" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/alternative-rank-names.jpg" alt="Alternative Rank Name's" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Alternative Rank Name's
 

@@ -3,8 +3,10 @@
 Source of <https://yakkaworks.github.io/>. Built with MkDocs + Material.
 Indonesian is the default language, English lives under `/en/`.
 
+For a quick, plain-text reference to every root `.bat` and `.sh` command, see `README.txt`.
+
 Local folder: `D:\yakkaworks-site\mkdocs\`
-Working branch: `mkdocs-site` (never `main` or `weblive` from the push script)
+Working branch: `mkdocs-site`; production branch: `mkdocs-site-live`; legacy website archive: `web-live`. See `README.txt` for the quick script reference.
 
 > `D:\yakkaworks-site\cloudflare\` sits **outside** this repo on purpose.
 > Workers scripts, `.dev.vars` and tokens must never end up in a public repo.
@@ -18,7 +20,7 @@ environment and packages are created automatically the first time.
 | Want to... | Windows (double-click) |
 | --- | --- |
 | Get latest from the current Git branch + set up / update everything | `pull.bat` (same as `update.bat`) |
-| Sync the live `weblive` branch into a separate local copy | `sync.bat` |
+| Sync `mkdocs-site-live` into a separate local copy | `sync.bat` |
 | Preview locally at http://127.0.0.1:8000/ | `serve.bat` |
 | Check build, commit, push to `mkdocs-site` | `push.bat` |
 | Reinstall the environment (rarely needed) | `install.bat` |
@@ -45,7 +47,7 @@ Then run a script from the project directory:
 | --- | --- |
 | Preview at http://127.0.0.1:8000/ | `bash serve.sh` |
 | Get latest from the current Git branch + update packages | `bash pull.sh` (same as `bash update.sh`) |
-| Sync the live `weblive` branch into a separate local copy | `bash sync.sh` |
+| Sync `mkdocs-site-live` into a separate local copy | `bash sync.sh` |
 | Strict build, commit, and push to `mkdocs-site` | `bash push.sh` or `bash push.sh "Commit message"` |
 | Install/reinstall the environment | `bash install.sh` |
 
@@ -72,13 +74,13 @@ extracting the ZIP, using `bash script.sh` as shown above avoids that issue.
 
 `push.bat` and `push.sh` run `mkdocs build --strict` first. If a link is broken
 or the build warns, nothing is pushed. They never force-push and refuse to push
-to `main`/`weblive`.
+to `main`, `web-live`, or `mkdocs-site-live`.
 
 
 ### Syncing the live branch to your computer
 
 Run `sync.bat` on Windows or `bash sync.sh` on Linux Mint / Ubuntu in Termux/PRoot.
-The first run clones the GitHub `weblive` branch into `live-sync/` inside this project;
+The first run clones the GitHub `mkdocs-site-live` branch into `live-sync/` inside this project;
 subsequent runs fetch and fast-forward that separate copy. This is a **one-way live-to-local
 sync** and does not change the MkDocs source files in the project root. `live-sync/` is
 ignored by the main repository so it will not be included in normal site commits.
@@ -111,7 +113,7 @@ outside `docs/` so they are never published.
 - `about.md` = Indonesian (default, served at `/about/`)
 - `about.en.md` = English (served at `/en/about/`)
 - No `.en.md` yet? The Indonesian page is shown under `/en/` until you add one.
-- The blog is Indonesian only.
+- Blog posts can have Indonesian and English variants; add the matching `.en.md` post when translating.
 
 ### Sidebar order and titles
 
@@ -156,6 +158,13 @@ Isi lengkap.
 URL: `/blogs/2026/10/04/judul-singkat/`. Always set `slug`, otherwise renaming
 the title changes the URL.
 
+## Tools
+
+- **Commission Price Estimator** (`docs/tools/commission-price-estimator/`) provides an approximate commission calculation.
+- **JSON Uni Tool** (`docs/tools/json-uni-tool/`) validates JSON, formats or minifies it, removes `//` and `/* */` comments, and supports paste, `.json`, `plugin.manifest`, or plugin ZIP input. ZIP input is read in-browser and looks for a file named exactly `plugin.manifest`; ZIP support loads JSZip from jsDelivr on demand. Files are not uploaded to the site by the tool.
+
+Standard JSON does not allow comments. Remove comments before formatting/minifying comment-containing files. The tool does not repair unrelated JSON syntax issues or trailing commas.
+
 ## Fonts and logo
 
 Already in place:
@@ -186,46 +195,25 @@ Git is bad at big binaries (GitHub warns at 50 MB, blocks at 100 MB, and every
 version stays in history forever). Keep `webdata/download/` for small files.
 For anything chunky use GitHub Releases or Cloudflare R2 and link to it.
 
-## How deployment works
+## Current branch roles and deployment
 
-`.github/workflows/build.yml`:
+The current GitHub branch layout is:
 
-- push to `mkdocs-site` or `main`: strict build check only, nothing is published
-- push to `weblive`: build + publish to GitHub Pages
+- `mkdocs-site`: development/source branch. `push.bat` and `push.sh` target this branch.
+- `mkdocs-site-live`: production branch. GitHub Actions runs `mkdocs build --strict` and deploys the generated `site/` output from this branch.
+- `web-live`: legacy static website archive; keep it for historical reference/recovery.
+- `main`: existing repository history/archive.
 
-So your habit stays the same: merge into `weblive` when ready, that's the live site.
+`.github/workflows/build.yml` is configured so pushes to `main` and `mkdocs-site` run a strict build check only. A push/merge to `mkdocs-site-live` runs the strict build and deploys through GitHub Pages. GitHub Pages must use **GitHub Actions** as its source, and the `github-pages` environment must allow `mkdocs-site-live` to deploy.
 
-## Going live (one time)
+Daily publishing workflow:
 
-Today `weblive` holds the old static site and Pages serves it straight from the
-branch. The new site shares **no history** with it, so a plain merge will refuse.
-Do these in order:
+1. Work and preview locally with `serve.bat` (or `bash serve.sh`).
+2. Run `push.bat` / `bash push.sh` while checked out on `mkdocs-site`. This strict-builds, commits non-ignored changes and pushes the development branch; it does not publish.
+3. Open a pull request from `mkdocs-site` into `mkdocs-site-live`. Review changes, wait for the strict build to pass, and merge to publish.
+4. Keep `main` and `web-live` unchanged as archives unless you intentionally decide otherwise. No unrelated-history merge or force-push is needed for normal publishing.
 
-1. **Pages source.** Repo Settings > Pages > Build and deployment > Source: **GitHub Actions**.
-   (This is the moment the live site switches. Do it right before step 3.)
-2. **Allow `weblive` to deploy.** Settings > Environments > `github-pages` >
-   Deployment branches > add `weblive`. Otherwise the deploy job is rejected.
-3. **Replace `weblive` with the new site.** Back up the old one first:
-
-   ```powershell
-   git fetch origin
-   git branch weblive-old origin/weblive
-   git push origin weblive-old
-   git checkout -B weblive origin/mkdocs-site
-   git push --force-with-lease origin weblive
-   ```
-
-   This is the only force-push in the whole flow, and it is manual on purpose.
-   The old site stays recoverable on `weblive-old`.
-4. Watch the Actions tab. When it's green, the new site is live.
-5. (Optional) Make `main` match too: same idea, `main-old` backup, then reset `main`
-   to `mkdocs-site`, so your merge-main-into-weblive habit works again. After that,
-   work on `main` (or keep `mkdocs-site`), and merge into `weblive` to publish.
-
-Alternative to step 3 if you want to keep the old files in `weblive`'s history:
-`git merge origin/mkdocs-site --allow-unrelated-histories` and resolve the
-conflicts. The old HTML files would stay in the tree but are not published
-(only the MkDocs `site/` output is). It's messier, so I'd go with step 3.
+`sync.bat` / `bash sync.sh` makes a separate fast-forward-only copy of `mkdocs-site-live` under `live-sync/`. It does not change the current source checkout.
 
 Old URLs `license.html`, `privacy.html` and `terms.html` redirect to the new pages.
 Other old URLs are not redirected. Add more under `redirects` in `mkdocs.yml`.
@@ -256,7 +244,7 @@ Other old URLs are not redirected. Add more under `redirects` in `mkdocs.yml`.
 
 ## Content migration from the live website
 
-The Store keeps the recovered TheoTown plugin catalogue and organizes it for future data additions. Synthetic thumbnail artwork has been removed; final media can be added under `docs/webdata/img/` with slug-based filenames and referenced from the table/detail pages when ready. Kustom and Minecraft currently have no catalog entries, so no fictional items are listed.
+The Store includes the recovered TheoTown plugin catalogue with local slug-based JPG thumbnails under `docs/webdata/img/`. Add future thumbnails using the same convention, such as `docs/webdata/img/just-stairs.jpg`. The commission pages and price estimator are also included. Kustom and Minecraft currently have no catalog entries, so no fictional items are listed.
 
 ## Legal pages and link validation
 
@@ -300,3 +288,12 @@ Added `docs/blogs/discord-server-directory/` in Indonesian and English. It conve
 ## Store product thumbnails
 
 The original Store thumbnail JPGs are now included under `docs/webdata/img/`, with filenames normalized to product slugs (for example, `just-stairs.jpg`, `generic-road-train.jpg`, and `warehouse-shed-pack.jpg`). The source files were provided in `thumb.zip`; the images were copied without re-encoding. Both Indonesian and English Store indexes use these images, and each TheoTown plugin detail page displays the same artwork above its title. Store table images use a 4:1 presentation at 9rem × 2.25rem; detail-page thumbnails are responsive with the same aspect ratio and 0.25rem corners.
+
+## Recent update: Store table and migration announcement
+
+- Store indexes combine each TheoTown product thumbnail and title in one cell, with the 4:1 image above the title to reduce horizontal width on mobile.
+- Added the bilingual announcement `docs/blogs/mkdocs-migration/` covering the MkDocs migration, accessibility, the gradual Library tutorial rollout, and clearer commissions plus the price estimator.
+
+## Store image paths
+
+Store thumbnails and product-detail images use root-relative paths such as `/webdata/img/just-stairs.jpg`. Do not use `../webdata/img/...` or `../../webdata/img/...`: the English site is served below `/en/`, so relative paths resolve to a nonexistent `/en/webdata/img/` location. Root-relative paths work in both language builds and on the root-domain local preview.

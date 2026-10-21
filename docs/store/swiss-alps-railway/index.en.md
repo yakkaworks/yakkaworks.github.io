@@ -1,4 +1,4 @@
-<img src="../../webdata/img/swiss-alps-railway.jpg" alt="Swiss Alps Railway" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/swiss-alps-railway.jpg" alt="Swiss Alps Railway" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Swiss Alps Railway
 

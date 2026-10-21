@@ -1,4 +1,4 @@
-<img src="../../webdata/img/just-stairs.jpg" alt="Just Stairs" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/just-stairs.jpg" alt="Just Stairs" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Just Stairs
 

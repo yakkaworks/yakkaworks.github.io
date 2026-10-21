@@ -1,4 +1,4 @@
-<img src="../../webdata/img/bordered-intercity-connection.jpg" alt="Bordered InterCity Connection" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/bordered-intercity-connection.jpg" alt="Bordered InterCity Connection" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Bordered InterCity Connection
 

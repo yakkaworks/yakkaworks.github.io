@@ -1,4 +1,4 @@
-<img src="../../webdata/img/pyongyang-apartment.jpg" alt="Pyongyang Apartment" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/pyongyang-apartment.jpg" alt="Pyongyang Apartment" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Pyongyang Apartment
 
