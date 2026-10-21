@@ -1,10 +1,11 @@
 name: Build & Deploy
 
 # - mkdocs-site / main : strict build check only (nothing is published)
-# - weblive            : build + publish to GitHub Pages
+# - mkdocs-site-live    : build + publish to GitHub Pages
+# - web-live            : legacy archive only
 on:
   push:
-    branches: [mkdocs-site, main, weblive]
+    branches: [mkdocs-site, main, mkdocs-site-live]
   workflow_dispatch:
 
 permissions:
@@ -30,14 +31,14 @@ jobs:
       - name: Build (strict)
         run: mkdocs build --strict
 
-      - name: Upload site (weblive only)
-        if: github.ref == 'refs/heads/weblive'
+      - name: Upload site (mkdocs-site-live only)
+        if: github.ref == 'refs/heads/mkdocs-site-live'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   deploy:
-    if: github.ref == 'refs/heads/weblive'
+    if: github.ref == 'refs/heads/mkdocs-site-live'
     needs: build
     runs-on: ubuntu-latest
     permissions:
