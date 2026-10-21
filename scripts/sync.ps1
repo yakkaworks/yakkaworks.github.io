@@ -1,8 +1,8 @@
-# Sync the live branch into an isolated live-sync folder. The MkDocs source is untouched.
+# Sync the current production branch into an isolated live-sync folder. The MkDocs source is untouched.
 $ErrorActionPreference = 'Stop'
 
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
-$LiveBranch = 'weblive'
+$LiveBranch = 'mkdocs-site-live'
 $LiveRemote = 'https://github.com/yakkaworks/yakkaworks.github.io.git'
 $LiveDir = Join-Path $ProjectRoot 'live-sync'
 

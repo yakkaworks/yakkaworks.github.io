@@ -1,4 +1,4 @@
-<img src="../../webdata/img/retaining-walls.jpg" alt="Retaining Walls" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/retaining-walls.jpg" alt="Retaining Walls" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Retaining Walls
 

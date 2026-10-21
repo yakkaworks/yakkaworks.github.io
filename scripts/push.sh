@@ -5,7 +5,7 @@ trap 'yw_handle_error "$?" "$BASH_COMMAND"' ERR
 
 BRANCH='mkdocs-site'
 REMOTE_URL='https://github.com/yakkaworks/yakkaworks.github.io.git'
-PROTECTED_BRANCHES=('main' 'master' 'weblive')
+PROTECTED_BRANCHES=('main' 'master' 'web-live' 'mkdocs-site-live')
 MESSAGE="${*:-}"
 
 cd "$YW_PROJECT_ROOT"
@@ -84,4 +84,4 @@ fi
 yw_step "Pushing to origin/$BRANCH"
 git -C "$YW_PROJECT_ROOT" push -u origin "${BRANCH}:${BRANCH}"
 printf '\nPushed. Build check runs at: https://github.com/yakkaworks/yakkaworks.github.io/actions\n'
-printf 'The live site is unchanged until you merge into weblive (see README.md).\n'
+printf 'The live site is unchanged until changes are merged into mkdocs-site-live (see README.txt).\n'

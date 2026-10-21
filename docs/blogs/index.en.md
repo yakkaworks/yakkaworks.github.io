@@ -13,3 +13,4 @@ hide:
 ## Announcements
 
 - [Welcome to the New Yakka Works Website](welcome-to-the-new-site/index.md) — Yakka Works projects and content are brought together in one place.
+- [Yakka Works Has Migrated to MkDocs](mkdocs-migration/index.md) — A short update on the site migration, the Library, and clearer commission information.

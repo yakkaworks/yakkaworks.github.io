@@ -1,4 +1,4 @@
-<img src="../../webdata/img/concrete-pylons.jpg" alt="Concrete Pylons" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/concrete-pylons.jpg" alt="Concrete Pylons" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Concrete Pylons
 

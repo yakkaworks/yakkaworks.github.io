@@ -1,4 +1,4 @@
-<img src="../../webdata/img/warehouse-shed-pack.jpg" alt="Warehouse & Shed Pack" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/warehouse-shed-pack.jpg" alt="Warehouse & Shed Pack" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Warehouse & Shed Pack
 

@@ -1,4 +1,4 @@
-<img src="../../webdata/img/invisible-intercity-connection.jpg" alt="Invisible InterCity Connection" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/invisible-intercity-connection.jpg" alt="Invisible InterCity Connection" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Invisible InterCity Connection
 

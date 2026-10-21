@@ -1,4 +1,4 @@
-<img src="../../webdata/img/yakka-studio-office.jpg" alt="Yakka Studio Office" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/yakka-studio-office.jpg" alt="Yakka Studio Office" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Yakka Studio Office
 

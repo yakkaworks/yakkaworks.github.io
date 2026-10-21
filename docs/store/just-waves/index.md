@@ -1,4 +1,4 @@
-<img src="../../webdata/img/just-waves.jpg" alt="Just Waves" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/just-waves.jpg" alt="Just Waves" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Just Waves
 

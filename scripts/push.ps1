@@ -1,5 +1,5 @@
 # Strict build check, then commit and push to the mkdocs-site branch ONLY.
-# main and weblive are protected: this script refuses to touch them and never force-pushes.
+# main, web-live, and mkdocs-site-live are protected: this script refuses to touch them and never force-pushes.
 param(
     [string]$Message
 )
@@ -8,7 +8,7 @@ param(
 
 $Branch    = 'mkdocs-site'
 $RemoteUrl = 'https://github.com/yakkaworks/yakkaworks.github.io.git'
-$Protected = @('main', 'master', 'weblive')
+$Protected = @('main', 'master', 'web-live', 'mkdocs-site-live')
 
 try {
     Set-Location $ProjectRoot
@@ -94,7 +94,7 @@ try {
 
     Write-Host ''
     Write-Host "Pushed. Build check runs on GitHub: https://github.com/yakkaworks/yakkaworks.github.io/actions" -ForegroundColor Green
-    Write-Host "The live site is unchanged until you merge into weblive (see README)." -ForegroundColor Green
+    Write-Host "The live site is unchanged until changes are merged into mkdocs-site-live (see README.txt)." -ForegroundColor Green
 }
 catch {
     Show-Failure $_

@@ -1,4 +1,4 @@
-<img src="../../webdata/img/yakka-topics.jpg" alt="Yakka Topics" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/yakka-topics.jpg" alt="Yakka Topics" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Yakka Topics
 

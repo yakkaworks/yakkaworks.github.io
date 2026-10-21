@@ -1,4 +1,4 @@
-<img src="../../webdata/img/tractor-road-train.jpg" alt="Tractor Road Train" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/tractor-road-train.jpg" alt="Tractor Road Train" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Tractor Road Train
 

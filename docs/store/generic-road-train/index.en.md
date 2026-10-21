@@ -1,4 +1,4 @@
-<img src="../../webdata/img/generic-road-train.jpg" alt="Generic Road Train" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/generic-road-train.jpg" alt="Generic Road Train" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Generic Road Train
 

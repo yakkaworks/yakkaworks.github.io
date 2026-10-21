@@ -1,4 +1,4 @@
-<img src="../../webdata/img/map-edge-pack.jpg" alt="Map Edge Pack" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/map-edge-pack.jpg" alt="Map Edge Pack" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Map Edge Pack
 

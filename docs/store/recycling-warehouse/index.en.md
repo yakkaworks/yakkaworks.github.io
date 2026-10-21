@@ -1,4 +1,4 @@
-<img src="../../webdata/img/recycling-warehouse.jpg" alt="Recycling Warehouse" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/recycling-warehouse.jpg" alt="Recycling Warehouse" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Recycling Warehouse
 

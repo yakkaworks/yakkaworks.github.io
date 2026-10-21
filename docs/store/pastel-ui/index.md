@@ -1,4 +1,4 @@
-<img src="../../webdata/img/pastel-ui.jpg" alt="Pastel UI" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/pastel-ui.jpg" alt="Pastel UI" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Pastel UI
 

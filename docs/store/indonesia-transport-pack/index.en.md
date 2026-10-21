@@ -1,4 +1,4 @@
-<img src="../../webdata/img/indonesia-transport-pack.jpg" alt="Indonesia Transport Pack (DEPRECATED!)" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/indonesia-transport-pack.jpg" alt="Indonesia Transport Pack (DEPRECATED!)" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Indonesia Transport Pack (DEPRECATED!)
 

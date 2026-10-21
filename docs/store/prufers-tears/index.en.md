@@ -1,4 +1,4 @@
-<img src="../../webdata/img/prufers-tears.jpg" alt="Prüfer's Tears" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/prufers-tears.jpg" alt="Prüfer's Tears" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Prüfer's Tears
 

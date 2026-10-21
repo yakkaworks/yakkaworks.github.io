@@ -1,4 +1,4 @@
-<img src="../../webdata/img/actual-map-sizes.jpg" alt="Actual Map Sizes" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/actual-map-sizes.jpg" alt="Actual Map Sizes" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Actual Map Sizes
 

@@ -1,4 +1,4 @@
-<img src="../../webdata/img/pedestrian-expansion.jpg" alt="Pedestrian Expansion" class="yw-store-detail-thumbnail" loading="lazy">
+<img src="/webdata/img/pedestrian-expansion.jpg" alt="Pedestrian Expansion" class="yw-store-detail-thumbnail" loading="lazy">
 
 # Pedestrian Expansion
 

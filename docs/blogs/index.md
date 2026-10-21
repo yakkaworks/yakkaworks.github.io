@@ -13,3 +13,4 @@ hide:
 ## Pengumuman
 
 - [Welcome to the New Yakka Works Website](welcome-to-the-new-site/index.md) — Seluruh proyek dan konten Yakka Works kini disatukan dalam satu tempat.
+- [Migrasi Yakka Works ke MkDocs](mkdocs-migration/index.md) — Ringkasan migrasi situs, awal baru bagi Library, dan pembaruan informasi komisi.
