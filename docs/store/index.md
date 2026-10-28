@@ -41,6 +41,23 @@ Katalog plugin TheoTown yang tersedia saat ini. Sebelum memasang konten, baca [p
 |---|---|---|---|---|
 | <img src="/webdata/img/warehouse-shed-pack.jpg" alt="Warehouse & Shed Pack" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Warehouse &amp; Shed Pack</span> | 1.6 | 07-Sep-26 | [Detail](warehouse-shed-pack/index.md) | [Unduh terbaru](https://link-target.net/7333481/SR0VXTvybeGn) |
 
+### Tema UI { #ui-themes }
+
+Tema antarmuka untuk mengubah tampilan TheoTown.
+
+| Plugin | Versi | Tanggal | Detail | Unduhan terbaru |
+|---|---|---|---|---|
+| <img src="/webdata/img/pastel-ui-legacy.jpg" alt="Pastel UI (DEPRECATED!)" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pastel UI (DEPRECATED!)</span> | 1p | 04-Apr-26 | [Detail](pastel-ui-legacy/index.md) | [Versi pengganti](pastel-ui/index.md) |
+| <img src="/webdata/img/pastel-ui.jpg" alt="Pastel UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pastel UI</span> | 1 | 28-Oct-26 | [Detail](pastel-ui/index.md) | [Unduh terbaru](https://direct-link.net/7333481/BafuoHfJpGjK) |
+| <img src="/webdata/img/nord-ui.jpg" alt="Nord UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Nord UI</span> | 1 | 28-Oct-26 | [Detail](nord-ui/index.md) | [Unduh terbaru](https://link-target.net/7333481/hEe2iN7qkTC9) |
+| <img src="/webdata/img/bubble-ui.jpg" alt="Bubble UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Bubble UI</span> | 1 | 28-Oct-26 | [Detail](bubble-ui/index.md) | [Unduh terbaru](https://link-hub.net/7333481/1yqCzecMDxWn) |
+| <img src="/webdata/img/mono-ui.jpg" alt="Mono UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Mono UI</span> | 1 | 28-Oct-26 | [Detail](mono-ui/index.md) | [Unduh terbaru](https://link-target.net/7333481/BSmzBHsEK4Bw) |
+| <img src="/webdata/img/mocca-ui.jpg" alt="Mocca UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Mocca UI</span> | 1 | 28-Oct-26 | [Detail](mocca-ui/index.md) | [Unduh terbaru](https://link-hub.net/7333481/GtuJIOrtJlCy) |
+| <img src="/webdata/img/boards-ui.jpg" alt="Boards UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Boards UI</span> | 1 | 28-Oct-26 | [Detail](boards-ui/index.md) | [Unduh terbaru](https://direct-link.net/7333481/oQWUj6OeHALK) |
+| <img src="/webdata/img/frutiger-aero-ui.jpg" alt="Frutiger Aero UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Frutiger Aero UI</span> | 1 | 28-Oct-26 | [Detail](frutiger-aero-ui/index.md) | [Unduh terbaru](https://direct-link.net/7333481/PEbFgOLT8arV) |
+| <img src="/webdata/img/doos-ui.jpg" alt="Doos UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Doos UI</span> | 1 | 28-Oct-26 | [Detail](doos-ui/index.md) | [Unduh terbaru](https://direct-link.net/7333481/kIVi2nnGIvFr) |
+| <img src="/webdata/img/cube-ui.jpg" alt="Cube UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Cube UI</span> | 1 | 28-Oct-26 | [Detail](cube-ui/index.md) | [Unduh terbaru](https://link-hub.net/7333481/a4NKVY4UTOSl) |
+
 ### Lainnya { #other }
 
 | Plugin | Versi | Tanggal | Detail | Unduhan terbaru |
@@ -48,7 +65,6 @@ Katalog plugin TheoTown yang tersedia saat ini. Sebelum memasang konten, baca [p
 | <img src="/webdata/img/discord-background.jpg" alt="Discord Background" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Discord Background</span> | 9 | 07-Sep-26 | [Detail](discord-background/index.md) | [Unduh terbaru](https://link-hub.net/7333481/aEB8tdRMsKro) |
 | <img src="/webdata/img/alternative-rank-names.jpg" alt="Alternative Rank Name's" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Alternative Rank Name's</span> | 9 | 08-Aug-26 | [Detail](alternative-rank-names/index.md) | [Unduh terbaru](https://link-center.net/7333481/fPkRJMXV0trb) |
 | <img src="/webdata/img/actual-map-sizes.jpg" alt="Actual Map Sizes" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Actual Map Sizes</span> | 1p | 04-Apr-26 | [Detail](actual-map-sizes/index.md) | Tidak tersedia |
-| <img src="/webdata/img/pastel-ui.jpg" alt="Pastel UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pastel UI</span> | 1p | 04-Apr-26 | [Detail](pastel-ui/index.md) | [Unduh terbaru](https://link-target.net/7333481/PlFwev56wGbC) |
 | <img src="/webdata/img/lighter-rain.jpg" alt="Lighter Rain" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Lighter Rain</span> | 1p | 11-Oct-25 | [Detail](lighter-rain/index.md) | [Unduh terbaru](https://direct-link.net/7333481/8EJh3M8f8OfV) |
 | <img src="/webdata/img/yakka-topics.jpg" alt="Yakka Topics" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Yakka Topics</span> | 3p | 11-Oct-25 | [Detail](yakka-topics/index.md) | [Unduh terbaru](https://link-target.net/7333481/b82tFj7rxyeM) |
 | <img src="/webdata/img/pedestrian-expansion.jpg" alt="Pedestrian Expansion" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pedestrian Expansion</span> | 1p | 01-Aug-25 | [Detail](pedestrian-expansion/index.md) | [Unduh terbaru](https://direct-link.net/7333481/xEuD1Ojc7uLs) |
@@ -103,6 +119,12 @@ Membutuhkan plugin atau konten khusus? Baca [informasi komisi](commissions/index
 ### Website Exclusive Plugins { #website-exclusive-plugins }
 
 Bagian ini diperuntukkan bagi plugin TheoTown eksklusif situs. Panduan pemasangan tersedia di [panduan instalasi plugin TheoTown](../library/theotown-tutorials/installing-plugins.md).
+
+#### Terrain and Trees { #exclusive-terrain-and-trees }
+
+| Plugin | Versi | Tanggal | Detail | Unduhan terbaru |
+|---|---|---|---|---|
+| <img src="/webdata/img/nature-plus.jpg" alt="Nature Plus (WEB EXCLUSIVE)" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Nature Plus <small>(WEB EXCLUSIVE)</small></span> | 1.3 | 28-Oct-26 | [Detail](nature-plus/index.md) | [Unduh terbaru](https://www.mediafire.com/file/muh1lk02ssjkl3v/Nature_Plus_1.3+.ttplugin/file) |
 
 ### TheoTown Maps { #theotown-maps }
 

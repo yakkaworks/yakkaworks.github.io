@@ -2,7 +2,8 @@ title: Toko
 nav:
   - ... | index.*md
   - commissions
-  - website-exclusive-plugins
+  - website-exclusive-plugins:
+    - nature-plus
   - TheoTown Plugins:
     - generic-road-train
     - bus-tram-road
@@ -17,7 +18,6 @@ nav:
     - discord-background
     - alternative-rank-names
     - actual-map-sizes
-    - pastel-ui
     - lighter-rain
     - yakka-topics
     - pedestrian-expansion
@@ -33,6 +33,17 @@ nav:
     - yakka-studio-office
     - pyongyang-apartment
     - prufers-tears
+    - UI Themes:
+      - pastel-ui
+      - pastel-ui-legacy
+      - nord-ui
+      - bubble-ui
+      - mono-ui
+      - mocca-ui
+      - boards-ui
+      - frutiger-aero-ui
+      - doos-ui
+      - cube-ui
   - TheoTown Maps:
     - theotown-maps
   - kustom

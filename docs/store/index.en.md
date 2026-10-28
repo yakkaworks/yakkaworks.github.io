@@ -41,6 +41,23 @@ Browse the currently listed TheoTown plugins. Before installing content, read th
 |---|---|---|---|---|
 | <img src="/webdata/img/warehouse-shed-pack.jpg" alt="Warehouse & Shed Pack" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Warehouse &amp; Shed Pack</span> | 1.6 | 07-Sep-26 | [Details](warehouse-shed-pack/index.md) | [Download latest](https://link-target.net/7333481/SR0VXTvybeGn) |
 
+### UI Themes { #ui-themes }
+
+Interface themes that change TheoTown’s appearance.
+
+| Plugin | Version | Date | Details | Latest download |
+|---|---|---|---|---|
+| <img src="/webdata/img/pastel-ui-legacy.jpg" alt="Pastel UI (DEPRECATED!)" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pastel UI (DEPRECATED!)</span> | 1p | 04-Apr-26 | [Details](pastel-ui-legacy/index.en.md) | [Replacement version](pastel-ui/index.en.md) |
+| <img src="/webdata/img/pastel-ui.jpg" alt="Pastel UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pastel UI</span> | 1 | 28-Oct-26 | [Details](pastel-ui/index.en.md) | [Latest download](https://direct-link.net/7333481/BafuoHfJpGjK) |
+| <img src="/webdata/img/nord-ui.jpg" alt="Nord UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Nord UI</span> | 1 | 28-Oct-26 | [Details](nord-ui/index.en.md) | [Latest download](https://link-target.net/7333481/hEe2iN7qkTC9) |
+| <img src="/webdata/img/bubble-ui.jpg" alt="Bubble UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Bubble UI</span> | 1 | 28-Oct-26 | [Details](bubble-ui/index.en.md) | [Latest download](https://link-hub.net/7333481/1yqCzecMDxWn) |
+| <img src="/webdata/img/mono-ui.jpg" alt="Mono UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Mono UI</span> | 1 | 28-Oct-26 | [Details](mono-ui/index.en.md) | [Latest download](https://link-target.net/7333481/BSmzBHsEK4Bw) |
+| <img src="/webdata/img/mocca-ui.jpg" alt="Mocca UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Mocca UI</span> | 1 | 28-Oct-26 | [Details](mocca-ui/index.en.md) | [Latest download](https://link-hub.net/7333481/GtuJIOrtJlCy) |
+| <img src="/webdata/img/boards-ui.jpg" alt="Boards UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Boards UI</span> | 1 | 28-Oct-26 | [Details](boards-ui/index.en.md) | [Latest download](https://direct-link.net/7333481/oQWUj6OeHALK) |
+| <img src="/webdata/img/frutiger-aero-ui.jpg" alt="Frutiger Aero UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Frutiger Aero UI</span> | 1 | 28-Oct-26 | [Details](frutiger-aero-ui/index.en.md) | [Latest download](https://direct-link.net/7333481/PEbFgOLT8arV) |
+| <img src="/webdata/img/doos-ui.jpg" alt="Doos UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Doos UI</span> | 1 | 28-Oct-26 | [Details](doos-ui/index.en.md) | [Latest download](https://direct-link.net/7333481/kIVi2nnGIvFr) |
+| <img src="/webdata/img/cube-ui.jpg" alt="Cube UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Cube UI</span> | 1 | 28-Oct-26 | [Details](cube-ui/index.en.md) | [Latest download](https://link-hub.net/7333481/a4NKVY4UTOSl) |
+
 ### Other { #other }
 
 | Plugin | Version | Date | Details | Download latest |
@@ -48,7 +65,6 @@ Browse the currently listed TheoTown plugins. Before installing content, read th
 | <img src="/webdata/img/discord-background.jpg" alt="Discord Background" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Discord Background</span> | 9 | 07-Sep-26 | [Details](discord-background/index.md) | [Download latest](https://link-hub.net/7333481/aEB8tdRMsKro) |
 | <img src="/webdata/img/alternative-rank-names.jpg" alt="Alternative Rank Name's" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Alternative Rank Name's</span> | 9 | 08-Aug-26 | [Details](alternative-rank-names/index.md) | [Download latest](https://link-center.net/7333481/fPkRJMXV0trb) |
 | <img src="/webdata/img/actual-map-sizes.jpg" alt="Actual Map Sizes" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Actual Map Sizes</span> | 1p | 04-Apr-26 | [Details](actual-map-sizes/index.md) | Unavailable |
-| <img src="/webdata/img/pastel-ui.jpg" alt="Pastel UI" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pastel UI</span> | 1p | 04-Apr-26 | [Details](pastel-ui/index.md) | [Download latest](https://link-target.net/7333481/PlFwev56wGbC) |
 | <img src="/webdata/img/lighter-rain.jpg" alt="Lighter Rain" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Lighter Rain</span> | 1p | 11-Oct-25 | [Details](lighter-rain/index.md) | [Download latest](https://direct-link.net/7333481/8EJh3M8f8OfV) |
 | <img src="/webdata/img/yakka-topics.jpg" alt="Yakka Topics" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Yakka Topics</span> | 3p | 11-Oct-25 | [Details](yakka-topics/index.md) | [Download latest](https://link-target.net/7333481/b82tFj7rxyeM) |
 | <img src="/webdata/img/pedestrian-expansion.jpg" alt="Pedestrian Expansion" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Pedestrian Expansion</span> | 1p | 01-Aug-25 | [Details](pedestrian-expansion/index.md) | [Download latest](https://direct-link.net/7333481/xEuD1Ojc7uLs) |
@@ -103,6 +119,12 @@ Need custom plugin or content? Read the [commission information](commissions/ind
 ### Website Exclusive Plugins { #website-exclusive-plugins }
 
 This section is for TheoTown plugins exclusive to this website. See the [TheoTown plugin installation guide](../library/theotown-tutorials/installing-plugins.md).
+
+#### Terrain and Trees { #exclusive-terrain-and-trees }
+
+| Plugin | Version | Date | Details | Download latest |
+|---|---|---|---|---|
+| <img src="/webdata/img/nature-plus.jpg" alt="Nature Plus (WEB EXCLUSIVE)" class="yw-store-thumbnail" loading="lazy"><span class="yw-store-product-title">Nature Plus <small>(WEB EXCLUSIVE)</small></span> | 1.3 | 28-Oct-26 | [Details](nature-plus/index.md) | [Download latest](https://www.mediafire.com/file/muh1lk02ssjkl3v/Nature_Plus_1.3+.ttplugin/file) |
 
 ### TheoTown Maps { #theotown-maps }
 
