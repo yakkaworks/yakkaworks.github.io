@@ -198,3 +198,16 @@ JSON UNI TOOL
 ## Store image paths
 
 Store thumbnails and product-detail images use root-relative paths such as `/webdata/img/just-stairs.jpg`. Do not use `../webdata/img/...` or `../../webdata/img/...`: the English site is served below `/en/`, so relative paths resolve to a nonexistent `/en/webdata/img/` location. Root-relative paths work in both language builds and on the root-domain local preview.
+
+ADS.TXT / ADSENSE
+----------------
+  Source file: docs/ads.txt
+  Published URL: https://yakkaworks.github.io/ads.txt
+  Current line:
+    google.com, pub-3902881310392114, DIRECT, f08c47fec0942fa0
+
+  MkDocs copies docs/ads.txt to the root of the generated site. ads.txt is a
+  standard root endpoint and does not need a menu or in-page link. Editing the
+  source file and rebuilding/redeploying updates the public endpoint. This line
+  does not itself install the AdSense JavaScript or analytics.
+

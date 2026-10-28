@@ -231,11 +231,7 @@ Other old URLs are not redirected. Add more under `redirects` in `mkdocs.yml`.
   and security updates only, announced until November 2026. Versions are pinned in
   `requirements.txt`, so the build stays reproducible, but plan a look at
   Zensical (the successor) later.
-- **AdSense / analytics.** `ads.txt` already has your publisher ID. The AdSense
-  script and any analytics are **not** installed on this new site yet. The privacy
-  and cookie pages describe them (copied from your old policy), so either add the
-  scripts or edit those pages to match. EEA/UK traffic needs a Google-certified
-  consent banner for AdSense.
+- **AdSense / `ads.txt`.** `docs/ads.txt` contains `google.com, pub-3902881310392114, DIRECT, f08c47fec0942fa0` and MkDocs publishes it at `https://yakkaworks.github.io/ads.txt` (the file is served from the site root; it does not need a navigation link). The AdSense script and analytics are **not** installed by this file alone. The privacy and cookie pages describe services from the previous site, so keep those descriptions aligned with whichever scripts/services are actually active. EEA/UK traffic may require a Google-certified consent banner if personalized ads are enabled.
 - **Public repo.** Everything pushed here, including the address in `mkdocs.yml`,
   stays in git history even after you delete it.
 - `ai.txt` is informational only. `robots.txt` is permissive. `sitemap.xml` is
