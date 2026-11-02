@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{#
+  Google AdSense site-wide code.
+  Publisher ID: ca-pub-3902881310392114
+  This template extends Material's base template so the snippet is added to
+  the <head> of every generated page without replacing the existing theme.
+#}
+
+{% block extrahead %}
+  {{ super() }}
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3902881310392114"
+    crossorigin="anonymous"></script>
+{% endblock %}
