@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
-
 :root {
-  font-family: "Nunito Sans", "Rounded Mplus 1c", system-ui, sans-serif;
+  font-family: "Rounded Mplus 1c", "Nunito Sans", system-ui, sans-serif;
   color: #26302b;
   background: #f4f6f3;
   font-synthesis: none;
@@ -37,13 +35,13 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   background: var(--orange); color: white; font-weight: 900; font-size: 17px;
 }
 .topbar-right { display: flex; align-items: center; gap: 12px; }
-.beta-tag { padding: 4px 8px; border-radius: 5px; color: #87501f; background: #fff2e6; font: 500 10px "DM Mono", monospace; letter-spacing: .5px; }
+.beta-tag { padding: 4px 8px; border-radius: 5px; color: #87501f; background: #fff2e6; font: 500 10px ui-monospace, monospace; letter-spacing: .5px; }
 .topbar-caption { color: var(--muted); font-size: 12px; }
 .workspace { max-width: 1000px; margin: 0 auto; padding: 54px 24px 32px; }
 .page-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 26px; }
-.eyebrow { margin: 0 0 8px; color: var(--green); font: 500 10px "DM Mono", monospace; letter-spacing: 1.2px; }
+.eyebrow { margin: 0 0 8px; color: var(--green); font: 500 10px ui-monospace, monospace; letter-spacing: 1.2px; }
 h1 { margin: 0; font-size: clamp(28px, 4vw, 36px); letter-spacing: -1.2px; line-height: 1.15; }
-.version { vertical-align: middle; padding: 4px 7px; border: 1px solid #dfe8da; border-radius: 6px; color: var(--green); font: 500 11px "DM Mono", monospace; letter-spacing: 0; }
+.version { vertical-align: middle; padding: 4px 7px; border: 1px solid #dfe8da; border-radius: 6px; color: var(--green); font: 500 11px ui-monospace, monospace; letter-spacing: 0; }
 .intro { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
 .heading-actions { display: flex; gap: 9px; flex-shrink: 0; }
 .button { min-height: 39px; padding: 0 14px; border-radius: 7px; font-size: 12px; font-weight: 800; transition: .15s ease; }
@@ -73,7 +71,7 @@ h1 { margin: 0; font-size: clamp(28px, 4vw, 36px); letter-spacing: -1.2px; line-
 .section-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
 .section-heading h2, .error-state h2 { margin: 0; font-size: 17px; letter-spacing: -.3px; }
 .section-heading p, .error-state p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
-.field-count { color: #89948c; font: 11px "DM Mono", monospace; }
+.field-count { color: #89948c; font: 11px ui-monospace, monospace; }
 .fields-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 23px 28px; max-width: 760px; }
 .field { min-width: 0; }
 .field > label:first-child { display: block; margin-bottom: 6px; color: #36423a; font-size: 12px; font-weight: 800; }
@@ -92,19 +90,19 @@ h1 { margin: 0; font-size: clamp(28px, 4vw, 36px); letter-spacing: -1.2px; line-
 .empty-state { padding: 45px 12px; color: #89948c; text-align: center; font-size: 12px; }
 .error-state { display: flex; gap: 14px; min-height: 260px; padding: 40px 30px; }
 .error-symbol { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; border-radius: 50%; background: #fff0ed; color: #bd4e43; font-weight: 900; }
-.error-state ul { padding-left: 18px; color: #a84c43; font: 11px "DM Mono", monospace; }
+.error-state ul { padding-left: 18px; color: #a84c43; font: 11px ui-monospace, monospace; }
 .panel-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 22px; border-top: 1px solid #edf0ec; background: #fcfdfb; }
 .source-toggle { padding: 3px 0; border: 0; background: none; color: #53634f; font-size: 11px; font-weight: 800; }
 .chevron { display: inline-block; margin-right: 7px; font-size: 17px; transition: transform .15s; }
 .chevron-open { transform: rotate(90deg); }
 .footer-hint { color: #9aa39c; font-size: 10px; }
 .source-area { padding: 15px 20px 18px; border-top: 1px solid var(--line); background: #f8faf7; }
-.source-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; color: #78847b; font: 10px "DM Mono", monospace; }
-.copy-button { padding: 4px 8px; border: 1px solid #dfe6dd; border-radius: 5px; background: white; color: #53634f; font: 10px "Nunito Sans", sans-serif; }
-.source-editor { display: block; width: 100%; min-height: 280px; padding: 15px; resize: vertical; border: 1px solid #dfe6dd; border-radius: 7px; outline: none; background: #222b26; color: #dce8da; font: 11px/1.65 "DM Mono", monospace; tab-size: 2; }
+.source-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; color: #78847b; font: 10px ui-monospace, monospace; }
+.copy-button { padding: 4px 8px; border: 1px solid #dfe6dd; border-radius: 5px; background: white; color: #53634f; font-size: 10px; }
+.source-editor { display: block; width: 100%; min-height: 280px; padding: 15px; resize: vertical; border: 1px solid #dfe6dd; border-radius: 7px; outline: none; background: #222b26; color: #dce8da; font: 11px/1.65 ui-monospace, monospace; tab-size: 2; }
 .source-editor:focus { border-color: #83aa70; box-shadow: 0 0 0 3px #4d8b3115; }
 .source-help { margin: 9px 0 0; color: #8b968d; font-size: 10px; }
-.source-help code { color: #526b48; font-family: "DM Mono", monospace; }
+.source-help code { color: #526b48; font-family: ui-monospace, monospace; }
 .page-footer { display: flex; justify-content: space-between; gap: 12px; padding: 20px 2px; color: #929d94; font-size: 10px; }
 .footer-separator { padding: 0 5px; color: #c4ccc3; }
 
