@@ -165,7 +165,7 @@ watch(visibleTabs, (nextTabs) => {
     <main class="workspace">
       <section class="page-heading">
         <div>
-          <p class="eyebrow">THETOWN CREATOR TOOLS</p>
+          <p class="eyebrow">THEOTOWN CREATOR TOOLS</p>
           <h1>Plugin Builder <span class="version">0.1</span></h1>
           <p class="intro">Configure a building with familiar settings. The source stays in sync in the background.</p>
         </div>
