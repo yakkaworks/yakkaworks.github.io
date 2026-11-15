@@ -1,0 +1,57 @@
+{
+  // DEMO TEMPLATE: these keys are illustrative and are NOT a verified TheoTown plugin schema.
+
+  // @studio.label "Building name"
+  // @studio.description "A name to identify this example building."
+  // @studio.tab "General"
+  "name": "Small Residence",
+
+  // @studio.label "Description"
+  // @studio.description "A short description shown in this example project."
+  // @studio.tab "General"
+  "description": "A modest home for a growing neighbourhood.",
+
+  // @studio.label "Building category"
+  // @studio.description "Choose the broad category for this demonstration."
+  // @studio.tab "General"
+  // @studio.options ["Residential", "Commercial", "Industrial"]
+  "category": "Residential",
+
+  // @studio.label "Construction cost"
+  // @studio.description "The example construction cost. This is not a confirmed in-game property."
+  // @studio.tab "Gameplay"
+  // @studio.type number
+  // @studio.min 0
+  // @studio.max 100000
+  "price": 500,
+
+  // @studio.label "Population"
+  // @studio.description "Example population value."
+  // @studio.tab "Gameplay"
+  // @studio.type number
+  // @studio.min 0
+  // @studio.max 10000
+  "population": 12,
+
+  // @studio.label "Building width"
+  // @studio.description "Illustrative footprint width."
+  // @studio.tab "Appearance"
+  // @studio.type number
+  // @studio.min 1
+  // @studio.max 64
+  "width": 2,
+
+  // @studio.label "Building depth"
+  // @studio.description "Illustrative footprint depth."
+  // @studio.tab "Appearance"
+  // @studio.type number
+  // @studio.min 1
+  // @studio.max 64
+  "depth": 2,
+
+  // @studio.label "Enable custom behaviour"
+  // @studio.description "A demonstration toggle for boolean controls."
+  // @studio.tab "Advanced"
+  // @studio.type boolean
+  "customBehaviour": false
+}
