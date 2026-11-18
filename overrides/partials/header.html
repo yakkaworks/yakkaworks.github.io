@@ -6,7 +6,7 @@
         {% if config.theme.logo %}<img src="{{ config.theme.logo | url }}" alt="" width="20" height="20">{% endif %}
         <span>{{ config.site_name }}</span>
       </a>
-      <div class="yw-header__utilities">
+      <div class="yw-header__utilities">\n        <label class="yw-search-modal-trigger" for="__search" aria-label="{{ lang.t(\"search\") }}">⌕</label>
         {% if config.theme.palette and not config.theme.palette is mapping %}
           {% include "partials/palette.html" %}
           {% include "partials/javascripts/palette.html" %}
