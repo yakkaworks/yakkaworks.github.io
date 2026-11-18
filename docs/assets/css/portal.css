@@ -131,21 +131,12 @@ body>*{position:relative;z-index:1}
 }
 
 
+
 /* Final header/search/nav and footer frame alignment. */
-.md-header.yw-header .yw-header__search{display:none}
+.md-header.yw-header{position:static;inset:auto;top:auto}
+.md-header.yw-header .yw-header__search{display:block}
 .md-header.yw-header .md-search__icon{display:none!important}
-.md-header.yw-header .md-search{
-  position:relative;
-  display:block;
-  width:100%;
-  max-width:none;
-  height:auto;
-  margin:0;
-  padding:6px 12px;
-  box-sizing:border-box;
-  background:var(--yw-green);
-}
-.md-header.yw-header .md-search__form{display:none}
+.md-header.yw-header .md-search__form{display:block}
 .md-header.yw-header .yw-primary-nav{display:block}
 .md-header.yw-header .yw-primary-nav__inner{min-height:38px}
 .md-footer{
