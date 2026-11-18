@@ -41,3 +41,12 @@ body>*{position:relative;z-index:1}
 @media(max-width:900px){.md-header.yw-header,.md-main__inner,.md-footer{margin-left:12px;margin-right:12px}}
 @media(max-width:640px){.md-header.yw-header{margin:8px 8px 0}.md-main__inner{margin:12px 8px 16px}.md-footer{margin:0 8px 12px}.yw-header__brand-inner{padding-inline:9px}.yw-header__search{padding:10px}.yw-search button{padding-inline:13px}.yw-primary-nav__inner{padding-inline:5px}.yw-primary-nav a{padding-inline:7px;font-size:12px}.yw-page__body{padding:24px 20px}.yw-page__end{padding:12px 20px 16px}.yw-footer__inner{grid-template-columns:1fr;gap:14px;padding:16px}.yw-footer__inner>*{padding:0}.yw-footer__inner>*+*{border-left:0;border-top:1px solid var(--yw-line);padding-top:12px}}
 @media(max-width:380px){.yw-header__brand-inner{align-items:flex-start}.yw-header__utilities{gap:5px}.yw-page__meta{flex-direction:column;gap:3px}.yw-search button{padding-inline:9px}}
+
+/* Footer sizing and search dialog trigger. */
+.yw-footer{max-width:var(--yw-page-width);margin:0 auto 22px;border:1px solid var(--yw-border);box-shadow:var(--yw-shadow)}
+.yw-footer__copyright{margin:0;text-align:center}
+.yw-footer__support{margin:.65rem 0 0;font-size:12px}
+.yw-search-modal-trigger{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;line-height:1;color:#fff}
+.yw-search-modal-trigger:hover{text-decoration:underline}
+@media(max-width:900px){.yw-footer{margin-left:12px;margin-right:12px}}
+@media(max-width:640px){.yw-footer{margin:0 8px 12px}}
