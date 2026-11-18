@@ -167,3 +167,21 @@ body>*{position:relative;z-index:1}
   padding:0;
   box-sizing:border-box;
 }
+
+
+/* Keep Material's back-to-top control out of the article flow.
+   It remains controlled by the navigation.top feature, but floats at the
+   lower-right edge of the portal frame instead of overlaying page content. */
+.md-top{
+  position:fixed!important;
+  top:auto!important;
+  right:max(calc((100vw - var(--yw-page-width))/2 + 12px),1rem)!important;
+  bottom:1rem!important;
+  left:auto!important;
+  z-index:20!important;
+  margin:0!important;
+  transform:none;
+}
+@media(max-width:900px){
+  .md-top{right:1rem!important;bottom:1rem!important}
+}
