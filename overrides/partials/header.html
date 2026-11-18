@@ -22,16 +22,15 @@
       </div>
     </div>
   </div>
-  <div class="yw-header__search">
-    <label class="yw-search-launch" for="__search">
-      <span>{{ "Cari di Yakka Works..." if config.theme.language == "id" else "Search Yakka Works..." }}</span>
-      <strong>{{ "Cari" if config.theme.language == "id" else "Search" }}</strong>
-    </label>
-  </div>
   <nav class="yw-primary-nav" aria-label="{{ lang.t('tabs') }}">
     <div class="yw-primary-nav__inner">
+      <a href="{{ nav.homepage.url | url }}" {% if page.is_homepage %}aria-current="page"{% endif %}>{{ "Beranda" if config.theme.language == "id" else "Home" }}</a>
       {% for item in nav.items %}
-        {% if item.url %}<a href="{{ item.url | url }}" {% if item.active %}aria-current="page"{% endif %}>{{ item.title }}</a>{% endif %}
+        {% set target = item.url %}
+        {% if not target and item.children %}{% set target = item.children[0].url %}{% endif %}
+        {% if target %}
+          <a href="{{ target | url }}" {% if item.active %}aria-current="page"{% endif %}>{{ item.title }}</a>
+        {% endif %}
       {% endfor %}
     </div>
   </nav>
