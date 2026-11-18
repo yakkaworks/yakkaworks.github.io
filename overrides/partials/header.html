@@ -23,11 +23,10 @@
     </div>
   </div>
   <div class="yw-header__search">
-    <form class="yw-search" action="{{ 'search.html' | url }}" method="get" role="search">
-      <label class="yw-visually-hidden" for="yw-search-query">{{ lang.t("search") }}</label>
-      <input id="yw-search-query" type="search" name="query" placeholder="{{ lang.t('search') }}" autocomplete="off">
-      <button type="submit">{{ "Cari" if config.theme.language == "id" else "Search" }}</button>
-    </form>
+    <label class="yw-search-launch" for="__search">
+      <span>{{ "Cari di Yakka Works..." if config.theme.language == "id" else "Search Yakka Works..." }}</span>
+      <strong>{{ "Cari" if config.theme.language == "id" else "Search" }}</strong>
+    </label>
   </div>
   <nav class="yw-primary-nav" aria-label="{{ lang.t('tabs') }}">
     <div class="yw-primary-nav__inner">
@@ -36,8 +35,5 @@
       {% endfor %}
     </div>
   </nav>
-  {% if "material/search" in config.plugins %}
-    {% set search = config.plugins["material/search"] | attr("config") %}
-    {% if search.enabled %}{% include "partials/search.html" %}{% endif %}
-  {% endif %}
+  {% include "partials/search.html" %}
 </header>
