@@ -129,3 +129,42 @@ body>*{position:relative;z-index:1}
   .md-main__inner{margin-top:12px;margin-bottom:16px}
   .md-footer{margin-bottom:12px}
 }
+
+
+/* Final header/search/nav and footer frame alignment. */
+.md-header.yw-header .yw-header__search{display:none}
+.md-header.yw-header .md-search__icon{display:none!important}
+.md-header.yw-header .md-search{
+  position:relative;
+  display:block;
+  width:100%;
+  max-width:none;
+  height:auto;
+  margin:0;
+  padding:6px 12px;
+  box-sizing:border-box;
+  background:var(--yw-green);
+}
+.md-header.yw-header .md-search__form{display:none}
+.md-header.yw-header .yw-primary-nav{display:block}
+.md-header.yw-header .yw-primary-nav__inner{min-height:38px}
+.md-footer{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-sizing:border-box;
+}
+.md-footer .yw-footer{
+  display:block;
+  width:min(var(--yw-page-width),calc(100vw - 1rem));
+  max-width:none;
+  margin:0 auto 22px;
+  box-sizing:border-box;
+}
+.md-footer .yw-footer__inner{width:100%;max-width:none;box-sizing:border-box}
+@media(max-width:640px){
+  .md-footer .yw-footer{width:calc(100vw - 1rem);margin:0 auto 12px}
+}
