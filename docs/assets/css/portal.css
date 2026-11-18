@@ -49,3 +49,33 @@ body>*{position:relative;z-index:1}
 .yw-footer__support{margin:.65rem 0 0;font-size:12px}
 @media(max-width:900px){.yw-footer{margin-left:12px;margin-right:12px}}
 @media(max-width:640px){.yw-footer{margin:0 8px 12px}}
+
+/* Homepage keeps its existing information architecture, now expressed as portal modules. */
+.yw-home{display:grid;gap:16px;color:var(--yw-text);font-size:16px;line-height:1.65}
+.yw-home__top{gap:12px;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.yw-home__hero{min-height:220px;border:1px solid var(--yw-border);border-radius:0;box-shadow:var(--yw-shadow)}
+.yw-home__hero h1{font-size:clamp(1.7rem,4vw,2.25rem)}
+.yw-home__hero p{font-size:14px}
+.yw-home__nav{gap:8px}
+.yw-home__nav-card{padding:12px;border:1px solid var(--yw-border);border-radius:0;background:var(--yw-card);box-shadow:var(--yw-shadow);transition:background-color .12s ease}
+.yw-home__nav-card:hover,.yw-home__nav-card:focus-visible{transform:none;background:var(--yw-subheader)}
+.yw-home__nav-icon{width:30px;height:30px;border:1px solid var(--yw-green-dark);border-radius:0}
+.yw-home__nav-title{font-size:16px;color:var(--yw-heading)}
+.yw-home__nav-desc{font-size:13px;color:var(--yw-muted)}
+.yw-home__panel{padding:16px 18px;border:1px solid var(--yw-border);border-radius:0;background:var(--yw-card);box-shadow:var(--yw-shadow)}
+.yw-home__panel h2{font-size:18px;color:var(--yw-heading)}
+.yw-home__panel p{font-size:16px;line-height:1.7;color:var(--yw-text)}
+.yw-home__stats{gap:8px}
+.yw-home__stat{min-height:76px;padding:12px;border:1px solid var(--yw-border);border-radius:0;background:var(--yw-subheader);box-shadow:none}
+.yw-home__stat strong{font-size:20px;color:var(--yw-heading)}
+.yw-home__stat span{font-size:13px;color:var(--yw-muted)}
+.yw-home__contact{min-height:150px;border:1px solid var(--yw-border);border-radius:0;box-shadow:var(--yw-shadow)}
+.yw-home__contact a{border:1px solid #2e571c;border-radius:0;box-shadow:2px 2px 0 rgba(0,0,0,.2);font-size:14px}
+.yw-home__contact a:hover,.yw-home__contact a:focus-visible{background:#3e7226}
+@media(max-width:640px){
+ .yw-home__top{grid-template-columns:minmax(0,1fr)}
+ .yw-home__hero{min-height:180px}
+ .yw-home__nav{grid-auto-rows:minmax(96px,auto)}
+ .yw-home__panel{padding:14px}
+ .yw-home__stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
