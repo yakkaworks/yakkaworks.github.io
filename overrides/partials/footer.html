@@ -1,7 +1,4 @@
-{#-
-  Yakka Works footer. Order: donate banner > brand (+ address) > socials > legal > copyright.
-  Data comes from mkdocs.yml (extra.brand, extra.socials, extra.donate). Replaces Material's footer.
--#}
+{# Yakka Works portal footer: copyright bar followed by identity, socials and legal. #}
 {% set lang = config.theme.language | default("id") %}
 {% set is_id = lang == "id" %}
 {% set prefix = "" if is_id else lang ~ "/" %}
@@ -14,63 +11,34 @@
   ["license", "Lisensi" if is_id else "License"],
   ["source", "Sumber & Kredit" if is_id else "Source & Credits"]
 ] %}
-
 <footer class="yw-footer" aria-label="Footer">
-
-  {% if config.extra.donate %}
-  <div class="yw-footer__banner">
-    <p class="md-grid">
-      <span class="yw-footer__icon">{% include ".icons/material/heart.svg" %}</span>
-      {{ "Dukung kreator dengan berdonasi lewat" if is_id else "Support the author by donating via" }}
-      {% for d in config.extra.donate %}
-        <a href="{{ d.link }}" target="_blank" rel="noopener">{{ d.name }}</a>
-        {%- if not loop.last %} {{ "atau" if is_id else "or" }} {% endif -%}
-      {% endfor %}.
-    </p>
+  <div class="yw-footer__copyright">
+    Copyright &copy; {{ brand.name }} {{ brand.since }}-{{ config.extra.year }}. All rights reserved.
   </div>
-  {% endif %}
-
-  <div class="yw-footer__inner md-grid">
-
+  <div class="yw-footer__inner">
     <section class="yw-footer__brand">
       <a class="yw-footer__logo" href="{{ base_url }}/{{ prefix }}" aria-label="{{ brand.name }}">
-        {% if config.theme.logo %}
-          <img src="{{ config.theme.logo | url }}" alt="" width="40" height="40">
-        {% endif %}
+        {% if config.theme.logo %}<img src="{{ config.theme.logo | url }}" alt="" width="40" height="40">{% endif %}
         <span>{{ brand.name }}</span>
       </a>
       <address>{% for line in brand.address.split('\n') %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</address>
+      {% if config.extra.donate %}
+        <p class="yw-footer__support">{{ "Dukung:" if is_id else "Support:" }}
+          {% for d in config.extra.donate %}<a href="{{ d.link }}" target="_blank" rel="noopener">{{ d.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+        </p>
+      {% endif %}
     </section>
-
+    <nav class="yw-footer__socials" aria-label="{{ 'Sosial dan kontak' if is_id else 'Social and contact' }}">
+      <h2>{{ "Sosial & Kontak" if is_id else "Social & Contact" }}</h2>
+      <ul>{% for s in config.extra.socials %}
+        <li><a href="{{ s.link }}" target="_blank" rel="noopener me">
+          <span class="yw-footer__icon">{% include ".icons/" ~ s.icon ~ ".svg" %}</span><span>{{ s.name }}</span>
+        </a></li>
+      {% endfor %}</ul>
+    </nav>
     <nav class="yw-footer__legal" aria-label="Legal">
       <h2>Legal</h2>
-      <ul>
-        {% for item in legal %}
-          <li><a href="{{ base_url }}/{{ prefix }}{{ item[0] }}/">{{ item[1] }}</a></li>
-        {% endfor %}
-      </ul>
+      <ul>{% for item in legal %}<li><a href="{{ base_url }}/{{ prefix }}{{ item[0] }}/">{{ item[1] }}</a></li>{% endfor %}</ul>
     </nav>
-
-    <section class="yw-footer__socials">
-      <h2>{{ "Sosial & Kontak" if is_id else "Social & Contact" }}</h2>
-      <ul>
-        {% for s in config.extra.socials %}
-          <li>
-            <a href="{{ s.link }}" target="_blank" rel="noopener me" title="{{ s.name }}">
-              <span class="yw-footer__icon">{% include ".icons/" ~ s.icon ~ ".svg" %}</span>
-              <span>{{ s.name }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-  </div>
-
-  <div class="yw-footer__copyright">
-    <div class="md-grid">
-      Copyright &copy; {{ brand.name }} {{ brand.since }}-{{ config.extra.year }}.
-      All rights reserved. In-game icons provided by TheoTown.
-    </div>
   </div>
 </footer>
