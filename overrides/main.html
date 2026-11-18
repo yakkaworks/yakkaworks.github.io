@@ -1,0 +1,11 @@
+{% block content %}
+<header class="yw-page__meta">
+  <span class="yw-page__meta-title">{{ page.title }}</span>
+  <time class="yw-page__meta-date">{% if page.meta and page.meta.date %}{{ page.meta.date }}{% elif page.meta and page.meta.updated %}{{ page.meta.updated }}{% else %}{{ config.site_name }}{% endif %}</time>
+</header>
+<div class="yw-page__body">{{ page.content }}</div>
+<footer class="yw-page__end">
+  <span>{{ page.meta.closing if page.meta and page.meta.closing else ("Terima kasih telah berkunjung." if config.theme.language == "id" else "Thank you for visiting.") }}</span>
+  <span class="yw-page__eof">[ EOF ]</span>
+</footer>
+{% endblock %}
