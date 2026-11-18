@@ -185,3 +185,55 @@ body>*{position:relative;z-index:1}
 @media(max-width:900px){
   .md-top{right:1rem!important;bottom:1rem!important}
 }
+
+
+/* Native Material search trigger; the search dialog itself is supplied by base.html. */
+.yw-material-search{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  margin:0;
+  padding:6px;
+  color:#fff!important;
+  cursor:pointer;
+  border:1px solid transparent;
+  background:transparent;
+}
+.yw-material-search:hover,
+.yw-material-search:focus-visible{
+  background:rgba(0,0,0,.14);
+  border-color:rgba(255,255,255,.35);
+}
+.yw-material-search svg{width:22px;height:22px;fill:currentColor}
+.yw-primary-nav{display:block!important;background:var(--yw-green)}
+.yw-primary-nav__inner{
+  display:flex!important;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-start;
+  min-height:38px;
+  padding:6px 12px;
+  margin:0 auto;
+}
+.yw-primary-nav a{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:4px 11px;
+  color:#fff!important;
+  font:700 13px/1.5 "YW Header",sans-serif;
+  text-decoration:none;
+}
+.yw-primary-nav a+a::before{content:none!important}
+.yw-primary-nav a:hover,
+.yw-primary-nav a[aria-current=page]{
+  background:#2e571c;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+@media(max-width:640px){
+  .yw-primary-nav__inner{padding:5px}
+  .yw-primary-nav a{padding:4px 8px;font-size:12px}
+}
