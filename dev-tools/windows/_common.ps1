@@ -29,7 +29,8 @@ function Find-Python {
 function Install-Env([switch]$Upgrade) {
     Write-Step 'Checking Python'
     $py = Find-Python
-    $version = & $py.Exe @($py.Args + @('-c', 'import sys; print(sys.version_info[0], sys.version_info[1], sep=chr(46))'))
+    $pythonArgs = @($py.Args) + @('-c', 'import sys; print(str(sys.version_info[0]) + chr(46) + str(sys.version_info[1]))')
+    $version = & $py.Exe @pythonArgs
     Assert-LastOk 'Python version check'
     $parts = "$version".Trim().Split('.')
     if ([int]$parts[0] -lt 3 -or ([int]$parts[0] -eq 3 -and [int]$parts[1] -lt 9)) {
