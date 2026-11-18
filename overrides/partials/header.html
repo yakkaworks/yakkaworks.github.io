@@ -1,0 +1,43 @@
+{% set features = config.theme.features or [] %}
+<header class="md-header yw-header" data-md-component="header">
+  <div class="yw-header__brand">
+    <div class="yw-header__brand-inner">
+      <a class="yw-brand" href="{{ nav.homepage.url | url }}" aria-label="{{ config.site_name }}">
+        {% if config.theme.logo %}<img src="{{ config.theme.logo | url }}" alt="" width="20" height="20">{% endif %}
+        <span>{{ config.site_name }}</span>
+      </a>
+      <div class="yw-header__utilities">
+        {% if config.theme.palette and not config.theme.palette is mapping %}
+          {% include "partials/palette.html" %}
+          {% include "partials/javascripts/palette.html" %}
+        {% endif %}
+        {% if page.alternate %}
+          <span aria-hidden="true">|</span>
+          <nav class="yw-language" aria-label="Language">
+            {% for alt in page.alternate %}
+              <a href="{{ alt.url | url }}" hreflang="{{ alt.lang }}" lang="{{ alt.lang }}">{{ alt.lang | upper }}</a>{% if not loop.last %}<span>/</span>{% endif %}
+            {% endfor %}
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="yw-header__search">
+    <form class="yw-search" action="{{ 'search.html' | url }}" method="get" role="search">
+      <label class="yw-visually-hidden" for="yw-search-query">{{ lang.t("search") }}</label>
+      <input id="yw-search-query" type="search" name="query" placeholder="{{ lang.t('search') }}" autocomplete="off">
+      <button type="submit">{{ "Cari" if config.theme.language == "id" else "Search" }}</button>
+    </form>
+  </div>
+  <nav class="yw-primary-nav" aria-label="{{ lang.t('tabs') }}">
+    <div class="yw-primary-nav__inner">
+      {% for item in nav.items %}
+        {% if item.url %}<a href="{{ item.url | url }}" {% if item.active %}aria-current="page"{% endif %}>{{ item.title }}</a>{% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+  {% if "material/search" in config.plugins %}
+    {% set search = config.plugins["material/search"] | attr("config") %}
+    {% if search.enabled %}{% include "partials/search.html" %}{% endif %}
+  {% endif %}
+</header>
