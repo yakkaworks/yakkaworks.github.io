@@ -141,6 +141,7 @@ plugins:
 
 extra_css:
   - assets/css/extra.css
+  - assets/css/portal.css
 
 extra_javascript:
   - assets/js/commission-estimator.js
