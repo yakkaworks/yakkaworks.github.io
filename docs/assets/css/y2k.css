@@ -1383,3 +1383,45 @@ body > .md-container {
     height: 40px;
   }
 }
+
+
+/* Effective header layout: stack brand and search, and stretch both rows equally. */
+.yw-header.md-header {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: min(800px, calc(100% - 1rem));
+  max-width: 800px;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+.yw-header__brand-row,
+.yw-search-row {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.yw-header__brand-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.yw-search-row__inner,
+.yw-search-row .md-search {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .yw-header.md-header {
+    width: calc(100% - 1rem);
+    margin: 0.5rem 0.5rem;
+  }
+}
