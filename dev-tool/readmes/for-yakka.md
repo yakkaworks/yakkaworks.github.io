@@ -145,7 +145,7 @@ The visible site layout is implemented with Material template overrides:
 - `overrides/partials/navigation.html` contains the custom primary navigation and localized labels.
 - `overrides/main.html` keeps Material page rendering inside the Yakka Works document frame and adds the document-end support signature.
 - `overrides/partials/footer.html` contains only the brand/address/email, legal links, social links, and credits.
-- `docs/assets/css/y2k.css` controls the shared 800px search, navigation, main-content, and footer widths.
+- `docs/assets/css/y2k.css` controls the shared 900px search, navigation, main-content, and footer widths.
 
 The primary navigation is a custom override in `overrides/partials/navigation.html`, rendered in the normal-flow Material tabs slot after the header. Update its Indonesian and English labels and keep destinations in sync with the indexes under `docs/`.
 
@@ -161,14 +161,14 @@ The header and navigation are separate Material template regions:
 - `overrides/partials/header.html` renders the Yakka Works brand bar and reuses Material's native palette, language selector, search toggle, and search dialog.
 - `overrides/partials/navigation.html` renders the custom Home/Store/Library/Tools/Blog menu.
 - `overrides/main.html` inserts the navigation partial through Material's `tabs` template block. This puts it after the header and before the main document, instead of embedding it in the header itself.
-- `docs/assets/css/y2k.css` constrains the navigation bar, main document and footer to the same 800px width. On mobile they use a 0.5rem side gutter.
+- `docs/assets/css/y2k.css` constrains the navigation bar, main document and footer to the same 900px width. On mobile they use a 0.5rem side gutter.
 
 When updating navigation labels or URLs, edit `overrides/partials/navigation.html`. The English and Indonesian labels and route prefixes are handled there. Do not make this navigation sticky or fixed.
 
 
 ## 11. Header spacing and dark background
 
-The header has three rows: the brand/control bar, the neutral Material search field, and the brand-coloured custom navigation. The current owner-edited header wrapper has an 800px maximum width and 0.5rem vertical margin; search and navigation share the 800px width and 0.5rem mobile gutter. Preserve the owner's latest spacing choices when adjusting the theme.
+The header has three rows: the brand/control bar, the neutral Material search field, and the brand-coloured custom navigation. The current owner-edited header wrapper has an 900px maximum width and 0.5rem vertical margin; search and navigation share the 800px width and 0.5rem mobile gutter. Preserve the owner's latest spacing choices when adjusting the theme.
 
 The search row is a neutral-coloured wrapper around Material's own search partial. Keep the native search input/results behaviour; only the wrapper and visual styling are custom.
 
@@ -177,4 +177,11 @@ In dark mode the city image remains as the page backdrop but is darkened by a ne
 
 ## 12. Navigation tab colours and row boundaries
 
-The brand, search, and navigation rows touch with no vertical gaps. The brand row keeps its bottom border. The neutral Material search field is left visually unchanged. The nav bar uses the Yakka Works primary green `#4d8b31`; inactive tabs use a deeper green shade and the active tab has an orange `#ff8427` top border. The active indicator is on top, not bottom. Keep the whole nav, search, and main document aligned to the same 800px column.
+The brand, search, and navigation rows touch with no vertical gaps. The brand row keeps its bottom border. The neutral Material search field is left visually unchanged. The nav bar uses the Yakka Works primary green `#4d8b31`; inactive tabs use a deeper green shade and the active tab has an orange `#ff8427` top border. The active indicator is on top, not bottom. Keep the whole nav, search, and main document aligned to the same 900px column.
+
+
+## 13. Latest 900px width and Blog cleanup
+
+The site column is now 900px wide on desktop. Brand/search header, search input, navigation, main document, and footer share that width. On mobile, use a 0.5rem gutter. The Material search input and all its wrappers are force-sized to 100% so the input edges align with the brand and navigation edges.
+
+Blog pages use a small compatibility script to remove legacy thank-you and EOF elements left by stale cached scripts. The current Blog signature should contain support links only. The main Blog framing script also needs the language variable defined before rendering translated support text.
