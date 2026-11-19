@@ -1522,3 +1522,30 @@ body > .md-container {
     width: calc(100% - 1rem);
   }
 }
+
+
+/* Native Material search field: fill the entire 900px neutral search row. */
+.yw-search-row,
+.yw-search-row__inner,
+.yw-search-row .md-search,
+.yw-search-row .md-search__inner,
+.yw-search-row .md-search__form {
+  width: 100% !important;
+  max-width: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  box-sizing: border-box;
+}
+
+.yw-search-row {
+  display: block;
+  padding: 0;
+  background: var(--yw-search-bg);
+}
+
+.yw-search-row .md-search__form {
+  height: 42px;
+  border: 0;
+  background: var(--yw-search-bg) !important;
+  box-shadow: none !important;
+}
