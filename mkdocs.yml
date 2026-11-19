@@ -125,6 +125,7 @@ extra_css:
 
 extra_javascript:
   - assets/js/y2k-clock.js
+  - assets/js/blog-layout-cleanup.js
 
 extra:
   generator: false
