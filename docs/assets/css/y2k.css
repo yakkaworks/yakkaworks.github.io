@@ -459,6 +459,10 @@ body::after {
   box-shadow: 3px 3px 0 var(--yw-primary-soft);
   max-width: 800px;
   margin: 0.5rem 0;
+  display: flex:
+  flex: column;
+  align-items:center;
+  justify-content: center;
 }
 
 .yw-header__window {
