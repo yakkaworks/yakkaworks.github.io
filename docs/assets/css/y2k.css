@@ -173,7 +173,6 @@ body::after {
   background: var(--yw-primary);
   border-bottom: 2px solid var(--yw-primary-dark);
   box-shadow: 3px 3px 0 var(--yw-primary-soft);
-  
 }
 
 [data-md-color-scheme="slate"] .md-header {
@@ -458,8 +457,8 @@ body::after {
   border-bottom: 1px solid var(--yw-border);
   background: var(--yw-surface);
   box-shadow: 3px 3px 0 var(--yw-primary-soft);
-  max-width: 800px: 
-  margin: 0.5rem 0px:
+  max-width: 800px;
+  margin: 0.5rem 0;
 }
 
 .yw-header__window {
