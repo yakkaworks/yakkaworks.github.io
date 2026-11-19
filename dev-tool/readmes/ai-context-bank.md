@@ -190,6 +190,6 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - Current shared layout is **900px** across header, search, nav, main and footer; mobile uses a 0.5rem gutter. Older 800px references in historical log entries are superseded.
 - Files changed: `docs/assets/css/y2k.css`, `docs/assets/js/y2k-clock.js`, `docs/assets/js/blog-layout-cleanup.js`, `mkdocs.yml`, and this documentation set.
 - Code commits: `de9c970` (search full-width), `67ddf07` (Blog legacy cleanup), `9013864` (load cleanup JS), `9a835f1` (fix Blog locale variable), and this context update.
-- Build status: pending after these changes. No browser verification / production deployment.
+- Strict GitHub Actions build passed for latest context commit `6024c21fc103b079d1b29e3d625f974d44172838` in run `44480558805`. No browser verification / production deployment.
 - Next: confirm strict build; owner should hard-refresh with Ctrl+F5 and inspect Blog index, including exact search left/right edges and removal of thanks/EOF.
 - **Responses since this snapshot: 0.**
