@@ -749,3 +749,20 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .md-top { transition: none; }
 }
+
+.yw-nav__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.yw-nav__item--active .yw-nav__link {
+  background: rgba(255,255,255,.13);
+  color: #fff !important;
+  text-decoration: underline !important;
+  text-underline-offset: .22rem;
+}

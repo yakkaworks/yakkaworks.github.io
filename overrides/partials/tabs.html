@@ -2,8 +2,10 @@
 {% import "partials/tabs-item.html" as item with context %}
 <nav class="yw-nav" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
   <div class="yw-nav__inner">
-    {% for nav_item in nav.items %}
-      {{ item.render(nav_item) | replace('md-tabs__item', 'yw-nav__item') | replace('md-tabs__link', 'yw-nav__link') }}
-    {% endfor %}
+    <ul class="yw-nav__list">
+      {% for nav_item in nav.items %}
+        {{ item.render(nav_item) | replace('md-tabs__item', 'yw-nav__item') | replace('md-tabs__link', 'yw-nav__link') }}
+      {% endfor %}
+    </ul>
   </div>
 </nav>
