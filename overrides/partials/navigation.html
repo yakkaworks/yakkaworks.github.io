@@ -2,6 +2,7 @@
 {% set locale = config.theme.language | default("id") %}
 {% set is_en = locale == "en" %}
 {% set current_url = page.url if page else "" %}
+{% set prefix = "" if locale == "id" else locale ~ "/" %}
 {% if not is_en and current_url.startswith(locale ~ "/") %}
   {% set current_url = current_url[3:] %}
 {% elif is_en and current_url.startswith("en/") %}
@@ -26,10 +27,10 @@
         <a class="yw-nav__link" href="{{ ('library/' if not is_en else 'library/') | url }}"{% if active_library %} aria-current="page"{% endif %}>{{ "Library" if is_en else "Pustaka" }}</a>
       </li>
       <li class="yw-nav__item{% if active_tools %} yw-nav__item--active{% endif %}">
-        <a class="yw-nav__link" href="{{ 'tools/' | url }}"{% if active_tools %} aria-current="page"{% endif %}>{{ "Tools" if is_en else "Alat" }}</a>
+        <a class="yw-nav__link" href="{{ (prefix ~ 'tools/') | url }}"{% if active_tools %} aria-current="page"{% endif %}>{{ "Tools" if is_en else "Alat" }}</a>
       </li>
       <li class="yw-nav__item{% if active_blogs %} yw-nav__item--active{% endif %}">
-        <a class="yw-nav__link" href="{{ 'blogs/' | url }}"{% if active_blogs %} aria-current="page"{% endif %}>Blog</a>
+        <a class="yw-nav__link" href="{{ (prefix ~ 'blogs/') | url }}"{% if active_blogs %} aria-current="page"{% endif %}>Blog</a>
       </li>
     </ul>
   </div>
