@@ -85,3 +85,18 @@ The owner supplied a light-mode screenshot showing that the custom navigation ro
 - Build status: strict GitHub Actions build passed in run `44465300784` (commit `05a2d1ebf6a5f53ac1fedbb9c2a7711985995fe8`); deployment was skipped as expected. No local browser verification has been performed by the agent.
 - Next: owner should inspect both light/dark mode and navigation routes in desktop/mobile previews.
 - **Responses since this snapshot: 0.**
+
+
+## Latest header/navigation/search correction (2026-11-19)
+
+The owner provided a fresh screenshot: the nav labels were visible but the bar background/width were wrong, and the search icon/control was missing.
+
+- Added `overrides/partials/navigation.html` as an independent custom nav partial. It renders localized Home/Store/Library/Tools/Blog links with explicit route state.
+- `overrides/main.html` now renders this partial through Material's normal-flow `tabs` block. The nav is no longer embedded in `header.html`; this separates it from the header block that lives outside `.md-container`.
+- `overrides/partials/header.html` now contains only the Yakka Works brand plus Material's native palette control, i18n language alternate control, search toggle, and native search dialog. Search was moved out of the flex controls so Material's dialog positioning is not overridden.
+- `docs/assets/css/y2k.css` now sets the **whole nav bar** to `min(800px, calc(100% - 1.5rem))`, with the same 800px max-width as main/footer and a 0.5rem mobile gutter. It has a visible brand-derived green background and localized active-link state. The native Material search overlay keeps its default positioning.
+- Updated `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` with the source-of-truth and maintenance rules.
+- Files changed: `overrides/partials/navigation.html`, `overrides/partials/header.html`, `overrides/main.html`, `docs/assets/css/y2k.css`, `dev-tool/readmes/for-yakka.md`, `dev-tool/readmes/ai-instruct.md`, this context bank.
+- Latest implementation commit: `69e73af3901395ba1766e31b43e525b50e45bbdf`. Strict GitHub Actions run `44466560405` is running at the time of this context update. No local visual verification has been performed.
+- Next: confirm strict build completion; owner should test Material search open/close and result navigation, palette switching, language switching, nav routes, and exact 800px alignment in both desktop and mobile viewports.
+- **Responses since this snapshot: 0.**
