@@ -27,20 +27,20 @@
       <a href="mailto:{{ brand.email }}">{{ brand.email }}</a>
     </section>
 
-    <nav class="yw-footer__links" aria-label="{{ 'Tautan legal' if is_id else 'Legal links' }}">
-      <h2>Legal</h2>
-      <ul>
-        {% for item in legal %}
-          <li><a href="{{ base_url }}/{{ prefix }}{{ item[0] }}/">{{ item[1] }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-
     <nav class="yw-footer__links" aria-label="{{ 'Tautan sosial' if is_id else 'Social links' }}">
       <h2>{{ "Sosial & Kontak" if is_id else "Social & Contact" }}</h2>
       <ul>
         {% for item in config.extra.socials %}
           <li><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <nav class="yw-footer__links" aria-label="{{ 'Tautan legal' if is_id else 'Legal links' }}">
+      <h2>Legal</h2>
+      <ul>
+        {% for item in legal %}
+          <li><a href="{{ base_url }}/{{ prefix }}{{ item[0] }}/">{{ item[1] }}</a></li>
         {% endfor %}
       </ul>
     </nav>
