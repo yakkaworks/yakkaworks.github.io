@@ -83,14 +83,40 @@
   }
 
   const searchInput = document.querySelector(".md-search__input");
+  const searchToggle = document.getElementById("__search");
+  const searchRoot = document.querySelector(".yw-search-row");
+
+  // Keep Material's native result panel in sync with the always-visible field.
+  if (searchInput && searchToggle) {
+    searchInput.addEventListener("focus", () => {
+      searchToggle.checked = true;
+    });
+
+    searchInput.addEventListener("input", () => {
+      searchToggle.checked = true;
+    });
+
+    document.addEventListener("pointerdown", (event) => {
+      if (searchRoot && !searchRoot.contains(event.target)) {
+        searchToggle.checked = false;
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        searchToggle.checked = false;
+        searchInput.blur();
+      }
+    });
+  }
+
   document.addEventListener("keydown", (event) => {
     const target = event.target;
     const editing = target instanceof HTMLElement &&
       (target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName));
     if (event.key === "/" && !editing && searchInput) {
       event.preventDefault();
-      const toggle = document.getElementById("__search");
-      if (toggle && !toggle.checked) toggle.checked = true;
+      if (searchToggle && !searchToggle.checked) searchToggle.checked = true;
       window.setTimeout(() => searchInput.focus(), 0);
     }
   });
