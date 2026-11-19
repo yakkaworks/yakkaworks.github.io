@@ -55,10 +55,10 @@
 
 [data-md-color-scheme="slate"] {
   color-scheme: dark;
-  --yw-primary: #8fbd79;
+  --yw-primary: #4d8b31;
   --yw-primary-dark: #b7d8a7;
   --yw-primary-soft: #31482b;
-  --yw-cta: #ff9b52;
+  --yw-cta: #ff8427;
   --yw-bg: #172119;
   --yw-surface: #202d22;
   --yw-surface-2: #29392b;
@@ -74,8 +74,8 @@
   --md-code-bg-color: #253328;
   --md-footer-bg-color: #202d22;
   --md-footer-fg-color: var(--yw-text);
-  --md-primary-fg-color: #4d753b;
-  --md-primary-fg-color--light: #6f995b;
+  --md-primary-fg-color: #4d8b31;
+  --md-primary-fg-color--light: #78a95f;
   --md-primary-fg-color--dark: #36572c;
   --md-accent-fg-color: #a8ce91;
   --md-typeset-a-color: #a8ce91;
@@ -166,8 +166,8 @@ body::after {
 }
 
 [data-md-color-scheme="slate"] .md-header {
-  background: #35552d;
-  border-bottom-color: #263f22;
+  background: #4d8b31;
+  border-bottom-color: #36572c;
 }
 
 .md-header__inner {
