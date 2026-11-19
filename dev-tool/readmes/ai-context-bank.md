@@ -157,3 +157,13 @@ The owner asked whether a flex-column layout would align the brand and search ro
 - Commit: `6b881b5ebc9de80e4efd0289dd82f67a18bb1a33`. Build status: pending when this note was written. No local visual verification.
 - Next: confirm strict GitHub Actions build, then owner can pull `y2k-dev` and preview. Main uncertainty to visually check: left alignment of the header as requested, and whether its right edge lines up with the 800px nav/main/footer at desktop width.
 - **Responses since this snapshot: 0.**
+
+
+## Header centering follow-up (2026-11-19)
+
+- Owner reported that the brand/search header was left-aligned while the 800px navigation and main document were centered.
+- Root cause: effective `.yw-header.md-header` rule used `margin: 0.5rem 0`, which explicitly sets both horizontal margins to zero. The mobile rule already has symmetric 0.5rem gutters.
+- Changed only desktop/effective rule to `margin: 0.5rem auto`; width remains `min(800px, calc(100% - 1rem))`, so it should center at the same 800px maximum width as nav/main/footer. Flex column and equal-width inner rows remain unchanged.
+- Commit: `95e0ffbf11bcdb419af5e60f172e53f30c30650d`. Build status: pending. No local visual verification.
+- Next: check strict CI, then owner can pull and verify header left/right edges align with navigation and document.
+- **Responses since this snapshot: 0.**
