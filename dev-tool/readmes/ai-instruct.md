@@ -82,9 +82,11 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 
 ## Header, search and navigation source of truth
 
-- `overrides/partials/header.html` owns the custom Yakka Works brand header. Keep Material's native palette partial, language alternate partial, search toggle and search dialog here; do not replace these controls with decorative or nonfunctional HTML.
-- `overrides/partials/navigation.html` owns the site's explicit Home/Store/Library/Tools/Blog links and localized labels.
-- `overrides/main.html` renders that navigation via the `tabs` block. Do not move the nav back inside the header partial; the header block is outside Material's `.md-container`, while the tabs block is inside it.
-- `docs/assets/css/y2k.css` must set the full `.yw-nav` bar itself to the same 800px width as `.md-main__inner` and `.yw-footer`; sizing only `.yw-nav__inner` leaves the background spanning the wrong area.
-- Preserve Material's search dialog positioning. Do not set its `.md-search` element to `position: static` or put it inside a flex control group.
-- Navigation remains in normal document flow, never sticky/fixed.
+- `overrides/partials/header.html` owns the first two header rows: branded logo/name with Material palette and language controls, followed by the always-visible full-width native Material search row.
+- Keep Material's `partials/search.html` markup intact. Do not replace its input or result templates with a homemade search implementation. Do not place `.md-search` inside the header controls flex group.
+- The native Material search parent must retain the `.md-header` class so Material's checked-toggle selectors and search-result behavior continue working. Adapt the search inner form/overlay/output through scoped CSS in `.yw-search-row`, not broad selectors.
+- `overrides/partials/navigation.html` owns the explicit Home/Store/Library/Tools/Blog links and localized labels.
+- `overrides/main.html` renders that custom nav via the normal-flow `tabs` block. Keep it separate from the header partial.
+- `docs/assets/css/y2k.css` must set the full `.yw-nav` bar itself to the same 800px width as the search row, `.md-main__inner`, and `.yw-footer`; links are left-aligned and the bar has a visible brand-derived background.
+- Keep the nav in normal document flow, never sticky/fixed.
+- Donation links belong in `.yw-page__signature` at the end of the document beside the translated thanks-for-reading note. The global footer must not repeat a support banner.
