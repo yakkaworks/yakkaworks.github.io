@@ -31,7 +31,7 @@
       <h2>{{ "Sosial & Kontak" if is_id else "Social & Contact" }}</h2>
       <ul>
         {% for item in config.extra.socials %}
-          <li><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></li>
+          <li><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ "X/Twitter" if item.name == "X" else item.name }}</a></li>
         {% endfor %}
       </ul>
     </nav>
@@ -48,6 +48,6 @@
 
   <div class="yw-footer__credits">
     Copyright &copy; {{ brand.name }} {{ brand.since }}–{{ config.extra.year }}.
-    All rights reserved. In-game icons by TheoTown. Made with MkDocs Material.
+    All rights reserved.<br>In-game icons by TheoTown. Made with MkDocs Material.
   </div>
 </footer>
