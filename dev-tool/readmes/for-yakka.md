@@ -151,7 +151,7 @@ The primary navigation is a custom override in `overrides/partials/navigation.ht
 
 The navigation is in normal document flow. Do not make it sticky or fixed. Material's back-to-top control is a separate fixed bottom-right button.
 
-Light mode uses the muted cover-image backdrop. Dark mode uses a plain neutral dark background instead of showing the cover image. Keep the brand green `#4d8b31` and action orange `#ff8427`; supporting surface and border colours should remain pale tints or darkened tints derived from those brand colours. Keep the supplied local font files.
+Light mode uses the muted cover-image backdrop. Dark mode uses the dark city background variant (background-dl.jpg / background-dp.jpg) under a strong neutral green-black overlay, so the image is visible but subdued. Keep the brand green `#4d8b31` and action orange `#ff8427`; supporting surface and border colours should remain pale tints or darkened tints derived from those brand colours. Keep the supplied local font files.
 
 
 ## 10. Header, search and navigation overrides
@@ -164,3 +164,12 @@ The header and navigation are separate Material template regions:
 - `docs/assets/css/y2k.css` constrains the navigation bar, main document and footer to the same 800px width. On mobile they use a 0.5rem side gutter.
 
 When updating navigation labels or URLs, edit `overrides/partials/navigation.html`. The English and Indonesian labels and route prefixes are handled there. Do not make this navigation sticky or fixed.
+
+
+## 11. Header spacing and dark background
+
+The header has three consecutive rows: the brand/control bar, the neutral Material search field, and the brand-coloured custom navigation. These rows intentionally touch with no vertical margins. The brand row is compact (56px desktop, 54px mobile); search and navigation share the 800px centered width and the 0.5rem mobile gutter.
+
+The search row is a neutral-coloured wrapper around Material's own search partial. Keep the native search input/results behaviour; only the wrapper and visual styling are custom.
+
+In dark mode the city image remains as the page backdrop but is darkened by a neutral green-black overlay. The landscape and portrait variants are selected separately. Light mode retains the lighter city treatment.
