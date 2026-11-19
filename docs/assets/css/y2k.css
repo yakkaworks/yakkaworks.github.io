@@ -1472,3 +1472,53 @@ body > .md-container {
   background: var(--yw-primary) !important;
   color: #fff !important;
 }
+
+
+/* 900px portal width: keep brand, search, navigation, document and footer aligned. */
+.yw-header.md-header {
+  width: min(900px, calc(100% - 1.5rem));
+  max-width: 900px;
+}
+
+.yw-header__brand-inner {
+  width: 100%;
+  max-width: none;
+}
+
+.yw-search-row,
+.yw-nav,
+.md-main__inner,
+.yw-footer {
+  width: min(900px, calc(100% - 1.5rem));
+  max-width: 900px;
+}
+
+.yw-search-row {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.yw-nav {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.md-main__inner {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.yw-footer {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .yw-header.md-header,
+  .yw-search-row,
+  .yw-nav,
+  .md-main__inner,
+  .yw-footer {
+    width: calc(100% - 1rem);
+  }
+}
