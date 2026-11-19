@@ -127,6 +127,6 @@ The owner reviewed the three-row header and requested: remove vertical gaps betw
 - `docs/assets/css/y2k.css`: brand bar is now 56px desktop / 54px mobile; search row and nav have no vertical margins between them. Both are centered at 800px max width and use a 0.5rem mobile gutter. Search row is a neutral-coloured wrapper around Material's native search field. Main document retains its separate top breathing room below the nav.
 - Dark mode `body::after` now uses background-dl.jpg / background-dp.jpg with an 80% neutral green-black overlay. Light mode retains the lighter city image treatment.
 - `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` updated to record these rules and correct the earlier obsolete note saying dark mode should be a solid colour.
-- Main code commit: `f7c21441bf0e4850955e75fb2f5c264432ccf986`. Build status: not yet verified after this change. No production deployment.
+- Main code commit: `f7c21441bf0e4850955e75fb2f5c264432ccf986`; strict GitHub Actions build passed in run `44469876390`. Maintainer-guide update commit `2ffa0c267db8363e5422e8d5241ab5f202cf438e` also passed in run `44469968267`. The latest context-bank-only update is queued/in progress in run `44470030794`. No production deployment.
 - Next: strict GitHub Actions build, then owner to inspect exact zero-gap header alignment and dark city image in browser.
 - **Responses since this snapshot: 0.**
