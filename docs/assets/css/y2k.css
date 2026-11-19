@@ -1549,3 +1549,32 @@ body > .md-container {
   background: var(--yw-search-bg) !important;
   box-shadow: none !important;
 }
+
+
+/* Search edge alignment: remove Material's default input-row inset at every level. */
+.yw-header.md-header .yw-search-row,
+.yw-header.md-header .yw-search-row__inner,
+.yw-header.md-header .yw-search-row .md-search,
+.yw-header.md-header .yw-search-row .md-search__inner,
+.yw-header.md-header .yw-search-row .md-search__form {
+  display: block;
+  flex: 0 0 100%;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.yw-header.md-header .yw-search-row {
+  height: 44px;
+  overflow: visible;
+}
+
+.yw-header.md-header .yw-search-row .md-search__form {
+  height: 42px;
+  border: 0;
+  background: var(--yw-search-bg) !important;
+  box-shadow: none !important;
+}
