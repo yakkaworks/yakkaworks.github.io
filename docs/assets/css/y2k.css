@@ -28,7 +28,9 @@
   --yw-primary-dark: #356c24;
   --yw-primary-soft: #dcebd3;
   --yw-cta: #ff8427;
-  --yw-nav-bg: #356c24;
+  --yw-nav-bg: #4d8b31;
+  --yw-nav-tab-bg: #356c24;
+  --yw-nav-edge: #356c24;
   --yw-nav-text: #f7faf3;
   --yw-search-bg: #e8ece5;
   --yw-search-text: #293528;
@@ -63,7 +65,9 @@
   --yw-primary-dark: #b7d8a7;
   --yw-primary-soft: #31482b;
   --yw-cta: #ff8427;
-  --yw-nav-bg: #203125;
+  --yw-nav-bg: #4d8b31;
+  --yw-nav-tab-bg: #2f4b2c;
+  --yw-nav-edge: #2b4628;
   --yw-nav-text: #e5ecdf;
   --yw-search-bg: #29342d;
   --yw-search-text: #e5ecdf;
@@ -1424,4 +1428,47 @@ body > .md-container {
     width: calc(100% - 1rem);
     margin: 0.5rem 0.5rem;
   }
+}
+
+
+/* Final header seam and tab treatment. Brand/search stay visually unchanged. */
+.yw-header.md-header {
+  margin-bottom: 0 !important;
+}
+
+.yw-header__brand-row {
+  border-bottom: 2px solid var(--yw-primary-dark);
+}
+
+.yw-nav {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--yw-nav-edge);
+  border-top: 2px solid var(--yw-nav-edge);
+  border-bottom: 0;
+  background: var(--yw-nav-bg) !important;
+  box-shadow: none;
+}
+
+.yw-nav .yw-nav__link,
+.yw-nav .yw-nav__item--active .yw-nav__link {
+  border: 0;
+  border-top: 3px solid var(--yw-nav-tab-bg);
+  border-bottom: 0;
+  background: var(--yw-nav-tab-bg) !important;
+  box-shadow: none !important;
+  color: #f7faf3 !important;
+  padding-top: calc(.55rem - 3px);
+}
+
+.yw-nav .yw-nav__link:hover,
+.yw-nav .yw-nav__link:focus-visible {
+  background: var(--yw-primary) !important;
+  color: #fff !important;
+}
+
+.yw-nav .yw-nav__item--active .yw-nav__link {
+  border-top-color: var(--yw-cta);
+  background: var(--yw-primary) !important;
+  color: #fff !important;
 }
