@@ -30,8 +30,10 @@
   {% include "partials/header.html" %}
 {% endblock %}
 
-{# The custom navigation is rendered directly after the brand header. #}
-{% block tabs %}{% endblock %}
+{# Custom navigation lives in the normal-flow Material tabs slot. #}
+{% block tabs %}
+  {% include "partials/navigation.html" %}
+{% endblock %}
 
 {# The navigation is rendered in the custom, non-sticky header. Keep Material's TOC out of the page grid. #}
 {% block site_nav %}{% endblock %}
