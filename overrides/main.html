@@ -49,5 +49,20 @@
     <div class="yw-page__content">
       {{ super() }}
     </div>
+    <div class="yw-page__signature">
+      <div class="yw-page__thanks">
+        <span aria-hidden="true">★</span>
+        <span>{{ "Terima kasih telah membaca sampai akhir." if config.theme.language == "id" else "Thank you for reading until the end." }}</span>
+      </div>
+      {% if config.extra.donate %}
+      <div class="yw-page__support">
+        <span>{{ "Dukung Yakka Works melalui" if config.theme.language == "id" else "Support Yakka Works through" }}</span>
+        {% for item in config.extra.donate %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>{% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      <span class="yw-page__eof">[ EOF ]</span>
+    </div>
   </div>
 {% endblock %}
