@@ -167,3 +167,14 @@ The owner asked whether a flex-column layout would align the brand and search ro
 - Commit: `95e0ffbf11bcdb419af5e60f172e53f30c30650d`. Build status: pending. No local visual verification.
 - Next: check strict CI, then owner can pull and verify header left/right edges align with navigation and document.
 - **Responses since this snapshot: 0.**
+
+
+## Latest nav margin and tab styling (2026-11-19)
+
+Owner reviewed centered brand/search/nav screenshot and requested: brand bottom border, preserve search appearance, nav brand-green background, top border instead of bottom, active orange and inactive green shade, with no vertical gaps between the three header rows.
+
+- `docs/assets/css/y2k.css` changed: `.yw-header.md-header` now has no bottom margin; `.yw-nav` has no vertical margins. Brand bottom border explicitly retained. Search row's form/background/height rules unchanged.
+- Nav bar background uses primary brand green `#4d8b31`; inactive tab surfaces use a darker green shade. Active tab has a top orange `#ff8427` border; old bottom accent/shadow removed. Dark mode gets its own deeper inactive green shade.
+- Commit: `c9b1572a80e07c4afbf80fc35f23283dae28d190`. Build status: pending at time of context update. No local browser verification.
+- Next: strict GitHub Actions check; owner to pull and inspect no-gap seams, nav border orientation, hover/active states in both palettes.
+- **Responses since this snapshot: 0.**
