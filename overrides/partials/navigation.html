@@ -1,0 +1,36 @@
+{% import "partials/language.html" as lang with context %}
+{% set locale = config.theme.language | default("id") %}
+{% set is_en = locale == "en" %}
+{% set current_url = page.url if page else "" %}
+{% if not is_en and current_url.startswith(locale ~ "/") %}
+  {% set current_url = current_url[3:] %}
+{% elif is_en and current_url.startswith("en/") %}
+  {% set current_url = current_url[3:] %}
+{% endif %}
+{% set active_home = current_url == "" or current_url == "index.html" %}
+{% set active_store = current_url.startswith("store/") %}
+{% set active_library = current_url.startswith("library/") %}
+{% set active_tools = current_url.startswith("tools/") %}
+{% set active_blogs = current_url.startswith("blogs/") %}
+
+<nav class="yw-nav" aria-label="{{ 'Main navigation' if is_en else 'Navigasi utama' }}">
+  <div class="yw-nav__inner">
+    <ul class="yw-nav__list">
+      <li class="yw-nav__item{% if active_home %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ nav.homepage.url | url }}"{% if active_home %} aria-current="page"{% endif %}>{{ "Home" if is_en else "Beranda" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_store %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ ('store/' if not is_en else 'store/') | url }}"{% if active_store %} aria-current="page"{% endif %}>{{ "Store" if is_en else "Toko" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_library %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ ('library/' if not is_en else 'library/') | url }}"{% if active_library %} aria-current="page"{% endif %}>{{ "Library" if is_en else "Pustaka" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_tools %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ 'tools/' | url }}"{% if active_tools %} aria-current="page"{% endif %}>{{ "Tools" if is_en else "Alat" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_blogs %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ 'blogs/' | url }}"{% if active_blogs %} aria-current="page"{% endif %}>Blog</a>
+      </li>
+    </ul>
+  </div>
+</nav>
