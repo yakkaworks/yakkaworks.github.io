@@ -76,7 +76,7 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - Navigation destinations must remain paired for Indonesian and English builds. Keep the current route active state for each section.
 - Navigation, main document, and footer share an 800px desktop maximum width and use a 0.5rem mobile side gutter.
 - Navigation is normal-flow only; never set it to sticky or fixed.
-- Dark mode backdrop is intentionally a neutral solid dark colour; do not reintroduce the cover-image background in dark mode.
+- Dark mode uses the dark city image variants background-dl.jpg / background-dp.jpg with a strong neutral green-black overlay. Preserve this darkened city backdrop; do not replace it with a plain solid colour unless explicitly requested.
 - Preserve the exact brand colours: primary `#4d8b31`, CTA `#ff8427`. Derive supporting pastel colours from them, and continue using the local Body/Header/Display TTFs.
 
 
@@ -90,3 +90,13 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - `docs/assets/css/y2k.css` must set the full `.yw-nav` bar itself to the same 800px width as the search row, `.md-main__inner`, and `.yw-footer`; links are left-aligned and the bar has a visible brand-derived background.
 - Keep the nav in normal document flow, never sticky/fixed.
 - Donation links belong in `.yw-page__signature` at the end of the document beside the translated thanks-for-reading note. The global footer must not repeat a support banner.
+
+
+## Header row spacing and background treatment
+
+- Header row order: compact brand/control bar, neutral full-width Material search row, then custom navigation.
+- Remove vertical margins between these three rows. They are meant to touch without gaps.
+- Brand row target height: 56px desktop and 54px mobile.
+- Search and navigation widths match the 800px document/footer column, with a 0.5rem mobile gutter.
+- The search wrapper may be a custom neutral-coloured div, but the Material search partial/input/results remain native.
+- Dark mode keeps the city background image with a strong dark overlay; use the landscape/portrait dark variants.
