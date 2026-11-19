@@ -100,3 +100,21 @@ The owner provided a fresh screenshot: the nav labels were visible but the bar b
 - Latest implementation commit: `69e73af3901395ba1766e31b43e525b50e45bbdf`; strict GitHub Actions run `44466560405` passed. Context-bank follow-up commit `5eee0e5428a66de077d494af3af6332b3b4744f5` also passed strict build in run `44466628844`. No local visual verification has been performed.
 - Next: confirm strict build completion; owner should test Material search open/close and result navigation, palette switching, language switching, nav routes, and exact 800px alignment in both desktop and mobile viewports.
 - **Responses since this snapshot: 0.**
+
+
+## Latest header/search and document-end layout (2026-11-19)
+
+The owner clarified the required hierarchy with two screenshots and a text sketch. The header must have three distinct rows: brand controls, full-width neutral Material search, then left-aligned brand-coloured custom navigation. The previous screenshot had search detached/floating and the navigation in the wrong hierarchy.
+
+- `overrides/partials/header.html`: brand row with Yakka Works logo/name on the left, native Material palette/language controls on the right, and a separate search row beneath. The root header keeps both `yw-header` and `md-header` classes so Material's search state selectors still work.
+- Material's own `partials/search.html` is included unchanged in the search row. Scoped `.yw-search-row` CSS makes the native input always visible and full-width, uses a neutral light/dark surface, and keeps the Material result panel/dropdown. `docs/assets/js/y2k-clock.js` opens the native search state on focus/input, closes it on outside click/Escape, and preserves the `/` shortcut.
+- `overrides/partials/navigation.html`: independent custom navigation, rendered through the normal-flow `tabs` block in `overrides/main.html`. It uses localized Home/Store/Library/Tools/Blog links. Nav bar itself is 800px, left aligned, and brand coloured.
+- `overrides/main.html`: adds a document-end signature inside `.yw-page`, with translated thanks-for-reading text plus Saweria/Patreon support links and `[ EOF ]` marker.
+- `overrides/partials/footer.html`: removed the old global support banner. The global footer now contains brand/contact, legal, social and credits only.
+- `docs/assets/css/y2k.css`: three-row structure, 800px neutral search row and navigation, document signature styling. Brand green `#4d8b31`, CTA orange `#ff8427`, and local font files are retained.
+- `docs/assets/js/y2k-clock.js`: generated Blog plugin pages also receive the same document-end thanks/support signature when the script wraps their content.
+- Updated `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` to document the new source of truth.
+- Files changed: `overrides/partials/header.html`, `overrides/partials/navigation.html`, `overrides/main.html`, `overrides/partials/footer.html`, `docs/assets/css/y2k.css`, `docs/assets/js/y2k-clock.js`, `dev-tool/readmes/for-yakka.md`, `dev-tool/readmes/ai-instruct.md`, this context bank.
+- Latest code commit before context update: `f12fa9676301af12cb1f5ca17e8768bd3559b79d`. Strict build: pending. No local browser verification.
+- Next: verify GitHub Actions strict build; owner should check search field at desktop/mobile, search results open/close, palette/language controls, nav alignment, and document-end signature.
+- **Responses since this snapshot: 0.**
