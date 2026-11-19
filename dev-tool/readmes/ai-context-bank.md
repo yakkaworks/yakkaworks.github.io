@@ -69,3 +69,19 @@ After every five user-facing assistant responses, refresh this file with a short
 - Build: not yet verified after this CSS-only adjustment.
 - Next: verify the latest strict GitHub Actions build, then owner should pull and inspect desktop/mobile alignment locally.
 - **Responses since this snapshot: 0.**
+
+
+## Latest navigation and background fix (2026-11-19)
+
+The owner supplied a light-mode screenshot showing that the custom navigation row was missing entirely, while the top brand header and document/footer were visible. This was a template-rendering issue, not just a colour/spacing issue: the previous navigation was rendered via the Material tabs block and its `nav.items` loop, which did not appear in the preview.
+
+- Moved the primary nav markup into `overrides/partials/header.html`, immediately after the brand header. It now uses explicit links for Home/Store/Library/Tools/Blog, Indonesian and English labels, and route-based active state.
+- Emptied the Material `tabs` block in `overrides/main.html` to avoid duplicate tabs; Material search, palette, i18n, Markdown rendering, and page frame remain in use.
+- Updated `docs/assets/css/y2k.css`: nav styling is in normal flow, uses a brand-derived dark green bar with readable links, keeps the 800px shared width and 0.5rem mobile gutter, and prevents the links from wrapping awkwardly on narrow screens (horizontal scroll when necessary).
+- Dark mode `body::after` now uses a neutral solid dark background instead of the cover image. The light-mode cover background remains; `.md-container` is elevated above the background pseudo-element so the background can show consistently behind the page.
+- Adjusted supporting light colours toward pale green/orange-derived pastels while preserving primary green `#4d8b31`, CTA orange `#ff8427`, and the local Body/Header/Display fonts.
+- Updated `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` with the new navigation and background rules.
+- Commits: `abaafbe` (header/nav), `89a3093` (remove Material tabs block), `1513c1d` (CSS/nav/background), followed by guide updates `4f80e77` and `7067531`.
+- Build status: not yet verified for this set of changes. No local browser verification has been performed by the agent.
+- Next: confirm strict GitHub Actions build, then owner should inspect both light/dark mode and navigation routes in desktop/mobile previews.
+- **Responses since this snapshot: 0.**
