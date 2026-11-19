@@ -151,3 +151,15 @@ The primary navigation is intentionally rendered directly in the header partial,
 The navigation is in normal document flow. Do not make it sticky or fixed. Material's back-to-top control is a separate fixed bottom-right button.
 
 Light mode uses the muted cover-image backdrop. Dark mode uses a plain neutral dark background instead of showing the cover image. Keep the brand green `#4d8b31` and action orange `#ff8427`; supporting surface and border colours should remain pale tints or darkened tints derived from those brand colours. Keep the supplied local font files.
+
+
+## 10. Header, search and navigation overrides
+
+The header and navigation are separate Material template regions:
+
+- `overrides/partials/header.html` renders the Yakka Works brand bar and reuses Material's native palette, language selector, search toggle, and search dialog.
+- `overrides/partials/navigation.html` renders the custom Home/Store/Library/Tools/Blog menu.
+- `overrides/main.html` inserts the navigation partial through Material's `tabs` template block. This puts it after the header and before the main document, instead of embedding it in the header itself.
+- `docs/assets/css/y2k.css` constrains the navigation bar, main document and footer to the same 800px width. On mobile they use a 0.5rem side gutter.
+
+When updating navigation labels or URLs, edit `overrides/partials/navigation.html`. The English and Indonesian labels and route prefixes are handled there. Do not make this navigation sticky or fixed.
