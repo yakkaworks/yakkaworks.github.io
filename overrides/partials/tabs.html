@@ -1,0 +1,8 @@
+{% import "partials/language.html" as lang with context %}
+<nav class="yw-nav" aria-label="{{ lang.t('tabs') }}">
+  <div class="yw-nav__inner">
+    {% for item in nav %}
+      <a class="yw-nav__link{% if item.active %} yw-nav__link--active{% endif %}" href="{{ item.url | url }}">{{ item.title }}</a>
+    {% endfor %}
+  </div>
+</nav>

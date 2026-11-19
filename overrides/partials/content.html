@@ -1,22 +1,13 @@
-{# Keep Material's built-in page features while adding the Y2K document frame. #}
-<div class="yw-page">
-  <header class="yw-page__bar">
-    <span class="yw-page__title">{{ page.title | d(config.site_name, true) }}</span>
-    <time class="yw-page__clock" id="yw-local-clock" aria-label="Local date and time"></time>
-  </header>
+{# Keep the native Material content pipeline; the outer Yakka Works document frame is in main.html. #}
+{% include "partials/tags.html" %}
+{% include "partials/actions.html" %}
 
-  <div class="yw-page__content">
-    {% include "partials/tags.html" %}
-    {% include "partials/actions.html" %}
+{% if "\u003ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true) }}</h1>
+{% endif %}
 
-    {% if "\u003ch1" not in page.content %}
-      <h1>{{ page.title | d(config.site_name, true) }}</h1>
-    {% endif %}
+{{ page.content }}
 
-    {{ page.content }}
-
-    {% include "partials/source-file.html" %}
-    {% include "partials/feedback.html" %}
-    {% include "partials/comments.html" %}
-  </div>
-</div>
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

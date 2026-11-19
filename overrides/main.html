@@ -9,28 +9,44 @@
   {{ super() }}
   {% set page_name = page.title if page else config.site_name %}
   {% set page_title = page_name ~ " - Yakka Works" %}
-  {% if page and page.meta %}
-    {% set page_description = page.meta.description | default(config.site_description, true) %}
-  {% else %}
-    {% set page_description = config.site_description %}
-  {% endif %}
+  {% set page_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
   {% set page_url = page.canonical_url if page and page.canonical_url else config.site_url %}
   {% set cover_url = config.site_url ~ "assets/img/cover.jpg" %}
-
-  <!-- Primary Meta Tags -->
   <meta name="title" content="{{ page_title }}">
-
-  <!-- Open Graph / Facebook -->
+  <meta name="description" content="{{ page_description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page_url }}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_description }}">
   <meta property="og:image" content="{{ cover_url }}">
-
-  <!-- X (Twitter) -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="{{ page_url }}">
   <meta property="twitter:title" content="{{ page_title }}">
   <meta property="twitter:description" content="{{ page_description }}">
   <meta property="twitter:image" content="{{ cover_url }}">
+{% endblock %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block tabs %}
+  {% include "partials/tabs.html" %}
+{% endblock %}
+
+{# The navigation is rendered in the custom, non-sticky header. Keep Material's TOC out of the page grid. #}
+{% block site_nav %}{% endblock %}
+
+{% block content %}
+  <div class="yw-page">
+    <div class="yw-page__bar">
+      <span class="yw-page__title">{{ page.title | d(config.site_name, true) }}</span>
+      {% if page.meta and page.meta.date %}
+        <time class="yw-page__date" datetime="{{ page.meta.date }}">{{ page.meta.date }}</time>
+      {% endif %}
+    </div>
+    <div class="yw-page__content">
+      {{ super() }}
+    </div>
+  </div>
 {% endblock %}

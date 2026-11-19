@@ -1,0 +1,29 @@
+{% import "partials/language.html" as lang with context %}
+<header class="yw-header" data-md-component="header">
+  <div class="yw-header__window">
+    <a class="yw-header__brand" href="{{ nav.homepage.url | url }}" aria-label="Yakka Works — Beranda">
+      <img src="{{ config.theme.logo | url }}" alt="" width="34" height="34">
+      <span>Yakka Works</span>
+    </a>
+
+    <div class="yw-header__controls">
+      {% if config.theme.palette and not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+        {% include "partials/javascripts/palette.html" %}
+      {% endif %}
+
+      {% if config.extra.alternate %}
+        {% include "partials/alternate.html" %}
+      {% endif %}
+
+      {% if "search" in config.plugins %}
+        <label class="yw-search-toggle" for="__search" aria-label="{{ lang.t('search') }}">
+          <span class="yw-search-toggle__icon">{% include ".icons/material/magnify.svg" %}</span>
+          <span>{{ "Cari" if config.theme.language == "id" else "Search" }}</span>
+          <kbd>/</kbd>
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+    </div>
+  </div>
+</header>
