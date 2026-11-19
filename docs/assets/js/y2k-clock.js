@@ -7,8 +7,8 @@
     page.className = "yw-page";
 
     const heading = inner.querySelector("h1");
-    const title = heading?.textContent?.trim() ||
-      document.title.replace(/\\s+-\\s+Yakka Works$/, "");
+    const title = heading?.textContent?.replace(/\s*#\s*$/, "").trim() ||
+      document.title.replace(/\s+-\s+Yakka Works$/, "");
 
     const bar = document.createElement("div");
     bar.className = "yw-page__bar";
