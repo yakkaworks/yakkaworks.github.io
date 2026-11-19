@@ -28,16 +28,18 @@
   --yw-primary-dark: #356c24;
   --yw-primary-soft: #dcebd3;
   --yw-cta: #ff8427;
-  --yw-bg: #f5f8f0;
-  --yw-surface: #fcfdf9;
-  --yw-surface-2: #eaf1e3;
-  --yw-border: #c5d4b9;
+  --yw-nav-bg: #356c24;
+  --yw-nav-text: #f7faf3;
+  --yw-bg: #f2f7ef;
+  --yw-surface: #fbfdf9;
+  --yw-surface-2: #e8f1e4;
+  --yw-border: #c5d8bd;
   --yw-text: #263321;
   --yw-muted: #65745d;
-  --yw-mint: #d9eee5;
-  --yw-lilac: #ebe4f4;
-  --yw-peach: #f9e5d5;
-  --yw-yellow: #fff1c9;
+  --yw-mint: #e4f1e7;
+  --yw-lilac: #e9efe5;
+  --yw-peach: #ffeadb;
+  --yw-yellow: #f7efd9;
   --md-primary-fg-color: var(--yw-primary);
   --md-primary-fg-color--light: #78a95f;
   --md-primary-fg-color--dark: var(--yw-primary-dark);
@@ -59,6 +61,8 @@
   --yw-primary-dark: #b7d8a7;
   --yw-primary-soft: #31482b;
   --yw-cta: #ff8427;
+  --yw-nav-bg: #203125;
+  --yw-nav-text: #e5ecdf;
   --yw-bg: #172119;
   --yw-surface: #202d22;
   --yw-surface-2: #29392b;
@@ -66,9 +70,9 @@
   --yw-text: #e5ecdf;
   --yw-muted: #b4c2a9;
   --yw-mint: #29443a;
-  --yw-lilac: #3d354d;
+  --yw-lilac: #303d32;
   --yw-peach: #4a372a;
-  --yw-yellow: #4b432b;
+  --yw-yellow: #403c2d;
   --md-default-bg-color: var(--yw-bg);
   --md-default-fg-color: var(--yw-text);
   --md-code-bg-color: #253328;
@@ -100,7 +104,7 @@ body {
 
 body::after {
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
   content: "";
   pointer-events: none;
@@ -122,17 +126,9 @@ body::after {
 }
 
 [data-md-color-scheme="slate"] body::after {
-  background-image:
-    linear-gradient(rgba(23, 33, 25, .82), rgba(23, 33, 25, .82)),
-    url("../img/background-dl.jpg");
-}
-
-@media (orientation: portrait) {
-  [data-md-color-scheme="slate"] body::after {
-    background-image:
-      linear-gradient(rgba(23, 33, 25, .82), rgba(23, 33, 25, .82)),
-      url("../img/background-dp.jpg");
-  }
+  background-image: none;
+  background-color: var(--yw-bg);
+  opacity: 1;
 }
 
 .md-typeset,
@@ -335,7 +331,7 @@ body::after {
 }
 
 .yw-footer__support a {
-  color: #99470f;
+  color: var(--yw-cta);
   font-weight: 800;
 }
 
@@ -798,6 +794,122 @@ body::after {
   .yw-nav__inner {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .md-main__inner {
+    padding: 0;
+  }
+}
+
+
+/* Navigation, content and footer share one centered 800px portal column. */
+body > .md-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.yw-nav {
+  position: relative !important;
+  inset: auto !important;
+  z-index: auto !important;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid var(--yw-border);
+  background: var(--yw-nav-bg);
+}
+
+.yw-nav__inner {
+  width: min(800px, calc(100% - 1.5rem));
+  max-width: 800px;
+  min-height: 42px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.yw-nav__list {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.yw-nav__item {
+  display: flex;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.yw-nav__link,
+.yw-nav__item--active .yw-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: .55rem .85rem;
+  background: transparent;
+  color: var(--yw-nav-text) !important;
+  font-family: "YW Header", "YW Body", sans-serif;
+  font-size: .86rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.yw-nav__link:hover,
+.yw-nav__item--active .yw-nav__link {
+  background: rgba(255, 255, 255, .13);
+  color: #fff !important;
+}
+
+.yw-nav__item--active .yw-nav__link {
+  box-shadow: inset 0 -3px 0 var(--yw-cta);
+}
+
+.yw-footer {
+  width: min(800px, calc(100% - 1.5rem));
+  max-width: 800px;
+}
+
+.md-main__inner {
+  width: min(800px, calc(100% - 1.5rem));
+  max-width: 800px;
+  padding: 0;
+}
+
+.md-content {
+  max-width: none;
+}
+
+@media (max-width: 700px) {
+  .yw-nav__inner,
+  .md-main__inner,
+  .yw-footer {
+    width: calc(100% - 1rem);
+  }
+
+  .yw-nav__list {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .yw-nav__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .yw-nav__link,
+  .yw-nav__item--active .yw-nav__link {
+    padding-right: .65rem;
+    padding-left: .65rem;
+    font-size: .8rem;
   }
 
   .md-main__inner {
