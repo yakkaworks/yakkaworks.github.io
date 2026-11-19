@@ -21,10 +21,10 @@
         <a class="yw-nav__link" href="{{ nav.homepage.url | url }}"{% if active_home %} aria-current="page"{% endif %}>{{ "Home" if is_en else "Beranda" }}</a>
       </li>
       <li class="yw-nav__item{% if active_store %} yw-nav__item--active{% endif %}">
-        <a class="yw-nav__link" href="{{ ('store/' if not is_en else 'store/') | url }}"{% if active_store %} aria-current="page"{% endif %}>{{ "Store" if is_en else "Toko" }}</a>
+        <a class="yw-nav__link" href="{{ (prefix ~ 'store/') | url }}"{% if active_store %} aria-current="page"{% endif %}>{{ "Store" if is_en else "Toko" }}</a>
       </li>
       <li class="yw-nav__item{% if active_library %} yw-nav__item--active{% endif %}">
-        <a class="yw-nav__link" href="{{ ('library/' if not is_en else 'library/') | url }}"{% if active_library %} aria-current="page"{% endif %}>{{ "Library" if is_en else "Pustaka" }}</a>
+        <a class="yw-nav__link" href="{{ (prefix ~ 'library/') | url }}"{% if active_library %} aria-current="page"{% endif %}>{{ "Library" if is_en else "Pustaka" }}</a>
       </li>
       <li class="yw-nav__item{% if active_tools %} yw-nav__item--active{% endif %}">
         <a class="yw-nav__link" href="{{ (prefix ~ 'tools/') | url }}"{% if active_tools %} aria-current="page"{% endif %}>{{ "Tools" if is_en else "Alat" }}</a>
