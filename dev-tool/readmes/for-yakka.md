@@ -21,10 +21,10 @@ The first run may take longer because the helper creates `.venv/` and installs t
 | `mkdocs.yml` | Site name, URL, plugins, language settings, theme and footer data |
 | `docs/` | Pages visitors read |
 | `docs/.pages` and nested `.pages` | Navigation names and ordering |
-| `assets/css/y2k.css` | Colours, typography, layout and responsive styling |
-| `assets/fonts/` | Local fonts used by the theme |
-| `assets/img/` | Social cover and page background images |
-| `assets/logo/` | Logo and favicon |
+| `docs/assets/css/y2k.css` | Colours, typography, layout and responsive styling |
+| `docs/assets/fonts/` | Local fonts used by the theme |
+| `docs/assets/img/` | Social cover and page background images |
+| `docs/assets/logo/` | Logo and favicon |
 | `overrides/` | HTML templates that customise Material |
 | `hooks/` | Small Python functions that run during a MkDocs build |
 | `requirements.txt` | Python packages and version ranges |
@@ -75,7 +75,7 @@ Keep the paired language files together. The i18n plugin handles the language sw
 
 ## 5. Changing the design
 
-Most visual changes belong in `assets/css/y2k.css`.
+Most visual changes belong in `docs/assets/css/y2k.css`.
 
 Main brand values:
 

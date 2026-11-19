@@ -29,8 +29,8 @@ Treat the repository files as the source of truth. Do not assume the previous co
 - Primary brand green: `#4d8b31`.
 - CTA/action orange: `#ff8427`; use sparingly.
 - Supporting palette: muted pastel greens, mint, lilac, peach, and soft yellow.
-- Use `body.ttf`, `header.ttf`, and `display.ttf` from `assets/fonts/`.
-- `assets/img/cover.jpg` is the site-wide social cover.
+- Use `body.ttf`, `header.ttf`, and `display.ttf` from `docs/assets/fonts/`.
+- `docs/assets/img/cover.jpg` is the site-wide social cover.
 - Background naming: `background-[a][b].jpg`, where `a=l/d` means light/dark and `b=l/p` means landscape/portrait.
 - Page title format: `[page title] - Yakka Works`.
 - Page meta description comes from the first rendered paragraph, via `hooks/meta_description.py`.

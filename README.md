@@ -68,7 +68,7 @@ The push command refuses protected branches and never force-pushes. It checks th
 ├── README.md               # Branch overview and quick start
 ├── mkdocs.yml              # MkDocs, theme, plugin, and brand configuration
 ├── requirements.txt        # Python dependencies
-├── assets/
+└── docs/assets/
 │   ├── css/                 # Yakka Works theme styling
 │   ├── fonts/               # Body, header, and display typefaces
 │   ├── img/                 # Cover and light/dark background variants
@@ -96,8 +96,8 @@ The push command refuses protected branches and never force-pushes. It checks th
 - Primary brand green: `#4d8b31`.
 - Action/CTA orange: `#ff8427`; use it sparingly.
 - Supporting colours are muted pastel greens, mint, lilac, peach, and soft yellow.
-- `body.ttf`, `header.ttf`, and `display.ttf` are loaded locally from `assets/fonts/`.
-- `assets/img/cover.jpg` is the site-wide social preview image.
+- `body.ttf`, `header.ttf`, and `display.ttf` are loaded locally from `docs/assets/fonts/`.
+- `docs/assets/img/cover.jpg` is the site-wide social preview image.
 - Background files use `background-[a][b].jpg`: `a` is theme (`l` light, `d` dark) and `b` is orientation (`l` landscape, `p` portrait).
 - The SEO description is generated from the first rendered paragraph of each page. The title format is `[page title] - Yakka Works`.
 
