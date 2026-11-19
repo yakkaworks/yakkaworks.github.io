@@ -30,6 +30,8 @@
   --yw-cta: #ff8427;
   --yw-nav-bg: #356c24;
   --yw-nav-text: #f7faf3;
+  --yw-search-bg: #e8ece5;
+  --yw-search-text: #293528;
   --yw-bg: #f2f7ef;
   --yw-surface: #fbfdf9;
   --yw-surface-2: #e8f1e4;
@@ -63,6 +65,8 @@
   --yw-cta: #ff8427;
   --yw-nav-bg: #203125;
   --yw-nav-text: #e5ecdf;
+  --yw-search-bg: #29342d;
+  --yw-search-text: #e5ecdf;
   --yw-bg: #172119;
   --yw-surface: #202d22;
   --yw-surface-2: #29392b;
@@ -1054,5 +1058,246 @@ body > .md-container {
     padding-right: .7rem;
     padding-left: .7rem;
     font-size: .8rem;
+  }
+}
+
+
+/* -------------------------------------------------------------------------
+   Three-row portal header:
+   1) brand + Material palette/language controls
+   2) always-visible native Material search field
+   3) custom navigation rendered by the Material tabs block
+   ------------------------------------------------------------------------- */
+
+.yw-header.md-header {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  z-index: 20;
+  width: 100%;
+  overflow: visible;
+  border: 0;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.yw-header__brand-row {
+  width: 100%;
+  border-bottom: 2px solid var(--yw-primary-dark);
+  background: var(--yw-primary);
+}
+
+.yw-header__brand-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1100px, calc(100% - 1.5rem));
+  min-height: 64px;
+  margin: 0 auto;
+  padding: .55rem 1.25rem;
+  background: var(--yw-primary);
+}
+
+.yw-header__brand {
+  color: #f7faf3 !important;
+  font-family: "YW Header", "YW Body", sans-serif;
+}
+
+.yw-header__brand:hover {
+  color: #fff !important;
+}
+
+.yw-header__controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  gap: .45rem;
+}
+
+.yw-header__controls .md-header__button,
+.yw-header__controls .md-icon {
+  color: #f7faf3 !important;
+}
+
+.yw-header__controls .md-header__button:hover,
+.yw-header__controls .md-icon:hover {
+  background: rgba(255, 255, 255, .14);
+}
+
+/* Search stays Material's own component and stays visible as a full-width row. */
+.yw-search-row {
+  width: min(800px, calc(100% - 1.5rem));
+  margin: .55rem auto;
+}
+
+.yw-search-row__inner,
+.yw-search-row .md-search {
+  position: relative !important;
+  display: block;
+  width: 100% !important;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.yw-search-row .md-search__overlay {
+  display: none !important;
+}
+
+.yw-search-row .md-search__inner {
+  position: relative !important;
+  inset: auto !important;
+  display: block;
+  float: none !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  z-index: auto;
+}
+
+.yw-search-row .md-search__form {
+  height: 42px;
+  border: 1px solid var(--yw-border);
+  background: var(--yw-search-bg) !important;
+  box-shadow: none !important;
+  color: var(--yw-search-text);
+}
+
+.yw-search-row .md-search__input {
+  color: var(--yw-search-text);
+  font-family: "YW Body", system-ui, sans-serif;
+  font-size: .9rem;
+}
+
+.yw-search-row .md-search__input::placeholder,
+.yw-search-row .md-search__input ~ .md-search__icon {
+  color: var(--yw-muted);
+  opacity: 1;
+}
+
+.yw-search-row .md-search__form:focus-within {
+  border-color: var(--yw-primary);
+  box-shadow: inset 0 0 0 1px var(--yw-primary) !important;
+}
+
+.yw-search-row .md-search__output {
+  position: absolute !important;
+  top: 100% !important;
+  right: 0;
+  bottom: auto !important;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__output {
+  opacity: 1;
+  visibility: visible;
+}
+
+.yw-search-row .md-search__scrollwrap {
+  width: 100% !important;
+  height: auto;
+  max-height: 0;
+  overflow-y: auto;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__scrollwrap {
+  max-height: 70vh;
+}
+
+.yw-search-row .md-search__result {
+  width: 100%;
+}
+
+/* The navigation bar uses the same 800px column, aligned to the start. */
+.yw-nav {
+  width: min(800px, calc(100% - 1.5rem));
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--yw-nav-bg) !important;
+}
+
+.yw-nav__inner {
+  justify-content: flex-start;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* Article end-note: the support links now belong to the document, not global footer. */
+.yw-page__signature {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .65rem 1rem;
+  margin: 0 2.4rem;
+  padding: 1rem 0 1.25rem;
+  border-top: 1px solid var(--yw-border);
+  color: var(--yw-muted);
+  font-size: .75rem;
+}
+
+.yw-page__thanks,
+.yw-page__support {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .35rem .55rem;
+}
+
+.yw-page__thanks > span:first-child {
+  color: var(--yw-primary);
+}
+
+.yw-page__support a {
+  color: var(--yw-cta) !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.yw-page__support a:hover {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.yw-page__eof {
+  margin-left: auto;
+  color: var(--yw-muted);
+  font-family: "YW Body", monospace;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .yw-header__brand-inner {
+    width: calc(100% - 1rem);
+    padding: .55rem .5rem;
+  }
+
+  .yw-search-row,
+  .yw-nav {
+    width: calc(100% - 1rem);
+  }
+
+  .yw-search-row {
+    margin: .5rem auto;
+  }
+
+  .yw-page__signature {
+    margin-right: 1.1rem;
+    margin-left: 1.1rem;
+  }
+
+  .yw-page__eof {
+    margin-left: 0;
   }
 }
