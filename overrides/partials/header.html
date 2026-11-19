@@ -1,31 +1,29 @@
 {% import "partials/language.html" as lang with context %}
 {% set is_en = config.theme.language == "en" %}
-<header class="yw-header" data-md-component="header">
-  <div class="yw-header__window">
-    <a class="yw-header__brand" href="{{ nav.homepage.url | url }}" aria-label="Yakka Works — {{ 'Home' if is_en else 'Beranda' }}">
-      <img src="{{ config.theme.logo | url }}" alt="" width="34" height="34">
-      <span>Yakka Works</span>
-    </a>
+<header class="yw-header md-header" data-md-component="header">
+  <div class="yw-header__brand-row">
+    <div class="yw-header__brand-inner">
+      <a class="yw-header__brand" href="{{ nav.homepage.url | url }}" aria-label="Yakka Works — {{ 'Home' if is_en else 'Beranda' }}">
+        <img src="{{ config.theme.logo | url }}" alt="" width="34" height="34">
+        <span>Yakka Works</span>
+      </a>
 
-    <div class="yw-header__controls">
-      {% if config.theme.palette and not config.theme.palette is mapping %}
-        {% include "partials/palette.html" %}
-        {% include "partials/javascripts/palette.html" %}
-      {% endif %}
+      <div class="yw-header__controls">
+        {% if config.theme.palette and not config.theme.palette is mapping %}
+          {% include "partials/palette.html" %}
+          {% include "partials/javascripts/palette.html" %}
+        {% endif %}
 
-      {% if config.extra.alternate %}
-        {% include "partials/alternate.html" %}
-      {% endif %}
-
-      <label class="md-header__button md-icon yw-header__search-button"
-             for="__search"
-             title="{{ lang.t('search') }}"
-             aria-label="{{ lang.t('search') }}">
-        {% set icon = config.theme.icon.search or "material/magnify" %}
-        {% include ".icons/" ~ icon ~ ".svg" %}
-      </label>
+        {% if config.extra.alternate %}
+          {% include "partials/alternate.html" %}
+        {% endif %}
+      </div>
     </div>
   </div>
 
-  {% include "partials/search.html" %}
+  <div class="yw-search-row">
+    <div class="yw-search-row__inner">
+      {% include "partials/search.html" %}
+    </div>
+  </div>
 </header>
