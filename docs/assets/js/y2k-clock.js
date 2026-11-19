@@ -34,19 +34,6 @@
     const signature = document.createElement("div");
     signature.className = "yw-page__signature";
 
-    const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
-
-    const thanks = document.createElement("div");
-    thanks.className = "yw-page__thanks";
-    const star = document.createElement("span");
-    star.setAttribute("aria-hidden", "true");
-    star.textContent = "★";
-    const thanksText = document.createElement("span");
-    thanksText.textContent = isEnglish
-      ? "Thank you for reading until the end."
-      : "Terima kasih telah membaca sampai akhir.";
-    thanks.append(star, thanksText);
-
     const support = document.createElement("div");
     support.className = "yw-page__support";
     const supportText = document.createElement("span");
@@ -73,11 +60,7 @@
       support.append(link);
     });
 
-    const eof = document.createElement("span");
-    eof.className = "yw-page__eof";
-    eof.textContent = "[ EOF ]";
-
-    signature.append(thanks, support, eof);
+    signature.append(support);
     page.append(bar, content, signature);
     inner.append(page);
   }
