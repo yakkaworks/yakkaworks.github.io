@@ -82,6 +82,6 @@ The owner supplied a light-mode screenshot showing that the custom navigation ro
 - Adjusted supporting light colours toward pale green/orange-derived pastels while preserving primary green `#4d8b31`, CTA orange `#ff8427`, and the local Body/Header/Display fonts.
 - Updated `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` with the new navigation and background rules.
 - Commits: `abaafbe` (header/nav), `89a3093` (remove Material tabs block), `1513c1d` (CSS/nav/background), followed by guide updates `4f80e77` and `7067531`.
-- Build status: not yet verified for this set of changes. No local browser verification has been performed by the agent.
-- Next: confirm strict GitHub Actions build, then owner should inspect both light/dark mode and navigation routes in desktop/mobile previews.
+- Build status: strict GitHub Actions build passed in run `44465300784` (commit `05a2d1ebf6a5f53ac1fedbb9c2a7711985995fe8`); deployment was skipped as expected. No local browser verification has been performed by the agent.
+- Next: owner should inspect both light/dark mode and navigation routes in desktop/mobile previews.
 - **Responses since this snapshot: 0.**
