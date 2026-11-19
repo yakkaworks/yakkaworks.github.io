@@ -173,3 +173,8 @@ The header has three rows: the brand/control bar, the neutral Material search fi
 The search row is a neutral-coloured wrapper around Material's own search partial. Keep the native search input/results behaviour; only the wrapper and visual styling are custom.
 
 In dark mode the city image remains as the page backdrop but is darkened by a neutral green-black overlay. The landscape and portrait variants are selected separately. Light mode retains the lighter city treatment. The current document signature contains the support links only; the owner removed the thanks text and EOF marker.
+
+
+## 12. Navigation tab colours and row boundaries
+
+The brand, search, and navigation rows touch with no vertical gaps. The brand row keeps its bottom border. The neutral Material search field is left visually unchanged. The nav bar uses the Yakka Works primary green `#4d8b31`; inactive tabs use a deeper green shade and the active tab has an orange `#ff8427` top border. The active indicator is on top, not bottom. Keep the whole nav, search, and main document aligned to the same 800px column.
