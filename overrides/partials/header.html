@@ -1,6 +1,6 @@
 {% import "partials/language.html" as lang with context %}
 {% set is_en = config.theme.language == "en" %}
-<header class="yw-header md-header" data-md-component="header">
+<header class="md-header yw-header" data-md-component="header">
   <div class="yw-header__brand-row">
     <div class="yw-header__brand-inner">
       <a class="yw-header__brand" href="{{ nav.homepage.url | url }}" aria-label="Yakka Works — {{ 'Home' if is_en else 'Beranda' }}">
