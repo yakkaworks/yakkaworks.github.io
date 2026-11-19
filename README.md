@@ -68,13 +68,13 @@ The push command refuses protected branches and never force-pushes. It checks th
 ├── README.md               # Branch overview and quick start
 ├── mkdocs.yml              # MkDocs, theme, plugin, and brand configuration
 ├── requirements.txt        # Python dependencies
-└── docs/assets/
-│   ├── css/                 # Yakka Works theme styling
-│   ├── fonts/               # Body, header, and display typefaces
-│   ├── img/                 # Cover and light/dark background variants
-│   ├── js/                  # Small site-side scripts
-│   └── logo/                # Logo and favicon assets
 ├── docs/
+│   ├── assets/
+│   │   ├── css/             # Yakka Works theme styling
+│   │   ├── fonts/           # Body, header, and display typefaces
+│   │   ├── img/             # Cover and light/dark background variants
+│   │   ├── js/              # Small site-side scripts
+│   │   └── logo/            # Logo and favicon assets
 │   ├── index.md             # Indonesian homepage placeholder
 │   ├── index.en.md          # English homepage placeholder
 │   ├── store/               # Store index only for now
@@ -99,6 +99,7 @@ The push command refuses protected branches and never force-pushes. It checks th
 - `body.ttf`, `header.ttf`, and `display.ttf` are loaded locally from `docs/assets/fonts/`.
 - `docs/assets/img/cover.jpg` is the site-wide social preview image.
 - Background files use `background-[a][b].jpg`: `a` is theme (`l` light, `d` dark) and `b` is orientation (`l` landscape, `p` portrait).
+- Theme assets must live under `docs/assets/`: MkDocs publishes files from `docs_dir` (currently `docs/`) and does not serve arbitrary files from the repository root.
 - The SEO description is generated from the first rendered paragraph of each page. The title format is `[page title] - Yakka Works`.
 
 ## Content and language conventions
