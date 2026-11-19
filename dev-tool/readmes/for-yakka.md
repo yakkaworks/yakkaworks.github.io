@@ -143,7 +143,7 @@ The visible site layout is implemented with Material template overrides:
 
 - `overrides/partials/header.html` contains the Yakka Works brand row, Material palette/language controls, and the full-width native Material search row.
 - `overrides/partials/navigation.html` contains the custom primary navigation and localized labels.
-- `overrides/main.html` keeps Material page rendering inside the Yakka Works document frame and adds the document-end thanks/support signature.
+- `overrides/main.html` keeps Material page rendering inside the Yakka Works document frame and adds the document-end support signature.
 - `overrides/partials/footer.html` contains only the brand/address/email, legal links, social links, and credits.
 - `docs/assets/css/y2k.css` controls the shared 800px search, navigation, main-content, and footer widths.
 
@@ -168,8 +168,8 @@ When updating navigation labels or URLs, edit `overrides/partials/navigation.htm
 
 ## 11. Header spacing and dark background
 
-The header has three consecutive rows: the brand/control bar, the neutral Material search field, and the brand-coloured custom navigation. These rows intentionally touch with no vertical margins. The brand row is compact (56px desktop, 54px mobile); search and navigation share the 800px centered width and the 0.5rem mobile gutter.
+The header has three rows: the brand/control bar, the neutral Material search field, and the brand-coloured custom navigation. The current owner-edited header wrapper has an 800px maximum width and 0.5rem vertical margin; search and navigation share the 800px width and 0.5rem mobile gutter. Preserve the owner's latest spacing choices when adjusting the theme.
 
 The search row is a neutral-coloured wrapper around Material's own search partial. Keep the native search input/results behaviour; only the wrapper and visual styling are custom.
 
-In dark mode the city image remains as the page backdrop but is darkened by a neutral green-black overlay. The landscape and portrait variants are selected separately. Light mode retains the lighter city treatment.
+In dark mode the city image remains as the page backdrop but is darkened by a neutral green-black overlay. The landscape and portrait variants are selected separately. Light mode retains the lighter city treatment. The current document signature contains the support links only; the owner removed the thanks text and EOF marker.
