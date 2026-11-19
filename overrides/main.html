@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  {% set page_title = page.title | default(config.site_name, true) %}
+  <title>{{ page_title }} - Yakka Works</title>
+{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% set page_title = page.title | default(config.site_name, true) ~ " - Yakka Works" %}
+  {% set page_description = page.meta.description | default(config.site_description, true) %}
+  {% set page_url = page.canonical_url | default(config.site_url, true) %}
+  {% set cover_url = config.site_url ~ "assets/img/cover.jpg" %}
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="{{ page_title }}">
+  <meta name="description" content="{{ page_description }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:image" content="{{ cover_url }}">
+
+  <!-- X (Twitter) -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page_url }}">
+  <meta property="twitter:title" content="{{ page_title }}">
+  <meta property="twitter:description" content="{{ page_description }}">
+  <meta property="twitter:image" content="{{ cover_url }}">
+{% endblock %}

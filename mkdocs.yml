@@ -1,5 +1,5 @@
 site_name: Yakka Works
-site_description: Independent digital studio dari Banyuwangi.
+site_description: Independent digital studio from Banyuwangi, Indonesia.
 site_author: Yakka Works
 site_url: https://yakkaworks.github.io/
 use_directory_urls: true
@@ -19,6 +19,7 @@ not_in_nav: |
 hooks:
   - hooks/year.py
   - hooks/plugin_order.py
+  - hooks/meta_description.py
 
 theme:
   name: material
@@ -26,7 +27,7 @@ theme:
   language: id
   font: false
   logo: assets/logo/logo.svg
-  favicon: assets/logo/favicon.svg
+  favicon: assets/logo/logo.ico
   features:
     - navigation.tabs
     - navigation.sections
@@ -58,7 +59,6 @@ theme:
         icon: material/brightness-4
         name: Ganti ke mode otomatis
 
-# No explicit nav: Awesome Pages owns tab order, like the existing project.
 markdown_extensions:
   - footnotes
   - admonition
