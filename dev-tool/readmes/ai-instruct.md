@@ -77,7 +77,7 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - Navigation, main document, and footer share an 800px desktop maximum width and use a 0.5rem mobile side gutter.
 - Navigation is normal-flow only; never set it to sticky or fixed.
 - Dark mode uses the dark city image variants background-dl.jpg / background-dp.jpg with a strong neutral green-black overlay. Preserve this darkened city backdrop; do not replace it with a plain solid colour unless explicitly requested.
-- The owner is now editing presentation details directly on GitHub. Inspect and preserve those edits before making further changes. Current owner preferences: social links column before legal links; header max-width 800px with 0.5rem vertical margin; thanks text and EOF marker omitted.
+- The owner is now editing presentation details directly on GitHub. Inspect and preserve those edits before making further changes. Current owner preferences: social links column before legal links; header max-width 900px with 0.5rem vertical margin; thanks text and EOF marker omitted.
 - Preserve the exact brand colours: primary `#4d8b31`, CTA `#ff8427`. Derive supporting pastel colours from them, and continue using the local Body/Header/Display TTFs.
 
 
@@ -88,7 +88,7 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - The native Material search parent must retain the `.md-header` class so Material's checked-toggle selectors and search-result behavior continue working. Adapt the search inner form/overlay/output through scoped CSS in `.yw-search-row`, not broad selectors.
 - `overrides/partials/navigation.html` owns the explicit Home/Store/Library/Tools/Blog links and localized labels.
 - `overrides/main.html` renders that custom nav via the normal-flow `tabs` block. Keep it separate from the header partial.
-- `docs/assets/css/y2k.css` must set the full `.yw-nav` bar itself to the same 800px width as the search row, `.md-main__inner`, and `.yw-footer`; links are left-aligned and the bar has a visible brand-derived background.
+- `docs/assets/css/y2k.css` must set the full `.yw-nav` bar itself to the same 900px width as the search row, `.md-main__inner`, and `.yw-footer`; links are left-aligned and the bar has a visible brand-derived background.
 - Keep the nav in normal document flow, never sticky/fixed.
 - Donation links belong in `.yw-page__signature` at the end of the document. The owner has removed the thanks-for-reading sentence and `[ EOF ]` marker; preserve that preference unless asked to restore them. The global footer must not repeat a support banner.
 
@@ -109,3 +109,12 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - There must be no vertical gap between brand row, search row, and nav row. The parent header has no bottom margin; nav has no top margin.
 - Nav outer background is the exact brand green `#4d8b31`, with a green-shade top border. Individual inactive tabs use a darker green shade. The active tab uses an orange `#ff8427` top border; do not use a bottom underline for active state.
 - Avoid changing the search row when adjusting nav colours or borders.
+
+
+## Blog signature and search width hotfix
+
+- `docs/assets/js/y2k-clock.js` is the source of the JS-generated Blog document frame. It must append only the support links to `.yw-page__signature`; do not add the old star/thanks sentence or `[ EOF ]` marker. Declare `isEnglish` from `document.documentElement.lang` before using it.
+- `docs/assets/js/blog-layout-cleanup.js` is a post-load compatibility cleanup for stale cached Blog scripts. It removes legacy `.yw-page__thanks` and `.yw-page__eof` elements only on `/blogs/` routes.
+- Both scripts are listed in `mkdocs.yml` after the main style script. Keep the cleanup script loaded after `y2k-clock.js`.
+- Search alignment: all wrappers from `.yw-search-row` down through `.md-search__form` must fill 100% of the 900px header, with no default horizontal margin or padding. Keep Material's search partial and result engine unchanged.
+- The current shared layout width is **900px**, not the older 800px values in historical notes; mobile uses a 0.5rem gutter.
