@@ -57,3 +57,15 @@ The owner shared a target layout reference and clarified that MkDocs Material mu
 ## Agent update cadence
 
 After every five user-facing assistant responses, refresh this file with a short TL;DR of completed work, changed paths, branch/commit state, build status, and next actions. **Responses since this snapshot: 0.**
+
+
+## Latest adjustment (2026-11-19)
+
+- Set the custom navigation inner width, main document column, and custom footer to a shared maximum width of **800px**.
+- On viewports up to 700px, each uses a 0.5rem horizontal gutter (`calc(100% - 1rem)`).
+- Main content now fills the 800px column rather than retaining the older 768px cap.
+- Changed file: `docs/assets/css/y2k.css`.
+- Commit: `596b926dc67a9a355feb7e985e0dc2f248d24d34`.
+- Build: not yet verified after this CSS-only adjustment.
+- Next: verify the latest strict GitHub Actions build, then owner should pull and inspect desktop/mobile alignment locally.
+- **Responses since this snapshot: 0.**
