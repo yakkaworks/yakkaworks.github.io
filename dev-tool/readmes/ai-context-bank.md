@@ -115,6 +115,6 @@ The owner clarified the required hierarchy with two screenshots and a text sketc
 - `docs/assets/js/y2k-clock.js`: generated Blog plugin pages also receive the same document-end thanks/support signature when the script wraps their content.
 - Updated `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` to document the new source of truth.
 - Files changed: `overrides/partials/header.html`, `overrides/partials/navigation.html`, `overrides/main.html`, `overrides/partials/footer.html`, `docs/assets/css/y2k.css`, `docs/assets/js/y2k-clock.js`, `dev-tool/readmes/for-yakka.md`, `dev-tool/readmes/ai-instruct.md`, this context bank.
-- Latest code commit before context update: `f12fa9676301af12cb1f5ca17e8768bd3559b79d`. Strict build: pending. No local browser verification.
+- Latest code commit: `f12fa9676301af12cb1f5ca17e8768bd3559b79d`; strict GitHub Actions build passed in run `44468534968`. The two maintainer-guide updates and context-bank update are documentation-only. No local browser verification.
 - Next: verify GitHub Actions strict build; owner should check search field at desktop/mobile, search results open/close, palette/language controls, nav alignment, and document-end signature.
 - **Responses since this snapshot: 0.**
