@@ -1,12 +1,10 @@
 ---
 title: Pustaka
-hide:
-  - toc
+description: Placeholder indeks pustaka Yakka Works.
 ---
 
-## Pilih jenis tutorial
+# Pustaka
 
-| Bagian | Keterangan |
-|---|---|
-| [Tutorial Umum TheoTown](theotown-tutorials/index.md) | Panduan umum untuk bermain dan menggunakan TheoTown |
-| [Tutorial Plugin](getting-started/index.md) | Mulai dari dasar pembuatan plugin TheoTown |
+Halaman indeks pustaka.
+
+> Placeholder — dokumentasi, referensi, dan sumber daya belum ditambahkan.

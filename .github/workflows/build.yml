@@ -1,11 +1,9 @@
 name: Build & Deploy
 
-# - mkdocs-site / main : strict build check only (nothing is published)
-# - mkdocs-site-live    : build + publish to GitHub Pages
-# - web-live            : legacy archive only
+# y2k-dev is build-only. Publishing remains restricted to mkdocs-site-live.
 on:
   push:
-    branches: [mkdocs-site, main, mkdocs-site-live]
+    branches: [y2k-dev, mkdocs-site, main, mkdocs-site-live]
   workflow_dispatch:
 
 permissions:

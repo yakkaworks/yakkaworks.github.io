@@ -1,12 +1,10 @@
 ---
 title: Library
-hide:
-  - toc
+description: Yakka Works library index placeholder.
 ---
 
-## Choose a tutorial type
+# Library
 
-| Section | Description |
-|---|---|
-| [General TheoTown Tutorials](theotown-tutorials/index.md) | General guides for playing and using TheoTown |
-| [Plugin Tutorials](getting-started/index.md) | Start with the basics of making TheoTown plugins |
+Library index.
+
+> Placeholder — documentation, references, and resources will be added later.

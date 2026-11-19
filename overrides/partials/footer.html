@@ -1,7 +1,4 @@
-{#-
-  Yakka Works footer. Order: donate banner > brand (+ address) > socials > legal > copyright.
-  Data comes from mkdocs.yml (extra.brand, extra.socials, extra.donate). Replaces Material's footer.
--#}
+{# Footer links are data-driven from mkdocs.yml; no icon-font dependency. #}
 {% set lang = config.theme.language | default("id") %}
 {% set is_id = lang == "id" %}
 {% set prefix = "" if is_id else lang ~ "/" %}
@@ -12,37 +9,35 @@
   ["privacy", "Kebijakan Privasi" if is_id else "Privacy Policy"],
   ["cookie", "Kebijakan Cookie" if is_id else "Cookie Policy"],
   ["license", "Lisensi" if is_id else "License"],
-  ["source", "Sumber & Kredit" if is_id else "Source & Credits"]
+  ["source", "Sumber & Kredit" if is_id else "Sources & Credits"]
 ] %}
 
 <footer class="yw-footer" aria-label="Footer">
-
   {% if config.extra.donate %}
-  <div class="yw-footer__banner">
-    <p class="md-grid">
-      <span class="yw-footer__icon">{% include ".icons/material/heart.svg" %}</span>
-      {{ "Dukung kreator dengan berdonasi lewat" if is_id else "Support the author by donating via" }}
-      {% for d in config.extra.donate %}
-        <a href="{{ d.link }}" target="_blank" rel="noopener">{{ d.name }}</a>
-        {%- if not loop.last %} {{ "atau" if is_id else "or" }} {% endif -%}
-      {% endfor %}.
-    </p>
-  </div>
+  <section class="yw-footer__support">
+    <strong>{{ "Dukung Yakka Works" if is_id else "Support Yakka Works" }}</strong>
+    <span>{{ "Dukung pengembangan melalui" if is_id else "Support ongoing work through" }}</span>
+    {% for item in config.extra.donate %}
+      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>{% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
+    {% endfor %}
+  </section>
   {% endif %}
 
-  <div class="yw-footer__inner md-grid">
-
+  <div class="yw-footer__grid">
     <section class="yw-footer__brand">
-      <a class="yw-footer__logo" href="{{ base_url }}/{{ prefix }}" aria-label="{{ brand.name }}">
-        {% if config.theme.logo %}
-          <img src="{{ config.theme.logo | url }}" alt="" width="40" height="40">
-        {% endif %}
+      <a class="yw-footer__logo" href="{{ base_url }}/{{ prefix }}">
+        <img src="{{ config.theme.logo | url }}" alt="" width="36" height="36">
         <span>{{ brand.name }}</span>
       </a>
-      <address>{% for line in brand.address.split('\n') %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</address>
+      <address>
+        {% for line in brand.address.split('\n') %}
+          {{ line }}{% if not loop.last %}<br>{% endif %}
+        {% endfor %}
+      </address>
+      <a href="mailto:{{ brand.email }}">{{ brand.email }}</a>
     </section>
 
-    <nav class="yw-footer__legal" aria-label="Legal">
+    <nav class="yw-footer__links" aria-label="{{ 'Tautan legal' if is_id else 'Legal links' }}">
       <h2>Legal</h2>
       <ul>
         {% for item in legal %}
@@ -51,26 +46,18 @@
       </ul>
     </nav>
 
-    <section class="yw-footer__socials">
+    <nav class="yw-footer__links" aria-label="{{ 'Tautan sosial' if is_id else 'Social links' }}">
       <h2>{{ "Sosial & Kontak" if is_id else "Social & Contact" }}</h2>
       <ul>
-        {% for s in config.extra.socials %}
-          <li>
-            <a href="{{ s.link }}" target="_blank" rel="noopener me" title="{{ s.name }}">
-              <span class="yw-footer__icon">{% include ".icons/" ~ s.icon ~ ".svg" %}</span>
-              <span>{{ s.name }}</span>
-            </a>
-          </li>
+        {% for item in config.extra.socials %}
+          <li><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></li>
         {% endfor %}
       </ul>
-    </section>
-
+    </nav>
   </div>
 
-  <div class="yw-footer__copyright">
-    <div class="md-grid">
-      Copyright &copy; {{ brand.name }} {{ brand.since }}-{{ config.extra.year }}.
-      All rights reserved. In-game icons provided by TheoTown.
-    </div>
+  <div class="yw-footer__credits">
+    Copyright &copy; {{ brand.name }} {{ brand.since }}–{{ config.extra.year }}.
+    All rights reserved. In-game icons by TheoTown. Made with MkDocs Material.
   </div>
 </footer>

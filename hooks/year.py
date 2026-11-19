@@ -1,4 +1,4 @@
-"""MkDocs hook: expose the current year so the footer's end year never goes stale."""
+"""Expose the current year to the footer template."""
 
 from datetime import date
 
