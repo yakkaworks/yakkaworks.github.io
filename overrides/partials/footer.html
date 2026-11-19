@@ -13,16 +13,6 @@
 ] %}
 
 <footer class="yw-footer" aria-label="Footer">
-  {% if config.extra.donate %}
-  <section class="yw-footer__support">
-    <strong>{{ "Dukung Yakka Works" if is_id else "Support Yakka Works" }}</strong>
-    <span>{{ "Dukung pengembangan melalui" if is_id else "Support ongoing work through" }}</span>
-    {% for item in config.extra.donate %}
-      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>{% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
-    {% endfor %}
-  </section>
-  {% endif %}
-
   <div class="yw-footer__grid">
     <section class="yw-footer__brand">
       <a class="yw-footer__logo" href="{{ base_url }}/{{ prefix }}">
