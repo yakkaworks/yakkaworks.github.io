@@ -178,3 +178,18 @@ Owner reviewed centered brand/search/nav screenshot and requested: brand bottom 
 - Commit: `c9b1572a80e07c4afbf80fc35f23283dae28d190`. Build status: pending at time of context update. No local browser verification.
 - Next: strict GitHub Actions check; owner to pull and inspect no-gap seams, nav border orientation, hover/active states in both palettes.
 - **Responses since this snapshot: 0.**
+
+
+## Blog and search alignment hotfix (2026-11-19)
+
+Owner supplied a Blog index screenshot. Two remaining issues: Material search field was visibly inset about 15px from the 900px brand/nav row, and Blog's JS-generated signature still showed the obsolete star/thanks text plus `[ EOF ]`.
+
+- `docs/assets/css/y2k.css`: appended a high-specificity rule targeting every layer from `.yw-search-row` through `.md-search__form`, forcing `width:100%`, `max-width:none`, `min-width:0`, zero margin/padding and `box-sizing:border-box`. Search form remains Material-native and retains its neutral background and 42px height.
+- Added `docs/assets/js/blog-layout-cleanup.js` and loaded it after `y2k-clock.js` via `mkdocs.yml`. On `/blogs/` routes it removes legacy `.yw-page__thanks` and `.yw-page__eof` nodes that may still be injected by an older cached script. Support links remain.
+- `docs/assets/js/y2k-clock.js`: fixed a separate bug discovered during inspection: the Blog fallback uses `isEnglish` but previously had no declaration. It now derives it from `document.documentElement.lang`. The current fallback already appends support only, without thanks or EOF nodes.
+- Current shared layout is **900px** across header, search, nav, main and footer; mobile uses a 0.5rem gutter. Older 800px references in historical log entries are superseded.
+- Files changed: `docs/assets/css/y2k.css`, `docs/assets/js/y2k-clock.js`, `docs/assets/js/blog-layout-cleanup.js`, `mkdocs.yml`, and this documentation set.
+- Code commits: `de9c970` (search full-width), `67ddf07` (Blog legacy cleanup), `9013864` (load cleanup JS), `9a835f1` (fix Blog locale variable), and this context update.
+- Build status: pending after these changes. No browser verification / production deployment.
+- Next: confirm strict build; owner should hard-refresh with Ctrl+F5 and inspect Blog index, including exact search left/right edges and removal of thanks/EOF.
+- **Responses since this snapshot: 0.**
