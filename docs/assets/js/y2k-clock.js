@@ -31,6 +31,8 @@
     content.className = "yw-page__content";
     while (inner.firstChild) content.append(inner.firstChild);
 
+    const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+
     const signature = document.createElement("div");
     signature.className = "yw-page__signature";
 
