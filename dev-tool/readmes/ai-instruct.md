@@ -77,6 +77,7 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - Navigation, main document, and footer share an 800px desktop maximum width and use a 0.5rem mobile side gutter.
 - Navigation is normal-flow only; never set it to sticky or fixed.
 - Dark mode uses the dark city image variants background-dl.jpg / background-dp.jpg with a strong neutral green-black overlay. Preserve this darkened city backdrop; do not replace it with a plain solid colour unless explicitly requested.
+- The owner is now editing presentation details directly on GitHub. Inspect and preserve those edits before making further changes. Current owner preferences: social links column before legal links; header max-width 800px with 0.5rem vertical margin; thanks text and EOF marker omitted.
 - Preserve the exact brand colours: primary `#4d8b31`, CTA `#ff8427`. Derive supporting pastel colours from them, and continue using the local Body/Header/Display TTFs.
 
 
@@ -89,7 +90,7 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - `overrides/main.html` renders that custom nav via the normal-flow `tabs` block. Keep it separate from the header partial.
 - `docs/assets/css/y2k.css` must set the full `.yw-nav` bar itself to the same 800px width as the search row, `.md-main__inner`, and `.yw-footer`; links are left-aligned and the bar has a visible brand-derived background.
 - Keep the nav in normal document flow, never sticky/fixed.
-- Donation links belong in `.yw-page__signature` at the end of the document beside the translated thanks-for-reading note. The global footer must not repeat a support banner.
+- Donation links belong in `.yw-page__signature` at the end of the document. The owner has removed the thanks-for-reading sentence and `[ EOF ]` marker; preserve that preference unless asked to restore them. The global footer must not repeat a support banner.
 
 
 ## Header row spacing and background treatment
