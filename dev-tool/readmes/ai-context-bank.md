@@ -118,3 +118,15 @@ The owner clarified the required hierarchy with two screenshots and a text sketc
 - Latest code commit: `f12fa9676301af12cb1f5ca17e8768bd3559b79d`; strict GitHub Actions build passed in run `44468534968`. The two maintainer-guide updates and context-bank update are documentation-only. No local browser verification.
 - Next: verify GitHub Actions strict build; owner should check search field at desktop/mobile, search results open/close, palette/language controls, nav alignment, and document-end signature.
 - **Responses since this snapshot: 0.**
+
+
+## Latest header spacing and dark backdrop adjustment (2026-11-19)
+
+The owner reviewed the three-row header and requested: remove vertical gaps between brand/search/navigation, compact the brand bar, and make the city background visibly dark (not neutral-solid) in dark mode.
+
+- `docs/assets/css/y2k.css`: brand bar is now 56px desktop / 54px mobile; search row and nav have no vertical margins between them. Both are centered at 800px max width and use a 0.5rem mobile gutter. Search row is a neutral-coloured wrapper around Material's native search field. Main document retains its separate top breathing room below the nav.
+- Dark mode `body::after` now uses background-dl.jpg / background-dp.jpg with an 80% neutral green-black overlay. Light mode retains the lighter city image treatment.
+- `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` updated to record these rules and correct the earlier obsolete note saying dark mode should be a solid colour.
+- Main code commit: `f7c21441bf0e4850955e75fb2f5c264432ccf986`. Build status: not yet verified after this change. No production deployment.
+- Next: strict GitHub Actions build, then owner to inspect exact zero-gap header alignment and dark city image in browser.
+- **Responses since this snapshot: 0.**
