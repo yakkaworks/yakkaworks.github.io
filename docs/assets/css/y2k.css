@@ -916,3 +916,143 @@ body > .md-container {
     padding: 0;
   }
 }
+
+
+/* Final portal navigation and native search control layout. */
+.yw-header {
+  position: relative !important;
+  z-index: 20;
+  overflow: visible;
+}
+
+.yw-header__window {
+  width: min(1100px, calc(100% - 1.5rem));
+}
+
+.yw-header__controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .5rem;
+}
+
+.yw-header__search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: .55rem;
+  color: var(--yw-primary-dark) !important;
+  cursor: pointer;
+}
+
+.yw-header__search-button:hover,
+.yw-header__search-button:focus-visible {
+  background: var(--yw-primary-soft);
+  outline: 1px solid var(--yw-primary);
+}
+
+.yw-header__search-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* The bar itself, not only its link row, shares the 800px content width. */
+.yw-nav {
+  position: relative !important;
+  inset: auto !important;
+  display: block;
+  width: min(800px, calc(100% - 1.5rem));
+  max-width: 800px;
+  min-height: 42px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--yw-primary-dark);
+  border-top: 0;
+  background: var(--yw-nav-bg) !important;
+  box-shadow: 3px 3px 0 var(--yw-primary-soft);
+}
+
+.yw-nav__inner {
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-height: 42px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.yw-nav__list {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.yw-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.yw-nav__item {
+  display: flex;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.yw-nav .yw-nav__link,
+.yw-nav .yw-nav__item--active .yw-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  margin: 0;
+  padding: .55rem .9rem;
+  border: 0;
+  background: transparent;
+  color: var(--yw-nav-text) !important;
+  font-family: "YW Header", "YW Body", sans-serif;
+  font-size: .86rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.yw-nav .yw-nav__link:hover,
+.yw-nav .yw-nav__link:focus-visible {
+  background: rgba(255, 255, 255, .12);
+  color: #fff !important;
+}
+
+.yw-nav .yw-nav__item--active .yw-nav__link {
+  background: rgba(255, 255, 255, .16);
+  box-shadow: inset 0 -3px 0 var(--yw-cta);
+  color: #fff !important;
+}
+
+@media (max-width: 700px) {
+  .yw-nav {
+    width: calc(100% - 1rem);
+  }
+
+  .yw-header__window {
+    width: calc(100% - 1rem);
+  }
+
+  .yw-nav .yw-nav__link,
+  .yw-nav .yw-nav__item--active .yw-nav__link {
+    padding-right: .7rem;
+    padding-left: .7rem;
+    font-size: .8rem;
+  }
+}
