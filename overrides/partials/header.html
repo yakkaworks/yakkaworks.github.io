@@ -1,7 +1,17 @@
 {% import "partials/language.html" as lang with context %}
+{% set locale = config.theme.language | default("id") %}
+{% set is_en = locale == "en" %}
+{% set prefix = "" if locale == "id" else locale ~ "/" %}
+{% set current_url = page.url if page else "" %}
+{% set active_home = current_url == "" or current_url == "index.html" %}
+{% set active_store = current_url.startswith("store/") %}
+{% set active_library = current_url.startswith("library/") %}
+{% set active_tools = current_url.startswith("tools/") %}
+{% set active_blogs = current_url.startswith("blogs/") %}
+
 <header class="yw-header" data-md-component="header">
   <div class="yw-header__window">
-    <a class="yw-header__brand" href="{{ nav.homepage.url | url }}" aria-label="Yakka Works — Beranda">
+    <a class="yw-header__brand" href="{{ nav.homepage.url | url }}" aria-label="Yakka Works — {{ 'Home' if is_en else 'Beranda' }}">
       <img src="{{ config.theme.logo | url }}" alt="" width="34" height="34">
       <span>Yakka Works</span>
     </a>
@@ -19,7 +29,7 @@
       {% if "search" in config.plugins %}
         <label class="yw-search-toggle" for="__search" aria-label="{{ lang.t('search') }}">
           <span class="yw-search-toggle__icon">{% include ".icons/material/magnify.svg" %}</span>
-          <span>{{ "Cari" if config.theme.language == "id" else "Search" }}</span>
+          <span>{{ "Search" if is_en else "Cari" }}</span>
           <kbd>/</kbd>
         </label>
         {% include "partials/search.html" %}
@@ -27,3 +37,25 @@
     </div>
   </div>
 </header>
+
+<nav class="yw-nav" aria-label="{{ 'Main navigation' if is_en else 'Navigasi utama' }}">
+  <div class="yw-nav__inner">
+    <ul class="yw-nav__list">
+      <li class="yw-nav__item{% if active_home %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ base_url }}/{{ prefix }}"{% if active_home %} aria-current="page"{% endif %}>{{ "Home" if is_en else "Beranda" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_store %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ base_url }}/{{ prefix }}store/"{% if active_store %} aria-current="page"{% endif %}>{{ "Store" if is_en else "Toko" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_library %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ base_url }}/{{ prefix }}library/"{% if active_library %} aria-current="page"{% endif %}>{{ "Library" if is_en else "Pustaka" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_tools %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ base_url }}/{{ prefix }}tools/"{% if active_tools %} aria-current="page"{% endif %}>{{ "Tools" if is_en else "Alat" }}</a>
+      </li>
+      <li class="yw-nav__item{% if active_blogs %} yw-nav__item--active{% endif %}">
+        <a class="yw-nav__link" href="{{ base_url }}/{{ prefix }}blogs/"{% if active_blogs %} aria-current="page"{% endif %}>{{ "Blog" if is_en else "Blog" }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
