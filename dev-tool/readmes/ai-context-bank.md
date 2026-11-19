@@ -97,6 +97,6 @@ The owner provided a fresh screenshot: the nav labels were visible but the bar b
 - `docs/assets/css/y2k.css` now sets the **whole nav bar** to `min(800px, calc(100% - 1.5rem))`, with the same 800px max-width as main/footer and a 0.5rem mobile gutter. It has a visible brand-derived green background and localized active-link state. The native Material search overlay keeps its default positioning.
 - Updated `dev-tool/readmes/for-yakka.md` and `dev-tool/readmes/ai-instruct.md` with the source-of-truth and maintenance rules.
 - Files changed: `overrides/partials/navigation.html`, `overrides/partials/header.html`, `overrides/main.html`, `docs/assets/css/y2k.css`, `dev-tool/readmes/for-yakka.md`, `dev-tool/readmes/ai-instruct.md`, this context bank.
-- Latest implementation commit: `69e73af3901395ba1766e31b43e525b50e45bbdf`. Strict GitHub Actions run `44466560405` is running at the time of this context update. No local visual verification has been performed.
+- Latest implementation commit: `69e73af3901395ba1766e31b43e525b50e45bbdf`; strict GitHub Actions run `44466560405` passed. Context-bank follow-up commit `5eee0e5428a66de077d494af3af6332b3b4744f5` also passed strict build in run `44466628844`. No local visual verification has been performed.
 - Next: confirm strict build completion; owner should test Material search open/close and result navigation, palette switching, language switching, nav routes, and exact 800px alignment in both desktop and mobile viewports.
 - **Responses since this snapshot: 0.**
