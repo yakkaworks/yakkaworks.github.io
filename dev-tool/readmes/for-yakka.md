@@ -135,3 +135,19 @@ The GitHub Actions workflow also runs the strict build. Only the existing live d
 - **Serve:** run a local preview server with live reload.
 
 When unsure, make one small change, preview it, and run a strict build before pushing.
+
+
+## 9. Custom site layout
+
+The visible site layout is implemented with Material template overrides:
+
+- `overrides/partials/header.html` contains the Yakka Works brand header and the manually defined primary navigation.
+- `overrides/main.html` keeps Material's page rendering inside the Yakka Works document frame.
+- `overrides/partials/footer.html` contains the custom support, legal, social, address, and credits footer.
+- `docs/assets/css/y2k.css` controls the shared 800px navigation, main-content, and footer width.
+
+The primary navigation is intentionally rendered directly in the header partial, not through Material's automatic tabs list. When changing labels or destinations, update both Indonesian and English labels there. Keep the links in sync with the index pages under `docs/`.
+
+The navigation is in normal document flow. Do not make it sticky or fixed. Material's back-to-top control is a separate fixed bottom-right button.
+
+Light mode uses the muted cover-image backdrop. Dark mode uses a plain neutral dark background instead of showing the cover image. Keep the brand green `#4d8b31` and action orange `#ff8427`; supporting surface and border colours should remain pale tints or darkened tints derived from those brand colours. Keep the supplied local font files.
