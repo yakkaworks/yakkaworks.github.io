@@ -145,3 +145,15 @@ The owner pulled commit `761d2eff602cd9bc027db27c7ccb4feca1991363` locally and r
 - Updated this guide and AI rules to reflect current owner decisions; no local browser verification. No production deploy.
 - Next: owner can pull latest `y2k-dev`, restart preview, and check that the support strip renders and the header width/margin match the intended web edits.
 - **Responses since this snapshot: 0.**
+
+
+## Latest header flex alignment adjustment (2026-11-19)
+
+The owner asked whether a flex-column layout would align the brand and search rows. Inspection showed their latest pushed CSS had `display: flex:` / `flex: column;` syntax, and a later `.yw-header.md-header { display: block !important; }` rule overrode the earlier `.yw-header` declaration.
+
+- Committed an effective later override in `docs/assets/css/y2k.css` targeting `.yw-header.md-header`: `display:flex !important`, `flex-direction:column`, `align-items:stretch`, `justify-content:flex-start`, width `min(800px, calc(100% - 1rem))`, max-width 800px, and left-aligned `margin:0.5rem 0` on desktop.
+- Set `.yw-header__brand-row` and `.yw-search-row` to 100% width with zero margin; set `.yw-header__brand-inner` and search inner wrappers to 100% width/max-width none and border-box. This removes the few-pixel width discrepancy between brand and search rows.
+- Mobile override gives the header a 0.5rem gutter on both sides.
+- Commit: `6b881b5ebc9de80e4efd0289dd82f67a18bb1a33`. Build status: pending when this note was written. No local visual verification.
+- Next: confirm strict GitHub Actions build, then owner can pull `y2k-dev` and preview. Main uncertainty to visually check: left alignment of the header as requested, and whether its right edge lines up with the 800px nav/main/footer at desktop width.
+- **Responses since this snapshot: 0.**
