@@ -130,3 +130,18 @@ The owner reviewed the three-row header and requested: remove vertical gaps betw
 - Main code commit: `f7c21441bf0e4850955e75fb2f5c264432ccf986`; strict GitHub Actions build passed in run `44469876390`. Maintainer-guide update commit `2ffa0c267db8363e5422e8d5241ab5f202cf438e` also passed in run `44469968267`. The latest context-bank-only update is queued/in progress in run `44470030794`. No production deployment.
 - Next: strict GitHub Actions build, then owner to inspect exact zero-gap header alignment and dark city image in browser.
 - **Responses since this snapshot: 0.**
+
+
+## Owner web-editor changes and repair (2026-11-19)
+
+The owner pulled commit `761d2eff602cd9bc027db27c7ccb4feca1991363` locally and reported a Jinja template error. Reviewed the four web-editor commits between `9ebb28a` and `761d2ef` and preserved their intended edits:
+
+- `overrides/partials/header.html`: retained class order `md-header yw-header` (functionally equivalent to the previous order).
+- `overrides/main.html`: retained removal of the thanks-for-reading text and `[ EOF ]` marker. The owner left the support links in the document signature. Fixed the missing `{% endif %}` closing `{% if config.extra.donate %}` before closing the signature.
+- `overrides/partials/footer.html`: retained the owner's decision to put Social & Contact before Legal.
+- `docs/assets/css/y2k.css`: repaired invalid declarations to `max-width: 800px;` and `margin: 0.5rem 0;`, preserving the owner's chosen values/left alignment. Removed stray whitespace.
+- Root cause of the preview crash: `overrides/main.html` had an unclosed Jinja `if`, confirmed by failed Actions runs `44471298271` and `44471947628`. CSS declarations were malformed too, but were not the cause of the Jinja template exception.
+- Repair commits: `e34e768` (Jinja endif) and `66ec7f6` (CSS syntax). Strict GitHub Actions build passed for `66ec7f6` in run `44472498118`.
+- Updated this guide and AI rules to reflect current owner decisions; no local browser verification. No production deploy.
+- Next: owner can pull latest `y2k-dev`, restart preview, and check that the support strip renders and the header width/margin match the intended web edits.
+- **Responses since this snapshot: 0.**
