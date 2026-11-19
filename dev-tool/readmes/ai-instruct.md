@@ -101,3 +101,11 @@ Report completed work in a concise TL;DR. Distinguish clearly between changes ac
 - Search and navigation widths match the 800px document/footer column, with a 0.5rem mobile gutter.
 - The search wrapper may be a custom neutral-coloured div, but the Material search partial/input/results remain native.
 - Dark mode keeps the city background image with a strong dark overlay; use the landscape/portrait dark variants.
+
+
+## Latest nav tab styling
+
+- Keep the brand row bottom border visible and keep the neutral search row's existing appearance.
+- There must be no vertical gap between brand row, search row, and nav row. The parent header has no bottom margin; nav has no top margin.
+- Nav outer background is the exact brand green `#4d8b31`, with a green-shade top border. Individual inactive tabs use a darker green shade. The active tab uses an orange `#ff8427` top border; do not use a bottom underline for active state.
+- Avoid changing the search row when adjusting nav colours or borders.
