@@ -141,12 +141,13 @@ When unsure, make one small change, preview it, and run a strict build before pu
 
 The visible site layout is implemented with Material template overrides:
 
-- `overrides/partials/header.html` contains the Yakka Works brand header and the manually defined primary navigation.
-- `overrides/main.html` keeps Material's page rendering inside the Yakka Works document frame.
-- `overrides/partials/footer.html` contains the custom support, legal, social, address, and credits footer.
-- `docs/assets/css/y2k.css` controls the shared 800px navigation, main-content, and footer width.
+- `overrides/partials/header.html` contains the Yakka Works brand row, Material palette/language controls, and the full-width native Material search row.
+- `overrides/partials/navigation.html` contains the custom primary navigation and localized labels.
+- `overrides/main.html` keeps Material page rendering inside the Yakka Works document frame and adds the document-end thanks/support signature.
+- `overrides/partials/footer.html` contains only the brand/address/email, legal links, social links, and credits.
+- `docs/assets/css/y2k.css` controls the shared 800px search, navigation, main-content, and footer widths.
 
-The primary navigation is intentionally rendered directly in the header partial, not through Material's automatic tabs list. When changing labels or destinations, update both Indonesian and English labels there. Keep the links in sync with the index pages under `docs/`.
+The primary navigation is a custom override in `overrides/partials/navigation.html`, rendered in the normal-flow Material tabs slot after the header. Update its Indonesian and English labels and keep destinations in sync with the indexes under `docs/`.
 
 The navigation is in normal document flow. Do not make it sticky or fixed. Material's back-to-top control is a separate fixed bottom-right button.
 
