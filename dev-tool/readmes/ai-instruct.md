@@ -68,6 +68,21 @@ If an agent cannot write to the repository, it must provide the exact proposed c
 
 Report completed work in a concise TL;DR. Distinguish clearly between changes actually committed, checks actually run, and recommendations that still need owner review. Flag uncertain assumptions rather than inventing answers.
 
+## Owner pull-and-preview command — mandatory after every change
+
+After **every** response that changes repository files (code, CSS, templates, config, docs), the agent must end its output with a short **Reminders** line telling the owner to pull the latest `y2k-dev` and restart the preview, using exactly this Windows command:
+
+```bat
+cd /d "D:\yakkaworks-site\y2k-dev-mkdocs-git" && git pull --ff-only origin y2k-dev && dev-tool\serve.bat
+```
+
+Rules:
+
+- Only say this after the change has actually been committed **and pushed** to `y2k-dev`. If the agent could not push, say so plainly and give the owner the patch or exact edits to apply instead; do not tell the owner to pull changes that are not on GitHub yet.
+- Do not shorten, reword, or change the path or branch in the command. If the local folder path or branch ever changes, update this section and `for-yakka.md` in the same commit.
+- If the preview server is already running, remind the owner to stop it with Ctrl+C first, then run the command.
+- `--ff-only` is intentional: if the pull fails because of local edits or diverged history, the owner should report the error rather than force anything.
+
 
 ## Custom layout maintenance
 

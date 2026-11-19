@@ -108,6 +108,12 @@ All four background files are temporary copies of the current cover image. Repla
 | Push the development branch | `dev-tool\push.bat` | `bash dev-tool/push.sh` |
 | Sync the live branch separately | `dev-tool\sync.bat` | `bash dev-tool/sync.sh` |
 
+After the AI assistant pushes a change, update and preview it on Windows with:
+
+```bat
+cd /d "D:\yakkaworks-site\y2k-dev-mkdocs-git" && git pull --ff-only origin y2k-dev && dev-tool\serve.bat
+```
+
 The push helper performs a strict build first and only pushes to `y2k-dev`. Do not change that safety check casually. The live sync helper uses a separate `live-sync/` folder; it does not overwrite the current source tree.
 
 ## 7. Before publishing

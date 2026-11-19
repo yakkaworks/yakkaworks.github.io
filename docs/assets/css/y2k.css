@@ -1578,3 +1578,16 @@ body > .md-container {
   background: var(--yw-search-bg) !important;
   box-shadow: none !important;
 }
+
+
+/* Language/palette dropdowns: keep the controls (and Material's .md-select
+   dropdown inside them) above the search row. The search row comes later in
+   the DOM and its native input/form would otherwise paint over the menu. */
+.yw-header__controls {
+  position: relative;
+  z-index: 40;
+}
+
+.yw-header__controls .md-select__inner {
+  z-index: 41;
+}

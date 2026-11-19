@@ -193,3 +193,14 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - Strict GitHub Actions build passed for latest context commit `6024c21fc103b079d1b29e3d625f974d44172838` in run `44480558805`. No browser verification / production deployment.
 - Next: confirm strict build; owner should hard-refresh with Ctrl+F5 and inspect Blog index, including exact search left/right edges and removal of thanks/EOF.
 - **Responses since this snapshot: 0.**
+
+
+## Language dropdown overlap fix and pull command rule (2026-11-19)
+
+- Bug (owner screenshot): the language switcher dropdown was painted under the native Material search input, hiding "Bahasa Indonesia". Reproduced in headless Chrome: `elementFromPoint` over that item returned `.md-search__input`.
+- Fix: `docs/assets/css/y2k.css` (end of file) gives `.yw-header__controls` `position: relative; z-index: 40` and `.md-select__inner` `z-index: 41`, so the dropdown stacks above the later search row. Search markup and behaviour are untouched.
+- Added the mandatory owner pull-and-preview command to `ai-instruct.md` and `for-yakka.md`: `cd /d "D:\yakkaworks-site\y2k-dev-mkdocs-git" && git pull --ff-only origin y2k-dev && dev-tool\serve.bat`. Agents must append it to every response that changes files, only after the change is pushed.
+- Note: the 900px width block is present at the end of `y2k.css`; earlier 800px/1100px rules are overridden by it and are legacy.
+- Build: `mkdocs build --strict` run locally by the agent (see commit/response for result). No production deploy.
+- Next: owner verifies the dropdown in light/dark and on mobile width.
+- **Responses since this snapshot: 0.**
