@@ -17,19 +17,15 @@
         {% include "partials/alternate.html" %}
       {% endif %}
 
-      {% if "search" in config.plugins %}
-        <label class="md-header__button md-icon yw-header__search-button"
-               for="__search"
-               title="{{ lang.t('search') }}"
-               aria-label="{{ lang.t('search') }}">
-          {% set icon = config.theme.icon.search or "material/magnify" %}
-          {% include ".icons/" ~ icon ~ ".svg" %}
-        </label>
-      {% endif %}
+      <label class="md-header__button md-icon yw-header__search-button"
+             for="__search"
+             title="{{ lang.t('search') }}"
+             aria-label="{{ lang.t('search') }}">
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
     </div>
   </div>
 
-  {% if "search" in config.plugins %}
-    {% include "partials/search.html" %}
-  {% endif %}
+  {% include "partials/search.html" %}
 </header>
