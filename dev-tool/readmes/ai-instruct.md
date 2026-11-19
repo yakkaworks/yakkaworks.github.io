@@ -67,3 +67,14 @@ If an agent cannot write to the repository, it must provide the exact proposed c
 ## Communication style
 
 Report completed work in a concise TL;DR. Distinguish clearly between changes actually committed, checks actually run, and recommendations that still need owner review. Flag uncertain assumptions rather than inventing answers.
+
+
+## Custom layout maintenance
+
+- The visible navigation is authored in `overrides/partials/header.html`, directly after the brand header. Do not depend on Material's `nav.items` / automatic tabs renderer for the primary links; it previously failed to render in the custom layout.
+- `overrides/main.html` intentionally empties the Material tabs block to prevent a duplicate navigation row.
+- Navigation destinations must remain paired for Indonesian and English builds. Keep the current route active state for each section.
+- Navigation, main document, and footer share an 800px desktop maximum width and use a 0.5rem mobile side gutter.
+- Navigation is normal-flow only; never set it to sticky or fixed.
+- Dark mode backdrop is intentionally a neutral solid dark colour; do not reintroduce the cover-image background in dark mode.
+- Preserve the exact brand colours: primary `#4d8b31`, CTA `#ff8427`. Derive supporting pastel colours from them, and continue using the local Body/Header/Display TTFs.
