@@ -6,16 +6,14 @@ title: Kebijakan Privasi
 
 *Berlaku sejak: 6 September 2026*
 
-<div class="yw-tldr" markdown="1">
-**Ringkasan**
-
-- Situs tidak memerlukan akun atau login dan sebagian besar bersifat anonim.
-- Kami dapat mengumpulkan analitik anonim terbatas, seperti halaman yang dikunjungi, perkiraan lokasi, dan kata kunci pencarian.
-- Cookie sesi anonim mungkin digunakan untuk analitik dan tidak dimaksudkan untuk mengidentifikasi Anda secara pribadi.
-- Layanan pihak ketiga (termasuk AdSense, Linkvertise, GitHub, Patreon, Saweria, TheoTown, Kustom, dan platform sosial) memiliki praktik privasi sendiri yang tidak kami kendalikan.
-- GitHub Pages dan Cloudflare dapat memproses data teknis yang diperlukan untuk menyajikan situs.
-- Hubungi [yakkaworks@gmail.com](mailto:yakkaworks@gmail.com) untuk pertanyaan atau permintaan terkait privasi.
-</div>
+| Ringkasan | Praktik utama |
+|---|---|
+| Akun | Situs tidak mewajibkan akun atau login. |
+| Analitik | Data anonim terbatas seperti halaman, perkiraan lokasi, dan kata kunci pencarian dapat dikumpulkan. |
+| Cookie | Cookie sesi anonim dapat digunakan untuk analitik. |
+| Pihak ketiga | AdSense, Linkvertise, GitHub, Patreon, Saweria, TheoTown, Kustom, dan platform sosial memiliki kebijakan sendiri. |
+| Infrastruktur | GitHub Pages dan Cloudflare dapat memproses data teknis untuk menyajikan situs. |
+| Kontak | Permintaan privasi: yakkaworks@gmail.com. |
 
 Baca seluruh dokumen di bawah ini untuk mengetahui ketentuan dan perincian lengkap.
 
