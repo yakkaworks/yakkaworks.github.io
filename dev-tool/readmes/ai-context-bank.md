@@ -215,3 +215,14 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - Files changed: `overrides/main.html`, `hooks/meta_date.py`, `mkdocs.yml`, `docs/assets/js/content-grids.js`, all page Markdown files under `docs/`, the maintainer/AI guides, and this context bank.
 - Strict build: pending. Browser verification: owner review required.
 - No production deployment.
+
+
+## Blog index Markdown date fallback (2026-11-20)
+
+- The Blog index front matter already contained `date: 21-10-26`, but the date was absent from the document bar because Material's `blog.html` overrides the normal content container and `y2k-clock.js` builds the Yakka Works frame itself.
+- `overrides/main.html` now exposes the current page's formatted and ISO publication date as head metadata. The JS-generated frame reads that metadata first, then falls back to Material's post date only for generated Blog views without page front matter.
+- `docs/assets/js/y2k-clock.js` parses ISO, `dd-mm-yy`, and `dd/mmm/yyyy` consistently. The Blog index therefore uses its Markdown date, not a post/catalog JSON date.
+- Updated `dev-tool/readmes/ai-instruct.md` to remove the stale rule suggesting the Blog index date should come from JSON.
+- Files changed: `overrides/main.html`, `docs/assets/js/y2k-clock.js`, AI instructions, this context bank.
+- Strict build and owner browser verification: pending.
+- No production deployment.

@@ -36,7 +36,7 @@ Treat the repository files as the source of truth. Do not assume the previous co
 - Page meta description comes from the first rendered paragraph, via `hooks/meta_description.py`.
 - Every published Markdown page should have a `date: dd-mm-yy` front-matter field (for example, `20-11-26`). Display that page publication/creation date at the far-right of the document metadata bar as `dd/mmm/yyyy`; preserve an ISO `datetime` value in the rendered `<time>`.
 - JSON `date` fields are metadata for chronological sorting only. Never use JSON content dates as page-header dates or render them inside content cards.
-- On the Blog index, retain per-post dates in `webdata/json/data_blogs.json` for sorting, show the newest valid date in `.yw-page__bar`, and do not render those dates inside individual Blog cards. An explicit page front-matter date takes priority.
+- The Blog index uses Material's `blog.html` container and a JavaScript-generated document frame. Its header date must come from the index Markdown front matter, exposed through head metadata for `y2k-clock.js`; never derive the header date from JSON catalog entries.
 
 ## Implementation expectations
 

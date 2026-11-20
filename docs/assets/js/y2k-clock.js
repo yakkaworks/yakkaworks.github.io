@@ -1,26 +1,53 @@
 (() => {
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  // Format ISO dates consistently without relying on the browser's locale or timezone.
-  const formatHeaderDate = (value) => {
-    const match = /^(\d{4})-(\d{2})-(\d{2})(?:$|T)/.exec(String(value || "").trim());
-    if (!match) return null;
+  // Parse publication dates without relying on browser locale or timezone.
+  // Supports ISO dates, dd-mm-yy front matter, and the dd/mmm/yyyy display form.
+  const parseHeaderDate = (value) => {
+    const source = String(value || "").trim();
+    let year;
+    let month;
+    let day;
+    let match = /^(\d{4})-(\d{2})-(\d{2})(?:$|T)/.exec(source);
 
-    const [, year, month, day] = match;
-    const monthIndex = Number(month) - 1;
-    const yearNumber = Number(year);
-    const dayNumber = Number(day);
-    if (monthIndex < 0 || monthIndex > 11) return null;
+    if (match) {
+      [, year, month, day] = match;
+      year = Number(year);
+      month = Number(month);
+      day = Number(day);
+    } else {
+      match = /^(\d{1,2})-(\d{1,2})-(\d{2}|\d{4})$/.exec(source);
+      if (match) {
+        [, day, month, year] = match;
+        day = Number(day);
+        month = Number(month);
+        year = Number(year);
+        if (year < 100) year += 2000;
+      } else {
+        match = /^(\d{1,2})\/([A-Za-z]{3})\/(\d{4})$/.exec(source);
+        if (!match) return null;
+        day = Number(match[1]);
+        month = monthNames.findIndex((name) => name.toLowerCase() === match[2].toLowerCase()) + 1;
+        year = Number(match[3]);
+      }
+    }
 
-    const parsed = new Date(Date.UTC(yearNumber, monthIndex, dayNumber));
+    if (!year || month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+    const parsed = new Date(Date.UTC(year, month - 1, day));
     if (
-      parsed.getUTCFullYear() !== yearNumber ||
-      parsed.getUTCMonth() !== monthIndex ||
-      parsed.getUTCDate() !== dayNumber
+      parsed.getUTCFullYear() !== year ||
+      parsed.getUTCMonth() !== month - 1 ||
+      parsed.getUTCDate() !== day
     ) return null;
 
-    return `${day}/${monthNames[monthIndex]}/${year}`;
+    return {
+      iso: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`,
+      display: `${String(day).padStart(2, "0")}/${monthNames[month - 1]}/${year}`
+    };
   };
+
+  const formatHeaderDate = (value) => parseHeaderDate(value)?.display || null;
 
   // Blog plugin-generated pages can bypass the normal Material content partial.
   // Put those pages in the same Yakka Works document frame as Markdown pages.
@@ -41,13 +68,30 @@
     label.textContent = title;
     bar.append(label);
 
-    const date = inner.querySelector("time[datetime], .md-post__date, .md-blog__date");
-    if (date) {
+    // Material's blog.html overrides the normal content container, so its
+    // document bar is built here. Prefer this page's Markdown front matter date.
+    const pageDateDisplay = document.querySelector('meta[name="yw-page-date-display"]')?.content.trim();
+    const pageDateIso = document.querySelector('meta[name="yw-page-date-iso"]')?.content.trim();
+    const blogDate = pageDateDisplay || pageDateIso
+      ? null
+      : inner.querySelector("time[datetime], .md-post__date, .md-blog__date");
+
+    if (pageDateDisplay || pageDateIso || blogDate) {
       const time = document.createElement("time");
       time.className = "yw-page__date";
-      const dateValue = date.getAttribute("datetime");
-      if (dateValue) time.dateTime = dateValue;
-      time.textContent = formatHeaderDate(dateValue) || date.textContent.trim();
+
+      const pageDate = parseHeaderDate(pageDateIso) || parseHeaderDate(pageDateDisplay);
+      const blogDateValue = blogDate?.getAttribute("datetime") || blogDate?.textContent.trim();
+      const parsedBlogDate = parseHeaderDate(blogDateValue);
+
+      if (pageDate) time.dateTime = pageDate.iso;
+      else if (parsedBlogDate) time.dateTime = parsedBlogDate.iso;
+      else if (blogDate?.getAttribute("datetime")) time.dateTime = blogDate.getAttribute("datetime");
+
+      time.textContent = pageDateDisplay
+        ? (formatHeaderDate(pageDateDisplay) || pageDateDisplay)
+        : pageDate?.display || parsedBlogDate?.display || blogDate?.textContent.trim() || "";
+
       bar.append(time);
     }
 
