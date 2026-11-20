@@ -20,6 +20,7 @@ hooks:
   - hooks/year.py
   - hooks/plugin_order.py
   - hooks/meta_description.py
+  - hooks/site_assets.py
 
 theme:
   name: material
@@ -122,10 +123,12 @@ plugins:
 
 extra_css:
   - assets/css/y2k.css
+  - assets/css/content-grids.css
 
 extra_javascript:
   - assets/js/y2k-clock.js
   - assets/js/blog-layout-cleanup.js
+  - assets/js/content-grids.js
 
 extra:
   generator: false
