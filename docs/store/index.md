@@ -49,10 +49,10 @@ Jelajahi berbagai plugin, peta, preset, dan konten digital dari Yakka Works.
 
 Menerima komisi pembuatan plugin TheoTown dari awal, perbaikan JSON, serta pembuatan gambar plugin atau frame. Permintaan perbaikan untuk plugin yang ditolak oleh sistem toko juga dapat dibahas.
 
-[Lihat informasi komisi](commissions/)
+[Lihat informasi komisi](commissions.md)
 
 ## Plugin Eksklusif Web
 
 Sebagian besar konten berbayar tersedia melalui halaman khusus dan dapat diarahkan ke platform eksternal seperti Lynk.id atau toko Patreon.
 
-[Jelajahi plugin eksklusif web](web-exclusive/)
+[Jelajahi plugin eksklusif web](web-exclusive.md)
