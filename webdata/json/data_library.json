@@ -16,8 +16,7 @@
     "description": "Contoh artikel proses pembuatan plugin TheoTown.",
     "category": "plugin",
     "urls": {
-      "download": [],
-      "details": "/store/items/plugin-tutorial-example/"
+      "Article": "/library/articles/plugin-tutorial-example/"
     }
   },
   {
@@ -27,8 +26,7 @@
     "description": "Contoh tutorial widget atau preset Kustom.",
     "category": "kustom",
     "urls": {
-      "download": [],
-      "details": "/store/items/kustom-tutorial-example/"
+      "Article": "/library/articles/kustom-tutorial-example/"
     }
   },
   {

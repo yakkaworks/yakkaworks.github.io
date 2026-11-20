@@ -16,8 +16,7 @@
     "description": "Example article about developing a TheoTown plugin.",
     "category": "plugin",
     "urls": {
-      "download": [],
-      "details": "/en/store/items/plugin-tutorial-example/"
+      "Article": "/en/library/articles/plugin-tutorial-example/"
     }
   },
   {
@@ -27,8 +26,7 @@
     "description": "Example tutorial for a Kustom widget or preset.",
     "category": "kustom",
     "urls": {
-      "download": [],
-      "details": "/en/store/items/kustom-tutorial-example/"
+      "Article": "/en/library/articles/kustom-tutorial-example/"
     }
   },
   {
