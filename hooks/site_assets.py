@@ -1,15 +1,10 @@
-"""Prepare supplied site artwork and copy the site's JSON catalog into the build.
-
-The original artwork archive lives in dev-tool/readmes/Website's.zip. The
-standard-library ZIP reader copies images unchanged before MkDocs builds.
-"""
+"""Copy supplied artwork and the JSON catalog into the completed MkDocs site."""
 from pathlib import Path
 import shutil
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_ARCHIVE = ROOT / "dev-tool" / "readmes" / "Website's.zip"
-IMAGE_DIR = ROOT / "docs" / "assets" / "img"
 
 # Archive filename -> stable website filename.
 IMAGE_FILES = {
@@ -34,11 +29,13 @@ IMAGE_FILES = {
 }
 
 
-def on_pre_build(config, **kwargs):
+def on_post_build(config, **kwargs):
     if not ASSET_ARCHIVE.is_file():
         raise FileNotFoundError(f"Site artwork archive not found: {ASSET_ARCHIVE}")
 
-    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+    # Write into build output, not docs/, so a local preview never dirties source files.
+    image_dir = Path(config["site_dir"]) / "assets" / "img"
+    image_dir.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(ASSET_ARCHIVE) as archive:
         available = set(archive.namelist())
         missing = [f"Website's/{name}" for name in IMAGE_FILES if f"Website's/{name}" not in available]
@@ -47,11 +44,9 @@ def on_pre_build(config, **kwargs):
 
         for source_name, target_name in IMAGE_FILES.items():
             with archive.open(f"Website's/{source_name}") as source:
-                with (IMAGE_DIR / target_name).open("wb") as target:
+                with (image_dir / target_name).open("wb") as target:
                     shutil.copyfileobj(source, target)
 
-
-def on_post_build(config, **kwargs):
     source = ROOT / "webdata"
     target = Path(config["site_dir"]) / "webdata"
     if source.exists():

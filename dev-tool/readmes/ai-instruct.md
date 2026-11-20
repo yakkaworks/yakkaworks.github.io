@@ -141,7 +141,7 @@ Rules:
 ## Artwork and image-placeholder workflow
 
 - The supplied image source is `dev-tool/readmes/Website's.zip`. The actual repository directory is `dev-tool/` (singular).
-- `hooks/site_assets.py` extracts the known images into `docs/assets/img/` during `on_pre_build`. The ZIP is the source archive; do not duplicate its binary assets elsewhere without a reason.
+- `hooks/site_assets.py` copies the known images into `site/assets/img/` during `on_post_build`. The ZIP is the source archive; do not duplicate its binary assets elsewhere without a reason. Keep extraction in the build output, not in `docs/`, to avoid dirtying the local working tree.
 - Extraction uses Python's standard library and copies image bytes unchanged. Do not reintroduce Pillow, image resizing/cropping, or `scripts/generate_placeholders.py`.
 - Use `content-cards-placeholders.jpg` for example article/content thumbnails. The content-grid renderer uses it automatically when a JSON item has no `thumbnail` or its image fails to load.
 - Use the supplied `banner-*.jpg` files for their corresponding sections and `icon-*.png` files for category/navigation icons.

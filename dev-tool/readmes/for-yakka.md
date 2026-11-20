@@ -200,7 +200,7 @@ Blog pages use a small compatibility script to remove legacy thank-you and EOF e
 
 ## 14. Site artwork and placeholders
 
-The supplied artwork source is `dev-tool/readmes/Website's.zip`. The MkDocs pre-build hook copies the original images into `docs/assets/img/` using stable website filenames. The files are copied byte-for-byte; the build does not resize, crop, recompress, or otherwise edit them.
+The supplied artwork source is `dev-tool/readmes/Website's.zip`. The MkDocs post-build hook copies the original images into `site/assets/img/` using stable website filenames. The files are copied byte-for-byte; the build does not resize, crop, recompress, or otherwise edit them.
 
 - `background-ll.jpg`, `background-lp.jpg`, `background-dl.jpg`, `background-dp.jpg`: light/dark landscape and portrait backgrounds.
 - `banner-home.jpg`, `banner-store.jpg`, `banner-library.jpg`, `banner-tools.jpg`, `banner-blogs.jpg`: section banners.
@@ -208,6 +208,6 @@ The supplied artwork source is `dev-tool/readmes/Website's.zip`. The MkDocs pre-
 - `content-cards-placeholders.jpg`: universal fallback for example articles and content cards.
 - `icon-*.png`: category icons. Keep their pixel-art appearance.
 
-Category icons are displayed with CSS `image-rendering: pixelated`; do not resize the source files themselves. When a content item has no thumbnail, the content grid automatically uses `content-cards-placeholders.jpg`.
+Category icons are displayed with CSS `image-rendering: pixelated`; do not resize the source files themselves. The hook writes into the build output rather than `docs/`, so local preview builds do not dirty tracked source files. When a content item has no thumbnail, the content grid automatically uses `content-cards-placeholders.jpg`.
 
 Do not add Pillow or another image-processing dependency for placeholder generation. Reuse the closest supplied asset for new pages; do not fabricate or process replacement artwork.

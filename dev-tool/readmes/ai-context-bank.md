@@ -240,3 +240,12 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - Strict build: not run in this tool session. No production deployment.
 - Next: verify strict GitHub Actions build and visually inspect the assets and pixel icon scaling.
 - **Responses since this snapshot: 0.**
+
+
+## Artwork build-output correction (2026-11-20)
+
+- Refined `hooks/site_assets.py`: artwork is now copied to `site/assets/img/` in `on_post_build`, after MkDocs copies normal docs assets. This ensures preview/build output gets the supplied files without modifying tracked `docs/` files or leaving untracked images in the source tree.
+- Updated both maintainer and AI instructions; corrected the old note that background images were temporary copies of the cover.
+- The archive remains `dev-tool/readmes/Website's.zip`; all 18 images are checked for presence before copying.
+- Strict build result for the previous integration commit: GitHub Actions passed. This refinement is awaiting its own CI run.
+- No production deployment.
