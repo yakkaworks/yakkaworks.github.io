@@ -9,7 +9,7 @@ description: TheoTown, Kustom, and miscellaneous guides and tutorials.
 
 The guide and tutorial library is still a work in progress.
 
-<div class="yw-nav-grid yw-nav-grid--four">
+<div class="yw-nav-grid yw-nav-grid--two-fixed">
   <a class="yw-nav-card" href="#tutorial-umum-theotown"><img src="../assets/img/theotown-icon.png" alt=""><span>General TheoTown Tutorials</span></a>
   <a class="yw-nav-card" href="#tutorial-plugin-theotown"><img src="../assets/img/theotown-icon.png" alt=""><span>TheoTown Plugin-making Tutorials</span></a>
   <a class="yw-nav-card" href="#tutorial-kustom"><img src="../assets/img/theotown-icon.png" alt=""><span>Kustom Tutorials</span></a>
