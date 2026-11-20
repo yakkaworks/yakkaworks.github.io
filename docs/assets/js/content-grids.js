@@ -40,7 +40,7 @@
       case "general": return !/plugin|kustom/.test(value);
       case "kustom": return /kustom|kwgt|klwp/.test(value);
       case "misc": return /misc|lainnya|other/.test(value);
-      case "announcements": return /announcement|pengumuman/.test(category);
+      case "announcements": return /announcement|pengumuman|update|pembaruan/.test(category);
       case "devlogs": return /devlog|development|pengembangan/.test(category);
       case "communities": return /communit|komunitas/.test(category);
       default: return true;
