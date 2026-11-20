@@ -7,6 +7,6 @@ description: Alat dan utilitas Yakka Works.
 
 # Alat
 
-<badge>Dalam pengembangan</badge>
-
+!!! info "Dalam pengembangan"
+    
 Belum ada alat yang tersedia untuk saat ini. Berbagai utilitas dan alat berbasis web sedang direncanakan dan akan ditambahkan di sini setelah siap.
