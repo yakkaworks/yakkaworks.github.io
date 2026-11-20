@@ -37,3 +37,13 @@ f = font(44)
 box = draw.textbbox((0, 0), "TT", font=f)
 draw.text(((128 - (box[2] - box[0])) / 2, (128 - (box[3] - box[1])) / 2 - box[1]), "TT", fill="#ffffff", font=f)
 icon.save(OUT / "theotown-icon.png", "PNG", optimize=True)
+
+# Generic 2:1 fallback thumbnail for catalog entries without artwork.
+placeholder = Image.new("RGB", (800, 400), "#f4f5f2")
+pdraw = ImageDraw.Draw(placeholder)
+pdraw.rectangle((8, 8, 792, 392), outline="#4d8b31", width=5)
+pfont = font(34)
+label = "Content thumbnail"
+box = pdraw.textbbox((0, 0), label, font=pfont)
+pdraw.text(((800 - (box[2] - box[0])) / 2, (400 - (box[3] - box[1])) / 2 - box[1]), label, fill="#4d8b31", font=pfont)
+placeholder.save(OUT / "placeholder.jpg", "JPEG", quality=88, optimize=True)
