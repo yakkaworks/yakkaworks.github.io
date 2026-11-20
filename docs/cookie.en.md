@@ -4,12 +4,13 @@ title: Cookie Policy
 
 # Cookie Policy
 
-| Summary | Main points |
+| Summary | Key practices |
 |---|---|
 | Site cookies | An anonymous session cookie may be used for analytics. |
-| Identification | It is not intended to identify an individual. |
+| Identification | Cookies are not intended to identify an individual. |
 | Third parties | External services may use their own cookies. |
-| User controls | Cookies can be deleted or blocked in browser settings. |
+| Controls | Cookies can be deleted or blocked in browser settings. |
+| Ad preferences | Google ad preferences are available in [Google Ads Settings](https://adssettings.google.com). |
 
 This page summarizes the cookie-related practices described in the [Privacy Policy](privacy.md), effective 6 September 2026.
 
