@@ -12,14 +12,14 @@ Updates, development notes, and community news from Yakka Works.
 ## Site Announcements
 
 <div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="announcements" data-yw-limit="5"></div>
-<details class="yw-more"><summary>Show more announcements</summary><div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="announcements" data-yw-limit="all"></div></details>
+<details class="yw-more"><summary>Show more announcements</summary><div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="announcements" data-yw-limit="all" data-yw-offset="5"></div></details>
 
 ## Devlogs
 
 <div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="devlogs" data-yw-limit="5"></div>
-<details class="yw-more"><summary>Show more devlogs</summary><div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="devlogs" data-yw-limit="all"></div></details>
+<details class="yw-more"><summary>Show more devlogs</summary><div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="devlogs" data-yw-limit="all" data-yw-offset="5"></div></details>
 
 ## Communities
 
 <div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="communities" data-yw-limit="5"></div>
-<details class="yw-more"><summary>Show more community updates</summary><div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="communities" data-yw-limit="all"></div></details>
+<details class="yw-more"><summary>Show more community updates</summary><div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="communities" data-yw-limit="all" data-yw-offset="5"></div></details>
