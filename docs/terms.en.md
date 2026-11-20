@@ -16,8 +16,6 @@ title: Terms of Service
 | Third parties | External platforms remain subject to their own terms. |
 | Content and liability | Materials are provided as-is to the extent permitted by law. |
 
-
-
 By accessing or using the Yakka Works website (the "Site"), you agree to the terms below. If you do not agree, please stop using the Site.
 
 ## What Yakka Works provides
