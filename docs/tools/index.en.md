@@ -1,10 +1,12 @@
 ---
 title: Tools
-description: Yakka Works tools index placeholder.
+description: Yakka Works tools and utilities.
 ---
+
+<div class="yw-hero-banner"><img src="../assets/img/banner-tools.jpg" alt="Yakka Works tools banner"></div>
 
 # Tools
 
-Tools and utilities index.
+<badge>Work in progress</badge>
 
-> Placeholder — the tool directory and user documentation will be added later.
+There are no tools available yet. A collection of web-based utilities is being planned and will be added here when ready.
