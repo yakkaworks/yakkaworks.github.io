@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "slug": "theotown-plugin-example",
+    "title": "TheoTown Plugin Example",
+    "date": "20-11-26",
+    "description": "Example TheoTown plugin entry. Replace this with the actual content summary.",
+    "category": "plugin",
+    "urls": {
+      "download": [],
+      "details": "/en/store/items/theotown-plugin-example/"
+    }
+  },
+  {
+    "slug": "theotown-map-example",
+    "title": "TheoTown Map Example",
+    "date": "20-11-26",
+    "description": "Example TheoTown map entry. Replace this with the actual map summary.",
+    "category": "map",
+    "urls": {
+      "download": [],
+      "details": "/en/store/items/theotown-map-example/"
+    }
+  },
+  {
+    "slug": "theotown-plugin-preset-example",
+    "title": "TheoTown Plugin Preset Example",
+    "date": "20-11-26",
+    "description": "Example TheoTown plugin preset entry.",
+    "category": "preset",
+    "urls": {
+      "download": [],
+      "details": "/en/store/items/theotown-plugin-preset-example/"
+    }
+  }
+]

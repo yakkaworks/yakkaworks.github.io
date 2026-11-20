@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "slug": "general-tutorial-example",
+    "title": "Contoh Tutorial Umum TheoTown",
+    "date": "20-11-26",
+    "description": "Contoh struktur tutorial umum TheoTown.",
+    "category": "general",
+    "urls": {
+      "Article": "/library/articles/general-tutorial-example/"
+    }
+  },
+  {
+    "slug": "plugin-tutorial-example",
+    "title": "Contoh Tutorial Pembuatan Plugin",
+    "date": "20-11-26",
+    "description": "Contoh artikel proses pembuatan plugin TheoTown.",
+    "category": "plugin",
+    "urls": {
+      "download": [],
+      "details": "/store/items/plugin-tutorial-example/"
+    }
+  },
+  {
+    "slug": "kustom-tutorial-example",
+    "title": "Contoh Tutorial Kustom",
+    "date": "20-11-26",
+    "description": "Contoh tutorial widget atau preset Kustom.",
+    "category": "kustom",
+    "urls": {
+      "download": [],
+      "details": "/store/items/kustom-tutorial-example/"
+    }
+  },
+  {
+    "slug": "other-tutorial-example",
+    "title": "Contoh Tutorial Lainnya",
+    "date": "20-11-26",
+    "description": "Contoh kerangka tutorial untuk topik lain.",
+    "category": "misc",
+    "urls": {
+      "Article": "/library/articles/other-tutorial-example/"
+    }
+  }
+]

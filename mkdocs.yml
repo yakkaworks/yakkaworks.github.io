@@ -15,6 +15,9 @@ not_in_nav: |
   /license*.md
   /source*.md
   /debug*.md
+  /store/items/*.md
+  /library/articles/*.md
+  /blogs/articles/*.md
 
 hooks:
   - hooks/year.py

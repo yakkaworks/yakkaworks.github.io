@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "slug": "theotown-plugin-example",
+    "title": "Contoh Plugin TheoTown",
+    "date": "20-11-26",
+    "description": "Contoh entri plugin TheoTown. Ganti dengan ringkasan konten sebenarnya.",
+    "category": "plugin",
+    "urls": {
+      "download": [],
+      "details": "/store/items/theotown-plugin-example/"
+    }
+  },
+  {
+    "slug": "theotown-map-example",
+    "title": "Contoh Peta TheoTown",
+    "date": "20-11-26",
+    "description": "Contoh entri peta TheoTown. Ganti dengan ringkasan peta sebenarnya.",
+    "category": "map",
+    "urls": {
+      "download": [],
+      "details": "/store/items/theotown-map-example/"
+    }
+  },
+  {
+    "slug": "theotown-plugin-preset-example",
+    "title": "Contoh Preset Plugin TheoTown",
+    "date": "20-11-26",
+    "description": "Contoh entri preset plugin TheoTown.",
+    "category": "preset",
+    "urls": {
+      "download": [],
+      "details": "/store/items/theotown-plugin-preset-example/"
+    }
+  }
+]

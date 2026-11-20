@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "slug": "site-announcement-example",
+    "title": "Site Announcement Example",
+    "date": "20-11-26",
+    "description": "Example official Yakka Works announcement article.",
+    "category": "announcement",
+    "urls": {
+      "Article": "/en/blogs/articles/site-announcement-example/"
+    }
+  },
+  {
+    "slug": "development-log-example",
+    "title": "Development Log Example",
+    "date": "20-11-26",
+    "description": "Example article for recording project progress.",
+    "category": "devlog",
+    "urls": {
+      "Article": "/en/blogs/articles/development-log-example/"
+    }
+  },
+  {
+    "slug": "community-update-example",
+    "title": "Community Update Example",
+    "date": "20-11-26",
+    "description": "Example article for community news and activities.",
+    "category": "community",
+    "urls": {
+      "Article": "/en/blogs/articles/community-update-example/"
+    }
+  }
+]

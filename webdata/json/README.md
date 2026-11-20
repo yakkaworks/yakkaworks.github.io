@@ -47,3 +47,14 @@ Each file contains a JSON array of entries:
 - `en/`: English-language equivalents, using the same schema.
 
 Keep each dataset valid JSON (no comments or trailing commas).
+
+
+## Example destinations
+
+Linked example pages are included in the documentation tree:
+
+- Store detail pages: `docs/store/items/`
+- Library tutorials: `docs/library/articles/`
+- Blog posts: `docs/blogs/articles/`
+
+Each page has an Indonesian and English version. The sample JSON entries link to these local pages. Store download arrays are intentionally empty until real download URLs are added.

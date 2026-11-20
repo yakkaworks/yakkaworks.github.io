@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "slug": "general-tutorial-example",
+    "title": "General TheoTown Tutorial Example",
+    "date": "20-11-26",
+    "description": "Example structure for a general TheoTown tutorial.",
+    "category": "general",
+    "urls": {
+      "Article": "/en/library/articles/general-tutorial-example/"
+    }
+  },
+  {
+    "slug": "plugin-tutorial-example",
+    "title": "Plugin Development Tutorial Example",
+    "date": "20-11-26",
+    "description": "Example article about developing a TheoTown plugin.",
+    "category": "plugin",
+    "urls": {
+      "download": [],
+      "details": "/en/store/items/plugin-tutorial-example/"
+    }
+  },
+  {
+    "slug": "kustom-tutorial-example",
+    "title": "Kustom Tutorial Example",
+    "date": "20-11-26",
+    "description": "Example tutorial for a Kustom widget or preset.",
+    "category": "kustom",
+    "urls": {
+      "download": [],
+      "details": "/en/store/items/kustom-tutorial-example/"
+    }
+  },
+  {
+    "slug": "other-tutorial-example",
+    "title": "Other Tutorial Example",
+    "date": "20-11-26",
+    "description": "Example tutorial framework for other topics.",
+    "category": "misc",
+    "urls": {
+      "Article": "/en/library/articles/other-tutorial-example/"
+    }
+  }
+]

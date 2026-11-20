@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "slug": "misc-content-example",
+    "title": "Contoh Konten Lainnya",
+    "date": "20-11-26",
+    "description": "Contoh entri untuk konten digital kategori lainnya.",
+    "category": "misc",
+    "urls": {
+      "download": [],
+      "details": "/store/items/misc-content-example/"
+    }
+  }
+]

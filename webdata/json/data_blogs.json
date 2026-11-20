@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "slug": "site-announcement-example",
+    "title": "Contoh Pengumuman Situs",
+    "date": "20-11-26",
+    "description": "Contoh artikel pengumuman resmi Yakka Works.",
+    "category": "announcement",
+    "urls": {
+      "Article": "/blogs/articles/site-announcement-example/"
+    }
+  },
+  {
+    "slug": "development-log-example",
+    "title": "Contoh Catatan Pengembangan",
+    "date": "20-11-26",
+    "description": "Contoh artikel untuk mencatat perkembangan proyek.",
+    "category": "devlog",
+    "urls": {
+      "Article": "/blogs/articles/development-log-example/"
+    }
+  },
+  {
+    "slug": "community-update-example",
+    "title": "Contoh Kabar Komunitas",
+    "date": "20-11-26",
+    "description": "Contoh artikel kabar dan kegiatan komunitas.",
+    "category": "community",
+    "urls": {
+      "Article": "/blogs/articles/community-update-example/"
+    }
+  }
+]
