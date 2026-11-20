@@ -63,7 +63,7 @@
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   function parseDateParts(value) {
-    const match = /^(\\d{1,2})-(\\d{1,2})-(\\d{2}|\\d{4})$/.exec(text(value));
+    const match = /^(\d{1,2})-(\d{1,2})-(\d{2}|\d{4})$/.exec(text(value));
     if (!match) return null;
 
     const day = Number(match[1]);
