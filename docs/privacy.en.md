@@ -6,16 +6,14 @@ title: Privacy Policy
 
 *Effective: 6 September 2026*
 
-<div class="yw-tldr" markdown="1">
-**TL;DR**
-
-- No accounts or logins are required. The site is mostly anonymous.
-- We may collect limited anonymous analytics, such as pages visited, approximate location, and search queries.
-- An anonymous session cookie may be used for analytics and is not intended to identify you personally.
-- Third-party services (including AdSense, Linkvertise, GitHub, Patreon, Saweria, TheoTown, Kustom, and social platforms) have their own privacy practices that we do not control.
-- GitHub Pages and Cloudflare may process technical data needed to serve the website.
-- Contact [yakkaworks@gmail.com](mailto:yakkaworks@gmail.com) for privacy questions or requests.
-</div>
+| Summary | Key practices |
+|---|---|
+| Accounts | No account or login is required. |
+| Analytics | Limited anonymous data such as visited pages, approximate location, and search queries may be collected. |
+| Cookies | An anonymous session cookie may be used for analytics. |
+| Third parties | AdSense, Linkvertise, GitHub, Patreon, Saweria, TheoTown, Kustom, and social platforms have their own policies. |
+| Infrastructure | GitHub Pages and Cloudflare may process technical data to serve the site. |
+| Contact | Privacy requests: yakkaworks@gmail.com. |
 
 Please read the full document below for the complete terms and details.
 
