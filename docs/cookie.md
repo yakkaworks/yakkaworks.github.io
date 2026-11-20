@@ -4,12 +4,13 @@ title: Kebijakan Cookie
 
 # Kebijakan Cookie
 
-| Ringkasan | Ketentuan utama |
+| Ringkasan | Praktik utama |
 |---|---|
 | Cookie situs | Cookie sesi anonim dapat digunakan untuk analitik. |
-| Identifikasi | Cookie tersebut tidak dimaksudkan untuk mengidentifikasi individu. |
-| Pihak ketiga | Layanan eksternal dapat memakai cookie sendiri. |
-| Kontrol pengguna | Cookie dapat dihapus atau diblokir melalui pengaturan peramban. |
+| Identifikasi | Cookie tidak dimaksudkan untuk mengidentifikasi seseorang. |
+| Pihak ketiga | Layanan eksternal dapat menggunakan cookie sendiri. |
+| Kontrol | Cookie dapat dihapus atau diblokir melalui pengaturan peramban. |
+| Preferensi iklan | Pengaturan iklan Google tersedia di [Google Ads Settings](https://adssettings.google.com). |
 
 Halaman ini merangkum praktik terkait cookie yang dijelaskan dalam [Kebijakan Privasi](privacy.md), berlaku sejak 6 September 2026.
 
