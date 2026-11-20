@@ -13,17 +13,17 @@ Explore plugins, maps, presets, and digital content published by Yakka Works.
 ## Quick access
 
 <div class="yw-nav-grid yw-nav-grid--two">
-  <a class="yw-nav-card" href="#plugin-presets"><img src="../assets/img/theotown-icon.png" alt=""><span>TheoTown Plugin Presets</span></a>
-  <a class="yw-nav-card" href="web-exclusive/"><img src="../assets/img/theotown-icon.png" alt=""><span>Web-exclusive Plugins</span></a>
+  <a class="yw-nav-card" href="#plugin-presets"><img src="../assets/img/icon-plugin.png" alt=""><span>TheoTown Plugin Presets</span></a>
+  <a class="yw-nav-card" href="web-exclusive/"><img src="../assets/img/icon-webexclusive.png" alt=""><span>Web-exclusive Plugins</span></a>
 </div>
 
 ## Categories
 
 <div class="yw-nav-grid yw-nav-grid--four">
-  <a class="yw-nav-card" href="#theotown-plugins"><img src="../assets/img/theotown-icon.png" alt=""><span>TheoTown Plugins</span></a>
-  <a class="yw-nav-card" href="#theotown-maps"><img src="../assets/img/theotown-icon.png" alt=""><span>TheoTown Maps</span></a>
-  <a class="yw-nav-card" href="#kustom"><img src="../assets/img/theotown-icon.png" alt=""><span>Kustom</span></a>
-  <a class="yw-nav-card" href="#misc"><img src="../assets/img/theotown-icon.png" alt=""><span>Miscellaneous</span></a>
+  <a class="yw-nav-card" href="#theotown-plugins"><img src="../assets/img/icon-plugin.png" alt=""><span>TheoTown Plugins</span></a>
+  <a class="yw-nav-card" href="#theotown-maps"><img src="../assets/img/icon-map.png" alt=""><span>TheoTown Maps</span></a>
+  <a class="yw-nav-card" href="#kustom"><img src="../assets/img/icon-kustom.png" alt=""><span>Kustom</span></a>
+  <a class="yw-nav-card" href="#misc"><img src="../assets/img/icon-misc.png" alt=""><span>Miscellaneous</span></a>
 </div>
 
 ## TheoTown Plugins { #theotown-plugins }

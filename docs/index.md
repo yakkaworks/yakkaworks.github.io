@@ -16,9 +16,9 @@ Yakka Works adalah studio independen yang berfokus pada proyek digital dan konte
 
 <div class="yw-nav-grid yw-nav-grid--four">
   <a class="yw-nav-card" href="store/"><img src="assets/img/theotown-icon.png" alt=""><span>Toko</span></a>
-  <a class="yw-nav-card" href="library/"><img src="assets/img/theotown-icon.png" alt=""><span>Pustaka</span></a>
-  <a class="yw-nav-card" href="tools/"><img src="assets/img/theotown-icon.png" alt=""><span>Alat</span></a>
-  <a class="yw-nav-card" href="blogs/"><img src="assets/img/theotown-icon.png" alt=""><span>Blog</span></a>
+  <a class="yw-nav-card" href="library/"><img src="assets/img/icon-tut.png" alt=""><span>Pustaka</span></a>
+  <a class="yw-nav-card" href="tools/"><img src="assets/img/icon-map.png" alt=""><span>Alat</span></a>
+  <a class="yw-nav-card" href="blogs/"><img src="assets/img/icon-misc.png" alt=""><span>Blog</span></a>
 </div>
 
 ## Tentang Yakka Works

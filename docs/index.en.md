@@ -16,9 +16,9 @@ Yakka Works is an independent studio focused on digital projects and community-r
 
 <div class="yw-nav-grid yw-nav-grid--four">
   <a class="yw-nav-card" href="store/"><img src="assets/img/theotown-icon.png" alt=""><span>Store</span></a>
-  <a class="yw-nav-card" href="library/"><img src="assets/img/theotown-icon.png" alt=""><span>Library</span></a>
-  <a class="yw-nav-card" href="tools/"><img src="assets/img/theotown-icon.png" alt=""><span>Tools</span></a>
-  <a class="yw-nav-card" href="blogs/"><img src="assets/img/theotown-icon.png" alt=""><span>Blogs</span></a>
+  <a class="yw-nav-card" href="library/"><img src="assets/img/icon-tut.png" alt=""><span>Library</span></a>
+  <a class="yw-nav-card" href="tools/"><img src="assets/img/icon-map.png" alt=""><span>Tools</span></a>
+  <a class="yw-nav-card" href="blogs/"><img src="assets/img/icon-misc.png" alt=""><span>Blogs</span></a>
 </div>
 
 ## About Yakka Works
