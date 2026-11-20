@@ -8,5 +8,4 @@ description: Yakka Works tools and utilities.
 # Tools
 
 !!! info "Work in progress"
-    
-There are no tools available yet. A collection of web-based utilities is being planned and will be added here when ready.
+    There are no tools available yet. A collection of web-based utilities is being planned and will be added here when ready.
