@@ -4,7 +4,7 @@ date: 21-10-26
 description: Yakka Works announcements, development logs, and community updates.
 ---
 
-<div class="yw-hero-banner"><img src="../assets/img/banner-blogs.jpg" alt="Yakka Works blog banner"></div>
+<div class="yw-hero-banner"><img src="/assets/img/banner-blogs.jpg" alt="Yakka Works blog banner"></div>
 
 # Blog
 

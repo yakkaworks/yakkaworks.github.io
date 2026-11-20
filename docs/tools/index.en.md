@@ -4,7 +4,7 @@ date: 21-10-26
 description: Yakka Works tools and utilities.
 ---
 
-<div class="yw-hero-banner"><img src="../assets/img/banner-tools.jpg" alt="Yakka Works tools banner"></div>
+<div class="yw-hero-banner"><img src="/assets/img/banner-tools.jpg" alt="Yakka Works tools banner"></div>
 
 # Tools
 
