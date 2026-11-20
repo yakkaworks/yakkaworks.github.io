@@ -4,7 +4,7 @@ date: 21-10-26
 description: Yakka Works — studio digital independen dari Indonesia.
 ---
 
-<div class="yw-hero-banner"><img src="../assets/img/banner-home.jpg" alt="Banner beranda Yakka Works"></div>
+<div class="yw-hero-banner"><img src="assets/img/banner-home.jpg" alt="Banner beranda Yakka Works"></div>
 
 # Yakka Works
 
@@ -15,10 +15,10 @@ Yakka Works adalah studio independen yang berfokus pada proyek digital dan konte
 ## Jelajahi Yakka Works
 
 <div class="yw-nav-grid yw-nav-grid--four">
-  <a class="yw-nav-card" href="store/"><img src="../assets/img/theotown-icon.png" alt=""><span>Toko</span></a>
-  <a class="yw-nav-card" href="library/"><img src="../assets/img/icon-tut.png" alt=""><span>Pustaka</span></a>
-  <a class="yw-nav-card" href="tools/"><img src="../assets/img/icon-map.png" alt=""><span>Alat</span></a>
-  <a class="yw-nav-card" href="blogs/"><img src="../assets/img/icon-misc.png" alt=""><span>Blog</span></a>
+  <a class="yw-nav-card" href="store/"><img src="assets/img/theotown-icon.png" alt=""><span>Toko</span></a>
+  <a class="yw-nav-card" href="library/"><img src="assets/img/icon-tut.png" alt=""><span>Pustaka</span></a>
+  <a class="yw-nav-card" href="tools/"><img src="assets/img/icon-map.png" alt=""><span>Alat</span></a>
+  <a class="yw-nav-card" href="blogs/"><img src="assets/img/icon-misc.png" alt=""><span>Blog</span></a>
 </div>
 
 ## Tentang Yakka Works

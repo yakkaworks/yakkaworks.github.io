@@ -1,5 +1,6 @@
 """Copy supplied artwork and the JSON catalog into the completed MkDocs site."""
 from pathlib import Path
+import re
 import shutil
 import zipfile
 
@@ -53,3 +54,12 @@ def on_post_build(config, **kwargs):
         if target.exists():
             shutil.rmtree(target)
         shutil.copytree(source, target)
+
+    # Locale pages live below /en/ and nested directory URLs. Normalize relative
+    # references to shared image assets so every page resolves them from site root.
+    image_path = re.compile(r"(?<![A-Za-z0-9:/])(?:(?:\\.\\./)|(?:\\./))*assets/img/")
+    for html_file in Path(config["site_dir"]).rglob("*.html"):
+        html = html_file.read_text(encoding="utf-8")
+        normalized = image_path.sub("/assets/img/", html)
+        if normalized != html:
+            html_file.write_text(normalized, encoding="utf-8")
