@@ -113,6 +113,8 @@
         };
         return parse(b.Date || b.date) - parse(a.Date || a.date);
       });
+      const offset = Number(grid.dataset.ywOffset) || 0;
+      if (offset) selected = selected.slice(offset);
       if (limit !== "all") selected = selected.slice(0, Number(limit) || 5);
       if (!selected.length) {
         grid.classList.add("yw-content-grid--empty");
