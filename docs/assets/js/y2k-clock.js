@@ -3,7 +3,7 @@
 
   // Format ISO dates consistently without relying on the browser's locale or timezone.
   const formatHeaderDate = (value) => {
-    const match = /^(\\d{4})-(\\d{2})-(\\d{2})(?:$|T)/.exec(String(value || "").trim());
+    const match = /^(\d{4})-(\d{2})-(\d{2})(?:$|T)/.exec(String(value || "").trim());
     if (!match) return null;
 
     const [, year, month, day] = match;
