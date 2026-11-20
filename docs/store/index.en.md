@@ -49,10 +49,10 @@ Explore plugins, maps, presets, and digital content published by Yakka Works.
 
 Commissions include full from-scratch TheoTown plugin development, JSON fixes, plugin image or frame commissions, and fixes for plugins rejected by the in-game store.
 
-[View commission information](commissions/)
+[View commission information](commissions.md)
 
 ## Web-exclusive Plugins
 
 Most paid content is available through a dedicated page and may redirect to external platforms such as Lynk.id or the Patreon shop.
 
-[Explore web-exclusive plugins](web-exclusive/)
+[Explore web-exclusive plugins](web-exclusive.md)
