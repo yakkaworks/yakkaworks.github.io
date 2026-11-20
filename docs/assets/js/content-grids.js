@@ -1,7 +1,6 @@
 (() => {
   const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
-  const root = "https://raw.githubusercontent.com/yakkaworks/yakkaworks.github.io/main/webdata/json/";
-  const imageRoot = "https://raw.githubusercontent.com/yakkaworks/yakkaworks.github.io/main/";
+  const root = "/webdata/json/";
   const sources = {
     theotown: "data_theotown.json",
     kustom: "data_kustom.json",
@@ -15,12 +14,12 @@
     if (!cache.has(name)) {
       const file = sources[name];
       cache.set(name, (async () => {
-        const candidates = isEnglish ? [root + "en/" + file, root + file] : [root + file];
-        for (const url of candidates) {
-          const response = await fetch(url);
-          if (response.ok) return response.json();
-        }
-        throw new Error("Unable to load " + file);
+        const localized = root + (isEnglish ? "en/" : "") + file;
+        const response = await fetch(localized);
+        if (!response.ok) throw new Error("Unable to load " + localized);
+        const data = await response.json();
+        if (!Array.isArray(data)) throw new TypeError(file + " must contain a JSON array");
+        return data;
       })());
     }
     return cache.get(name);
@@ -28,7 +27,10 @@
 
   const text = (value) => String(value ?? "").trim();
   const categories = (item) => (Array.isArray(item.category) ? item.category : [item.category || ""]).join(" ").toLowerCase();
-  const haystack = (item) => [item.title, item.slug, item.Description, ...(Array.isArray(item.category) ? item.category : [item.category || ""])].join(" ").toLowerCase();
+  const haystack = (item) => [
+    item.title, item.slug, item.description, item.desc, item.category,
+    ...(Array.isArray(item.category) ? item.category : [])
+  ].flat().join(" ").toLowerCase();
 
   function matches(item, filter, type) {
     const value = haystack(item);
@@ -47,21 +49,33 @@
     }
   }
 
-  function localAsset(path) {
-    const value = text(path);
-    if (!value) return "/assets/img/placeholder.jpg";
-    if (/^https?:\/\//i.test(value) || value.startsWith("/")) return value;
-    if (value.startsWith("webdata/")) return imageRoot + value;
-    return "/" + value.replace(/^\.\//, "");
+  function resolveUrl(value) {
+    const url = text(value);
+    if (!url) return "";
+    if (/^(https?:|mailto:|tel:)/i.test(url) || url.startsWith("/")) return url;
+    return "/" + url.replace(/^\.\//, "");
+  }
+
+  function localAsset(value) {
+    return resolveUrl(value) || "/assets/img/placeholder.jpg";
+  }
+
+  function parseDate(value) {
+    const [day, month, year] = text(value).split("-").map(Number);
+    if (!day || !month || !year) return 0;
+    return new Date(year < 100 ? 2000 + year : year, month - 1, day).getTime();
   }
 
   function makeCard(item, kind) {
-    const card = document.createElement("article");
-    card.className = "yw-content-card";
+    const urls = item.urls || {};
+    const articleUrl = kind === "library" || kind === "blogs" ? resolveUrl(urls.Article || urls.article) : "";
+    const card = document.createElement(articleUrl ? "a" : "article");
+    card.className = "yw-content-card" + (articleUrl ? " yw-content-card--linked" : "");
+    if (articleUrl) card.href = articleUrl;
 
     const thumb = document.createElement("img");
     thumb.className = "yw-content-card__thumb";
-    thumb.src = localAsset(item.Thumbnails || item.thumbnail);
+    thumb.src = localAsset(item.thumbnail);
     thumb.alt = "";
     thumb.loading = "lazy";
     thumb.onerror = () => { thumb.src = "/assets/img/placeholder.jpg"; };
@@ -74,34 +88,46 @@
     title.textContent = text(item.title) || "Untitled";
     body.append(title);
 
+    const description = text(item.description || item.desc);
+    if (description) {
+      const summary = document.createElement("p");
+      summary.className = "yw-content-card__description";
+      summary.textContent = description;
+      body.append(summary);
+    }
+
+    const downloads = Array.isArray(urls.download) ? urls.download : [];
+    const latest = downloads.find((entry) => entry && text(entry.url)) || null;
     const meta = document.createElement("p");
     meta.className = "yw-content-card__meta";
-    const version = text(item.Version || item.version);
-    const date = text(item.Date || item.date);
+    const version = latest ? text(latest.ver) : "";
+    const date = text(item.date);
     meta.textContent = [version ? "v" + version : "", date].filter(Boolean).join(" · ");
     if (meta.textContent) body.append(meta);
 
-    const actions = document.createElement("div");
-    actions.className = "yw-content-card__actions";
-    const urls = item.urls || {};
-    const download = Array.isArray(urls.download) ? urls.download[0] : urls.download;
-    const details = urls.Details || urls.details || urls.link;
-    if (download && download !== "#") {
-      const button = document.createElement("a");
-      button.className = "yw-button yw-button--primary";
-      button.href = download;
-      button.textContent = isEnglish ? "Download Latest" : "Unduh Terbaru";
-      if (/^https?:\/\//i.test(download)) { button.target = "_blank"; button.rel = "noopener noreferrer"; }
-      actions.append(button);
+    // Library and blog cards navigate as a whole; store cards retain explicit actions.
+    if (kind !== "library" && kind !== "blogs") {
+      const actions = document.createElement("div");
+      actions.className = "yw-content-card__actions";
+      if (latest) {
+        const button = document.createElement("a");
+        button.className = "yw-button yw-button--primary";
+        button.href = resolveUrl(latest.url);
+        button.textContent = isEnglish ? "Download Latest" : "Unduh Terbaru";
+        if (/^https?:\/\//i.test(button.href)) { button.target = "_blank"; button.rel = "noopener noreferrer"; }
+        actions.append(button);
+      }
+      const details = resolveUrl(urls.details);
+      if (details) {
+        const button = document.createElement("a");
+        button.className = "yw-button yw-button--outline";
+        button.href = details;
+        button.textContent = isEnglish ? "Details" : "Detail";
+        actions.append(button);
+      }
+      if (actions.childElementCount) body.append(actions);
     }
-    if (details && details !== "#") {
-      const button = document.createElement("a");
-      button.className = "yw-button yw-button--outline";
-      button.href = /^https?:\/\//i.test(details) || details.startsWith("/") ? details : "https://yakkaworks.github.io/" + details.replace(/^\.\//, "");
-      button.textContent = isEnglish ? "Details" : "Detail";
-      actions.append(button);
-    }
-    if (actions.childElementCount) body.append(actions);
+
     card.append(body);
     return card;
   }
@@ -113,13 +139,7 @@
     try {
       const items = await load(type);
       let selected = items.filter((item) => matches(item, filter, type));
-      selected.sort((a, b) => {
-        const parse = (value) => {
-          const [d, m, y] = text(value).split("-").map(Number);
-          return y && m && d ? new Date(y, m - 1, d).getTime() : 0;
-        };
-        return parse(b.Date || b.date) - parse(a.Date || a.date);
-      });
+      selected.sort((a, b) => parseDate(b.date) - parseDate(a.date));
       const offset = Number(grid.dataset.ywOffset) || 0;
       if (offset) selected = selected.slice(offset);
       if (limit !== "all") selected = selected.slice(0, Number(limit) || 5);
