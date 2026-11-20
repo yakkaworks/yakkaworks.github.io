@@ -30,18 +30,19 @@
   const categories = (item) => (Array.isArray(item.category) ? item.category : [item.category || ""]).join(" ").toLowerCase();
   const haystack = (item) => [item.title, item.slug, item.Description, ...((item.category || []))].join(" ").toLowerCase();
 
-  function matches(item, filter) {
+  function matches(item, filter, type) {
     const value = haystack(item);
+    const category = categories(item);
     switch (filter) {
-      case "maps": return /\bmap(s)?\b|peta/.test(value);
-      case "presets": return /preset/.test(value);
-      case "plugins": return !/\bmap(s)?\b|peta|preset/.test(value);
+      case "maps": return /(^|[, ])maps?([, ]|$)|peta/.test(category) || item.type === "map";
+      case "presets": return /preset/.test(category) || item.type === "preset";
+      case "plugins": return type === "library" ? /plugin/.test(value) : !/(^|[, ])maps?([, ]|$)|peta|preset/.test(category);
       case "general": return !/plugin|kustom/.test(value);
       case "kustom": return /kustom|kwgt|klwp/.test(value);
       case "misc": return /misc|lainnya|other/.test(value) || (!/plugin|kustom|guide|tutorial/.test(value));
-      case "announcements": return /announcement|pengumuman/.test(categories(item));
-      case "devlogs": return /devlog|development|pengembangan/.test(categories(item));
-      case "communities": return /communit|komunitas/.test(categories(item));
+      case "announcements": return /announcement|pengumuman/.test(category);
+      case "devlogs": return /devlog|development|pengembangan/.test(category);
+      case "communities": return /communit|komunitas/.test(category);
       default: return true;
     }
   }
