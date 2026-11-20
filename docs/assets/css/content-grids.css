@@ -5,6 +5,7 @@
 .yw-nav-grid { display: grid; gap: .8rem; margin: 1rem 0 1.8rem; }
 .yw-nav-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .yw-nav-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.yw-nav-grid--two-fixed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .yw-nav-card { display: flex; min-height: 5.5rem; align-items: center; justify-content: center; gap: .7rem; flex-direction: column; padding: 1rem .7rem; border: 1px solid color-mix(in srgb, var(--md-primary-fg-color), transparent 18%); border-radius: .75rem; background: var(--md-primary-fg-color); color: var(--md-primary-bg-color) !important; text-align: center; text-decoration: none !important; font-weight: 650; transition: transform .16s ease, filter .16s ease; }
 .yw-nav-card:hover { filter: brightness(1.08); transform: translateY(-2px); }
 .yw-nav-card img { display: block; width: 2rem; height: 2rem; object-fit: contain; }
