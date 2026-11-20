@@ -136,3 +136,15 @@ Rules:
 - Both scripts are listed in `mkdocs.yml` after the main style script. Keep the cleanup script loaded after `y2k-clock.js`.
 - Search alignment: all wrappers from `.yw-search-row` down through `.md-search__form` must fill 100% of the 900px header, with no default horizontal margin or padding. Keep Material's search partial and result engine unchanged.
 - The current shared layout width is **900px**, not the older 800px values in historical notes; mobile uses a 0.5rem gutter.
+
+
+## Artwork and image-placeholder workflow
+
+- The supplied image source is `dev-tool/readmes/Website's.zip`. The actual repository directory is `dev-tool/` (singular).
+- `hooks/site_assets.py` extracts the known images into `docs/assets/img/` during `on_pre_build`. The ZIP is the source archive; do not duplicate its binary assets elsewhere without a reason.
+- Extraction uses Python's standard library and copies image bytes unchanged. Do not reintroduce Pillow, image resizing/cropping, or `scripts/generate_placeholders.py`.
+- Use `content-cards-placeholders.jpg` for example article/content thumbnails. The content-grid renderer uses it automatically when a JSON item has no `thumbnail` or its image fails to load.
+- Use the supplied `banner-*.jpg` files for their corresponding sections and `icon-*.png` files for category/navigation icons.
+- Category icons must remain crisp when scaled: preserve `image-rendering: pixelated` on `.yw-nav-card img`. Do not apply it to photographic banners or card thumbnails.
+- If a new image filename is needed, map it explicitly in `IMAGE_FILES` in `hooks/site_assets.py` and reference the stable destination filename. Prefer reusing supplied artwork.
+- Do not remove `dev-tool/readmes/Website's.zip`; it is required by the build hook.

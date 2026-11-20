@@ -226,3 +226,17 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - Files changed: `overrides/main.html`, `docs/assets/js/y2k-clock.js`, AI instructions, this context bank.
 - Strict build and owner browser verification: pending.
 - No production deployment.
+
+
+## Supplied artwork integration (2026-11-20)
+
+- Owner supplied `dev-tool/readmes/Website's.zip` containing 18 original images; the archive is retained as the source.
+- `hooks/site_assets.py` copies the images into `docs/assets/img/` before each MkDocs build, mapping underscore background names to the established hyphenated filenames. It also retains the existing `webdata/` post-build copy.
+- Removed the Pillow requirement and deleted `scripts/generate_placeholders.py`; no image processing or automatic artwork generation remains.
+- Content-grid fallback now uses `content-cards-placeholders.jpg` for example content and missing/broken thumbnails.
+- `docs/assets/css/content-grids.css` applies nearest-neighbour pixel rendering to the actual navigation icon selector, `.yw-nav-card img`.
+- Updated maintainer and AI guides with the archive, fallback, and pixel-icon rules.
+- Files changed: `hooks/site_assets.py`, `requirements.txt`, deleted `scripts/generate_placeholders.py`, `docs/assets/js/content-grids.js`, `docs/assets/css/content-grids.css`, and the three readmes.
+- Strict build: not run in this tool session. No production deployment.
+- Next: verify strict GitHub Actions build and visually inspect the assets and pixel icon scaling.
+- **Responses since this snapshot: 0.**

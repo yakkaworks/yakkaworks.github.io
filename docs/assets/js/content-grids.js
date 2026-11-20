@@ -57,7 +57,7 @@
   }
 
   function localAsset(value) {
-    return resolveUrl(value) || "/assets/img/placeholder.jpg";
+    return resolveUrl(value) || "/assets/img/content-cards-placeholders.jpg";
   }
 
   // Keep JSON dates available for chronological sorting only.
@@ -79,7 +79,7 @@
     thumb.src = localAsset(item.thumbnail);
     thumb.alt = "";
     thumb.loading = "lazy";
-    thumb.onerror = () => { thumb.src = "/assets/img/placeholder.jpg"; };
+    thumb.onerror = () => { thumb.src = "/assets/img/content-cards-placeholders.jpg"; };
     card.append(thumb);
 
     const body = document.createElement("div");
