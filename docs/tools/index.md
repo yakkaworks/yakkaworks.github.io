@@ -1,10 +1,12 @@
 ---
 title: Alat
-description: Placeholder indeks alat Yakka Works.
+description: Alat dan utilitas Yakka Works.
 ---
+
+<div class="yw-hero-banner"><img src="../assets/img/banner-tools.jpg" alt="Banner alat Yakka Works"></div>
 
 # Alat
 
-Halaman indeks alat dan utilitas.
+<badge>Dalam pengembangan</badge>
 
-> Placeholder — daftar alat dan dokumentasi pengguna akan ditambahkan kemudian.
+Belum ada alat yang tersedia untuk saat ini. Berbagai utilitas dan alat berbasis web sedang direncanakan dan akan ditambahkan di sini setelah siap.
