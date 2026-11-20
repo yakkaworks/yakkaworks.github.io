@@ -1,5 +1,6 @@
 ---
 title: Kebijakan Cookie
+date: 21-10-26
 ---
 
 # Kebijakan Cookie

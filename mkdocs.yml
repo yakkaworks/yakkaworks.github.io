@@ -23,6 +23,7 @@ hooks:
   - hooks/year.py
   - hooks/plugin_order.py
   - hooks/meta_description.py
+  - hooks/meta_date.py
   - hooks/site_assets.py
 
 theme:

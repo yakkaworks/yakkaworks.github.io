@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+date: 21-10-26
 ---
 
 # Privacy Policy

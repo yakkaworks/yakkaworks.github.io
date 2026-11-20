@@ -1,5 +1,6 @@
 ---
 title: Beranda
+date: 21-10-26
 description: Yakka Works — studio digital independen dari Indonesia.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: General TheoTown Tutorial Example
+date: 20-11-26
 description: Example structure for a general TheoTown tutorial article.
 ---
 

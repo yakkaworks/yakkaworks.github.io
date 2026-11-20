@@ -1,5 +1,6 @@
 ---
 title: Syarat & Ketentuan
+date: 21-10-26
 ---
 
 # Syarat & Ketentuan

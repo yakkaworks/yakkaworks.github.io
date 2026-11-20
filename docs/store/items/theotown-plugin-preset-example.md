@@ -1,5 +1,6 @@
 ---
 title: Contoh Preset Plugin TheoTown
+date: 20-11-26
 description: Contoh halaman detail preset plugin TheoTown.
 ---
 

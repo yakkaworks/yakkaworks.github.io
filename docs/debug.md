@@ -1,5 +1,6 @@
 ---
 title: Debug & Diagnostics
+date: 19-11-26
 description: Internal preview diagnostics for the Y2K theme.
 ---
 

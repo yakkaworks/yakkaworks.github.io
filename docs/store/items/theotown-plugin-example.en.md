@@ -1,5 +1,6 @@
 ---
 title: TheoTown Plugin Example
+date: 20-11-26
 description: Example TheoTown plugin detail page for the Yakka Works catalogue.
 ---
 

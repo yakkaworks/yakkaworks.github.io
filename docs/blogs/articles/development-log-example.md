@@ -1,5 +1,6 @@
 ---
 title: Contoh Catatan Pengembangan
+date: 20-11-26
 description: Contoh artikel devlog untuk mencatat perkembangan proyek.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Development Log Example
+date: 20-11-26
 description: Example devlog article for recording project progress.
 ---
 

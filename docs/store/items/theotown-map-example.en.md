@@ -1,5 +1,6 @@
 ---
 title: TheoTown Map Example
+date: 20-11-26
 description: Example TheoTown map detail page for the Yakka Works catalogue.
 ---
 

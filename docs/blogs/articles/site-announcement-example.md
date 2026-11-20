@@ -1,5 +1,6 @@
 ---
 title: Contoh Pengumuman Situs
+date: 20-11-26
 description: Contoh artikel pengumuman resmi Yakka Works.
 ---
 

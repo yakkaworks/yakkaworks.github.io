@@ -1,5 +1,6 @@
 ---
 title: Tentang
+date: 21-10-26
 description: Draf halaman tentang Yakka Works.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Contoh Tutorial Pembuatan Plugin
+date: 20-11-26
 description: Contoh artikel tutorial pembuatan plugin TheoTown.
 ---
 

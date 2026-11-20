@@ -1,5 +1,6 @@
 ---
 title: Contoh Konten Kustom
+date: 20-11-26
 description: Contoh halaman detail konten Kustom untuk katalog Yakka Works.
 ---
 

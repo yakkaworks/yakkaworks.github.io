@@ -1,5 +1,6 @@
 ---
 title: Site Announcement Example
+date: 20-11-26
 description: Example official Yakka Works site announcement.
 ---
 

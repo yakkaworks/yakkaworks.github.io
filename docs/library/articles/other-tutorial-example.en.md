@@ -1,5 +1,6 @@
 ---
 title: Other Tutorial Example
+date: 20-11-26
 description: Example framework for a tutorial on another topic.
 ---
 

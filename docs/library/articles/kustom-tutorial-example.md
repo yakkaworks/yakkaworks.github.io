@@ -1,5 +1,6 @@
 ---
 title: Contoh Tutorial Kustom
+date: 20-11-26
 description: Contoh struktur tutorial widget atau preset Kustom.
 ---
 

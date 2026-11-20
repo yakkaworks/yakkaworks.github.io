@@ -54,7 +54,7 @@ A simple page can look like this:
 ```markdown
 ---
 title: Nama Halaman
-date: 2026-11-20
+date: 20-11-26
 ---
 
 # Nama Halaman
@@ -68,9 +68,9 @@ Isi halaman di sini.
 
 The title in the front matter controls the navigation/page title. The browser title is automatically formatted as `Nama Halaman - Yakka Works`.
 
-The optional `date` field appears on the far-right side of the document header. Use an unquoted ISO date (`YYYY-MM-DD`); it is displayed as `dd/mmm/yyyy`, for example `20/Nov/2026`. Pages without a `date` field do not show a date.
+The `date` field is the Markdown page's publication/creation date. Use `dd-mm-yy` (for example, `20-11-26`). It appears on the far-right side of the document header as `dd/mmm/yyyy` (for example, `20/Nov/2026`). Add it to every published page's front matter and update it only when the page's publication date should change.
 
-On the Blog index, each post's `date` remains in `webdata/json/data_blogs.json` for sorting, but is not printed inside its card. The newest valid post date is shown on the far-right side of the Blog page header bar instead. A date explicitly set in the Markdown page's front matter takes priority.
+JSON `date` values remain metadata for sorting content, but are not displayed inside content cards or used as the page-header date.
 
 ## 4. Navigation
 

@@ -1,5 +1,6 @@
 ---
 title: Contoh Peta TheoTown
+date: 20-11-26
 description: Contoh halaman detail peta TheoTown untuk katalog Yakka Works.
 ---
 

@@ -34,7 +34,8 @@ Treat the repository files as the source of truth. Do not assume the previous co
 - Background naming: `background-[a][b].jpg`, where `a=l/d` means light/dark and `b=l/p` means landscape/portrait.
 - Page title format: `[page title] - Yakka Works`.
 - Page meta description comes from the first rendered paragraph, via `hooks/meta_description.py`.
-- Render Markdown `date` front matter in the document header as `dd/mmm/yyyy` (for example, `20/Nov/2026`); keep the underlying `datetime` value ISO-formatted and use the same display format for Blog-generated headers.
+- Every published Markdown page should have a `date: dd-mm-yy` front-matter field (for example, `20-11-26`). Display that page publication/creation date at the far-right of the document metadata bar as `dd/mmm/yyyy`; preserve an ISO `datetime` value in the rendered `<time>`.
+- JSON `date` fields are metadata for chronological sorting only. Never use JSON content dates as page-header dates or render them inside content cards.
 - On the Blog index, retain per-post dates in `webdata/json/data_blogs.json` for sorting, show the newest valid date in `.yw-page__bar`, and do not render those dates inside individual Blog cards. An explicit page front-matter date takes priority.
 
 ## Implementation expectations

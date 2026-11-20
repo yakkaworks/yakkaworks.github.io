@@ -1,5 +1,6 @@
 ---
 title: Contoh Tutorial Lainnya
+date: 20-11-26
 description: Contoh kerangka artikel tutorial untuk topik lainnya.
 ---
 

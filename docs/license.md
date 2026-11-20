@@ -1,5 +1,6 @@
 ---
 title: Lisensi
+date: 21-10-26
 ---
 <div class="yw-editorial yw-license" markdown="1">
 

@@ -1,5 +1,6 @@
 ---
 title: Terms of Service
+date: 21-10-26
 ---
 
 # Terms of Service

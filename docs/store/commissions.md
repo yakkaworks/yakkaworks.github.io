@@ -1,5 +1,6 @@
 ---
 title: Komisi
+date: 20-11-26
 description: Informasi komisi pembuatan plugin TheoTown dan layanan terkait.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Contoh Kabar Komunitas
+date: 20-11-26
 description: Contoh artikel untuk kabar dan kegiatan komunitas.
 ---
 

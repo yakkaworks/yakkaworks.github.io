@@ -206,11 +206,12 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - **Responses since this snapshot: 0.**
 
 
-## Blog index date placement (2026-11-20)
+## Markdown publication dates (2026-11-20)
 
-- Blog post dates remain in `webdata/json/data_blogs.json` as sorting metadata, but are no longer rendered inside individual Blog cards.
-- `docs/assets/js/content-grids.js` finds the newest valid Blog date and inserts it as a semantic `<time>` at the far-right of `.yw-page__bar` (formatted `dd/mmm/yyyy`). An explicit Markdown front-matter date takes priority.
-- Non-Blog card metadata and other page date behavior remain unchanged.
-- Files changed: `docs/assets/js/content-grids.js`, `dev-tool/readmes/for-yakka.md`, `dev-tool/readmes/ai-instruct.md`, this context bank.
-- Build and browser verification: pending.
+- Corrected the date model: each published page's date comes only from its own Markdown front matter (`date: dd-mm-yy`), not from content/catalog JSON.
+- `hooks/meta_date.py` validates the front-matter date and provides an ISO `datetime` plus `dd/mmm/yyyy` display text for the far-right of `.yw-page__bar`.
+- `docs/assets/js/content-grids.js` retains JSON date parsing for chronological sorting but no longer renders JSON dates in any content cards and no longer populates the page header from Blog JSON.
+- All rendered Markdown pages under `docs/` have front-matter dates based on their first commit on `y2k-dev`; new pages should include their publication/creation date.
+- Files changed: `overrides/main.html`, `hooks/meta_date.py`, `mkdocs.yml`, `docs/assets/js/content-grids.js`, all page Markdown files under `docs/`, the maintainer/AI guides, and this context bank.
+- Strict build: pending. Browser verification: owner review required.
 - No production deployment.

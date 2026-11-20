@@ -1,5 +1,6 @@
 ---
 title: Blog
+date: 21-10-26
 description: Yakka Works announcements, development logs, and community updates.
 ---
 

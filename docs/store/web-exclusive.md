@@ -1,5 +1,6 @@
 ---
 title: Plugin Eksklusif Web
+date: 20-11-26
 description: Plugin dan konten eksklusif yang tersedia melalui situs Yakka Works.
 ---
 

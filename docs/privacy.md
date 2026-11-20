@@ -1,5 +1,6 @@
 ---
 title: Kebijakan Privasi
+date: 21-10-26
 ---
 
 # Kebijakan Privasi

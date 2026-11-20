@@ -1,5 +1,6 @@
 ---
 title: Miscellaneous Content Example
+date: 20-11-26
 description: Example detail page for miscellaneous digital content.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Home
+date: 21-10-26
 description: Yakka Works — an independent digital studio from Indonesia.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Blog
+date: 21-10-26
 description: Pengumuman, catatan pengembangan, dan kabar komunitas Yakka Works.
 ---
 

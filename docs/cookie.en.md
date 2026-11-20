@@ -1,5 +1,6 @@
 ---
 title: Cookie Policy
+date: 21-10-26
 ---
 
 # Cookie Policy

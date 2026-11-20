@@ -1,5 +1,6 @@
 ---
 title: Contoh Konten Lainnya
+date: 20-11-26
 description: Contoh halaman detail untuk konten digital kategori lainnya.
 ---
 

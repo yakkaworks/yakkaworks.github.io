@@ -1,5 +1,6 @@
 ---
 title: Community Update Example
+date: 20-11-26
 description: Example article for community news and activities.
 ---
 
