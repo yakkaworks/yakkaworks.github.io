@@ -89,15 +89,15 @@
       const button = document.createElement("a");
       button.className = "yw-button yw-button--primary";
       button.href = download;
-      button.textContent = "Download Latest";
+      button.textContent = isEnglish ? "Download Latest" : "Unduh Terbaru";
       if (/^https?:\/\//i.test(download)) { button.target = "_blank"; button.rel = "noopener noreferrer"; }
       actions.append(button);
     }
     if (details && details !== "#") {
       const button = document.createElement("a");
       button.className = "yw-button yw-button--outline";
-      button.href = /^https?:\/\//i.test(details) || details.startsWith("/") ? details : "/" + details.replace(/^\.\//, "");
-      button.textContent = "Details";
+      button.href = /^https?:\/\//i.test(details) || details.startsWith("/") ? details : "https://yakkaworks.github.io/" + details.replace(/^\.\//, "");
+      button.textContent = isEnglish ? "Details" : "Detail";
       actions.append(button);
     }
     if (actions.childElementCount) body.append(actions);
