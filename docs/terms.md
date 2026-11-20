@@ -16,8 +16,6 @@ title: Syarat & Ketentuan
 | Layanan pihak ketiga | Platform eksternal tunduk pada ketentuan masing-masing. |
 | Konten dan tanggung jawab | Materi disediakan apa adanya sejauh diizinkan hukum. |
 
-
-
 Dengan mengakses atau menggunakan situs web Yakka Works ("Situs"), Anda menyetujui ketentuan berikut. Jika tidak setuju, mohon berhenti menggunakan Situs.
 
 ## Layanan dan konten Yakka Works
