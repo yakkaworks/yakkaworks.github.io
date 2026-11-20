@@ -1,6 +1,7 @@
 (() => {
   const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
-  const root = isEnglish ? "/webdata/json/en/" : "/webdata/json/";
+  const root = "https://raw.githubusercontent.com/yakkaworks/yakkaworks.github.io/main/webdata/json/";
+  const imageRoot = "https://raw.githubusercontent.com/yakkaworks/yakkaworks.github.io/main/";
   const sources = {
     theotown: "data_theotown.json",
     kustom: "data_kustom.json",
@@ -13,10 +14,14 @@
   async function load(name) {
     if (!cache.has(name)) {
       const file = sources[name];
-      cache.set(name, fetch(root + file).then((response) => {
-        if (!response.ok) throw new Error("Unable to load " + file);
-        return response.json();
-      }));
+      cache.set(name, (async () => {
+        const candidates = isEnglish ? [root + "en/" + file, root + file] : [root + file];
+        for (const url of candidates) {
+          const response = await fetch(url);
+          if (response.ok) return response.json();
+        }
+        throw new Error("Unable to load " + file);
+      })());
     }
     return cache.get(name);
   }
@@ -45,6 +50,7 @@
     const value = text(path);
     if (!value) return "/assets/img/placeholder.jpg";
     if (/^https?:\/\//i.test(value) || value.startsWith("/")) return value;
+    if (value.startsWith("webdata/")) return imageRoot + value;
     return "/" + value.replace(/^\.\//, "");
   }
 
