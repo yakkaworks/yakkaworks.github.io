@@ -105,33 +105,47 @@ body {
   position: relative;
   isolation: isolate;
   min-height: 100vh;
-  background-color: var(--yw-bg);
-  background-image:
-    linear-gradient(rgba(245, 248, 240, .78), rgba(245, 248, 240, .78)),
-    url("../img/background-ll.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: var(--yw-bg);
   color: var(--yw-text);
   font-family: "YW Body", system-ui, sans-serif;
 }
 
+body::after {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .9;
+  background-image:
+    linear-gradient(rgba(245, 248, 240, .78), rgba(245, 248, 240, .78)),
+    url("../img/background-ll.jpg");
+}
+
 @media (orientation: portrait) {
-  body {
+  body::after {
     background-image:
       linear-gradient(rgba(245, 248, 240, .78), rgba(245, 248, 240, .78)),
       url("../img/background-lp.jpg");
   }
 }
 
-html[data-md-color-scheme="slate"] body {
+/* Material may place the active palette attribute on the root or body. */
+html[data-md-color-scheme="slate"] body::after,
+body[data-md-color-scheme="slate"]::after {
   background-image:
     linear-gradient(rgba(23, 33, 25, .80), rgba(23, 33, 25, .80)),
     url("../img/background-dl.jpg");
+  background-color: var(--yw-bg);
+  opacity: 1;
 }
 
 @media (orientation: portrait) {
-  html[data-md-color-scheme="slate"] body {
+  html[data-md-color-scheme="slate"] body::after,
+  body[data-md-color-scheme="slate"]::after {
     background-image:
       linear-gradient(rgba(23, 33, 25, .80), rgba(23, 33, 25, .80)),
       url("../img/background-dp.jpg");
