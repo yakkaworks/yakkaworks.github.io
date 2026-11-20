@@ -25,23 +25,23 @@ Jelajahi berbagai plugin, peta, preset, dan konten digital dari Yakka Works.
   <a class="yw-nav-card" href="#misc"><img src="../assets/img/theotown-icon.png" alt=""><span>Lainnya</span></a>
 </div>
 
-## Plugin TheoTown
+## Plugin TheoTown { #theotown-plugins }
 
 <div class="yw-content-grid" data-yw-grid="theotown" data-yw-filter="plugins"></div>
 
-## Peta TheoTown
+## Peta TheoTown { #theotown-maps }
 
 <div class="yw-content-grid" data-yw-grid="theotown" data-yw-filter="maps"></div>
 
-## Preset Plugin
+## Preset Plugin { #plugin-presets }
 
 <div class="yw-content-grid" data-yw-grid="theotown" data-yw-filter="presets"></div>
 
-## Kustom
+## Kustom { #kustom }
 
 <div class="yw-content-grid" data-yw-grid="kustom"></div>
 
-## Lainnya
+## Lainnya { #misc }
 
 <div class="yw-content-grid" data-yw-grid="misc"></div>
 
