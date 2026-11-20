@@ -35,6 +35,7 @@ Treat the repository files as the source of truth. Do not assume the previous co
 - Page title format: `[page title] - Yakka Works`.
 - Page meta description comes from the first rendered paragraph, via `hooks/meta_description.py`.
 - Render Markdown `date` front matter in the document header as `dd/mmm/yyyy` (for example, `20/Nov/2026`); keep the underlying `datetime` value ISO-formatted and use the same display format for Blog-generated headers.
+- On the Blog index, retain per-post dates in `webdata/json/data_blogs.json` for sorting, show the newest valid date in `.yw-page__bar`, and do not render those dates inside individual Blog cards. An explicit page front-matter date takes priority.
 
 ## Implementation expectations
 

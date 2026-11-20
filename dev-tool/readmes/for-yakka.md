@@ -70,6 +70,8 @@ The title in the front matter controls the navigation/page title. The browser ti
 
 The optional `date` field appears on the far-right side of the document header. Use an unquoted ISO date (`YYYY-MM-DD`); it is displayed as `dd/mmm/yyyy`, for example `20/Nov/2026`. Pages without a `date` field do not show a date.
 
+On the Blog index, each post's `date` remains in `webdata/json/data_blogs.json` for sorting, but is not printed inside its card. The newest valid post date is shown on the far-right side of the Blog page header bar instead. A date explicitly set in the Markdown page's front matter takes priority.
+
 ## 4. Navigation
 
 This project uses the Awesome Pages plugin instead of a manually maintained `nav:` list. Each folder may have a `.pages` file to control its title, order, and visibility. Check the existing `.pages` files before changing navigation.

@@ -204,3 +204,13 @@ Owner supplied a Blog index screenshot. Two remaining issues: Material search fi
 - Build: `mkdocs build --strict` run locally by the agent (see commit/response for result). No production deploy.
 - Next: owner verifies the dropdown in light/dark and on mobile width.
 - **Responses since this snapshot: 0.**
+
+
+## Blog index date placement (2026-11-20)
+
+- Blog post dates remain in `webdata/json/data_blogs.json` as sorting metadata, but are no longer rendered inside individual Blog cards.
+- `docs/assets/js/content-grids.js` finds the newest valid Blog date and inserts it as a semantic `<time>` at the far-right of `.yw-page__bar` (formatted `dd/mmm/yyyy`). An explicit Markdown front-matter date takes priority.
+- Non-Blog card metadata and other page date behavior remain unchanged.
+- Files changed: `docs/assets/js/content-grids.js`, `dev-tool/readmes/for-yakka.md`, `dev-tool/readmes/ai-instruct.md`, this context bank.
+- Build and browser verification: pending.
+- No production deployment.

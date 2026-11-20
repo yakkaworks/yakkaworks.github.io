@@ -60,10 +60,50 @@
     return resolveUrl(value) || "/assets/img/placeholder.jpg";
   }
 
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  function parseDateParts(value) {
+    const match = /^(\\d{1,2})-(\\d{1,2})-(\\d{2}|\\d{4})$/.exec(text(value));
+    if (!match) return null;
+
+    const day = Number(match[1]);
+    const month = Number(match[2]);
+    const rawYear = Number(match[3]);
+    const year = rawYear < 100 ? 2000 + rawYear : rawYear;
+    if (month < 1 || month > 12) return null;
+
+    const parsed = new Date(Date.UTC(year, month - 1, day));
+    if (
+      parsed.getUTCFullYear() !== year ||
+      parsed.getUTCMonth() !== month - 1 ||
+      parsed.getUTCDate() !== day
+    ) return null;
+
+    return { day, month, year, timestamp: parsed.getTime() };
+  }
+
   function parseDate(value) {
-    const [day, month, year] = text(value).split("-").map(Number);
-    if (!day || !month || !year) return 0;
-    return new Date(year < 100 ? 2000 + year : year, month - 1, day).getTime();
+    return parseDateParts(value)?.timestamp ?? 0;
+  }
+
+  function updateBlogHeaderDate(items) {
+    const headerBar = document.querySelector(".yw-page__bar");
+    if (!headerBar || headerBar.querySelector(".yw-page__date")) return;
+
+    const newest = items.reduce((latest, item) => {
+      const candidate = parseDateParts(item.date);
+      return candidate && (!latest || candidate.timestamp > latest.timestamp)
+        ? candidate
+        : latest;
+    }, null);
+
+    if (!newest) return;
+
+    const date = document.createElement("time");
+    date.className = "yw-page__date";
+    date.dateTime = `${newest.year}-${String(newest.month).padStart(2, "0")}-${String(newest.day).padStart(2, "0")}`;
+    date.textContent = `${String(newest.day).padStart(2, "0")}/${monthNames[newest.month - 1]}/${newest.year}`;
+    headerBar.append(date);
   }
 
   function makeCard(item, kind) {
@@ -101,7 +141,8 @@
     const meta = document.createElement("p");
     meta.className = "yw-content-card__meta";
     const version = latest ? text(latest.ver) : "";
-    const date = text(item.date);
+    // Blog dates belong in the page metadata bar, not on individual cards.
+    const date = kind === "blogs" ? "" : text(item.date);
     meta.textContent = [version ? "v" + version : "", date].filter(Boolean).join(" · ");
     if (meta.textContent) body.append(meta);
 
@@ -138,6 +179,7 @@
     const limit = grid.dataset.ywLimit || "all";
     try {
       const items = await load(type);
+      if (type === "blogs") updateBlogHeaderDate(items);
       let selected = items.filter((item) => matches(item, filter, type));
       selected.sort((a, b) => parseDate(b.date) - parseDate(a.date));
       const offset = Number(grid.dataset.ywOffset) || 0;
