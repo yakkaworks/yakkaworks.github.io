@@ -28,7 +28,7 @@
 
   const text = (value) => String(value ?? "").trim();
   const categories = (item) => (Array.isArray(item.category) ? item.category : [item.category || ""]).join(" ").toLowerCase();
-  const haystack = (item) => [item.title, item.slug, item.Description, ...((item.category || []))].join(" ").toLowerCase();
+  const haystack = (item) => [item.title, item.slug, item.Description, ...(Array.isArray(item.category) ? item.category : [item.category || ""])].join(" ").toLowerCase();
 
   function matches(item, filter, type) {
     const value = haystack(item);
@@ -39,7 +39,7 @@
       case "plugins": return type === "library" ? /plugin/.test(value) : !/(^|[, ])maps?([, ]|$)|peta|preset/.test(category);
       case "general": return !/plugin|kustom/.test(value);
       case "kustom": return /kustom|kwgt|klwp/.test(value);
-      case "misc": return /misc|lainnya|other/.test(value) || (!/plugin|kustom|guide|tutorial/.test(value));
+      case "misc": return /misc|lainnya|other/.test(value);
       case "announcements": return /announcement|pengumuman/.test(category);
       case "devlogs": return /devlog|development|pengembangan/.test(category);
       case "communities": return /communit|komunitas/.test(category);
