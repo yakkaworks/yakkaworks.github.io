@@ -51,21 +51,25 @@ Treat the repository files as the source of truth. Do not assume the previous co
 - Run `mkdocs build --strict` (or the equivalent venv command) after meaningful MkDocs/template/config changes.
 - Review generated diffs and verify that no prohibited legacy content pages were copied.
 
-## Shared context cadence — mandatory
+## Shared context bank maintenance — mandatory
 
-Update `dev-tool/readmes/ai-context-bank.md` after every **5 user-facing assistant responses** in the work sequence. Count assistant responses shown to the user; do not count tool calls, internal reasoning, or progress tool operations.
+Maintain `dev-tool/readmes/ai-context-bank.md` as a compact current-state handoff, not a chronological log.
 
-Each update must be a compact TL;DR-style snapshot containing:
+- Update the bank after every **5 user-facing assistant responses** in the work sequence. Count responses shown to the owner; do not count tool calls, internal reasoning, or progress operations.
+- Also update it after a major milestone or handoff when the current state materially changes; five responses is the maximum interval, not a reason to delay an important update.
+- Each update should capture only durable current context: completed work since the prior snapshot, important files/systems changed, branch and latest commit when known, build/test status, open risks, and the next concrete action.
+- Periodically **collapse and rewrite** the bank. Remove resolved issue logs, superseded implementations, obsolete measurements, old commit-by-commit history, and completed task notes. Replace stale or contradictory status rather than appending another snapshot.
+- Preserve only decisions and constraints that still affect future work, current branch/build state, and genuinely open actions. Put durable procedures and agent rules in this instruction file instead of the bank.
+- Keep the bank short enough to scan quickly. Do not turn it into an archive.
+- Use Jakarta time (WIB, UTC+7) for timestamps, in exactly this format: `(yyyy-mm-dd hh-mm (Jakarta time))`, using a 24-hour clock. If the exact time is unknown, record the date only; never guess the time.
+- If an agent cannot update the repository, provide the exact proposed bank update to the owner and state that it was not saved. Reset the response counter after a successful bank update.
 
-- What was completed since the previous snapshot.
-- Important files or systems changed.
-- Commit/branch state when known.
-- Build/test result (passed, failed, or not run).
-- Open issues, risks, and the next concrete step.
+## Markdown image paths and bilingual routes
 
-Keep the bank concise and useful to the next agent. Replace stale status rather than letting contradictory instructions accumulate; preserve a short dated history only when it helps explain an important decision. Reset the response counter to zero after updating it.
-
-If an agent cannot write to the repository, it must provide the exact proposed context-bank update to the owner instead of pretending it was saved. Make an earlier update when a major handoff or state change occurs; the five-response rule is the maximum interval, not a reason to delay a critical update.
+- For shared site artwork copied to `site/assets/img/`, use **site-root-relative** URLs such as `/assets/img/banner-tools.jpg` in Markdown and HTML. Do not use page-relative forms such as `assets/img/...`, `./assets/img/...`, or `../assets/img/...` for shared assets.
+- This applies to every Indonesian and English page, including nested routes such as `/en/store/items/...`. Page-relative paths resolve against the current URL and can silently point into the locale or nested directory.
+- Do not describe `/assets/img/...` as a filesystem path; it is a URL rooted at the published site. Keep the source asset mapping/extraction in `hooks/site_assets.py` unchanged unless the asset itself needs adding.
+- When adding or editing image references, inspect all affected language variants and verify the generated URL resolves from the actual page route. A successful strict build alone does not verify that the image file exists at the requested URL.
 
 ## Communication style
 

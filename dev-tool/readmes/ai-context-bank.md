@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-As of **(2026-11-20 22-15 (Jakarta time))**: Yakka Works is being rebuilt with **MkDocs Material retained as the underlying engine**, while custom overrides provide the Yakka Works presentation. Active branch: `y2k-dev`; latest known commit: `b7d93bfa1fb580a0526132d56fba61d32123b9db`. The custom site uses a three-row header (brand/controls, native Material search, custom navigation), a centered document layout, and a custom footer. Header, search, navigation, main content and footer share a **900px maximum width** with mobile gutters. Page publication dates come from each Markdown file's front matter, not content JSON or a live clock. The supplied artwork archive is `dev-tool/readmes/Website's.zip`; build hooks copy its images into the generated site. Pillow and the old placeholder-generation script have been removed; use supplied artwork and the content-card placeholder instead of generating replacement images. Category icons should retain pixelated/nearest-neighbour rendering. Strict GitHub Actions builds have passed for the latest implementation; `y2k-dev` is build-only and does not deploy production. Owner visual review is still required. Legal pages remain drafts; do not migrate old content without explicit approval.
+As of **2026-11-20**: Yakka Works uses MkDocs Material with custom overrides. Active branch: `y2k-dev`; latest commit: `c34dd6e2947eb12465057794fa8233fdb9241e5b`. The site has a three-row header, custom navigation, centered document layout and footer, currently targeting a 900px desktop width. Page dates come from Markdown front matter. Supplied artwork is extracted from `dev-tool/readmes/Website's.zip` into generated site output; do not add Pillow or regenerate placeholders. Shared image references in Markdown must use site-root-relative `/assets/img/...` URLs so locale and nested English routes resolve correctly. `y2k-dev` is build-only; no production deployment. Latest image-path changes have not yet been locally/visually verified. Legal pages remain drafts; do not migrate old content without explicit approval.
 
 ## Current rules and decisions
 
@@ -23,16 +23,7 @@ As of **(2026-11-20 22-15 (Jakarta time))**: Yakka Works is being rebuilt with *
 ## Current status / next actions
 
 - Branch: `y2k-dev`
-- Latest known commit: `b7d93bfa1fb580a0526132d56fba61d32123b9db` — supplied category icons mapped into navigation cards.
-- Latest implementation CI: strict build passed (run `44761468412`).
+- Latest commit: `c34dd6e2947eb12465057794fa8233fdb9241e5b` — English index image references changed to `/assets/img/...`; previous build-time HTML path rewriting removed.
+- Build/test: not run for this change. Owner visual review is still required, especially across nested English routes.
 - No production deployment.
-- Owner should pull and visually inspect desktop/mobile, light/dark modes, navigation, search, publication dates, and supplied artwork. Do not treat this review as complete until the owner confirms it.
 - Keep legal pages as drafts. Any substantive migration of legacy content needs explicit owner approval.
-
-## Context-bank maintenance instructions
-
-- Periodically **collapse and rewrite** this file into one concise TL;DR/current-state summary. Do this after a substantial milestone or roughly every five user-facing responses; do not keep appending snapshots.
-- Remove resolved-issue logs, superseded implementations, obsolete CSS/layout measurements, old commit-by-commit histories, and completed task notes. Retain only decisions and constraints that still affect future work, the latest relevant branch/commit/build state, and genuinely open actions.
-- If a decision changes, replace the old decision rather than recording both versions. Preserve history only when it is necessary to explain a still-open risk.
-- Keep the whole file short enough to serve as a handoff, not an archive. Put durable detailed guidance in the maintainer/AI instruction files where appropriate.
-- Use **Jakarta time (WIB, UTC+7)** for every recorded timestamp, in exactly this format: `(yyyy-mm-dd hh-mm (Jakarta time))` using a 24-hour clock. Do not mix UTC/local timestamps or omit the timezone label. If the exact time is unknown, record the date only rather than guessing.
