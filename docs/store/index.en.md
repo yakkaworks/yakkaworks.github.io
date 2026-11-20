@@ -25,23 +25,23 @@ Explore plugins, maps, presets, and digital content published by Yakka Works.
   <a class="yw-nav-card" href="#misc"><img src="../assets/img/theotown-icon.png" alt=""><span>Miscellaneous</span></a>
 </div>
 
-## TheoTown Plugins
+## TheoTown Plugins { #theotown-plugins }
 
 <div class="yw-content-grid" data-yw-grid="theotown" data-yw-filter="plugins"></div>
 
-## TheoTown Maps
+## TheoTown Maps { #theotown-maps }
 
 <div class="yw-content-grid" data-yw-grid="theotown" data-yw-filter="maps"></div>
 
-## Plugin Presets
+## Plugin Presets { #plugin-presets }
 
 <div class="yw-content-grid" data-yw-grid="theotown" data-yw-filter="presets"></div>
 
-## Kustom
+## Kustom { #kustom }
 
 <div class="yw-content-grid" data-yw-grid="kustom"></div>
 
-## Miscellaneous
+## Miscellaneous { #misc }
 
 <div class="yw-content-grid" data-yw-grid="misc"></div>
 
