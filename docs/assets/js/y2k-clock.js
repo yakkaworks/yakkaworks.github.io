@@ -1,4 +1,27 @@
 (() => {
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  // Format ISO dates consistently without relying on the browser's locale or timezone.
+  const formatHeaderDate = (value) => {
+    const match = /^(\\d{4})-(\\d{2})-(\\d{2})(?:$|T)/.exec(String(value || "").trim());
+    if (!match) return null;
+
+    const [, year, month, day] = match;
+    const monthIndex = Number(month) - 1;
+    const yearNumber = Number(year);
+    const dayNumber = Number(day);
+    if (monthIndex < 0 || monthIndex > 11) return null;
+
+    const parsed = new Date(Date.UTC(yearNumber, monthIndex, dayNumber));
+    if (
+      parsed.getUTCFullYear() !== yearNumber ||
+      parsed.getUTCMonth() !== monthIndex ||
+      parsed.getUTCDate() !== dayNumber
+    ) return null;
+
+    return `${day}/${monthNames[monthIndex]}/${year}`;
+  };
+
   // Blog plugin-generated pages can bypass the normal Material content partial.
   // Put those pages in the same Yakka Works document frame as Markdown pages.
   const inner = document.querySelector(".md-content__inner");
@@ -22,8 +45,9 @@
     if (date) {
       const time = document.createElement("time");
       time.className = "yw-page__date";
-      if (date.getAttribute("datetime")) time.dateTime = date.getAttribute("datetime");
-      time.textContent = date.textContent.trim();
+      const dateValue = date.getAttribute("datetime");
+      if (dateValue) time.dateTime = dateValue;
+      time.textContent = formatHeaderDate(dateValue) || date.textContent.trim();
       bar.append(time);
     }
 
@@ -66,6 +90,13 @@
     page.append(bar, content, signature);
     inner.append(page);
   }
+
+  // Also normalize dates rendered by the Markdown template when YAML front matter
+  // was quoted and therefore loaded as a string instead of a date object.
+  inner?.querySelectorAll(".yw-page__date[datetime]").forEach((time) => {
+    const formattedDate = formatHeaderDate(time.getAttribute("datetime"));
+    if (formattedDate) time.textContent = formattedDate;
+  });
 
   const searchInput = document.querySelector(".md-search__input");
   const searchToggle = document.getElementById("__search");

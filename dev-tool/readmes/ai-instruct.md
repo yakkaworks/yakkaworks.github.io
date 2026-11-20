@@ -34,6 +34,7 @@ Treat the repository files as the source of truth. Do not assume the previous co
 - Background naming: `background-[a][b].jpg`, where `a=l/d` means light/dark and `b=l/p` means landscape/portrait.
 - Page title format: `[page title] - Yakka Works`.
 - Page meta description comes from the first rendered paragraph, via `hooks/meta_description.py`.
+- Render Markdown `date` front matter in the document header as `dd/mmm/yyyy` (for example, `20/Nov/2026`); keep the underlying `datetime` value ISO-formatted and use the same display format for Blog-generated headers.
 
 ## Implementation expectations
 

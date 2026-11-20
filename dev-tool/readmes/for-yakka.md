@@ -54,6 +54,7 @@ A simple page can look like this:
 ```markdown
 ---
 title: Nama Halaman
+date: 2026-11-20
 ---
 
 # Nama Halaman
@@ -66,6 +67,8 @@ Isi halaman di sini.
 ```
 
 The title in the front matter controls the navigation/page title. The browser title is automatically formatted as `Nama Halaman - Yakka Works`.
+
+The optional `date` field appears on the far-right side of the document header. Use an unquoted ISO date (`YYYY-MM-DD`); it is displayed as `dd/mmm/yyyy`, for example `20/Nov/2026`. Pages without a `date` field do not show a date.
 
 ## 4. Navigation
 

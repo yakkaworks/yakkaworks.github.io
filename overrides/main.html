@@ -43,7 +43,8 @@
     <div class="yw-page__bar">
       <span class="yw-page__title">{{ page.title | d(config.site_name, true) }}</span>
       {% if page.meta and page.meta.date %}
-        <time class="yw-page__date" datetime="{{ page.meta.date }}">{{ page.meta.date }}</time>
+        {% set date_months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] %}
+        <time class="yw-page__date" datetime="{{ page.meta.date }}">{% if page.meta.date.day is defined %}{{ "%02d"|format(page.meta.date.day) }}/{{ date_months[page.meta.date.month - 1] }}/{{ page.meta.date.year }}{% else %}{{ page.meta.date }}{% endif %}</time>
       {% endif %}
     </div>
     <div class="yw-page__content">
