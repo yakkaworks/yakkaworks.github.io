@@ -116,13 +116,16 @@ body::after {
   inset: 0;
   content: "";
   pointer-events: none;
-  background-image:
-    linear-gradient(rgba(245, 248, 240, .78), rgba(245, 248, 240, .78)),
-    url("../img/background-ll.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .9;
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(245, 248, 240, .78), rgba(245, 248, 240, .78)),
+    url("../img/background-ll.jpg");
 }
 
 @media (orientation: portrait) {
