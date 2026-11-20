@@ -1,5 +1,6 @@
 (() => {
-  const root = "/webdata/json/";
+  const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+  const root = isEnglish ? "/webdata/json/en/" : "/webdata/json/";
   const sources = {
     theotown: "data_theotown.json",
     kustom: "data_kustom.json",
@@ -115,13 +116,13 @@
       if (limit !== "all") selected = selected.slice(0, Number(limit) || 5);
       if (!selected.length) {
         grid.classList.add("yw-content-grid--empty");
-        grid.textContent = "Konten untuk kategori ini akan ditambahkan.";
+        grid.textContent = isEnglish ? "Content for this category will be added here." : "Konten untuk kategori ini akan ditambahkan.";
         return;
       }
       selected.forEach((item) => grid.append(makeCard(item, type)));
     } catch (error) {
       grid.classList.add("yw-content-grid--empty");
-      grid.textContent = "Konten belum dapat dimuat. Silakan coba lagi nanti.";
+      grid.textContent = isEnglish ? "Content could not be loaded yet. Please try again later." : "Konten belum dapat dimuat. Silakan coba lagi nanti.";
       console.warn("[Yakka Works] Content grid:", error);
     }
   }
