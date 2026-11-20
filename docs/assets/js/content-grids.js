@@ -111,7 +111,7 @@
     const limit = grid.dataset.ywLimit || "all";
     try {
       const items = await load(type);
-      let selected = items.filter((item) => matches(item, filter));
+      let selected = items.filter((item) => matches(item, filter, type));
       selected.sort((a, b) => {
         const parse = (value) => {
           const [d, m, y] = text(value).split("-").map(Number);
