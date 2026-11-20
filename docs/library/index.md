@@ -9,7 +9,7 @@ description: Panduan dan tutorial TheoTown, Kustom, dan topik lainnya.
 
 Pustaka panduan dan tutorial masih dalam tahap pengembangan.
 
-<div class="yw-nav-grid yw-nav-grid--four">
+<div class="yw-nav-grid yw-nav-grid--two-fixed">
   <a class="yw-nav-card" href="#tutorial-umum-theotown"><img src="../assets/img/theotown-icon.png" alt=""><span>Tutorial Umum TheoTown</span></a>
   <a class="yw-nav-card" href="#tutorial-plugin-theotown"><img src="../assets/img/theotown-icon.png" alt=""><span>Tutorial Pembuatan Plugin TheoTown</span></a>
   <a class="yw-nav-card" href="#tutorial-kustom"><img src="../assets/img/theotown-icon.png" alt=""><span>Tutorial Kustom</span></a>
