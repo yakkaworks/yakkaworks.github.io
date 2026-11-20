@@ -1591,3 +1591,11 @@ body > .md-container {
 .yw-header__controls .md-select__inner {
   z-index: 41;
 }
+
+
+/* Keep the native search-result list visible when the custom search panel opens.
+   The result-count label is outside this scroll area, so a zero-height list
+   leaves the count visible while hiding result titles and excerpts. */
+.yw-search-row .md-search__scrollwrap {
+  max-height: 70vh !important;
+}
