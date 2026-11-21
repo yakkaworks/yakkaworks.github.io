@@ -200,14 +200,16 @@ Blog pages use a small compatibility script to remove legacy thank-you and EOF e
 
 ## 14. Site artwork and placeholders
 
-The preferred artwork source is `dev-tool/readmes/Website's.zip`. When it is available, the MkDocs post-build hook copies the original images byte-for-byte into `site/assets/img/` using stable website filenames. This archive is currently absent from `y2k-dev`, so the hook falls back to matching images in `docs/assets/img/` and uses `cover.jpg` for missing JPG artwork instead of stopping the build. Missing PNG icon artwork is skipped with a warning; restore the original archive or original PNG files before considering the visual assets complete.
+All 18 supplied website artwork files are stored in `docs/assets/img/`. The transfer archive `dev-tool/readmes/Website's.zip` is extracted and removed; do not restore it as a build dependency.
+
+The post-build hook validates the tracked files and copies them byte-for-byte into `site/assets/img/`:
 
 - `background-ll.jpg`, `background-lp.jpg`, `background-dl.jpg`, `background-dp.jpg`: light/dark landscape and portrait backgrounds.
 - `banner-home.jpg`, `banner-store.jpg`, `banner-library.jpg`, `banner-tools.jpg`, `banner-blogs.jpg`: section banners.
 - `cover.jpg`: social/link-preview cover.
-- `content-cards-placeholders.jpg`: universal fallback for example articles and content cards.
-- `icon-*.png`: category icons. Keep their pixel-art appearance.
+- `content-cards-placeholders.jpg`: fallback for example articles and content cards.
+- `icon-kustom.png`, `icon-map.png`, `icon-misc.png`, `icon-plugin.png`, `theotown-icon.png`, `icon-tut.png`, `icon-webexclusive.png`: category icons. The archive's `icon-theotown.png` uses the stable destination name `theotown-icon.png`.
 
-Category icons are displayed with CSS `image-rendering: pixelated`; do not resize the source files themselves. The hook writes into the build output rather than `docs/`, so local preview builds do not dirty tracked source files. When a content item has no thumbnail, the content grid automatically uses `content-cards-placeholders.jpg`.
+Category icons keep their pixel-art appearance; preserve `image-rendering: pixelated` on `.yw-nav-card img` and do not process the source files. The content-grid renderer uses `content-cards-placeholders.jpg` when an item has no thumbnail or its image fails to load.
 
-Do not add Pillow or another image-processing dependency for placeholder generation. Reuse the closest supplied asset for new pages; do not fabricate or process replacement artwork.
+Individual TheoTown plugin detail-page previews and thumbnails are separate from this site artwork. Source those only from the `mkdocs-site` branch; do not copy general site assets or unrelated content from that branch.

@@ -142,14 +142,13 @@ Rules:
 - The current shared layout width is **900px**, not the older 800px values in historical notes; mobile uses a 0.5rem gutter.
 
 
-## Artwork and image-placeholder workflow
+## Artwork and image assets
 
-- The preferred supplied image archive is `dev-tool/readmes/Website's.zip`. The actual repository directory is `dev-tool/` (singular). The archive is currently absent from `y2k-dev`.
-- `hooks/site_assets.py` copies the artwork into `site/assets/img/` during `on_post_build`. When the ZIP exists, the hook validates and copies its image set byte-for-byte. When it is absent, the hook falls back to matching tracked files in `docs/assets/img/` and uses `cover.jpg` as a temporary fallback for missing JPG assets. This keeps preview builds from failing solely because the archive is absent.
-- The archive-less fallback does not fabricate PNG pixel icons. Missing icon PNGs are skipped with a warning, so restore the original archive or add the original icon assets before considering the visual artwork complete.
-- Extraction and fallback copies go into the build output, not `docs/`, to avoid dirtying the local working tree. Do not add Pillow, image resizing/cropping, or `scripts/generate_placeholders.py`.
-- Use `content-cards-placeholders.jpg` for example article/content thumbnails. The content-grid renderer uses it automatically when a JSON item has no `thumbnail` or its image fails to load.
-- Use the supplied `banner-*.jpg` files for their corresponding sections and `icon-*.png` files for category/navigation icons.
-- Category icons must remain crisp when scaled: preserve `image-rendering: pixelated` on `.yw-nav-card img`. Do not apply it to photographic banners or card thumbnails.
-- If a new image filename is needed, map it explicitly in `IMAGE_FILES` in `hooks/site_assets.py` and reference the stable destination filename. Prefer reusing supplied artwork.
-- Keep the archive when it is reintroduced, but do not make the local preview depend on it being present.
+- The source-of-truth artwork files live directly in `docs/assets/img/`. The supplied `dev-tool/readmes/Website's.zip` is a transfer archive only: extract its files into this folder, verify them, and delete the ZIP. Do not make builds depend on the archive.
+- `hooks/site_assets.py` validates the tracked artwork set and copies it byte-for-byte into `site/assets/img/` during `on_post_build`. Keep the source assets in `docs/`; do not add image resizing, cropping, placeholder generation, or Pillow.
+- Stable artwork names: `background-dl.jpg`, `background-dp.jpg`, `background-ll.jpg`, `background-lp.jpg`; `banner-home.jpg`, `banner-store.jpg`, `banner-library.jpg`, `banner-tools.jpg`, `banner-blogs.jpg`; `content-cards-placeholders.jpg`; and `cover.jpg`.
+- Category icons are `icon-kustom.png`, `icon-map.png`, `icon-misc.png`, `icon-plugin.png`, `theotown-icon.png`, `icon-tut.png`, and `icon-webexclusive.png`. The archive's `icon-theotown.png` is stored as `theotown-icon.png` to preserve the established website filename.
+- Keep category icons crisp with `image-rendering: pixelated` on `.yw-nav-card img`; do not apply that to photographic banners or card thumbnails.
+- Use `content-cards-placeholders.jpg` for example article/content thumbnails. The content-grid renderer uses it when a JSON item has no thumbnail or its image fails to load.
+- For individual TheoTown plugin detail pages only, source previews and thumbnails from the `mkdocs-site` branch when available. Do not use that branch as the source for general site artwork or other page content.
+- Shared image references in Markdown must remain site-root-relative (for example, `/assets/img/cover.jpg`) so nested and English routes resolve correctly.

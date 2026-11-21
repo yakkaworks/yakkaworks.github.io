@@ -17,12 +17,12 @@ As of **2026-11-21**: Yakka Works is rebuilding its site with MkDocs Material on
 - The Indonesia Transport Pack source lists version `8.4.5p`, while supplied files are named `EXP_843` and `EXP_842`; its page flags this mismatch instead of claiming the files match.
 - Minimum-version shorthand is normalized per the source instruction: `1985` → `1.9.85` and `11255` → `1.12.55`. Diamond prices are identified as in-game store prices, separate from website downloads.
 
-## Important build blocker
+## Build and artwork state
 
-- The artwork ZIP `dev-tool/readmes/Website's.zip` is absent from `y2k-dev`. `hooks/site_assets.py` now falls back to matching files under `docs/assets/img/`, then uses the existing `cover.jpg` for missing JPG assets so the build can continue. Missing PNG icon artwork is skipped with a warning rather than fabricated.
-- The missing-archive fallback was tested with a temporary fixture: tracked images and webdata copy successfully. The complete local MkDocs build and browser/visual preview still need to be run by the owner; do not report them as passing.
-- `docs/assets/img/cover.jpg` and all four background variants are present. The hook uses the cover for absent JPG banners/placeholders. Original PNG category icons are still missing while the archive is absent.
-
+- The supplied artwork ZIP contained exactly 18 files (11 JPG and 7 PNG), all under `Website's/`. They were CRC/signature checked and extracted into `docs/assets/img/`; the transfer archive was deleted afterward.
+- `hooks/site_assets.py` now validates the tracked artwork set and copies it byte-for-byte into `site/assets/img/`. The preview no longer depends on an archive or temporary JPG fallback.
+- Individual TheoTown plugin-page previews/thumbnails remain a separate task and must be sourced from the `mkdocs-site` branch only.
+- The extraction workflow runs `mkdocs build --strict` before committing the asset migration; do not claim visual/browser verification unless separately performed.
 ## Durable site decisions
 
 - Work on `y2k-dev` only; do not merge or deploy to `mkdocs-site-live` unless the owner explicitly asks.
