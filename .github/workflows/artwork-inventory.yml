@@ -1,0 +1,43 @@
+name: Temporary artwork ZIP inventory
+
+on:
+  push:
+    branches:
+      - y2k-dev
+    paths:
+      - .github/workflows/artwork-inventory.yml
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out development branch
+        uses: actions/checkout@v4
+        with:
+          ref: y2k-dev
+      - name: List artwork archive members
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import PurePosixPath
+          from zipfile import ZipFile
+          from collections import Counter
+          archive_path = "dev-tool/readmes/Website's.zip"
+          with ZipFile(archive_path) as archive:
+              files = [info for info in archive.infolist() if not info.is_dir()]
+              print(f"ARCHIVE_FILE_COUNT={len(files)}")
+              print(f"ARCHIVE_TOTAL_UNCOMPRESSED_BYTES={sum(info.file_size for info in files)}")
+              print("TOP_LEVEL_ENTRIES:")
+              print("\\n".join(sorted({PurePosixPath(info.filename).parts[0] for info in files})))
+              print("EXTENSIONS:")
+              counts = Counter(PurePosixPath(info.filename).suffix.lower() or "[no extension]" for info in files)
+              for ext, count in sorted(counts.items()):
+                  print(f"{ext}: {count}")
+              print("FILES_BEGIN")
+              for info in files:
+                  print(f"{info.file_size:>10}  {info.filename}")
+              print("FILES_END")
+          PY
