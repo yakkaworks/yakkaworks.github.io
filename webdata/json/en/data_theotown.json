@@ -1,35 +1,898 @@
 [
   {
-    "slug": "theotown-plugin-example",
-    "title": "TheoTown Plugin Example",
-    "date": "20-11-26",
-    "description": "Example TheoTown plugin entry. Replace this with the actual content summary.",
-    "category": "plugin",
+    "slug": "mono-ui",
+    "title": "Mono UI",
+    "date": "28-10-26",
+    "description": "Inspired by Nothing OS, Mono UI gives TheoTown a clean, minimal interface through a restrained grayscale palette and carefully placed blue accents, keeping the overall look modern without feeling plain.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.54KB",
+    "min_version": "1.12.95",
+    "status": "active",
     "urls": {
-      "download": [],
-      "details": "/en/store/items/theotown-plugin-example/"
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/0paluuwvrrh43xq/Mono_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/mono-ui/"
     }
   },
   {
-    "slug": "theotown-map-example",
-    "title": "TheoTown Map Example",
-    "date": "20-11-26",
-    "description": "Example TheoTown map entry. Replace this with the actual map summary.",
-    "category": "map",
+    "slug": "board-ui",
+    "title": "Board UI",
+    "date": "28-10-26",
+    "description": "Board UI gives TheoTown a bright, approachable interface built around a light palette, soft neutral surfaces, and blue accents, keeping menus and windows clean and uncluttered.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "9.67KB",
+    "min_version": "1.12.95",
+    "status": "active",
     "urls": {
-      "download": [],
-      "details": "/en/store/items/theotown-map-example/"
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/k9ogre0sjzpubn0/Boards_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/board-ui/"
     }
   },
   {
-    "slug": "theotown-plugin-preset-example",
-    "title": "TheoTown Plugin Preset Example",
-    "date": "20-11-26",
-    "description": "Example TheoTown plugin preset entry.",
-    "category": "preset",
+    "slug": "cube-ui",
+    "title": "Cube UI",
+    "date": "28-10-26",
+    "description": "Cube UI brings a block-inspired look to TheoTown, drawing on Minecraft-style inventory interfaces and stone textures with earthy gray surfaces and emerald-green accents; it includes both dark and light modes.",
+    "category": "",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": null,
+    "platforms": [],
+    "size": "18.52KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/6lby5eb3pgoqq86/Cube_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/cube-ui/"
+    }
+  },
+  {
+    "slug": "doos-ui",
+    "title": "Doos UI",
+    "date": "28-10-26",
+    "description": "Doos UI recreates the feel of classic DOS interfaces with grayscale surfaces, raised-looking controls, and blue accents, creating a practical retro-computing theme with both dark and light modes.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "15.89KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/jn5rwewg3289rve/Doos_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/doos-ui/"
+    }
+  },
+  {
+    "slug": "frutiger-ui",
+    "title": "Frutiger UI",
+    "date": "28-10-26",
+    "description": "Frutiger UI draws on the optimistic Frutiger Aero aesthetic of the 2000s, combining glossy surfaces, aqua tones, vibrant greens, and glass-like highlights with contrast adjustments intended to keep the interface readable.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "13.13KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/2snokmfwomc2bqe/Frutiger_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/frutiger-ui/"
+    }
+  },
+  {
+    "slug": "mocca-ui",
+    "title": "Mocca UI",
+    "date": "28-10-26",
+    "description": "Mocca UI brings the Catppuccin colour palette to TheoTown with rich mocha tones, soft neutrals, and mauve accents, offering matching dark and light variants for a cosy interface.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.69KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/x4aakmhhvkhpecd/Mocca_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/mocca-ui/"
+    }
+  },
+  {
+    "slug": "bubble-ui",
+    "title": "Bubble UI",
+    "date": "28-10-26",
+    "description": "Bubble UI gives TheoTown a glass-inspired makeover with translucent-looking surfaces, soft highlights, and rounded visual details, taking cues from modern liquid-glass interfaces.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "20.47KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/3tkmjrmlu58p968/Bubble_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/bubble-ui/"
+    }
+  },
+  {
+    "slug": "nord-ui",
+    "title": "Nord UI",
+    "date": "28-10-26",
+    "description": "Nord UI applies the calm Nord colour palette to TheoTown through muted blues, cool grays, and balanced contrast, creating a clean and understated interface.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.5KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/brmvb4lhjprzgyc/Nord_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/nord-ui/"
+    }
+  },
+  {
+    "slug": "pastel-ui",
+    "title": "Pastel UI",
+    "date": "28-10-26",
+    "description": "Pastel UI gives TheoTown a softer, more colourful appearance with a gentle pastel palette and relaxed visual styling, providing an alternative to the default interface while keeping menus comfortable to use.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.68KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/6npzfpx33cws3uq/Pastel_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/pastel-ui/"
+    }
+  },
+  {
+    "slug": "nature-plus-web-exclusive",
+    "title": "Nature Plus (Web Exclusive)",
+    "date": "28-10-26",
+    "description": "Nature Plus, previously known as Nature+ or Cytopia Nature Pack, returns as a large environment collection containing approximately 30 flora items, 21 ground types, 7 water items, 25 decals, 5 colour decals, and 1 blueprint.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "616.69KB",
+    "min_version": "1.12.90",
+    "status": "web-exclusive",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/muh1lk02ssjkl3v/Nature_Plus_1.3_.ttplugin/file",
+          "ver": "1.3"
+        }
+      ],
+      "details": "/en/store/items/nature-plus-web-exclusive/"
+    }
+  },
+  {
+    "slug": "i3r-formerly-invisible-rrr",
+    "title": "I3R (formerly Invisible RRR)",
+    "date": "22-09-26",
+    "description": "I3R adds invisible roads, rails, and runways designed to work alongside related infrastructure add-ons such as advanced roads, advanced rails, and runway markings.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "3.57KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/20j8wlvmb7v4aqt/Invisible_RRR.ttplugin/file",
+          "ver": "0.6"
+        }
+      ],
+      "details": "/en/store/items/i3r-formerly-invisible-rrr/"
+    }
+  },
+  {
+    "slug": "diagonal-decals",
+    "title": "Diagonal Decals",
+    "date": "06-10-26",
+    "description": "Diagonal Decals adds diagonal variants of the in-game decals, including regular and shore-side versions, making terrain detailing and transitions along coastlines easier and more natural.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "66.76KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/kz9lrjte7pq6utn/Diagonal_Decals.ttplugin/file",
+          "ver": "1.2"
+        }
+      ],
+      "details": "/en/store/items/diagonal-decals/"
+    }
+  },
+  {
+    "slug": "indonesia-transport-pack-deprecated",
+    "title": "Indonesia Transport Pack (Deprecated)",
+    "date": "06-10-26",
+    "description": "Indonesia Transport Pack is a collection of Indonesian public-transport content featuring trains, buses, supporting infrastructure, and a road set with medians and road markings; the pack is deprecated and will receive maintenance updates only while a replacement is planned.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "1.1MB",
+    "min_version": "1.12.60",
+    "status": "deprecated",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/7d23ld0kqnud07c/1ITP_2023_EXP_843.ttplugin/file",
+          "ver": ""
+        },
+        {
+          "url": "https://www.mediafire.com/file/wm29ki0ek6d19k8/1ITP_2023_EXP_842.ttplugin/file",
+          "ver": ""
+        }
+      ],
+      "details": "/en/store/items/indonesia-transport-pack-deprecated/"
+    }
+  },
+  {
+    "slug": "pyongyang-apartment",
+    "title": "Pyongyang Apartment",
+    "date": "22-09-26",
+    "description": "Pyongyang Apartment is a residential building pack inspired by North Korean architecture shown in footage from 2006–2016, featuring 72 variations of a distinctive apartment style associated with Pyongyang.",
+    "category": "Residential",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "44.87KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/pqqff3mzy40yerm/Pyongyang_Buildings.ttplugin/file",
+          "ver": "8"
+        }
+      ],
+      "details": "/en/store/items/pyongyang-apartment/"
+    }
+  },
+  {
+    "slug": "yakka-s-topic",
+    "title": "Yakka's Topic",
+    "date": "22-09-26",
+    "description": "Yakka's Topic adds 128 assorted topics that had previously been kept private; it is code-only, does not consume plugin texture space, and includes Indonesian translations for some topics.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "3.54KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/2fvugz8ry2legp0/Yakka_Topics.ttplugin/file",
+          "ver": "7"
+        }
+      ],
+      "details": "/en/store/items/yakka-s-topic/"
+    }
+  },
+  {
+    "slug": "lighter-rains",
+    "title": "Lighter Rains",
+    "date": "22-09-26",
+    "description": "Lighter Rains is a small quality-of-life plugin that reduces the opacity of in-game rain by 25%, making it easier to see your city during rainy weather.",
+    "category": "Weather and Overlay",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "12.25KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/9nxha3zlsk5tsiw/Lighter_Rain.ttplugin/file",
+          "ver": "6"
+        }
+      ],
+      "details": "/en/store/items/lighter-rains/"
+    }
+  },
+  {
+    "slug": "concrete-pylons",
+    "title": "Concrete Pylons",
+    "date": "22-09-26",
+    "description": "Concrete Pylons adds a concrete utility power-line pole that costs more than the standard option but offers a shorter connection radius and less power loss when linking neighbouring cities.",
+    "category": "Supply (Energy, Water, Waste Disposal)",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "4.36KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/n3ez4n9h8bxwqsx/Concrete_Pylons.ttplugin/file",
+          "ver": "8"
+        }
+      ],
+      "details": "/en/store/items/concrete-pylons/"
+    }
+  },
+  {
+    "slug": "generic-road-train",
+    "title": "Generic Road Train",
+    "date": "07-09-26",
+    "description": "Generic Road Train adds a selection of in-game trucks pulling two trailers (bi-trailers) or three trailers (tri-trailers), inspired by Australian road trains.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "897B",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/s8nlk7hflrzkk4p/Truck_Road_Train.ttplugin/file",
+          "ver": "11"
+        }
+      ],
+      "details": "/en/store/items/generic-road-train/"
+    }
+  },
+  {
+    "slug": "warehouse-and-shed-pack",
+    "title": "Warehouse & Shed pack",
+    "date": "07-09-26",
+    "description": "Warehouse & Shed Pack expands the in-game warehouse selection with around 32 improved building variations and roughly 1,400 additional randomly generated variations, drawing inspiration from warehouses in Cities: Skylines.",
+    "category": "Industrial",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 50,
+    "platforms": [],
+    "size": "59.99KB",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/kuk4eps6evb4f91/Industrial_Warehouses.ttplugin/file",
+          "ver": "1.6"
+        }
+      ],
+      "details": "/en/store/items/warehouse-and-shed-pack/"
+    }
+  },
+  {
+    "slug": "bus-tram-road",
+    "title": "Bus-Tram Road",
+    "date": "07-09-26",
+    "description": "Bus-Tram Road adds a dedicated road type that allows both buses and trams to travel along it.",
+    "category": "Road",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "8.19KB",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/k2j32qoyc8dypha/Bus_Tram_Road.ttplugin/file",
+          "ver": "5"
+        }
+      ],
+      "details": "/en/store/items/bus-tram-road/"
+    }
+  },
+  {
+    "slug": "discord-background-old-discord-bg-color",
+    "title": "Discord Background (old discord bg color)",
+    "date": "07-09-26",
+    "description": "Discord Background recreates the older Discord background colour as a simple in-game visual option and uses the game's existing world texture.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "970B",
+    "min_version": "Any",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/i67wnrensn4lndl/Discord_Background.ttplugin/file",
+          "ver": "9"
+        }
+      ],
+      "details": "/en/store/items/discord-background-old-discord-bg-color/"
+    }
+  },
+  {
+    "slug": "recycling-warehouse",
+    "title": "Recycling Warehouse",
+    "date": "07-09-26",
+    "description": "Recycling Warehouse adds a waste-processing building that generates monthly income, with income and capacity scaling progressively and upgrades available according to the city rank.",
+    "category": "Supply (Energy, Water, Waste Disposal)",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "5.7KB",
+    "min_version": "Any",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/o292iawdngc31ea/Recycling_Warehouse.ttplugin/file",
+          "ver": "10"
+        }
+      ],
+      "details": "/en/store/items/recycling-warehouse/"
+    }
+  },
+  {
+    "slug": "just-waves",
+    "title": "Just Waves",
+    "date": "07-09-26",
+    "description": "Just Waves adds decorative beach-wave elements for coastal scenes; rotation is not supported in the current version.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "2.39KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/2e41cdnsf9ije9f/Beach_Waves.ttplugin/file",
+          "ver": "3"
+        }
+      ],
+      "details": "/en/store/items/just-waves/"
+    }
+  },
+  {
+    "slug": "map-edge-pack",
+    "title": "Map Edge Pack",
+    "date": "07-09-26",
+    "description": "Map Edge Pack is a decorative set for creating artificial map boundaries on an existing map with fences and decals; the current release supports a single elevation level.",
+    "category": "Decorations",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "24.03KB",
+    "min_version": "1.12.32",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/dywkgacyv22layr/Map_Edge_Eyecandy.ttplugin/file",
+          "ver": "3"
+        }
+      ],
+      "details": "/en/store/items/map-edge-pack/"
+    }
+  },
+  {
+    "slug": "swiss-alps-railways",
+    "title": "Swiss Alps Railways",
+    "date": "08-08-26",
+    "description": "Swiss Alps Railways is a transport plugin that adds a small selection of trains inspired by railway services in the Swiss Alps.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 50,
+    "platforms": [],
+    "size": "10.31KB",
+    "min_version": "1.12.50",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/ltmiu2hes8pwwwn/Swiss_Alps_Railways.ttplugin/file",
+          "ver": "7"
+        }
+      ],
+      "details": "/en/store/items/swiss-alps-railways/"
+    }
+  },
+  {
+    "slug": "arrow-remover",
+    "title": "Arrow Remover",
+    "date": "08-08-26",
+    "description": "Arrow Remover removes the default directional arrows from one-way roads, alleys, and one-way bus roads for a cleaner look, without using any plugin texture space.",
+    "category": "Road",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "1.44KB",
+    "min_version": "1.11.28",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/19vmqere7iec7qv/Road_Arrow_Remover.ttplugin/file",
+          "ver": ""
+        }
+      ],
+      "details": "/en/store/items/arrow-remover/"
+    }
+  },
+  {
+    "slug": "just-stairs",
+    "title": "Just Stairs",
+    "date": "08-08-26",
+    "description": "Just Stairs adds stair-like decals that can be placed on slopes to create steps; fence plugins can be used alongside them as railings, and the current release contains selected in-game decals.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "32.45KB",
+    "min_version": "1.11.00",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/j3p1m8efcuwoitq/Just_Stairs.ttplugin/file",
+          "ver": "4"
+        }
+      ],
+      "details": "/en/store/items/just-stairs/"
+    }
+  },
+  {
+    "slug": "invisible-intercity-connection",
+    "title": "Invisible Intercity Connection",
+    "date": "08-08-26",
+    "description": "Invisible Intercity Connection hides the sign normally used to mark a neighbouring-city connection, allowing the connection to remain in place without its usual visible marker.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "581B",
+    "min_version": "1.11.03",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/8sfq5jtmg9tnlcm/Invisible_Intercity.ttplugin/file",
+          "ver": "4"
+        }
+      ],
+      "details": "/en/store/items/invisible-intercity-connection/"
+    }
+  },
+  {
+    "slug": "yakka-works-office",
+    "title": "Yakka Works Office",
+    "date": "08-08-26",
+    "description": "Yakka Works Office adds an office building representing Yakka Studio to your TheoTown city.",
+    "category": "Commercial",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "4.32KB",
+    "min_version": "Any",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/t1pph9f8f9lodnq/Yakka_Office.ttplugin/file",
+          "ver": "4"
+        }
+      ],
+      "details": "/en/store/items/yakka-works-office/"
+    }
+  },
+  {
+    "slug": "alternative-rank-name",
+    "title": "Alternative Rank Name",
+    "date": "08-08-26",
+    "description": "Alternative Rank Name changes the names displayed for the in-game city ranks.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "1.25KB",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/dctecmqc51zo9vb/Alternative_Rank_Names.ttplugin/file",
+          "ver": "9"
+        }
+      ],
+      "details": "/en/store/items/alternative-rank-name/"
+    }
+  },
+  {
+    "slug": "tractor-road-train",
+    "title": "Tractor Road Train",
+    "date": "08-08-26",
+    "description": "Tractor Road Train adds tractors hauling multiple trailers using the game's existing textures; these long vehicles can also create additional traffic in your city.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "829B",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/vz24ms5cld8287q/Tractors_Road_Train.ttplugin/file",
+          "ver": "7"
+        }
+      ],
+      "details": "/en/store/items/tractor-road-train/"
+    }
+  },
+  {
+    "slug": "actual-map-sizes",
+    "title": "Actual Map Sizes",
+    "date": null,
+    "description": "Actual Map Sizes replaces the game's abbreviated map-size labels with more useful information about tile dimensions and region size values from the console `cr` command, while retaining the XS–3XL size labels.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "611B",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/1mcl5bq6jvs59sx/True_City_Size.ttplugin/file",
+          "ver": "1p"
+        }
+      ],
+      "details": "/en/store/items/actual-map-sizes/"
+    }
+  },
+  {
+    "slug": "pastel-ui-legacy",
+    "title": "Pastel UI (Legacy)",
+    "date": null,
+    "description": "Pastel UI (Legacy) changes the game's interface textures with a style inspired by Material Design and Material You; its colours are selected from the available in-game palettes rather than changing dynamically.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 100,
+    "platforms": [],
+    "size": "6.28KB",
+    "min_version": "1.12.55",
+    "status": "legacy",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1p"
+        }
+      ],
+      "details": "/en/store/items/pastel-ui-legacy/"
+    }
+  },
+  {
+    "slug": "pedestrian-expansions",
+    "title": "Pedestrian Expansions",
+    "date": null,
+    "description": "Pedestrian Expansions adds more variety to pedestrians who use sidewalks, making cities feel livelier through characters that participate in the actual walking system rather than static decorative props.",
+    "category": "Packs",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "1.59KB",
+    "min_version": "1.10.30",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1p"
+        }
+      ],
+      "details": "/en/store/items/pedestrian-expansions/"
+    }
+  },
+  {
+    "slug": "nord-ui-legacy-formerly-clean-ui",
+    "title": "Nord UI (Legacy) (Formerly Clean UI)",
+    "date": null,
+    "description": "Nord UI (Legacy), formerly Clean UI, changes the game's interface textures to create a modern minimalist appearance inspired by the user interface of Cities: Skylines II.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "5.35KB",
+    "min_version": "1.10.20",
+    "status": "legacy",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "2p"
+        }
+      ],
+      "details": "/en/store/items/nord-ui-legacy-formerly-clean-ui/"
+    }
+  },
+  {
+    "slug": "board-ui-legacy-formerly-oriental-ui",
+    "title": "Board UI (legacy) (formerly Oriental UI)",
+    "date": null,
+    "description": "Board UI (Legacy), formerly Oriental UI, changes the game's interface textures to a medieval-inspired style that gives TheoTown menus a more immersive role-playing-game appearance.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "4.78KB",
+    "min_version": "1.11.80",
+    "status": "legacy",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1.2p"
+        }
+      ],
+      "details": "/en/store/items/board-ui-legacy-formerly-oriental-ui/"
+    }
+  },
+  {
+    "slug": "retaining-walls",
+    "title": "Retaining Walls",
+    "date": null,
+    "description": "Retaining Walls adds decal sets for building Japanese- or Swiss-inspired retaining walls on hillsides, with grid and striped styles available.",
+    "category": "Decorations",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "16.21KB",
+    "min_version": "1.11.28",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1.1p"
+        }
+      ],
+      "details": "/en/store/items/retaining-walls/"
+    }
+  },
+  {
+    "slug": "prufer-s-tears",
+    "title": "Prufer's Tears",
+    "date": null,
+    "description": "Prufer's Tears is a fan-made memorial monument inspired by Schwi Dola from *No Game No Life*; upgrading the monument provides 250T in monthly income.",
+    "category": "Award and Special",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "2.44KB",
+    "min_version": "1.11.05",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/mcqm3gq8jnwhla0/Prutfer%2527s_Tears.ttplugin/file",
+          "ver": "1p"
+        }
+      ],
+      "details": "/en/store/items/prufer-s-tears/"
+    }
+  },
+  {
+    "slug": "bordered-intercity-connection",
+    "title": "Bordered intercity connection",
+    "date": null,
+    "description": "Bordered Intercity Connection changes the neighbouring-city road connection marker into a stripe on the road itself.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "952B",
+    "min_version": "Any",
+    "status": "active",
     "urls": {
       "download": [],
-      "details": "/en/store/items/theotown-plugin-preset-example/"
+      "details": "/en/store/items/bordered-intercity-connection/"
     }
   }
 ]
