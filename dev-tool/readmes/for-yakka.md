@@ -200,7 +200,7 @@ Blog pages use a small compatibility script to remove legacy thank-you and EOF e
 
 ## 14. Site artwork and placeholders
 
-The supplied artwork source is `dev-tool/readmes/Website's.zip`. The MkDocs post-build hook copies the original images into `site/assets/img/` using stable website filenames. The files are copied byte-for-byte; the build does not resize, crop, recompress, or otherwise edit them.
+The preferred artwork source is `dev-tool/readmes/Website's.zip`. When it is available, the MkDocs post-build hook copies the original images byte-for-byte into `site/assets/img/` using stable website filenames. This archive is currently absent from `y2k-dev`, so the hook falls back to matching images in `docs/assets/img/` and uses `cover.jpg` for missing JPG artwork instead of stopping the build. Missing PNG icon artwork is skipped with a warning; restore the original archive or original PNG files before considering the visual assets complete.
 
 - `background-ll.jpg`, `background-lp.jpg`, `background-dl.jpg`, `background-dp.jpg`: light/dark landscape and portrait backgrounds.
 - `banner-home.jpg`, `banner-store.jpg`, `banner-library.jpg`, `banner-tools.jpg`, `banner-blogs.jpg`: section banners.
