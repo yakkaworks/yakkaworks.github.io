@@ -3,7 +3,7 @@ title: "Just Stairs"
 date: 21-11-26
 ---
 
-![Just Stairs preview](/assets/img/cover.jpg)
+![Just Stairs preview](/webdata/img/just-stairs.jpg)
 
 # Just Stairs
 

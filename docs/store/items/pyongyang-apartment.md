@@ -3,7 +3,7 @@ title: "Pyongyang Apartment"
 date: 21-11-26
 ---
 
-![Pyongyang Apartment preview](/assets/img/cover.jpg)
+![Pyongyang Apartment preview](/webdata/img/pyongyang-apartment.jpg)
 
 # Pyongyang Apartment
 

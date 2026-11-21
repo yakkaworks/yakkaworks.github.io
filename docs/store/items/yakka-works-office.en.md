@@ -3,7 +3,7 @@ title: "Yakka Works Office"
 date: 21-11-26
 ---
 
-![Yakka Works Office preview](/assets/img/cover.jpg)
+![Yakka Works Office preview](/webdata/img/yakka-studio-office.jpg)
 
 # Yakka Works Office
 

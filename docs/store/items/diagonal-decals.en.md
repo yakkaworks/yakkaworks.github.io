@@ -3,7 +3,7 @@ title: "Diagonal Decals"
 date: 21-11-26
 ---
 
-![Diagonal Decals preview](/assets/img/cover.jpg)
+![Diagonal Decals preview](/webdata/img/diagonal-decals.jpg)
 
 # Diagonal Decals
 

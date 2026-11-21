@@ -3,7 +3,7 @@ title: "Bordered intercity connection"
 date: 21-11-26
 ---
 
-![Bordered intercity connection preview](/assets/img/cover.jpg)
+![Bordered intercity connection preview](/webdata/img/bordered-intercity-connection.jpg)
 
 # Bordered intercity connection
 

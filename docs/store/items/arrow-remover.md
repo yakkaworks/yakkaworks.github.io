@@ -3,7 +3,7 @@ title: "Arrow Remover"
 date: 21-11-26
 ---
 
-![Arrow Remover preview](/assets/img/cover.jpg)
+![Arrow Remover preview](/webdata/img/arrow-remover.jpg)
 
 # Arrow Remover
 

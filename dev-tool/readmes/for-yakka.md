@@ -212,4 +212,4 @@ The post-build hook validates the tracked files and copies them byte-for-byte in
 
 Category icons keep their pixel-art appearance; preserve `image-rendering: pixelated` on `.yw-nav-card img` and do not process the source files. The content-grid renderer uses `content-cards-placeholders.jpg` when an item has no thumbnail or its image fails to load.
 
-Individual TheoTown plugin detail-page previews and thumbnails are separate from this site artwork. Source those only from the `mkdocs-site` branch; do not copy general site assets or unrelated content from that branch.
+Individual TheoTown plugin thumbnail/preview assets are stored in `webdata/img/`. Copy only matching product images from `mkdocs-site/docs/webdata/img/`; update the Indonesian and English detail pages and both JSON catalogue thumbnail paths to use the same `/webdata/img/<filename>` URL. Do not copy general site artwork or unrelated content from that branch.

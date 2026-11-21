@@ -3,7 +3,7 @@ title: "Lighter Rains"
 date: 21-11-26
 ---
 
-![Lighter Rains preview](/assets/img/cover.jpg)
+![Lighter Rains preview](/webdata/img/lighter-rain.jpg)
 
 # Lighter Rains
 

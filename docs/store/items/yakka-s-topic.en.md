@@ -3,7 +3,7 @@ title: "Yakka's Topic"
 date: 21-11-26
 ---
 
-![Yakka's Topic preview](/assets/img/cover.jpg)
+![Yakka's Topic preview](/webdata/img/yakka-topics.jpg)
 
 # Yakka's Topic
 

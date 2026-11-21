@@ -3,7 +3,7 @@ title: "Bus-Tram Road"
 date: 21-11-26
 ---
 
-![Bus-Tram Road preview](/assets/img/cover.jpg)
+![Bus-Tram Road preview](/webdata/img/bus-tram-road.jpg)
 
 # Bus-Tram Road
 

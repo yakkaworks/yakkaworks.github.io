@@ -3,7 +3,7 @@ title: "Nature Plus (Web Exclusive)"
 date: 21-11-26
 ---
 
-![Nature Plus (Web Exclusive) preview](/assets/img/cover.jpg)
+![Nature Plus (Web Exclusive) preview](/webdata/img/nature-plus.jpg)
 
 # Nature Plus (Web Exclusive)
 

@@ -3,7 +3,7 @@ title: "Map Edge Pack"
 date: 21-11-26
 ---
 
-![Map Edge Pack preview](/assets/img/cover.jpg)
+![Map Edge Pack preview](/webdata/img/map-edge-pack.jpg)
 
 # Map Edge Pack
 

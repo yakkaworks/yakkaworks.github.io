@@ -3,7 +3,7 @@ title: "Swiss Alps Railways"
 date: 21-11-26
 ---
 
-![Swiss Alps Railways preview](/assets/img/cover.jpg)
+![Swiss Alps Railways preview](/webdata/img/swiss-alps-railway.jpg)
 
 # Swiss Alps Railways
 

@@ -3,7 +3,7 @@ title: "Actual Map Sizes"
 date: 21-11-26
 ---
 
-![Actual Map Sizes preview](/assets/img/cover.jpg)
+![Actual Map Sizes preview](/webdata/img/actual-map-sizes.jpg)
 
 # Actual Map Sizes
 

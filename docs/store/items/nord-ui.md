@@ -3,7 +3,7 @@ title: "Nord UI"
 date: 21-11-26
 ---
 
-![Nord UI preview](/assets/img/cover.jpg)
+![Nord UI preview](/webdata/img/nord-ui.jpg)
 
 # Nord UI
 

@@ -3,7 +3,7 @@ title: "Board UI (legacy) (formerly Oriental UI)"
 date: 21-11-26
 ---
 
-![Board UI (legacy) (formerly Oriental UI) preview](/assets/img/cover.jpg)
+![Board UI (legacy) (formerly Oriental UI) preview](/webdata/img/oriental-ui.jpg)
 
 # Board UI (legacy) (formerly Oriental UI)
 

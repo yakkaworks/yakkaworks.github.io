@@ -3,7 +3,7 @@ title: "Cube UI"
 date: 21-11-26
 ---
 
-![Cube UI preview](/assets/img/cover.jpg)
+![Cube UI preview](/webdata/img/cube-ui.jpg)
 
 # Cube UI
 

@@ -3,7 +3,7 @@ title: "I3R (formerly Invisible RRR)"
 date: 21-11-26
 ---
 
-![I3R (formerly Invisible RRR) preview](/assets/img/cover.jpg)
+![I3R (formerly Invisible RRR) preview](/webdata/img/invisible-rrr.jpg)
 
 # I3R (formerly Invisible RRR)
 

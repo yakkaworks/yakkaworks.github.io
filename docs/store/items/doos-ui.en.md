@@ -3,7 +3,7 @@ title: "Doos UI"
 date: 21-11-26
 ---
 
-![Doos UI preview](/assets/img/cover.jpg)
+![Doos UI preview](/webdata/img/doos-ui.jpg)
 
 # Doos UI
 

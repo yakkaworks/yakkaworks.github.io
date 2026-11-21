@@ -3,7 +3,7 @@ title: "Nord UI (Legacy) (Formerly Clean UI)"
 date: 21-11-26
 ---
 
-![Nord UI (Legacy) (Formerly Clean UI) preview](/assets/img/cover.jpg)
+![Nord UI (Legacy) (Formerly Clean UI) preview](/webdata/img/clean-ui.jpg)
 
 # Nord UI (Legacy) (Formerly Clean UI)
 

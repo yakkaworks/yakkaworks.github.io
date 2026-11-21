@@ -12,7 +12,7 @@ As of **2026-11-21**: Yakka Works is rebuilding its site with MkDocs Material on
 - Catalogue data: `webdata/json/data_theotown.json` and `webdata/json/en/data_theotown.json` each contain 39 entries. Store index pages already render these through `docs/assets/js/content-grids.js`.
 - The temporary `dev-tool/readmes/content-data.md` source and generated staging file were deleted after processing, as instructed. Use the detail pages and JSON catalogues as the current site content.
 - Page front matter dates are `21-11-26`; product release/update dates remain catalogue metadata.
-- Product-specific preview files were not available in the inspected development branch. Detail pages and catalogue cards currently use the existing `/assets/img/cover.jpg` artwork as a fallback; replace per item when confirmed previews are available.
+- All 39 TheoTown catalogue items now have a matching preview image sourced from `mkdocs-site/docs/webdata/img/`. Detail-page lead images and both localized catalogue thumbnails use the corresponding `/webdata/img/<filename>` path.
 - Source metadata was preserved without guessing missing values. Blank platform support is shown as unspecified; Cube UI has no category or diamond price in the source; Bordered Intercity Connection has no direct download URL.
 - The Indonesia Transport Pack source lists version `8.4.5p`, while supplied files are named `EXP_843` and `EXP_842`; its page flags this mismatch instead of claiming the files match.
 - Minimum-version shorthand is normalized per the source instruction: `1985` → `1.9.85` and `11255` → `1.12.55`. Diamond prices are identified as in-game store prices, separate from website downloads.
@@ -21,7 +21,7 @@ As of **2026-11-21**: Yakka Works is rebuilding its site with MkDocs Material on
 
 - The supplied artwork ZIP contained exactly 18 files (11 JPG and 7 PNG), all under `Website's/`. They were CRC/signature checked and extracted into `docs/assets/img/`; the transfer archive was deleted afterward.
 - `hooks/site_assets.py` now validates the tracked artwork set and copies it byte-for-byte into `site/assets/img/`. The preview no longer depends on an archive or temporary JPG fallback.
-- Individual TheoTown plugin-page previews/thumbnails remain a separate task and must be sourced from the `mkdocs-site` branch only.
+- The 39 TheoTown product preview images have been copied from `mkdocs-site/docs/webdata/img/` into `webdata/img/`; the bilingual detail pages and both JSON catalogues now reference those images. This is separate from general website artwork.
 - The extraction workflow runs `mkdocs build --strict` before committing the asset migration; do not claim visual/browser verification unless separately performed.
 ## Durable site decisions
 

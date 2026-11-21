@@ -3,7 +3,7 @@ title: "Pedestrian Expansions"
 date: 21-11-26
 ---
 
-![Pedestrian Expansions preview](/assets/img/cover.jpg)
+![Pedestrian Expansions preview](/webdata/img/pedestrian-expansion.jpg)
 
 # Pedestrian Expansions
 

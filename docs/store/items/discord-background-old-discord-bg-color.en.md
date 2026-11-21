@@ -3,7 +3,7 @@ title: "Discord Background (old discord bg color)"
 date: 21-11-26
 ---
 
-![Discord Background (old discord bg color) preview](/assets/img/cover.jpg)
+![Discord Background (old discord bg color) preview](/webdata/img/discord-background.jpg)
 
 # Discord Background (old discord bg color)
 
