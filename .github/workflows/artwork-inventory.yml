@@ -1,4 +1,4 @@
-name: Temporary artwork ZIP inventory
+name: One-time artwork extraction
 
 on:
   push:
@@ -8,36 +8,227 @@ on:
       - .github/workflows/artwork-inventory.yml
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  inspect:
+  extract:
     runs-on: ubuntu-latest
     steps:
       - name: Check out development branch
         uses: actions/checkout@v4
         with:
           ref: y2k-dev
-      - name: List artwork archive members
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Extract and validate site artwork
         shell: bash
         run: |
           python - <<'PY'
-          from pathlib import PurePosixPath
+          from pathlib import Path
           from zipfile import ZipFile
-          from collections import Counter
-          archive_path = "dev-tool/readmes/Website's.zip"
+          import hashlib
+          import shutil
+
+          archive_path = Path("dev-tool/readmes/Website's.zip")
+          destination = Path("docs/assets/img")
+          mapping = {
+              "background_dl.jpg": "background-dl.jpg",
+              "background_dp.jpg": "background-dp.jpg",
+              "background_ll.jpg": "background-ll.jpg",
+              "background_lp.jpg": "background-lp.jpg",
+              "banner-home.jpg": "banner-home.jpg",
+              "banner-store.jpg": "banner-store.jpg",
+              "banner-library.jpg": "banner-library.jpg",
+              "banner-tools.jpg": "banner-tools.jpg",
+              "banner-blogs.jpg": "banner-blogs.jpg",
+              "content-cards-placeholders.jpg": "content-cards-placeholders.jpg",
+              "cover.jpg": "cover.jpg",
+              "icon-kustom.png": "icon-kustom.png",
+              "icon-map.png": "icon-map.png",
+              "icon-misc.png": "icon-misc.png",
+              "icon-plugin.png": "icon-plugin.png",
+              "icon-theotown.png": "theotown-icon.png",
+              "icon-tut.png": "icon-tut.png",
+              "icon-webexclusive.png": "icon-webexclusive.png",
+          }
+
+          if not archive_path.is_file():
+              raise FileNotFoundError(archive_path)
+
+          expected_members = {f"Website's/{name}" for name in mapping}
           with ZipFile(archive_path) as archive:
-              files = [info for info in archive.infolist() if not info.is_dir()]
-              print(f"ARCHIVE_FILE_COUNT={len(files)}")
-              print(f"ARCHIVE_TOTAL_UNCOMPRESSED_BYTES={sum(info.file_size for info in files)}")
-              print("TOP_LEVEL_ENTRIES:")
-              print("\\n".join(sorted({PurePosixPath(info.filename).parts[0] for info in files})))
-              print("EXTENSIONS:")
-              counts = Counter(PurePosixPath(info.filename).suffix.lower() or "[no extension]" for info in files)
-              for ext, count in sorted(counts.items()):
-                  print(f"{ext}: {count}")
-              print("FILES_BEGIN")
-              for info in files:
-                  print(f"{info.file_size:>10}  {info.filename}")
-              print("FILES_END")
+              bad_member = archive.testzip()
+              if bad_member:
+                  raise RuntimeError(f"ZIP CRC validation failed for {bad_member}")
+              actual_members = {
+                  item.filename for item in archive.infolist() if not item.is_dir()
+              }
+              missing = sorted(expected_members - actual_members)
+              unexpected = sorted(actual_members - expected_members)
+              if missing or unexpected:
+                  raise RuntimeError(
+                      f"Unexpected ZIP contents; missing={missing}, unexpected={unexpected}"
+                  )
+
+              destination.mkdir(parents=True, exist_ok=True)
+              for source_name, target_name in mapping.items():
+                  data = archive.read(f"Website's/{source_name}")
+                  if source_name.lower().endswith((".jpg", ".jpeg")):
+                      if not data.startswith(b"\\xff\\xd8\\xff"):
+                          raise RuntimeError(f"Invalid JPEG signature: {source_name}")
+                  elif source_name.lower().endswith(".png"):
+                      if not data.startswith(b"\\x89PNG\\r\\n\\x1a\\n"):
+                          raise RuntimeError(f"Invalid PNG signature: {source_name}")
+                  target = destination / target_name
+                  target.write_bytes(data)
+                  print(
+                      f"EXTRACTED {target.as_posix()} "
+                      f"({len(data)} bytes, sha256={hashlib.sha256(data).hexdigest()})"
+                  )
+
+          # Delete the transfer archive only after every image passed validation.
+          archive_path.unlink()
+          print(f"DELETED {archive_path.as_posix()}")
           PY
+
+      - name: Make tracked artwork the build source
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          hook = '''"""Copy tracked artwork and the JSON catalog into the completed MkDocs site."""
+          from pathlib import Path
+          import shutil
+
+          ROOT = Path(__file__).resolve().parents[1]
+
+          # Stable website filenames in docs/assets/img/.
+          ASSET_FILES = (
+              "background-dl.jpg",
+              "background-dp.jpg",
+              "background-ll.jpg",
+              "background-lp.jpg",
+              "banner-home.jpg",
+              "banner-store.jpg",
+              "banner-library.jpg",
+              "banner-tools.jpg",
+              "banner-blogs.jpg",
+              "content-cards-placeholders.jpg",
+              "cover.jpg",
+              "icon-kustom.png",
+              "icon-map.png",
+              "icon-misc.png",
+              "icon-plugin.png",
+              "theotown-icon.png",
+              "icon-tut.png",
+              "icon-webexclusive.png",
+          )
+
+
+          def on_post_build(config, **kwargs):
+              # Source artwork is tracked in docs/; copy byte-for-byte into the
+              # output root so site-root-relative URLs work on every language route.
+              source_dir = ROOT / "docs" / "assets" / "img"
+              missing = [name for name in ASSET_FILES if not (source_dir / name).is_file()]
+              if missing:
+                  raise FileNotFoundError(
+                      "Missing tracked site artwork in docs/assets/img/: "
+                      + ", ".join(missing)
+                  )
+
+              image_dir = Path(config["site_dir"]) / "assets" / "img"
+              image_dir.mkdir(parents=True, exist_ok=True)
+              for name in ASSET_FILES:
+                  shutil.copy2(source_dir / name, image_dir / name)
+
+              source = ROOT / "webdata"
+              target = Path(config["site_dir"]) / "webdata"
+              if source.exists():
+                  if target.exists():
+                      shutil.rmtree(target)
+                  shutil.copytree(source, target)
+          '''
+
+          instruction = Path("dev-tool/readmes/ai-instruct.md")
+          instruction_text = instruction.read_text(encoding="utf-8")
+          marker = "## Artwork and image-placeholder workflow"
+          if marker not in instruction_text:
+              raise RuntimeError("Could not find artwork instructions section")
+          instruction_text = instruction_text[:instruction_text.index(marker)] + '''## Artwork and image assets
+
+          - The source-of-truth artwork files live directly in `docs/assets/img/`. The supplied `dev-tool/readmes/Website's.zip` is a transfer archive only: extract its files into this folder, verify them, and delete the ZIP. Do not make builds depend on the archive.
+          - `hooks/site_assets.py` validates the tracked artwork set and copies it byte-for-byte into `site/assets/img/` during `on_post_build`. Keep the source assets in `docs/`; do not add image resizing, cropping, placeholder generation, or Pillow.
+          - Stable artwork names: `background-dl.jpg`, `background-dp.jpg`, `background-ll.jpg`, `background-lp.jpg`; `banner-home.jpg`, `banner-store.jpg`, `banner-library.jpg`, `banner-tools.jpg`, `banner-blogs.jpg`; `content-cards-placeholders.jpg`; and `cover.jpg`.
+          - Category icons are `icon-kustom.png`, `icon-map.png`, `icon-misc.png`, `icon-plugin.png`, `theotown-icon.png`, `icon-tut.png`, and `icon-webexclusive.png`. The archive's `icon-theotown.png` is stored as `theotown-icon.png` to preserve the established website filename.
+          - Keep category icons crisp with `image-rendering: pixelated` on `.yw-nav-card img`; do not apply that to photographic banners or card thumbnails.
+          - Use `content-cards-placeholders.jpg` for example article/content thumbnails. The content-grid renderer uses it when a JSON item has no thumbnail or its image fails to load.
+          - For individual TheoTown plugin detail pages only, source previews and thumbnails from the `mkdocs-site` branch when available. Do not use that branch as the source for general site artwork or other page content.
+          - Shared image references in Markdown must remain site-root-relative (for example, `/assets/img/cover.jpg`) so nested and English routes resolve correctly.
+          '''
+          instruction.write_text(instruction_text, encoding="utf-8")
+
+          guide = Path("dev-tool/readmes/for-yakka.md")
+          guide_text = guide.read_text(encoding="utf-8")
+          marker = "## 14. Site artwork and placeholders"
+          if marker not in guide_text:
+              raise RuntimeError("Could not find section 14 in for-yakka.md")
+          guide_text = guide_text[:guide_text.index(marker)] + '''## 14. Site artwork and placeholders
+
+          All 18 supplied website artwork files are stored in `docs/assets/img/`. The transfer archive `dev-tool/readmes/Website's.zip` is extracted and removed; do not restore it as a build dependency.
+
+          The post-build hook validates the tracked files and copies them byte-for-byte into `site/assets/img/`:
+
+          - `background-ll.jpg`, `background-lp.jpg`, `background-dl.jpg`, `background-dp.jpg`: light/dark landscape and portrait backgrounds.
+          - `banner-home.jpg`, `banner-store.jpg`, `banner-library.jpg`, `banner-tools.jpg`, `banner-blogs.jpg`: section banners.
+          - `cover.jpg`: social/link-preview cover.
+          - `content-cards-placeholders.jpg`: fallback for example articles and content cards.
+          - `icon-kustom.png`, `icon-map.png`, `icon-misc.png`, `icon-plugin.png`, `theotown-icon.png`, `icon-tut.png`, `icon-webexclusive.png`: category icons. The archive's `icon-theotown.png` uses the stable destination name `theotown-icon.png`.
+
+          Category icons keep their pixel-art appearance; preserve `image-rendering: pixelated` on `.yw-nav-card img` and do not process the source files. The content-grid renderer uses `content-cards-placeholders.jpg` when an item has no thumbnail or its image fails to load.
+
+          Individual TheoTown plugin detail-page previews and thumbnails are separate from this site artwork. Source those only from the `mkdocs-site` branch; do not copy general site assets or unrelated content from that branch.
+          '''
+          guide.write_text(guide_text, encoding="utf-8")
+
+          bank = Path("dev-tool/readmes/ai-context-bank.md")
+          bank_text = bank.read_text(encoding="utf-8")
+          start_marker = "## Important build blocker"
+          end_marker = "## Durable site decisions"
+          if start_marker not in bank_text or end_marker not in bank_text:
+              raise RuntimeError("Could not locate the current artwork status in context bank")
+          start = bank_text.index(start_marker)
+          end = bank_text.index(end_marker)
+          bank_text = bank_text[:start] + '''## Build and artwork state
+
+          - The supplied artwork ZIP contained exactly 18 files (11 JPG and 7 PNG), all under `Website's/`. They were CRC/signature checked and extracted into `docs/assets/img/`; the transfer archive was deleted afterward.
+          - `hooks/site_assets.py` now validates the tracked artwork set and copies it byte-for-byte into `site/assets/img/`. The preview no longer depends on an archive or temporary JPG fallback.
+          - Individual TheoTown plugin-page previews/thumbnails remain a separate task and must be sourced from the `mkdocs-site` branch only.
+          - The extraction workflow runs `mkdocs build --strict` before committing the asset migration; do not claim visual/browser verification unless separately performed.
+          ''' + bank_text[end:]
+          bank.write_text(bank_text, encoding="utf-8")
+
+          Path("hooks/site_assets.py").write_text(hook, encoding="utf-8")
+          print("Updated the asset hook and readme-folder instructions.")
+          PY
+
+      - name: Verify strict MkDocs build
+        run: |
+          pip install -r requirements.txt
+          python -m mkdocs build --strict
+
+      - name: Commit extracted artwork and remove transfer files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/assets/img hooks/site_assets.py dev-tool/readmes/ai-instruct.md dev-tool/readmes/for-yakka.md dev-tool/readmes/ai-context-bank.md
+          git rm -f "dev-tool/readmes/Website's.zip" .github/workflows/artwork-inventory.yml
+          git diff --cached --stat
+          git commit -m "Extract site artwork into tracked assets"
+          git push origin HEAD:y2k-dev
