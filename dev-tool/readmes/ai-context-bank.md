@@ -19,9 +19,9 @@ As of **2026-11-21**: Yakka Works is rebuilding its site with MkDocs Material on
 
 ## Important build blocker
 
-- `hooks/site_assets.py` still requires `dev-tool/readmes/Website's.zip`, but that archive is currently absent from `y2k-dev`. The hook raises `FileNotFoundError` when it cannot find the archive, so the strict MkDocs build is expected to fail until the asset archive is restored or the hook is updated for the new asset source.
-- Build and browser/visual checks have **not** been run for the TheoTown migration. Do not report them as passing.
-- `docs/assets/img/cover.jpg` is present and is the current fallback referenced by the new pages. Other archived artwork such as the store banner/category icons may also need the missing archive.
+- The artwork ZIP `dev-tool/readmes/Website's.zip` is absent from `y2k-dev`. `hooks/site_assets.py` now falls back to matching files under `docs/assets/img/`, then uses the existing `cover.jpg` for missing JPG assets so the build can continue. Missing PNG icon artwork is skipped with a warning rather than fabricated.
+- The missing-archive fallback was tested with a temporary fixture: tracked images and webdata copy successfully. The complete local MkDocs build and browser/visual preview still need to be run by the owner; do not report them as passing.
+- `docs/assets/img/cover.jpg` and all four background variants are present. The hook uses the cover for absent JPG banners/placeholders. Original PNG category icons are still missing while the archive is absent.
 
 ## Durable site decisions
 
