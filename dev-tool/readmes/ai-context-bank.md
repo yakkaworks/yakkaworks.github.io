@@ -1,29 +1,33 @@
 # AI shared context bank
 
-> Single compact handoff for the next agent. This file is a current-state summary, not a chronological changelog.
+> Single compact handoff for the next agent. This is current project state, not a chronological log.
 
 ## TL;DR
 
-As of **2026-11-20**: Yakka Works uses MkDocs Material with custom overrides. Active branch: `y2k-dev`; latest commit: `c34dd6e2947eb12465057794fa8233fdb9241e5b`. The site has a three-row header, custom navigation, centered document layout and footer, currently targeting a 900px desktop width. Page dates come from Markdown front matter. Supplied artwork is extracted from `dev-tool/readmes/Website's.zip` into generated site output; do not add Pillow or regenerate placeholders. Shared image references in Markdown must use site-root-relative `/assets/img/...` URLs so locale and nested English routes resolve correctly. `y2k-dev` is build-only; no production deployment. Latest image-path changes have not yet been locally/visually verified. Legal pages remain drafts; do not migrate old content without explicit approval.
+As of **2026-11-21**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store migration requested by the owner is complete: **39 catalogue items, 78 bilingual detail pages**, and both localized JSON catalogues have been populated from the new README-folder source data. No production deployment has been made.
 
-## Current rules and decisions
+## Current project state
 
-- Keep MkDocs Material's rendering, search, palette and i18n systems; implement the custom visual structure through the existing overrides and assets.
-- Preserve the current three-row header, 900px shared layout width, custom navigation, document frame/signature and footer. Inspect the current implementation before changing it; do not revive older layouts from historical notes.
-- Markdown front matter is the source of truth for page dates. New pages should include a publication/creation date using the established `date: dd-mm-yy` format.
-- Artwork source: `dev-tool/readmes/Website's.zip`. The build hook copies images into the generated `site/assets/img/` output. Do not change this to pre-build writes into tracked `docs/` assets.
-- Do not add Pillow or regenerate artwork with Python. Reuse the closest supplied image; use `content-cards-placeholders.jpg` for example/missing content thumbnails. Keep category icons pixelated.
-- Production deployment is restricted to `mkdocs-site-live`; development branches such as `y2k-dev` should only run strict builds.
-- Do not claim browser/visual verification unless it was actually performed. A passing CI build does not prove visual correctness.
-- When a change is pushed, include this owner pull-and-preview command in the response:
-  ```bat
-  cd /d "D:\\yakkaworks-site\\y2k-dev-mkdocs-git" && git pull --ff-only origin y2k-dev && dev-tool\\serve.bat
-  ```
+- TheoTown detail pages: `docs/store/items/<slug>.md` and matching `.en.md` files; routes are `/store/items/<slug>/` and `/en/store/items/<slug>/`.
+- Catalogue data: `webdata/json/data_theotown.json` and `webdata/json/en/data_theotown.json` each contain 39 entries. Store index pages already render these through `docs/assets/js/content-grids.js`.
+- The temporary `dev-tool/readmes/content-data.md` source and generated staging file were deleted after processing, as instructed. Use the detail pages and JSON catalogues as the current site content.
+- Page front matter dates are `21-11-26`; product release/update dates remain catalogue metadata.
+- Product-specific preview files were not available in the inspected development branch. Detail pages and catalogue cards currently use the existing `/assets/img/cover.jpg` artwork as a fallback; replace per item when confirmed previews are available.
+- Source metadata was preserved without guessing missing values. Blank platform support is shown as unspecified; Cube UI has no category or diamond price in the source; Bordered Intercity Connection has no direct download URL.
+- The Indonesia Transport Pack source lists version `8.4.5p`, while supplied files are named `EXP_843` and `EXP_842`; its page flags this mismatch instead of claiming the files match.
+- Minimum-version shorthand is normalized per the source instruction: `1985` → `1.9.85` and `11255` → `1.12.55`. Diamond prices are identified as in-game store prices, separate from website downloads.
 
-## Current status / next actions
+## Important build blocker
 
-- Branch: `y2k-dev`
-- Latest commit: `c34dd6e2947eb12465057794fa8233fdb9241e5b` — English index image references changed to `/assets/img/...`; previous build-time HTML path rewriting removed.
-- Build/test: not run for this change. Owner visual review is still required, especially across nested English routes.
-- No production deployment.
-- Keep legal pages as drafts. Any substantive migration of legacy content needs explicit owner approval.
+- `hooks/site_assets.py` still requires `dev-tool/readmes/Website's.zip`, but that archive is currently absent from `y2k-dev`. The hook raises `FileNotFoundError` when it cannot find the archive, so the strict MkDocs build is expected to fail until the asset archive is restored or the hook is updated for the new asset source.
+- Build and browser/visual checks have **not** been run for the TheoTown migration. Do not report them as passing.
+- `docs/assets/img/cover.jpg` is present and is the current fallback referenced by the new pages. Other archived artwork such as the store banner/category icons may also need the missing archive.
+
+## Durable site decisions
+
+- Work on `y2k-dev` only; do not merge or deploy to `mkdocs-site-live` unless the owner explicitly asks.
+- Keep the current three-row header, custom navigation, document frame/signature and footer. Desktop shared width is 900px; mobile uses a 0.5rem gutter.
+- Preserve brand green `#4d8b31`, CTA orange `#ff8427`, local Body/Header/Display fonts, Material search, and current i18n configuration.
+- Every published Markdown page needs `date: dd-mm-yy` front matter. Shared image links must be site-root-relative (for example, `/assets/img/cover.jpg`) so English and nested routes resolve.
+- Keep content ordering in `.pages` files; `/store/items/*.md` remains excluded from navigation and is reached through the store content cards.
+- Legal pages remain drafts. Do not add unnecessary dependencies or change deployment workflows.
