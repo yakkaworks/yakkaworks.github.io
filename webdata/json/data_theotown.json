@@ -1,35 +1,898 @@
 [
   {
-    "slug": "theotown-plugin-example",
-    "title": "Contoh Plugin TheoTown",
-    "date": "20-11-26",
-    "description": "Contoh entri plugin TheoTown. Ganti dengan ringkasan konten sebenarnya.",
-    "category": "plugin",
+    "slug": "mono-ui",
+    "title": "Mono UI",
+    "date": "28-10-26",
+    "description": "Terinspirasi dari Nothing OS, Mono UI menghadirkan antarmuka TheoTown yang bersih dan minimalis melalui palet abu-abu dengan aksen biru yang terukur, menghasilkan tampilan modern tanpa terasa membosankan.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.54KB",
+    "min_version": "1.12.95",
+    "status": "active",
     "urls": {
-      "download": [],
-      "details": "/store/items/theotown-plugin-example/"
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/0paluuwvrrh43xq/Mono_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/mono-ui/"
     }
   },
   {
-    "slug": "theotown-map-example",
-    "title": "Contoh Peta TheoTown",
-    "date": "20-11-26",
-    "description": "Contoh entri peta TheoTown. Ganti dengan ringkasan peta sebenarnya.",
-    "category": "map",
+    "slug": "board-ui",
+    "title": "Board UI",
+    "date": "28-10-26",
+    "description": "Board UI memberikan tampilan antarmuka TheoTown yang cerah dan ramah dengan palet terang, permukaan netral yang lembut, serta aksen biru agar menu dan jendela terasa bersih dan tidak berantakan.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "9.67KB",
+    "min_version": "1.12.95",
+    "status": "active",
     "urls": {
-      "download": [],
-      "details": "/store/items/theotown-map-example/"
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/k9ogre0sjzpubn0/Boards_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/board-ui/"
     }
   },
   {
-    "slug": "theotown-plugin-preset-example",
-    "title": "Contoh Preset Plugin TheoTown",
-    "date": "20-11-26",
-    "description": "Contoh entri preset plugin TheoTown.",
-    "category": "preset",
+    "slug": "cube-ui",
+    "title": "Cube UI",
+    "date": "28-10-26",
+    "description": "Cube UI menghadirkan tampilan bernuansa blok ke TheoTown, terinspirasi dari antarmuka inventaris Minecraft dan tekstur batu dengan permukaan abu-abu alami serta aksen hijau zamrud, lengkap dengan mode gelap dan terang.",
+    "category": "",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": null,
+    "platforms": [],
+    "size": "18.52KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/6lby5eb3pgoqq86/Cube_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/cube-ui/"
+    }
+  },
+  {
+    "slug": "doos-ui",
+    "title": "Doos UI",
+    "date": "28-10-26",
+    "description": "Doos UI menghadirkan kembali nuansa antarmuka DOS klasik melalui permukaan abu-abu, kontrol bergaya timbul, dan aksen biru, menghasilkan tema retro-komputer yang tetap praktis dengan mode gelap dan terang.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "15.89KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/jn5rwewg3289rve/Doos_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/doos-ui/"
+    }
+  },
+  {
+    "slug": "frutiger-ui",
+    "title": "Frutiger UI",
+    "date": "28-10-26",
+    "description": "Frutiger UI terinspirasi dari estetika Frutiger Aero yang optimistis pada era 2000-an, memadukan permukaan mengilap, nuansa aqua, hijau cerah, dan efek kaca dengan penyesuaian kontras agar antarmuka tetap mudah dibaca.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "13.13KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/2snokmfwomc2bqe/Frutiger_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/frutiger-ui/"
+    }
+  },
+  {
+    "slug": "mocca-ui",
+    "title": "Mocca UI",
+    "date": "28-10-26",
+    "description": "Mocca UI membawa palet warna Catppuccin ke TheoTown dengan nuansa moka yang pekat, warna netral lembut, dan aksen mauve, serta menyediakan varian gelap dan terang untuk tampilan yang nyaman.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.69KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/x4aakmhhvkhpecd/Mocca_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/mocca-ui/"
+    }
+  },
+  {
+    "slug": "bubble-ui",
+    "title": "Bubble UI",
+    "date": "28-10-26",
+    "description": "Bubble UI mengubah tampilan TheoTown dengan gaya terinspirasi kaca, menggunakan permukaan yang tampak transparan, sorotan lembut, dan detail membulat yang mengambil inspirasi dari antarmuka liquid glass modern.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "20.47KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/3tkmjrmlu58p968/Bubble_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/bubble-ui/"
+    }
+  },
+  {
+    "slug": "nord-ui",
+    "title": "Nord UI",
+    "date": "28-10-26",
+    "description": "Nord UI menerapkan palet warna Nord yang tenang ke TheoTown melalui biru redup, abu-abu sejuk, dan kontras seimbang untuk menghasilkan antarmuka yang bersih dan sederhana.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.5KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/brmvb4lhjprzgyc/Nord_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/nord-ui/"
+    }
+  },
+  {
+    "slug": "pastel-ui",
+    "title": "Pastel UI",
+    "date": "28-10-26",
+    "description": "Pastel UI memberikan tampilan TheoTown yang lebih lembut dan berwarna melalui palet pastel serta gaya visual yang santai, menjadi alternatif dari antarmuka bawaan tanpa mengorbankan kenyamanan saat menggunakan menu.",
+    "category": "Themes",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "18.68KB",
+    "min_version": "1.12.95",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/6npzfpx33cws3uq/Pastel_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/pastel-ui/"
+    }
+  },
+  {
+    "slug": "nature-plus-web-exclusive",
+    "title": "Nature Plus (Web Exclusive)",
+    "date": "28-10-26",
+    "description": "Nature Plus, yang sebelumnya dikenal sebagai Nature+ atau Cytopia Nature Pack, hadir kembali sebagai paket lingkungan berisi sekitar 30 flora, 21 jenis ground, 7 elemen air, 25 decal, 5 decal warna, dan 1 blueprint.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "616.69KB",
+    "min_version": "1.12.90",
+    "status": "web-exclusive",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/muh1lk02ssjkl3v/Nature_Plus_1.3_.ttplugin/file",
+          "ver": "1.3"
+        }
+      ],
+      "details": "/store/items/nature-plus-web-exclusive/"
+    }
+  },
+  {
+    "slug": "i3r-formerly-invisible-rrr",
+    "title": "I3R (formerly Invisible RRR)",
+    "date": "22-09-26",
+    "description": "I3R menambahkan jalan, rel, dan landasan pacu tak terlihat yang dirancang untuk digunakan bersama plugin infrastruktur terkait seperti Advanced Road, Advanced Rails, dan Runway Markings.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "3.57KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/20j8wlvmb7v4aqt/Invisible_RRR.ttplugin/file",
+          "ver": "0.6"
+        }
+      ],
+      "details": "/store/items/i3r-formerly-invisible-rrr/"
+    }
+  },
+  {
+    "slug": "diagonal-decals",
+    "title": "Diagonal Decals",
+    "date": "06-10-26",
+    "description": "Diagonal Decals menambahkan versi diagonal dari decal bawaan game, termasuk varian biasa dan tepi pantai, sehingga detail medan serta transisi di sepanjang garis pantai dapat dibuat lebih halus dan alami.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "66.76KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/kz9lrjte7pq6utn/Diagonal_Decals.ttplugin/file",
+          "ver": "1.2"
+        }
+      ],
+      "details": "/store/items/diagonal-decals/"
+    }
+  },
+  {
+    "slug": "indonesia-transport-pack-deprecated",
+    "title": "Indonesia Transport Pack (Deprecated)",
+    "date": "06-10-26",
+    "description": "Indonesia Transport Pack merupakan kumpulan konten transportasi umum Indonesia yang mencakup kereta, bus, infrastruktur pendukung, serta paket jalan dengan median dan marka. Plugin ini sudah deprecated dan hanya akan menerima pembaruan pemeliharaan sambil menunggu paket pengganti.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "1.1MB",
+    "min_version": "1.12.60",
+    "status": "deprecated",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/7d23ld0kqnud07c/1ITP_2023_EXP_843.ttplugin/file",
+          "ver": ""
+        },
+        {
+          "url": "https://www.mediafire.com/file/wm29ki0ek6d19k8/1ITP_2023_EXP_842.ttplugin/file",
+          "ver": ""
+        }
+      ],
+      "details": "/store/items/indonesia-transport-pack-deprecated/"
+    }
+  },
+  {
+    "slug": "pyongyang-apartment",
+    "title": "Pyongyang Apartment",
+    "date": "22-09-26",
+    "description": "Pyongyang Apartment adalah paket bangunan hunian yang terinspirasi dari arsitektur Korea Utara dalam rekaman tahun 2006–2016, dengan 72 variasi gaya apartemen khas yang diasosiasikan dengan Pyongyang.",
+    "category": "Residential",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "44.87KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/pqqff3mzy40yerm/Pyongyang_Buildings.ttplugin/file",
+          "ver": "8"
+        }
+      ],
+      "details": "/store/items/pyongyang-apartment/"
+    }
+  },
+  {
+    "slug": "yakka-s-topic",
+    "title": "Yakka's Topic",
+    "date": "22-09-26",
+    "description": "Yakka's Topic menambahkan 128 topik acak yang sebelumnya disimpan secara pribadi. Plugin ini hanya berisi kode, tidak menggunakan ruang tekstur plugin, dan beberapa topiknya juga telah diterjemahkan ke bahasa Indonesia.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "3.54KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/2fvugz8ry2legp0/Yakka_Topics.ttplugin/file",
+          "ver": "7"
+        }
+      ],
+      "details": "/store/items/yakka-s-topic/"
+    }
+  },
+  {
+    "slug": "lighter-rains",
+    "title": "Lighter Rains",
+    "date": "22-09-26",
+    "description": "Lighter Rains adalah plugin peningkatan kenyamanan sederhana yang mengurangi opasitas hujan dalam game sebesar 25%, sehingga kota lebih mudah terlihat saat cuaca hujan.",
+    "category": "Weather and Overlay",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "12.25KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/9nxha3zlsk5tsiw/Lighter_Rain.ttplugin/file",
+          "ver": "6"
+        }
+      ],
+      "details": "/store/items/lighter-rains/"
+    }
+  },
+  {
+    "slug": "concrete-pylons",
+    "title": "Concrete Pylons",
+    "date": "22-09-26",
+    "description": "Concrete Pylons menambahkan tiang listrik utilitas berbahan beton. Biayanya lebih tinggi dibandingkan pilihan standar, tetapi memiliki radius sambungan lebih pendek dan kehilangan daya yang lebih kecil saat menghubungkan kota tetangga.",
+    "category": "Supply (Energy, Water, Waste Disposal)",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "4.36KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/n3ez4n9h8bxwqsx/Concrete_Pylons.ttplugin/file",
+          "ver": "8"
+        }
+      ],
+      "details": "/store/items/concrete-pylons/"
+    }
+  },
+  {
+    "slug": "generic-road-train",
+    "title": "Generic Road Train",
+    "date": "07-09-26",
+    "description": "Generic Road Train menambahkan berbagai truk bawaan game dengan dua trailer (bi-trailer) atau tiga trailer (tri-trailer), terinspirasi dari road train yang digunakan di Australia.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "897B",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/s8nlk7hflrzkk4p/Truck_Road_Train.ttplugin/file",
+          "ver": "11"
+        }
+      ],
+      "details": "/store/items/generic-road-train/"
+    }
+  },
+  {
+    "slug": "warehouse-and-shed-pack",
+    "title": "Warehouse & Shed pack",
+    "date": "07-09-26",
+    "description": "Warehouse & Shed Pack memperluas pilihan gudang bawaan game dengan sekitar 32 variasi bangunan yang ditingkatkan serta kurang lebih 1.400 variasi tambahan yang dibuat secara acak, dengan inspirasi dari gudang di Cities: Skylines.",
+    "category": "Industrial",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 50,
+    "platforms": [],
+    "size": "59.99KB",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/kuk4eps6evb4f91/Industrial_Warehouses.ttplugin/file",
+          "ver": "1.6"
+        }
+      ],
+      "details": "/store/items/warehouse-and-shed-pack/"
+    }
+  },
+  {
+    "slug": "bus-tram-road",
+    "title": "Bus-Tram Road",
+    "date": "07-09-26",
+    "description": "Bus-Tram Road menambahkan satu jenis jalan khusus yang dapat dilalui oleh bus maupun trem.",
+    "category": "Road",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "8.19KB",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/k2j32qoyc8dypha/Bus_Tram_Road.ttplugin/file",
+          "ver": "5"
+        }
+      ],
+      "details": "/store/items/bus-tram-road/"
+    }
+  },
+  {
+    "slug": "discord-background-old-discord-bg-color",
+    "title": "Discord Background (old discord bg color)",
+    "date": "07-09-26",
+    "description": "Discord Background menghadirkan kembali warna latar Discord versi lama sebagai opsi visual sederhana di dalam game dan menggunakan tekstur dunia bawaan game.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "970B",
+    "min_version": "Any",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/i67wnrensn4lndl/Discord_Background.ttplugin/file",
+          "ver": "9"
+        }
+      ],
+      "details": "/store/items/discord-background-old-discord-bg-color/"
+    }
+  },
+  {
+    "slug": "recycling-warehouse",
+    "title": "Recycling Warehouse",
+    "date": "07-09-26",
+    "description": "Recycling Warehouse menambahkan bangunan pengolahan limbah yang menghasilkan pendapatan bulanan. Pendapatan dan kapasitasnya meningkat secara bertahap, dengan peningkatan yang dapat dilakukan sesuai peringkat kota.",
+    "category": "Supply (Energy, Water, Waste Disposal)",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "5.7KB",
+    "min_version": "Any",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/o292iawdngc31ea/Recycling_Warehouse.ttplugin/file",
+          "ver": "10"
+        }
+      ],
+      "details": "/store/items/recycling-warehouse/"
+    }
+  },
+  {
+    "slug": "just-waves",
+    "title": "Just Waves",
+    "date": "07-09-26",
+    "description": "Just Waves menambahkan elemen dekoratif berupa ombak pantai untuk mempercantik area pesisir. Versi saat ini belum mendukung rotasi.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "2.39KB",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/2e41cdnsf9ije9f/Beach_Waves.ttplugin/file",
+          "ver": "3"
+        }
+      ],
+      "details": "/store/items/just-waves/"
+    }
+  },
+  {
+    "slug": "map-edge-pack",
+    "title": "Map Edge Pack",
+    "date": "07-09-26",
+    "description": "Map Edge Pack adalah paket dekorasi untuk membuat batas peta buatan pada peta yang sudah ada menggunakan pagar dan decal. Rilis saat ini hanya mendukung satu tingkat elevasi.",
+    "category": "Decorations",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "24.03KB",
+    "min_version": "1.12.32",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/dywkgacyv22layr/Map_Edge_Eyecandy.ttplugin/file",
+          "ver": "3"
+        }
+      ],
+      "details": "/store/items/map-edge-pack/"
+    }
+  },
+  {
+    "slug": "swiss-alps-railways",
+    "title": "Swiss Alps Railways",
+    "date": "08-08-26",
+    "description": "Swiss Alps Railways adalah plugin transportasi yang menambahkan sejumlah kereta dengan tema jalur kereta di Pegunungan Alpen Swiss.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 50,
+    "platforms": [],
+    "size": "10.31KB",
+    "min_version": "1.12.50",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/ltmiu2hes8pwwwn/Swiss_Alps_Railways.ttplugin/file",
+          "ver": "7"
+        }
+      ],
+      "details": "/store/items/swiss-alps-railways/"
+    }
+  },
+  {
+    "slug": "arrow-remover",
+    "title": "Arrow Remover",
+    "date": "08-08-26",
+    "description": "Arrow Remover menghapus tanda panah arah bawaan dari jalan satu arah, gang, dan jalur bus satu arah agar tampil lebih bersih tanpa menggunakan ruang tekstur plugin.",
+    "category": "Road",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "1.44KB",
+    "min_version": "1.11.28",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/19vmqere7iec7qv/Road_Arrow_Remover.ttplugin/file",
+          "ver": ""
+        }
+      ],
+      "details": "/store/items/arrow-remover/"
+    }
+  },
+  {
+    "slug": "just-stairs",
+    "title": "Just Stairs",
+    "date": "08-08-26",
+    "description": "Just Stairs menambahkan decal berbentuk tangga yang dapat ditempatkan pada lereng untuk membentuk anak tangga. Plugin pagar dapat digunakan sebagai pegangan, sementara rilis saat ini hanya mencakup decal bawaan game tertentu.",
+    "category": "Terrain",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "32.45KB",
+    "min_version": "1.11.00",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/j3p1m8efcuwoitq/Just_Stairs.ttplugin/file",
+          "ver": "4"
+        }
+      ],
+      "details": "/store/items/just-stairs/"
+    }
+  },
+  {
+    "slug": "invisible-intercity-connection",
+    "title": "Invisible Intercity Connection",
+    "date": "08-08-26",
+    "description": "Invisible Intercity Connection menyembunyikan tanda yang biasanya digunakan untuk menandai sambungan ke kota tetangga, sehingga sambungan tetap berfungsi tanpa penanda yang terlihat.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "581B",
+    "min_version": "1.11.03",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/8sfq5jtmg9tnlcm/Invisible_Intercity.ttplugin/file",
+          "ver": "4"
+        }
+      ],
+      "details": "/store/items/invisible-intercity-connection/"
+    }
+  },
+  {
+    "slug": "yakka-works-office",
+    "title": "Yakka Works Office",
+    "date": "08-08-26",
+    "description": "Yakka Works Office menambahkan bangunan perkantoran yang merepresentasikan Yakka Studio ke dalam kota TheoTown.",
+    "category": "Commercial",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "4.32KB",
+    "min_version": "Any",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/t1pph9f8f9lodnq/Yakka_Office.ttplugin/file",
+          "ver": "4"
+        }
+      ],
+      "details": "/store/items/yakka-works-office/"
+    }
+  },
+  {
+    "slug": "alternative-rank-name",
+    "title": "Alternative Rank Name",
+    "date": "08-08-26",
+    "description": "Alternative Rank Name mengubah nama yang ditampilkan untuk tingkatan peringkat kota di dalam game.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "1.25KB",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/dctecmqc51zo9vb/Alternative_Rank_Names.ttplugin/file",
+          "ver": "9"
+        }
+      ],
+      "details": "/store/items/alternative-rank-name/"
+    }
+  },
+  {
+    "slug": "tractor-road-train",
+    "title": "Tractor Road Train",
+    "date": "08-08-26",
+    "description": "Tractor Road Train menambahkan traktor yang menarik beberapa trailer menggunakan tekstur bawaan game. Kendaraan panjang ini juga dapat menambah kepadatan lalu lintas di kota.",
+    "category": "Transport",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "829B",
+    "min_version": "1.9.85",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/vz24ms5cld8287q/Tractors_Road_Train.ttplugin/file",
+          "ver": "7"
+        }
+      ],
+      "details": "/store/items/tractor-road-train/"
+    }
+  },
+  {
+    "slug": "actual-map-sizes",
+    "title": "Actual Map Sizes",
+    "date": null,
+    "description": "Actual Map Sizes mengganti label ukuran peta yang disingkat dengan informasi yang lebih berguna tentang dimensi tile dan nilai ukuran region dari perintah konsol `cr`, sambil tetap mempertahankan label ukuran XS–3XL.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "611B",
+    "min_version": "1.12.55",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/1mcl5bq6jvs59sx/True_City_Size.ttplugin/file",
+          "ver": "1p"
+        }
+      ],
+      "details": "/store/items/actual-map-sizes/"
+    }
+  },
+  {
+    "slug": "pastel-ui-legacy",
+    "title": "Pastel UI (Legacy)",
+    "date": null,
+    "description": "Pastel UI (Legacy) mengubah tekstur antarmuka game dengan gaya terinspirasi Material Design dan Material You. Warnanya dipilih dari palet yang tersedia di dalam game, bukan berubah secara dinamis.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 100,
+    "platforms": [],
+    "size": "6.28KB",
+    "min_version": "1.12.55",
+    "status": "legacy",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1p"
+        }
+      ],
+      "details": "/store/items/pastel-ui-legacy/"
+    }
+  },
+  {
+    "slug": "pedestrian-expansions",
+    "title": "Pedestrian Expansions",
+    "date": null,
+    "description": "Pedestrian Expansions menambah variasi pejalan kaki yang menggunakan trotoar, membuat kota terasa lebih hidup melalui karakter yang menjadi bagian dari sistem berjalan sebenarnya, bukan sekadar objek dekorasi statis.",
+    "category": "Packs",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "1.59KB",
+    "min_version": "1.10.30",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1p"
+        }
+      ],
+      "details": "/store/items/pedestrian-expansions/"
+    }
+  },
+  {
+    "slug": "nord-ui-legacy-formerly-clean-ui",
+    "title": "Nord UI (Legacy) (Formerly Clean UI)",
+    "date": null,
+    "description": "Nord UI (Legacy), yang sebelumnya bernama Clean UI, mengubah tekstur antarmuka game untuk menghadirkan tampilan minimalis modern yang terinspirasi dari antarmuka Cities: Skylines II.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 40,
+    "platforms": [],
+    "size": "5.35KB",
+    "min_version": "1.10.20",
+    "status": "legacy",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "2p"
+        }
+      ],
+      "details": "/store/items/nord-ui-legacy-formerly-clean-ui/"
+    }
+  },
+  {
+    "slug": "board-ui-legacy-formerly-oriental-ui",
+    "title": "Board UI (legacy) (formerly Oriental UI)",
+    "date": null,
+    "description": "Board UI (Legacy), yang sebelumnya bernama Oriental UI, mengubah tekstur antarmuka game ke gaya bernuansa abad pertengahan sehingga menu TheoTown terasa lebih seperti antarmuka permainan role-playing.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "4.78KB",
+    "min_version": "1.11.80",
+    "status": "legacy",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1.2p"
+        }
+      ],
+      "details": "/store/items/board-ui-legacy-formerly-oriental-ui/"
+    }
+  },
+  {
+    "slug": "retaining-walls",
+    "title": "Retaining Walls",
+    "date": null,
+    "description": "Retaining Walls menambahkan kumpulan decal untuk membangun dinding penahan tanah bergaya Jepang atau Swiss di lereng, dengan pilihan pola kisi dan garis.",
+    "category": "Decorations",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "16.21KB",
+    "min_version": "1.11.28",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://yakkaid.itch.io/",
+          "ver": "1.1p"
+        }
+      ],
+      "details": "/store/items/retaining-walls/"
+    }
+  },
+  {
+    "slug": "prufer-s-tears",
+    "title": "Prufer's Tears",
+    "date": null,
+    "description": "Prufer's Tears adalah monumen peringatan buatan penggemar yang terinspirasi dari Schwi Dola dalam *No Game No Life*. Peningkatan monumen ini memberikan pendapatan bulanan sebesar 250T.",
+    "category": "Award and Special",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "2.44KB",
+    "min_version": "1.11.05",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/mcqm3gq8jnwhla0/Prutfer%2527s_Tears.ttplugin/file",
+          "ver": "1p"
+        }
+      ],
+      "details": "/store/items/prufer-s-tears/"
+    }
+  },
+  {
+    "slug": "bordered-intercity-connection",
+    "title": "Bordered intercity connection",
+    "date": null,
+    "description": "Bordered Intercity Connection mengubah penanda sambungan jalan ke kota tetangga menjadi garis marka pada permukaan jalan.",
+    "category": "Other",
+    "type": "plugin",
+    "thumbnail": "/assets/img/cover.jpg",
+    "price_diamonds": 30,
+    "platforms": [],
+    "size": "952B",
+    "min_version": "Any",
+    "status": "active",
     "urls": {
       "download": [],
-      "details": "/store/items/theotown-plugin-preset-example/"
+      "details": "/store/items/bordered-intercity-connection/"
     }
   }
 ]
