@@ -3,7 +3,7 @@ title: "Generic Road Train"
 date: 21-11-26
 ---
 
-![Generic Road Train preview](/webdata/img/generic-road-train.jpg)
+![Generic Road Train preview](../../../webdata/img/generic-road-train.jpg)
 
 # Generic Road Train
 

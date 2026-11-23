@@ -3,7 +3,7 @@ title: "Indonesia Transport Pack (Deprecated)"
 date: 21-11-26
 ---
 
-![Indonesia Transport Pack (Deprecated) preview](/webdata/img/indonesia-transport-pack.jpg)
+![Indonesia Transport Pack (Deprecated) preview](../../../webdata/img/indonesia-transport-pack.jpg)
 
 # Indonesia Transport Pack (Deprecated)
 

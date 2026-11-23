@@ -3,7 +3,7 @@ title: "Frutiger UI"
 date: 21-11-26
 ---
 
-![Frutiger UI preview](/webdata/img/frutiger-aero-ui.jpg)
+![Frutiger UI preview](../../../webdata/img/frutiger-aero-ui.jpg)
 
 # Frutiger UI
 
