@@ -3,7 +3,7 @@ title: "Mocca UI"
 date: 21-11-26
 ---
 
-![Mocca UI preview](/webdata/img/mocca-ui.jpg)
+![Mocca UI preview](../../../webdata/img/mocca-ui.jpg)
 
 # Mocca UI
 

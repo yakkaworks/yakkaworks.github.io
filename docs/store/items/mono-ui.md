@@ -3,7 +3,7 @@ title: "Mono UI"
 date: 21-11-26
 ---
 
-![Mono UI preview](/webdata/img/mono-ui.jpg)
+![Mono UI preview](../../../webdata/img/mono-ui.jpg)
 
 # Mono UI
 
