@@ -54,17 +54,25 @@
       /requirements|persyaratan/i.test(element.textContent)
     );
     if (!heading) return;
+
+    const tables = [];
     let node = heading.nextElementSibling;
     while (node && node.tagName !== "H2") {
-      if (node.matches("table")) {
-        node.querySelectorAll("tr").forEach((row) => {
-          const firstCell = row.querySelector("th, td");
-          if (firstCell && /platform/i.test(firstCell.textContent.trim())) row.remove();
-        });
-        if (!node.querySelector("tbody tr, tr")) node.remove();
-      }
+      if (node.matches("table")) tables.push(node);
+      tables.push(...node.querySelectorAll("table"));
       node = node.nextElementSibling;
     }
+
+    tables.forEach((table) => {
+      table.querySelectorAll("tr").forEach((row) => {
+        const firstCell = row.querySelector("th, td");
+        if (firstCell && /platform/i.test(firstCell.textContent.trim())) row.remove();
+      });
+      if (!table.querySelector("tr")) {
+        const wrapper = table.closest(".md-typeset__table, .md-typeset__scrollwrap");
+        (wrapper || table).remove();
+      }
+    });
   };
 
   const addRuleAfter = (element) => {
