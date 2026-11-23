@@ -118,6 +118,7 @@
     actions.className = "yw-content-card__actions";
     if (latest) {
       const download = document.createElement("a");
+      download.className = "yw-button yw-button--primary";
       download.href = resolveUrl(latest.url);
       download.textContent = isEnglish ? "Download Latest" : "Unduh Terbaru";
       if (/^https?:\/\//i.test(download.href)) {
@@ -135,6 +136,7 @@
         actions.append(separator);
       }
       const details = document.createElement("a");
+      details.className = "yw-button yw-button--outline";
       details.href = detailsUrl;
       details.textContent = isEnglish ? "Details" : "Detail";
       actions.append(details);
