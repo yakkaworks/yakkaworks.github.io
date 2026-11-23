@@ -29,6 +29,6 @@ As of **2026-11-23**: Yakka Works is rebuilding its site with MkDocs Material on
 - Work on `y2k-dev` only; do not merge or deploy to `mkdocs-site-live` unless the owner explicitly asks.
 - Keep the current three-row header, custom navigation, document frame/signature and footer. Desktop shared width is 900px; mobile uses a 0.5rem gutter.
 - Preserve brand green `#4d8b31`, CTA orange `#ff8427`, local Body/Header/Display fonts, Material search, and current i18n configuration.
-- Every published Markdown page needs `date: dd-mm-yy` front matter. Shared image links must be site-root-relative (for example, `/assets/img/cover.jpg`) so English and nested routes resolve.
+- Every published Markdown page needs `date: dd-mm-yy` front matter. Internal asset links must be page-relative, with the `../` depth calculated from each page's published URL (for example, `../assets/img/cover.jpg` from `/en/store/` and `../../../assets/img/cover.jpg` from `/en/store/items/example/`). Avoid `/assets/...` root-relative asset URLs on English pages.
 - Keep content ordering in `.pages` files; `/store/items/*.md` remains excluded from navigation and is reached through the store content cards.
 - Legal pages remain drafts. Do not add unnecessary dependencies or change deployment workflows.
