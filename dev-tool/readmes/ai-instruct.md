@@ -67,10 +67,11 @@ Maintain `dev-tool/readmes/ai-context-bank.md` as a compact current-state handof
 
 ## Markdown image paths and bilingual routes
 
-- For shared site artwork copied to `site/assets/img/`, use **site-root-relative** URLs such as `/assets/img/banner-tools.jpg` in Markdown and HTML. Do not use page-relative forms such as `assets/img/...`, `./assets/img/...`, or `../assets/img/...` for shared assets.
-- This applies to every Indonesian and English page, including nested routes such as `/en/store/items/...`. Page-relative paths resolve against the current URL and can silently point into the locale or nested directory.
-- Do not describe `/assets/img/...` as a filesystem path; it is a URL rooted at the published site. Keep the source asset mapping/extraction in `hooks/site_assets.py` unchanged unless the asset itself needs adding.
-- When adding or editing image references, inspect all affected language variants and verify the generated URL resolves from the actual page route. A successful strict build alone does not verify that the image file exists at the requested URL.
+- Use **page-relative URLs** for internal assets in Markdown and HTML, including shared artwork copied to `site/assets/img/`. Do not use site-root-relative URLs such as `/assets/img/banner-tools.jpg`; these can fail to load on English routes.
+- Calculate the relative path from each page's published URL to the asset directory. For example, a page at `/en/store/` uses `../assets/img/example.jpg`, while a nested page at `/en/store/items/example/` uses `../../../assets/img/example.jpg`. Do not assume one relative prefix works for every route depth.
+- Apply the same rule to other internal asset directories, such as `webdata/img/`; keep external URLs unchanged.
+- Keep the source asset mapping/extraction in `hooks/site_assets.py` unchanged unless the asset itself needs adding.
+- When adding or editing image references, inspect all affected language variants and verify the generated URL resolves from each actual page route. A successful strict build alone does not verify that the image file exists at the requested URL.
 
 ## Communication style
 
