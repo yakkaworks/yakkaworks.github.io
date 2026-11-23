@@ -5,20 +5,10 @@ description: Plugin TheoTown, peta, preset, dan konten digital Yakka Works.
 ---
 
 <div class="yw-hero-banner"><img src="../assets/img/banner-store.jpg" alt="Banner toko Yakka Works"></div>
-
-# Toko
-
-Jelajahi berbagai plugin, peta, preset, dan konten digital dari Yakka Works.
-
-## Akses cepat
-
 <div class="yw-nav-grid yw-nav-grid--two">
   <a class="yw-nav-card" href="#plugin-presets"><img src="../assets/img/icon-plugin.png" alt=""><span>Preset Plugin TheoTown</span></a>
   <a class="yw-nav-card" href="web-exclusive/"><img src="../assets/img/icon-webexclusive.png" alt=""><span>Plugin Eksklusif Web</span></a>
 </div>
-
-## Kategori
-
 <div class="yw-nav-grid yw-nav-grid--four">
   <a class="yw-nav-card" href="#theotown-plugins"><img src="../assets/img/icon-plugin.png" alt=""><span>Plugin TheoTown</span></a>
   <a class="yw-nav-card" href="#theotown-maps"><img src="../assets/img/icon-map.png" alt=""><span>Peta TheoTown</span></a>
