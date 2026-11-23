@@ -153,4 +153,4 @@ Rules:
 - Keep category icons crisp with `image-rendering: pixelated` on `.yw-nav-card img`; do not apply that to photographic banners or card thumbnails.
 - Use `content-cards-placeholders.jpg` for example article/content thumbnails. The content-grid renderer uses it when a JSON item has no thumbnail or its image fails to load.
 - Individual TheoTown plugin thumbnails/previews are a separate asset set: copy only verified matching image files from `mkdocs-site`'s `docs/webdata/img/` into `webdata/img/`. Keep their original filenames; update both localized detail-page lead images and both JSON catalogue `thumbnail` values to the same `/webdata/img/<filename>` URL. Do not copy general site artwork or unrelated content from that branch.
-- Shared image references in Markdown must remain site-root-relative (for example, `/assets/img/cover.jpg`) so nested and English routes resolve correctly.
+- Internal image references in Markdown must be page-relative, with the `../` depth calculated from each page's published URL. Do not use `/assets/...` root-relative asset URLs; verify the relative path separately for every language variant and route depth.
