@@ -3,7 +3,7 @@ title: "Pastel UI (Legacy)"
 date: 21-11-26
 ---
 
-![Pastel UI (Legacy) preview](/webdata/img/pastel-ui-legacy.jpg)
+![Pastel UI (Legacy) preview](../../../webdata/img/pastel-ui-legacy.jpg)
 
 # Pastel UI (Legacy)
 

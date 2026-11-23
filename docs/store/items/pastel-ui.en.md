@@ -3,7 +3,7 @@ title: "Pastel UI"
 date: 21-11-26
 ---
 
-![Pastel UI preview](/webdata/img/pastel-ui.jpg)
+![Pastel UI preview](../../../../webdata/img/pastel-ui.jpg)
 
 # Pastel UI
 

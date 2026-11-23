@@ -3,7 +3,7 @@ title: "Recycling Warehouse"
 date: 21-11-26
 ---
 
-![Recycling Warehouse preview](/webdata/img/recycling-warehouse.jpg)
+![Recycling Warehouse preview](../../../../webdata/img/recycling-warehouse.jpg)
 
 # Recycling Warehouse
 

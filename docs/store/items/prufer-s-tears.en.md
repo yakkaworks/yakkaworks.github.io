@@ -3,7 +3,7 @@ title: "Prufer's Tears"
 date: 21-11-26
 ---
 
-![Prufer's Tears preview](/webdata/img/prufers-tears.jpg)
+![Prufer's Tears preview](../../../../webdata/img/prufers-tears.jpg)
 
 # Prufer's Tears
 
