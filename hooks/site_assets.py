@@ -1,5 +1,6 @@
 """Copy tracked artwork and the JSON catalog into the completed MkDocs site."""
 from pathlib import Path
+import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,3 +50,23 @@ def on_post_build(config, **kwargs):
         if target.exists():
             shutil.rmtree(target)
         shutil.copytree(source, target)
+
+# Keep source Markdown page-relative while allowing MkDocs' source-tree link
+# validator to recognize shared images stored outside docs/. The rendered HTML
+# is converted back to a route-relative URL after the page has been rendered.
+def on_page_markdown(markdown, **kwargs):
+    return re.sub(
+        r'(["\'(])(?:\.\./)+webdata/img/',
+        r'\1/webdata/img/',
+        markdown,
+    )
+
+
+def on_post_page(output, page, **kwargs):
+    depth = len([part for part in page.url.strip("/").split("/") if part])
+    relative = "../" * depth + "webdata/img/"
+    return re.sub(
+        r'(["\'(])/webdata/img/',
+        lambda match: match.group(1) + relative,
+        output,
+    )
