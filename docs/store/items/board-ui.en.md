@@ -3,7 +3,7 @@ title: "Board UI"
 date: 21-11-26
 ---
 
-![Board UI preview](/webdata/img/boards-ui.jpg)
+![Board UI preview](../../../../webdata/img/boards-ui.jpg)
 
 # Board UI
 

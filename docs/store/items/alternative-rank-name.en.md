@@ -3,7 +3,7 @@ title: "Alternative Rank Name"
 date: 21-11-26
 ---
 
-![Alternative Rank Name preview](/webdata/img/alternative-rank-names.jpg)
+![Alternative Rank Name preview](../../../../webdata/img/alternative-rank-names.jpg)
 
 # Alternative Rank Name
 
