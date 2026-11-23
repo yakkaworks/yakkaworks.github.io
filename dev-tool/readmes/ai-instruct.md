@@ -9,7 +9,8 @@ Before making changes, read:
 1. The root `README.md` for the project map and branch workflow.
 2. `dev-tool/readmes/for-yakka.md` for the maintainer's preferred practical workflow.
 3. `dev-tool/readmes/ai-context-bank.md` for the latest shared project state.
-4. The relevant source files and the current Git branch before editing.
+4. `dev-tool/readmes/content-layout.md` for content-card and detail-page authoring rules.
+5. The relevant source files and the current Git branch before editing.
 
 Treat the repository files as the source of truth. Do not assume the previous conversation or an old summary reflects the current branch state.
 

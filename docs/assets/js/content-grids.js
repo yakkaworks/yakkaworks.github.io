@@ -6,7 +6,8 @@
     kustom: "data_kustom.json",
     misc: "data_mcb.json",
     library: "data_library.json",
-    blogs: "data_blogs.json"
+    blogs: "data_blogs.json",
+    tools: "data_tools.json"
   };
   const cache = new Map();
 
@@ -56,27 +57,34 @@
     return "/" + url.replace(/^\.\//, "");
   }
 
-  function localAsset(value) {
-    return resolveUrl(value) || "/assets/img/content-cards-placeholders.jpg";
+  function fallbackAsset(item, kind) {
+    if (kind === "library") {
+      const category = categories(item);
+      if (/plugin/.test(category)) return "/assets/img/icon-plugin.png";
+      if (/kustom/.test(category)) return "/assets/img/icon-kustom.png";
+      if (/misc|other|lainnya/.test(category)) return "/assets/img/icon-misc.png";
+      return "/assets/img/icon-tut.png";
+    }
+    if (kind === "blogs" || kind === "tools") return "/assets/img/icon-misc.png";
+    return "/assets/img/content-cards-placeholders.jpg";
   }
 
-  // Keep JSON dates available for chronological sorting only.
   function parseDate(value) {
     const [day, month, year] = text(value).split("-").map(Number);
     if (!day || !month || !year) return 0;
     return new Date(year < 100 ? 2000 + year : year, month - 1, day).getTime();
   }
 
-  function makeCard(item, kind) {
+  function makeStoreCard(item, kind) {
     const urls = item.urls || {};
-    const articleUrl = kind === "library" || kind === "blogs" ? resolveUrl(urls.Article || urls.article) : "";
-    const card = document.createElement(articleUrl ? "a" : "article");
-    card.className = "yw-content-card" + (articleUrl ? " yw-content-card--linked" : "");
-    if (articleUrl) card.href = articleUrl;
+    const downloads = Array.isArray(urls.download) ? urls.download : [];
+    const latest = downloads.find((entry) => entry && text(entry.url)) || null;
+    const card = document.createElement("article");
+    card.className = "yw-content-card";
 
     const thumb = document.createElement("img");
     thumb.className = "yw-content-card__thumb";
-    thumb.src = localAsset(item.thumbnail);
+    thumb.src = resolveUrl(item.thumbnail) || fallbackAsset(item, kind);
     thumb.alt = "";
     thumb.loading = "lazy";
     thumb.onerror = () => { thumb.src = "/assets/img/content-cards-placeholders.jpg"; };
@@ -84,76 +92,142 @@
 
     const body = document.createElement("div");
     body.className = "yw-content-card__body";
+
     const title = document.createElement("h3");
     title.className = "yw-content-card__title";
     title.textContent = text(item.title) || "Untitled";
     body.append(title);
 
-    const description = text(item.description || item.desc);
-    if (description) {
-      const summary = document.createElement("p");
-      summary.className = "yw-content-card__description";
-      summary.textContent = description;
-      body.append(summary);
-    }
-
-    const downloads = Array.isArray(urls.download) ? urls.download : [];
-    const latest = downloads.find((entry) => entry && text(entry.url)) || null;
-    const meta = document.createElement("p");
-    meta.className = "yw-content-card__meta";
     const version = latest ? text(latest.ver) : "";
-    // Content dates stay in JSON for sorting/metadata; publication dates belong in Markdown front matter.
-    meta.textContent = version ? "v" + version : "";
-    if (meta.textContent) body.append(meta);
-
-    // Library and blog cards navigate as a whole; store cards retain explicit actions.
-    if (kind !== "library" && kind !== "blogs") {
-      const actions = document.createElement("div");
-      actions.className = "yw-content-card__actions";
-      if (latest) {
-        const button = document.createElement("a");
-        button.className = "yw-button yw-button--primary";
-        button.href = resolveUrl(latest.url);
-        button.textContent = isEnglish ? "Download Latest" : "Unduh Terbaru";
-        if (/^https?:\/\//i.test(button.href)) { button.target = "_blank"; button.rel = "noopener noreferrer"; }
-        actions.append(button);
-      }
-      const details = resolveUrl(urls.details);
-      if (details) {
-        const button = document.createElement("a");
-        button.className = "yw-button yw-button--outline";
-        button.href = details;
-        button.textContent = isEnglish ? "Details" : "Detail";
-        actions.append(button);
-      }
-      if (actions.childElementCount) body.append(actions);
+    const date = text(item.date);
+    const metaParts = [];
+    if (version) metaParts.push((isEnglish ? "v" : "v") + version);
+    if (date) metaParts.push(date);
+    if (metaParts.length) {
+      const meta = document.createElement("p");
+      meta.className = "yw-content-card__meta";
+      meta.textContent = metaParts.join(" · ");
+      body.append(meta);
     }
+
+    const divider = document.createElement("hr");
+    divider.className = "yw-content-card__divider";
+    body.append(divider);
+
+    const actions = document.createElement("div");
+    actions.className = "yw-content-card__actions";
+    if (latest) {
+      const download = document.createElement("a");
+      download.href = resolveUrl(latest.url);
+      download.textContent = isEnglish ? "Download Latest" : "Unduh Terbaru";
+      if (/^https?:\/\//i.test(download.href)) {
+        download.target = "_blank";
+        download.rel = "noopener noreferrer";
+      }
+      actions.append(download);
+    }
+    const detailsUrl = resolveUrl(urls.details);
+    if (detailsUrl) {
+      if (actions.childElementCount) {
+        const separator = document.createElement("span");
+        separator.className = "yw-content-card__separator";
+        separator.textContent = "·";
+        actions.append(separator);
+      }
+      const details = document.createElement("a");
+      details.href = detailsUrl;
+      details.textContent = isEnglish ? "Details" : "Detail";
+      actions.append(details);
+    }
+    if (actions.childElementCount) body.append(actions);
 
     card.append(body);
     return card;
   }
 
-  async function render(grid) {
-    const type = grid.dataset.ywGrid;
-    const filter = grid.dataset.ywFilter || "";
-    const limit = grid.dataset.ywLimit || "all";
+  function makeListItem(item, kind) {
+    const urls = item.urls || {};
+    const articleUrl = resolveUrl(urls.Article || urls.article);
+    const itemElement = document.createElement(articleUrl ? "a" : "article");
+    itemElement.className = "yw-content-list__item";
+    if (articleUrl) itemElement.href = articleUrl;
+
+    const image = document.createElement("img");
+    image.className = "yw-content-list__thumb";
+    const suppliedThumbnail = resolveUrl(item.thumbnail);
+    image.src = suppliedThumbnail || fallbackAsset(item, kind);
+    if (!suppliedThumbnail) image.classList.add("yw-content-list__thumb--icon");
+    image.alt = "";
+    image.loading = "lazy";
+    image.onerror = () => {
+      image.src = "/assets/img/icon-misc.png";
+      image.classList.add("yw-content-list__thumb--icon");
+    };
+    itemElement.append(image);
+
+    const body = document.createElement("div");
+    body.className = "yw-content-list__body";
+
+    const title = document.createElement("h3");
+    title.className = "yw-content-list__title";
+    title.textContent = text(item.title) || "Untitled";
+    body.append(title);
+
+    if (text(item.date)) {
+      const date = document.createElement("time");
+      date.className = "yw-content-list__date";
+      date.textContent = text(item.date);
+      body.append(date);
+    }
+
+    const description = text(item.description || item.desc);
+    if (description) {
+      const summary = document.createElement("p");
+      summary.className = "yw-content-list__description";
+      summary.textContent = description;
+      body.append(summary);
+    }
+
+    itemElement.append(body);
+    return itemElement;
+  }
+
+  async function render(container) {
+    const type = container.dataset.ywGrid;
+    const filter = container.dataset.ywFilter || "";
+    const limit = container.dataset.ywLimit || "all";
+    const listStyle = type === "library" || type === "tools" || type === "blogs";
+
+    if (listStyle) {
+      container.classList.remove("yw-content-grid");
+      container.classList.add("yw-content-list");
+    }
+
     try {
       const items = await load(type);
       let selected = items.filter((item) => matches(item, filter, type));
       selected.sort((a, b) => parseDate(b.date) - parseDate(a.date));
-      const offset = Number(grid.dataset.ywOffset) || 0;
+      const offset = Number(container.dataset.ywOffset) || 0;
       if (offset) selected = selected.slice(offset);
       if (limit !== "all") selected = selected.slice(0, Number(limit) || 5);
+
       if (!selected.length) {
-        grid.classList.add("yw-content-grid--empty");
-        grid.textContent = isEnglish ? "Content for this category will be added here." : "Konten untuk kategori ini akan ditambahkan.";
+        container.classList.add("yw-content-grid--empty");
+        container.textContent = isEnglish
+          ? "Content for this category will be added here."
+          : "Konten untuk kategori ini akan ditambahkan.";
         return;
       }
-      selected.forEach((item) => grid.append(makeCard(item, type)));
+
+      selected.forEach((item) => {
+        container.append(listStyle ? makeListItem(item, type) : makeStoreCard(item, type));
+      });
     } catch (error) {
-      grid.classList.add("yw-content-grid--empty");
-      grid.textContent = isEnglish ? "Content could not be loaded yet. Please try again later." : "Konten belum dapat dimuat. Silakan coba lagi nanti.";
-      console.warn("[Yakka Works] Content grid:", error);
+      container.classList.add("yw-content-grid--empty");
+      container.textContent = isEnglish
+        ? "Content could not be loaded yet. Please try again later."
+        : "Konten belum dapat dimuat. Silakan coba lagi nanti.";
+      console.warn("[Yakka Works] Content list:", error);
     }
   }
 

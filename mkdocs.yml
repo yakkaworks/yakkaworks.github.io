@@ -134,6 +134,7 @@ extra_javascript:
   - assets/js/y2k-clock.js
   - assets/js/blog-layout-cleanup.js
   - assets/js/content-grids.js
+  - assets/js/content-details.js
 
 extra:
   generator: false
