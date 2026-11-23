@@ -59,7 +59,7 @@
       if (node.matches("table")) {
         node.querySelectorAll("tr").forEach((row) => {
           const firstCell = row.querySelector("th, td");
-          if (firstCell && /^platforms?$/i.test(firstCell.textContent.trim())) row.remove();
+          if (firstCell && /platform/i.test(firstCell.textContent.trim())) row.remove();
         });
         if (!node.querySelector("tbody tr, tr")) node.remove();
       }
