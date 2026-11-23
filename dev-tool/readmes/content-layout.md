@@ -7,7 +7,7 @@ This document defines the content presentation rules for Yakka Works. It is inte
 - Keep Indonesian and English pages paired, using the existing `.en.md` suffix convention.
 - Preserve each page's existing slug, public URL, front matter, source metadata, and relevant external links.
 - Use a semi-formal, neutral tone. Avoid first-person wording such as "I", "I'm", "we", or "our".
-- Keep shared image URLs site-root-relative, for example `/assets/img/example.jpg`.
+- Use page-relative URLs for internal asset references (images, files, and other resources), not site-root-relative URLs. Calculate the required `../` segments from the page's published URL depth; for example, a page at `/en/store/` uses `../assets/img/example.jpg`, while `/en/store/items/example/` uses `../../../assets/img/example.jpg`.
 - Every published Markdown page must retain a `date: dd-mm-yy` front-matter value. This is the page publication date, not necessarily the product release date.
 - Do not invent versions, release dates, requirements, credits, download URLs, or other missing metadata.
 - Descriptions on Store detail pages must be one complete paragraph. Keep notices, warnings, compatibility notes, and other non-description information separate.
