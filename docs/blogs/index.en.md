@@ -6,10 +6,6 @@ description: Yakka Works announcements, development logs, and community updates.
 
 <div class="yw-hero-banner"><img src="/assets/img/banner-blogs.jpg" alt="Yakka Works blog banner"></div>
 
-# Blog
-
-Updates, development notes, and community news from Yakka Works.
-
 ## Site Announcements
 
 <div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="announcements" data-yw-limit="5"></div>
