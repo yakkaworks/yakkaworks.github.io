@@ -3,7 +3,7 @@ title: "Retaining Walls"
 date: 21-11-26
 ---
 
-![Retaining Walls preview](/webdata/img/retaining-walls.jpg)
+![Retaining Walls preview](../../../../webdata/img/retaining-walls.jpg)
 
 # Retaining Walls
 

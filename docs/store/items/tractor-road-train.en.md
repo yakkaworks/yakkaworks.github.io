@@ -3,7 +3,7 @@ title: "Tractor Road Train"
 date: 21-11-26
 ---
 
-![Tractor Road Train preview](/webdata/img/tractor-road-train.jpg)
+![Tractor Road Train preview](../../../../webdata/img/tractor-road-train.jpg)
 
 # Tractor Road Train
 
