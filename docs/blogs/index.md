@@ -6,10 +6,6 @@ description: Pengumuman, catatan pengembangan, dan kabar komunitas Yakka Works.
 
 <div class="yw-hero-banner"><img src="../assets/img/banner-blogs.jpg" alt="Banner blog Yakka Works"></div>
 
-# Blog
-
-Pembaruan, catatan pengembangan, dan informasi komunitas dari Yakka Works.
-
 ## Pengumuman Situs
 
 <div class="yw-content-grid" data-yw-grid="blogs" data-yw-filter="announcements" data-yw-limit="5"></div>
