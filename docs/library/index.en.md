@@ -4,7 +4,7 @@ date: 21-10-26
 description: TheoTown, Kustom, and miscellaneous guides and tutorials.
 ---
 
-<div class="yw-hero-banner"><img src="../assets/img/banner-library.jpg" alt="Yakka Works library banner"></div>
+<div class="yw-hero-banner"><img src="../../assets/img/banner-library.jpg" alt="Yakka Works library banner"></div>
 <div class="yw-nav-grid yw-nav-grid--two-fixed">
   <a class="yw-nav-card" href="#tutorial-umum-theotown"><img src="../../assets/img/icon-tut.png" alt=""><span>General TheoTown Tutorials</span></a>
   <a class="yw-nav-card" href="#tutorial-plugin-theotown"><img src="../../assets/img/icon-plugin.png" alt=""><span>TheoTown Plugin-making Tutorials</span></a>
