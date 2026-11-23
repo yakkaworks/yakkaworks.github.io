@@ -37,6 +37,36 @@
     title.before(image);
   }
 
+  const mergeIntroDescription = (start, end) => {
+    const nodes = [];
+    for (let node = start; node && node !== end; node = node.nextElementSibling) {
+      if (node.tagName === "P" && node.textContent.trim()) nodes.push(node);
+    }
+    if (nodes.length < 2) return;
+    const first = nodes[0];
+    first.textContent = nodes.map((node) => node.textContent.trim()).join(" ");
+    nodes.slice(1).forEach((node) => node.remove());
+    first.classList.add("yw-detail__description");
+  };
+
+  const removePlatformRequirementRows = () => {
+    const heading = [...content.querySelectorAll("h2")].find((element) =>
+      /requirements|persyaratan/i.test(element.textContent)
+    );
+    if (!heading) return;
+    let node = heading.nextElementSibling;
+    while (node && node.tagName !== "H2") {
+      if (node.matches("table")) {
+        node.querySelectorAll("tr").forEach((row) => {
+          const firstCell = row.querySelector("th, td");
+          if (firstCell && /^platforms?$/i.test(firstCell.textContent.trim())) row.remove();
+        });
+        if (!node.querySelector("tbody tr, tr")) node.remove();
+      }
+      node = node.nextElementSibling;
+    }
+  };
+
   const addRuleAfter = (element) => {
     if (!element || element.nextElementSibling?.tagName === "HR") return;
     const rule = document.createElement("hr");
@@ -113,10 +143,8 @@
 
       const top = [...content.children];
       const metaIndex = top.indexOf(meta);
-      const nextHeading = top.findIndex((element, index) => index > metaIndex && element.tagName === "H2");
-      const topEnd = nextHeading < 0 ? top.length : nextHeading;
-      const description = top.slice(metaIndex + 1, topEnd).filter((element) => element.tagName === "P").at(-1);
-      description?.classList.add("yw-detail__description");
+      const nextHeading = top.find((element, index) => index > metaIndex && element.tagName === "H2");
+      mergeIntroDescription(meta.nextElementSibling, nextHeading || null);
     }
 
     content.querySelectorAll("h2").forEach((heading) => {
@@ -130,6 +158,7 @@
       /requirements|persyaratan/i.test(heading.textContent)
     );
     if (requirements) {
+      removePlatformRequirementRows();
       const previous = requirements.previousElementSibling;
       if (previous?.tagName !== "HR") {
         const rule = document.createElement("hr");
