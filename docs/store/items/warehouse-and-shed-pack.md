@@ -3,7 +3,7 @@ title: "Warehouse & Shed pack"
 date: 21-11-26
 ---
 
-![Warehouse & Shed pack preview](/webdata/img/warehouse-shed-pack.jpg)
+![Warehouse & Shed pack preview](../../../webdata/img/warehouse-shed-pack.jpg)
 
 # Warehouse & Shed pack
 
