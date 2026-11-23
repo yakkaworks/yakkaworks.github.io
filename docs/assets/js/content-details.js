@@ -75,6 +75,68 @@
     });
   };
 
+  const formatDownloadLinks = () => {
+    const heading = [...content.querySelectorAll("h2")].find((element) =>
+      /^(downloads|unduhan)$/i.test(element.textContent.trim())
+    );
+    if (!heading) return;
+
+    let section = heading.nextElementSibling;
+    while (section && section.tagName !== "H2") {
+      section.querySelectorAll("li").forEach((item) => {
+        const link = item.querySelector("a[href]");
+        if (!link) return;
+
+        let url;
+        try {
+          url = new URL(link.href, window.location.href);
+        } catch {
+          return;
+        }
+
+        const segments = url.pathname.split("/").filter(Boolean);
+        const filenameSegment = [...segments].reverse().find((segment) =>
+          !/^(file|download|view)$/i.test(segment)
+        );
+        let filename = "";
+        if (filenameSegment) {
+          try {
+            filename = decodeURIComponent(filenameSegment);
+          } catch {
+            filename = filenameSegment;
+          }
+        }
+        if (!filename || !/\.[a-z0-9]{1,10}$/i.test(filename)) {
+          filename = link.textContent.trim();
+        }
+
+        const host = url.hostname.replace(/^www\./i, "").toLowerCase();
+        const sourceNames = {
+          "mediafire.com": "MediaFire",
+          "drive.google.com": "Google Drive",
+          "docs.google.com": "Google Drive",
+          "dropbox.com": "Dropbox",
+          "github.com": "GitHub",
+          "mega.nz": "MEGA",
+          "pixeldrain.com": "Pixeldrain"
+        };
+        const source = sourceNames[host] || host.split(".")[0]
+          .replace(/[-_]/g, " ")
+          .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+        const versionMatch = item.textContent.match(/[—–-]\s*(?:(?:versi|version|v)\s*)?(.+)$/i);
+        const version = versionMatch ? versionMatch[1].trim() : "";
+        link.textContent = \`[\${source}] \${filename}\`;
+
+        [...item.childNodes].forEach((node) => {
+          if (node !== link && node.nodeType === Node.TEXT_NODE) node.remove();
+        });
+        if (version) item.append(document.createTextNode(\` - \${version}\`));
+      });
+      section = section.nextElementSibling;
+    }
+  };
+
   const addRuleAfter = (element) => {
     if (!element || element.nextElementSibling?.tagName === "HR") return;
     const rule = document.createElement("hr");
@@ -161,6 +223,8 @@
       if (/^downloadables?$/.test(label)) heading.textContent = isEnglish ? "Downloads" : "Unduhan";
       if (/^credits\s*&\s*links$/.test(label)) heading.textContent = isEnglish ? "Credits & Links" : "Kredit & Tautan";
     });
+
+    formatDownloadLinks();
 
     const requirements = [...content.querySelectorAll("h2")].find((heading) =>
       /requirements|persyaratan/i.test(heading.textContent)
