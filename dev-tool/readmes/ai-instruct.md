@@ -68,7 +68,7 @@ Maintain `dev-tool/readmes/ai-context-bank.md` as a compact current-state handof
 ## Markdown image paths and bilingual routes
 
 - Use **page-relative URLs** for internal assets in Markdown and HTML, including shared artwork copied to `site/assets/img/`. Do not use site-root-relative URLs such as `/assets/img/banner-tools.jpg`; these can fail to load on English routes.
-- Calculate the relative path from each page's published URL to the asset directory. For example, a page at `/en/store/` uses `../assets/img/example.jpg`, while a nested page at `/en/store/items/example/` uses `../../../assets/img/example.jpg`. Do not assume one relative prefix works for every route depth.
+- Calculate the relative path from each page's published URL to the asset directory. For example, a page at `/en/store/` uses `../assets/img/example.jpg`, while a nested page at `/en/store/items/example/` uses `../../../../assets/img/example.jpg`. Do not assume one relative prefix works for every route depth.
 - Apply the same rule to other internal asset directories, such as `webdata/img/`; keep external URLs unchanged.
 - `hooks/site_assets.py` copies the root `webdata/` directory into the site output. Its page hooks temporarily normalize relative `webdata/img/` references for MkDocs link validation, then rewrite rendered HTML back to route-relative URLs. Preserve this behavior; do not replace the final relative URLs with root-relative ones.
 - When adding or editing image references, inspect all affected language variants and verify the generated URL resolves from each actual page route. A successful strict build alone does not verify that the image file exists at the requested URL.
