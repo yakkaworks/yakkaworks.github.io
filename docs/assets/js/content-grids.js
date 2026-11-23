@@ -129,12 +129,6 @@
     }
     const detailsUrl = resolveUrl(urls.details);
     if (detailsUrl) {
-      if (actions.childElementCount) {
-        const separator = document.createElement("span");
-        separator.className = "yw-content-card__separator";
-        separator.textContent = "·";
-        actions.append(separator);
-      }
       const details = document.createElement("a");
       details.className = "yw-button yw-button--outline";
       details.href = detailsUrl;
