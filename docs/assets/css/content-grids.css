@@ -77,8 +77,8 @@
 
 .yw-content-card__actions a { text-decoration: none !important; }
 .yw-content-card__actions .yw-button { min-height: 2rem; padding: .4rem .7rem; font-size: .78rem; }
-.yw-content-card__actions .yw-button--primary { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color) !important; }
-.yw-content-card__actions .yw-button--outline { background: transparent; color: var(--md-primary-fg-color) !important; }
+.yw-content-card__actions .yw-button--primary { background: var(--yw-cta, #ff8427); border-color: var(--yw-cta, #ff8427); color: #fff !important; }
+.yw-content-card__actions .yw-button--outline { background: var(--yw-primary, #4d8b31); border-color: var(--yw-primary, #4d8b31); color: #fff !important; }
 .yw-content-card__actions .yw-button:hover { filter: brightness(1.08); }
 
 .yw-content-card__separator {
@@ -116,6 +116,9 @@
   aspect-ratio: 1;
   object-fit: cover;
   background: var(--md-code-bg-color);
+  /* These are still placeholder thumbnails; preserve their pixel-art appearance when scaled. */
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .yw-content-list__thumb--icon {
