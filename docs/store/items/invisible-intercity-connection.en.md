@@ -3,7 +3,7 @@ title: "Invisible Intercity Connection"
 date: 21-11-26
 ---
 
-![Invisible Intercity Connection preview](/webdata/img/invisible-intercity-connection.jpg)
+![Invisible Intercity Connection preview](../../../../webdata/img/invisible-intercity-connection.jpg)
 
 # Invisible Intercity Connection
 

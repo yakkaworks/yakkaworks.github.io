@@ -3,7 +3,7 @@ title: "Just Waves"
 date: 21-11-26
 ---
 
-![Just Waves preview](/webdata/img/just-waves.jpg)
+![Just Waves preview](../../../../webdata/img/just-waves.jpg)
 
 # Just Waves
 
