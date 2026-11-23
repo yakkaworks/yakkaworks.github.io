@@ -3,7 +3,7 @@ title: "Bubble UI"
 date: 21-11-26
 ---
 
-![Bubble UI preview](/webdata/img/bubble-ui.jpg)
+![Bubble UI preview](../../../webdata/img/bubble-ui.jpg)
 
 # Bubble UI
 

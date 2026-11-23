@@ -3,7 +3,7 @@ title: "Concrete Pylons"
 date: 21-11-26
 ---
 
-![Concrete Pylons preview](/webdata/img/concrete-pylons.jpg)
+![Concrete Pylons preview](../../../webdata/img/concrete-pylons.jpg)
 
 # Concrete Pylons
 
