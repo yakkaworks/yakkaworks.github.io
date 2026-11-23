@@ -22,13 +22,13 @@ As of **2026-11-23**: Yakka Works is rebuilding its site with MkDocs Material on
 - `docs/assets/js/content-details.js` normalizes Store, Library, and Blog detail-page presentation. Store pages use thumbnail, title, latest-version/date metadata, optional notices, one description paragraph, requirements, downloads, and credits/links. Library and Blog pages receive a localized AI crawler notice at the end.
 - `dev-tool/readmes/content-layout.md` is the shared human/AI authoring specification. Read it before creating or restructuring content pages.
 - Credits & Links must omit email addresses, the Yakka Works website link, and commission information. Preserve other relevant credits and external project links.
-- Strict build status after the content-layout change: not yet verified. Do not claim it passed until run locally or confirmed through GitHub Actions.
+- Strict build after the relative asset-path changes: passed on GitHub Actions run `45126689685` (commit `56292fd14dfb4b12e4e6f8b5424cf649582b2af4`). The deploy job was skipped; no production deployment was made.
 
 ## Durable site decisions
 
 - Work on `y2k-dev` only; do not merge or deploy to `mkdocs-site-live` unless the owner explicitly asks.
 - Keep the current three-row header, custom navigation, document frame/signature and footer. Desktop shared width is 900px; mobile uses a 0.5rem gutter.
 - Preserve brand green `#4d8b31`, CTA orange `#ff8427`, local Body/Header/Display fonts, Material search, and current i18n configuration.
-- Every published Markdown page needs `date: dd-mm-yy` front matter. Internal asset links must be page-relative, with the `../` depth calculated from each page's published URL (for example, `../assets/img/cover.jpg` from `/en/store/` and `../../../assets/img/cover.jpg` from `/en/store/items/example/`). Avoid `/assets/...` root-relative asset URLs on English pages.
+- Every published Markdown page needs `date: dd-mm-yy` front matter. Internal asset links must be page-relative, with the `../` depth calculated from each page's published URL. Existing Store detail-page image references (39 bilingual pairs), both Store indexes, both TheoTown JSON catalogues, the English homepage, and the English Library index have been corrected. `hooks/site_assets.py` normalizes `webdata/img/` paths for MkDocs link validation, then restores route-relative URLs in rendered HTML.
 - Keep content ordering in `.pages` files; `/store/items/*.md` remains excluded from navigation and is reached through the store content cards.
 - Legal pages remain drafts. Do not add unnecessary dependencies or change deployment workflows.
