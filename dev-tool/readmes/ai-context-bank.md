@@ -15,6 +15,11 @@ As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on
 - The four latest plugin entries were added to both localized catalogues on 2026-11-25; their thumbnails are expected at `webdata/img/<slug>.jpg` and are supplied separately by the owner.
 - Product release/update dates remain catalogue metadata; published Markdown pages retain their own `date: dd-mm-yy` front matter.
 
+## Commission pages
+
+- `docs/store/commissions.md` and `docs/store/commissions.en.md` now contain matching service sections, localized pricing (IDR-only / USD-only), anchor navigation, map services, rejection troubleshooting, and terms. The existing full-plugin packages and add-ons are retained; the revision policy is capped at three in-scope requests.
+- The commission estimator is not present in `y2k-dev`. The public site's existing estimator only covers full-plugin packages/add-ons and would need a separate update to estimate the new services; it was not added or changed in this page-only task.
+
 ## Content presentation
 
 - Store cards use thumbnail, title, muted latest-version/date metadata, divider, and inline Download Latest / Details links. Store descriptions are not shown on cards.
