@@ -27,7 +27,7 @@ Pilih layanan untuk langsung menuju rincian dan harga:
 
 Layanan pembuatan plugin TheoTown dari awal, termasuk penyusunan aset, konfigurasi, dan fitur sesuai kesepakatan. Untuk kebutuhan yang sesuai dengan paket di bawah, harga paket tetap berlaku; harga mulai di atas merupakan indikasi umum untuk proyek kustom di luar paket dasar.
 
-### Paket bangunan dasar — Rp40.000
+### Paket bangunan dasar — Rp100.000
 
 - Ukuran maksimal 4×4 petak.
 - Maksimal 1 objek.
@@ -36,7 +36,7 @@ Layanan pembuatan plugin TheoTown dari awal, termasuk penyusunan aset, konfigura
 - Satu pengaruh dalam game dengan radius maksimal 16 petak.
 - Maksimal 3 permintaan revisi setelah hasil awal diserahkan.
 
-### Paket kendaraan dasar — Rp35.000
+### Paket kendaraan dasar — Rp80.000
 
 Untuk kereta, bus, truk, atau mobil.
 
