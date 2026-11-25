@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store contains 48 catalogue items, including five restored map entries, with 96 bilingual detail pages and both localized JSON catalogues populated. No production deployment has been made.
+As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store contains 48 catalogue items, including five restored map entries, with 96 bilingual detail pages and both localized JSON catalogues populated. The Kustom catalogue contains NEETscape v3 and v4. No production deployment has been made.
 
 ## Current content state
 
@@ -13,7 +13,7 @@ As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on
 - Library examples: four bilingual detail-page pairs under `docs/library/articles/`; Blog examples: three bilingual pairs under `docs/blogs/articles/`.
 - The temporary content-data source and generated staging files were deleted after migration. Use the detail pages and JSON catalogues as the current content source.
 - The five TheoTown map entries and their ten bilingual detail pages were restored after an accidental deletion in the NEETscape commit. Their thumbnail files (`map-papua.jpg`, `map-java.jpg`, `map-kalimantan.jpg`, `map-sulawesi.jpg`, `map-sumatera.jpg`) are still expected separately in `webdata/img/`.
-- The Kustom catalogue now contains NEETscape v3 only; the generic `kustom-example` placeholder was removed from both languages.
+- The Kustom catalogue now contains NEETscape v3 and v4 in both languages; the generic `kustom-example` placeholder is excluded from both catalogues. NEETscape v4 uses `webdata/img/kustom-neetscapev4.jpg` as its preview and links to `http://lynk.id/yakkaworks/4dvlp0w1er36`.
 - Product release/update dates remain catalogue metadata; published Markdown pages retain their own `date: dd-mm-yy` front matter.
 
 ## Commission pages
