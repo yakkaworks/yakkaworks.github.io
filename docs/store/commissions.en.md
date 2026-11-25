@@ -27,7 +27,7 @@ Choose a service to jump to its details and pricing:
 
 A from-scratch TheoTown plugin development service, including assets, configuration, and features agreed upon for the project. The package prices below remain available for requests that fit their specifications; the starting price above is a general indication for custom projects beyond the basic packages.
 
-### Basic building package — $5.00
+### Basic building package — $9.99
 
 - Maximum size of 4×4 tiles.
 - Maximum of 1 object.
@@ -36,7 +36,7 @@ A from-scratch TheoTown plugin development service, including assets, configurat
 - One in-game effect with a maximum radius of 16 tiles.
 - Up to 3 revision requests after the initial delivery.
 
-### Basic vehicle package — $4.25
+### Basic vehicle package — $7.99
 
 For trains, buses, trucks, or cars.
 
