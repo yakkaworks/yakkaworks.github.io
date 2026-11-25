@@ -140,10 +140,9 @@ Some NSFW content or kinks are not accepted. Every request remains subject to te
 
 ### Ordering and payment
 
-- Orders below the applicable deposit threshold do not require an upfront deposit.
-- Orders at or above the applicable deposit threshold require a **25% deposit**.
+- Smaller orders do not require an upfront deposit; larger orders require a **25% deposit**. The applicable threshold will be confirmed in the quote.
 - For orders that do not require a deposit, payment is due after the work is completed.
-- Available payment methods: PayPal, Patreon, and Ko-fi. QRIS may be available for supported local payments.
+- Available payment methods: QRIS, PayPal, Patreon, and Ko-fi.
 - Discuss requirements, scope, feasibility, estimated cost, and schedule before accepting an order. Work begins after the order details and payment terms have been agreed upon.
 
 ### Refund policy
