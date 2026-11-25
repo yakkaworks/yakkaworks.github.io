@@ -1,5 +1,101 @@
 [
   {
+    "slug": "road-vehicle-as-bus",
+    "title": "Road Vehicle as Bus",
+    "category": "Transport",
+    "size": "3.62KB",
+    "download": "https://www.mediafire.com/file/qcg84k3sk75kled/RV_as_Bus.ttplugin/file",
+    "description": "Road Vehicle As Bus is a simple QoL plugin that lets you use regular road vehicles as buses in TheoTown. Assign routes to your vehicles and let them travel between designated stops, making it easier to create custom public transportation services and add more variety to your city's transit system.",
+    "date": "25-11-26",
+    "thumbnail": "../../webdata/img/road-vehicle-as-bus.jpg",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/qcg84k3sk75kled/RV_as_Bus.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/road-vehicle-as-bus/"
+    },
+    "type": "plugin",
+    "price_diamonds": 40,
+    "platforms": [],
+    "min_version": "1.12.95",
+    "status": "active"
+  },
+  {
+    "slug": "i3pt-ui",
+    "title": "i3pt UI",
+    "category": "Themes",
+    "size": "15.29KB",
+    "download": "https://www.mediafire.com/file/ftjw9kb5nupj6mp/i3pt_UI.ttplugin/file",
+    "description": "Inspired by the distinctive tiling window manager aesthetic of i3wm, i3pt UI brings a functional, minimalist look to TheoTown. Featuring a clean layout, sharp visual elements, and a utilitarian design language, this theme takes inspiration from the world of Linux desktop environments and brings a touch of that experience into the game.",
+    "date": "25-11-26",
+    "thumbnail": "../../webdata/img/i3pt-ui.jpg",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/ftjw9kb5nupj6mp/i3pt_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/i3pt-ui/"
+    },
+    "type": "plugin",
+    "price_diamonds": 40,
+    "platforms": [],
+    "min_version": "1.12.95",
+    "status": "active"
+  },
+  {
+    "slug": "panelki-ui",
+    "title": "Panelki UI",
+    "category": "Themes",
+    "size": "15.37KB",
+    "download": "https://www.mediafire.com/file/54d69orejftw44o/Panelki_UI.ttplugin/file",
+    "description": "Panelki UI brings a simple yet modern appearance to TheoTown through its flat-colored and translucent interface elements. Combining subtle transparency with clean, solid surfaces, this theme creates a lightweight visual experience that keeps the interface looking organized without unnecessary decoration.",
+    "date": "25-11-26",
+    "thumbnail": "../../webdata/img/panelki-ui.jpg",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/54d69orejftw44o/Panelki_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/panelki-ui/"
+    },
+    "type": "plugin",
+    "price_diamonds": 40,
+    "platforms": [],
+    "min_version": "1.12.95",
+    "status": "active"
+  },
+  {
+    "slug": "aria-ui",
+    "title": "Aria UI",
+    "category": "Themes",
+    "size": "16.57KB",
+    "download": "https://www.mediafire.com/file/kolf6pkul915o1x/Aria_UI.ttplugin/file",
+    "description": "Aria UI introduces a minimal and distinctive interface style to TheoTown, featuring flat panels with selectively bordered corners instead of conventional full outlines. This subtle design approach creates a clean, structured appearance while giving interface elements a unique visual identity. Simple, understated, and designed for those who appreciate thoughtful UI details.",
+    "date": "25-11-26",
+    "thumbnail": "../../webdata/img/aria-ui.jpg",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/kolf6pkul915o1x/Aria_UI.ttplugin/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/aria-ui/"
+    },
+    "type": "plugin",
+    "price_diamonds": 40,
+    "platforms": [],
+    "min_version": "1.12.95",
+    "status": "active"
+  },
+  {
     "slug": "mono-ui",
     "title": "Mono UI",
     "date": "28-10-26",
