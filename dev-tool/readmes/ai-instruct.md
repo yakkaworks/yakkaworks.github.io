@@ -16,7 +16,7 @@ Treat the repository files as the source of truth. Do not assume the previous co
 
 ## Project boundaries
 
-- Work on `y2k-dev` unless the owner explicitly asks for another branch.
+- Do content and development work on `y2k-dev` unless the owner explicitly asks for another branch. `y2k-live` is the production deployment branch; update it only when the owner explicitly requests publication.
 - This is a rebuild scaffold and preview, not a content migration.
 - Do not copy old store, library, tool, blog, or other substantive content pages unless explicitly requested.
 - Keep only the agreed indexes, legal pages/placeholders, and debug page until the content-migration stage.

@@ -17,7 +17,7 @@ The current build keeps the existing MkDocs plugins:
 - Blog
 - Redirects
 
-The GitHub Actions workflow runs a strict MkDocs build on development branches. Deployment remains restricted to the existing live deployment branch; pushing to `y2k-dev` does not publish this preview as the production website.
+The GitHub Actions workflow runs a strict MkDocs build on `y2k-dev`. The `y2k-live` branch is the production deployment branch; pushing to `y2k-dev` does not publish the preview.
 
 ## Run locally
 
@@ -56,7 +56,7 @@ All user-facing command wrappers live in `dev-tool/`. Their implementation files
 | Update | `dev-tool\update.bat` | `bash dev-tool/update.sh` | Pull the configured upstream (when present) and upgrade dependencies |
 | Pull | `dev-tool\pull.bat` | `bash dev-tool/pull.sh` | Compatibility alias for update |
 | Push | `dev-tool\push.bat` | `bash dev-tool/push.sh` | Run a strict build, then push only to `y2k-dev` |
-| Sync live | `dev-tool\sync.bat` | `bash dev-tool/sync.sh` | Clone/update `mkdocs-site-live` separately in `live-sync/` |
+| Sync live | `dev-tool\sync.bat` | `bash dev-tool/sync.sh` | Clone/update `y2k-live` separately in `live-sync/` |
 
 The push command refuses protected branches and never force-pushes. It checks the site with `mkdocs build --strict` before committing or pushing.
 

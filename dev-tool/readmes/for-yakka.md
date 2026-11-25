@@ -132,7 +132,7 @@ A successful local preview is not the same as a successful production deployment
 - Search and page titles/descriptions.
 - The strict build: `python -m mkdocs build --strict`.
 
-The GitHub Actions workflow also runs the strict build. Only the existing live deployment branch is configured to deploy the website.
+The GitHub Actions workflow also runs the strict build. `y2k-dev` is build-only; pushing to `y2k-live` triggers the production deployment.
 
 ## 8. A few MkDocs words
 

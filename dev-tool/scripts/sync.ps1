@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 $ProjectRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-$LiveBranch = 'mkdocs-site-live'
+$LiveBranch = 'y2k-live'
 $LiveRemote = 'https://github.com/yakkaworks/yakkaworks.github.io.git'
 $LiveDir = Join-Path $ProjectRoot 'live-sync'
 

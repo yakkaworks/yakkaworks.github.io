@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store contains 48 catalogue items, including five restored map entries, with 96 bilingual detail pages and both localized JSON catalogues populated. The Kustom catalogue contains NEETscape v3 and v4. No production deployment has been made.
+As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store contains 48 catalogue items, including five restored map entries, with 96 bilingual detail pages and both localized JSON catalogues populated. The Kustom catalogue contains NEETscape v3 and v4. The production branch is `y2k-live`; this deployment task is promoting the verified development tree.
 
 ## Current content state
 
@@ -29,11 +29,11 @@ As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on
 - `docs/assets/js/content-details.js` normalizes Store, Library, and Blog detail-page presentation. Store pages use thumbnail, title, latest-version/date metadata, optional notices, one description paragraph, requirements, downloads, and credits/links. Library and Blog pages receive a localized AI crawler notice at the end.
 - `dev-tool/readmes/content-layout.md` is the shared human/AI authoring specification. Read it before creating or restructuring content pages.
 - Credits & Links must omit email addresses, the Yakka Works website link, and commission information. Preserve other relevant credits and external project links.
-- GitHub Actions strict builds were failing on two commission-page issues: incorrect relative links to the root license pages and unresolved English section anchors. These have been corrected; verify the next `y2k-dev` workflow run before claiming a clean build. The Library image migration also now places unique SVGs in the shared root `webdata/img/` directory so `hooks/site_assets.py` does not discard them.
+- GitHub Actions strict builds were failing on two commission-page issues: incorrect relative links to the root license pages and unresolved English section anchors. These have been corrected; the latest `y2k-dev` strict build passed on commit `de47d421af88411c60d815f600a0f5671bfd91fb`. The Library image migration also now places unique SVGs in the shared root `webdata/img/` directory so `hooks/site_assets.py` does not discard them.
 
 ## Durable site decisions
 
-- Work on `y2k-dev` only; do not merge or deploy to `mkdocs-site-live` unless the owner explicitly asks.
+- Keep development/content work on `y2k-dev`. `y2k-live` is the production branch and must only be updated when the owner explicitly requests publication. `mkdocs-site-live` is legacy.
 - Keep the current three-row header, custom navigation, document frame/signature and footer. Desktop shared width is 900px; mobile uses a 0.5rem gutter.
 - Preserve brand green `#4d8b31`, CTA orange `#ff8427`, local Body/Header/Display fonts, Material search, and current i18n configuration.
 - Every published Markdown page needs `date: dd-mm-yy` front matter. Internal asset links must be page-relative, with the `../` depth calculated from each page's published URL. Existing Store detail-page image references (39 bilingual pairs / 78 pages) and both TheoTown JSON catalogues have been corrected. The English Store index and homepage were corrected; the Indonesian Store index already used relative asset paths. English Library, Tools, and Blogs index banner URLs must use `../../assets/img/...` from `/en/<section>/`; their Indonesian counterparts use `../assets/img/...`. The remaining Indonesian and English Store pages were checked for root-relative asset links. `hooks/site_assets.py` normalizes `webdata/img/` paths for MkDocs link validation, then restores route-relative URLs in rendered HTML.
