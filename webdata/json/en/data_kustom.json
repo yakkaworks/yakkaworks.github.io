@@ -9,5 +9,22 @@
       "download": [],
       "details": "/en/store/items/kustom-example/"
     }
+  },
+  {
+    "slug": "neetscape-v3",
+    "category": "kustom",
+    "date": "25-11-26",
+    "thumbnail": "https://i.redd.it/2t0jw2i8iutf1.jpg",
+    "description": "NEETscape v3 is a minimalist, pixel-inspired Android homescreen and lock screen setup combining dithered imagery, custom KWGT widgets, modified icons, and carefully selected typography. Originally shared on r/androidthemes, it blends stock XOS elements with third-party customization tools. The complete setup files and components are available through the purchase link below.",
+    "urls": {
+      "download": [
+        {
+          "url": "https://lynk.id/yakkaworks/eo3yv6je0mrv",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/neetscape-v3/"
+    },
+    "title": "NEETscape v3"
   }
 ]
