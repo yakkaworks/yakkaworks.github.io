@@ -1,32 +1,52 @@
 [
   {
-    "slug": "site-announcement-example",
-    "title": "Contoh Pengumuman Situs",
-    "date": "20-11-26",
-    "description": "Contoh artikel pengumuman resmi Yakka Works.",
-    "category": "announcement",
+    "slug": "discord-server-directory",
+    "title": "Direktori Server Discord Komunitas TheoTown",
+    "date": "20-10-26",
+    "description": "Direktori Server Discord Komunitas TheoTown. Baca pembaruan Yakka Works dan informasi terkait.",
+    "category": "communities",
     "urls": {
-      "Article": "/blogs/articles/site-announcement-example/"
+      "Article": "/blogs/articles/discord-server-directory/"
     }
   },
   {
-    "slug": "development-log-example",
-    "title": "Contoh Catatan Pengembangan",
-    "date": "20-11-26",
-    "description": "Contoh artikel untuk mencatat perkembangan proyek.",
-    "category": "devlog",
+    "slug": "kustom-presets-launch",
+    "title": "Preset Kustom Kini Tersedia",
+    "date": "20-08-26",
+    "description": "Preset Kustom Kini Tersedia. Baca pembaruan Yakka Works dan informasi terkait.",
+    "category": "announcements",
     "urls": {
-      "Article": "/blogs/articles/development-log-example/"
+      "Article": "/blogs/articles/kustom-presets-launch/"
     }
   },
   {
-    "slug": "community-update-example",
-    "title": "Contoh Kabar Komunitas",
-    "date": "20-11-26",
-    "description": "Contoh artikel kabar dan kegiatan komunitas.",
-    "category": "community",
+    "slug": "mkdocs-migration",
+    "title": "Migrasi Yakka Works ke MkDocs",
+    "date": "21-10-26",
+    "description": "Migrasi Yakka Works ke MkDocs. Baca pembaruan Yakka Works dan informasi terkait.",
+    "category": "announcements",
     "urls": {
-      "Article": "/blogs/articles/community-update-example/"
+      "Article": "/blogs/articles/mkdocs-migration/"
+    }
+  },
+  {
+    "slug": "posts-situs-baru",
+    "title": "Situs Baru Yakka Works",
+    "date": "04-10-26",
+    "description": "Situs Baru Yakka Works. Baca pembaruan Yakka Works dan informasi terkait.",
+    "category": "announcements",
+    "urls": {
+      "Article": "/blogs/articles/posts/situs-baru/"
+    }
+  },
+  {
+    "slug": "welcome-to-the-new-site",
+    "title": "Selamat Datang di Situs Baru Yakka Works",
+    "date": "06-09-26",
+    "description": "Selamat Datang di Situs Baru Yakka Works. Baca pembaruan Yakka Works dan informasi terkait.",
+    "category": "announcements",
+    "urls": {
+      "Article": "/blogs/articles/welcome-to-the-new-site/"
     }
   }
 ]

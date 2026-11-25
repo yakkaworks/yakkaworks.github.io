@@ -1,0 +1,12 @@
+---
+title: "Trees"
+date: 25-11-26
+description: "An introduction to tree object configuration and vegetation variations."
+---
+
+# Trees
+
+An introduction to tree object configuration and vegetation variations.
+
+> **Work in progress:** This tutorial is still being written. The current page is only a brief placeholder and should not be treated as complete instructions.
+

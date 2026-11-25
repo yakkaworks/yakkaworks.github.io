@@ -1,32 +1,42 @@
 [
   {
-    "slug": "site-announcement-example",
-    "title": "Site Announcement Example",
-    "date": "20-11-26",
-    "description": "Example official Yakka Works announcement article.",
-    "category": "announcement",
+    "slug": "discord-server-directory",
+    "title": "TheoTown Community Discord Server Directory",
+    "date": "20-10-26",
+    "description": "TheoTown Community Discord Server Directory. Read the latest Yakka Works update and related information.",
+    "category": "communities",
     "urls": {
-      "Article": "/en/blogs/articles/site-announcement-example/"
+      "Article": "/en/blogs/articles/discord-server-directory/"
     }
   },
   {
-    "slug": "development-log-example",
-    "title": "Development Log Example",
-    "date": "20-11-26",
-    "description": "Example article for recording project progress.",
-    "category": "devlog",
+    "slug": "kustom-presets-launch",
+    "title": "Kustom Presets Are Now Live",
+    "date": "20-08-26",
+    "description": "Kustom Presets Are Now Live. Read the latest Yakka Works update and related information.",
+    "category": "announcements",
     "urls": {
-      "Article": "/en/blogs/articles/development-log-example/"
+      "Article": "/en/blogs/articles/kustom-presets-launch/"
     }
   },
   {
-    "slug": "community-update-example",
-    "title": "Community Update Example",
-    "date": "20-11-26",
-    "description": "Example article for community news and activities.",
-    "category": "community",
+    "slug": "mkdocs-migration",
+    "title": "Yakka Works Has Migrated to MkDocs",
+    "date": "21-10-26",
+    "description": "Yakka Works Has Migrated to MkDocs. Read the latest Yakka Works update and related information.",
+    "category": "announcements",
     "urls": {
-      "Article": "/en/blogs/articles/community-update-example/"
+      "Article": "/en/blogs/articles/mkdocs-migration/"
+    }
+  },
+  {
+    "slug": "welcome-to-the-new-site",
+    "title": "Welcome to the New Yakka Works Website",
+    "date": "06-09-26",
+    "description": "Welcome to the New Yakka Works Website. Read the latest Yakka Works update and related information.",
+    "category": "announcements",
+    "urls": {
+      "Article": "/en/blogs/articles/welcome-to-the-new-site/"
     }
   }
 ]

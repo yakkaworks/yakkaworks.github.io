@@ -1,42 +1,602 @@
 [
   {
-    "slug": "general-tutorial-example",
-    "title": "Contoh Tutorial Umum TheoTown",
-    "date": "20-11-26",
-    "description": "Contoh struktur tutorial umum TheoTown.",
-    "category": "general",
-    "urls": {
-      "Article": "/library/articles/general-tutorial-example/"
-    }
-  },
-  {
-    "slug": "plugin-tutorial-example",
-    "title": "Contoh Tutorial Pembuatan Plugin",
-    "date": "20-11-26",
-    "description": "Contoh artikel proses pembuatan plugin TheoTown.",
-    "category": "plugin",
-    "urls": {
-      "Article": "/library/articles/plugin-tutorial-example/"
-    }
-  },
-  {
-    "slug": "kustom-tutorial-example",
-    "title": "Contoh Tutorial Kustom",
-    "date": "20-11-26",
-    "description": "Contoh tutorial widget atau preset Kustom.",
-    "category": "kustom",
-    "urls": {
-      "Article": "/library/articles/kustom-tutorial-example/"
-    }
-  },
-  {
-    "slug": "other-tutorial-example",
-    "title": "Contoh Tutorial Lainnya",
-    "date": "20-11-26",
-    "description": "Contoh kerangka tutorial untuk topik lain.",
+    "slug": "common-errors",
+    "title": "Common Errors and How to Fix Them",
+    "date": "05-02-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang kesalahan umum dan cara mengatasinya.",
     "category": "misc",
     "urls": {
-      "Article": "/library/articles/other-tutorial-example/"
+      "Article": "/library/articles/common-errors/"
+    }
+  },
+  {
+    "slug": "getting-started-animation-animations",
+    "title": "Animasi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang animations.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/animation/animations/"
+    }
+  },
+  {
+    "slug": "getting-started-animation-building-smoke",
+    "title": "Asap bangunan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang building smoke.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/animation/building-smoke/"
+    }
+  },
+  {
+    "slug": "getting-started-animation",
+    "title": "Animasi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang animation.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/animation/"
+    }
+  },
+  {
+    "slug": "getting-started-animation-moving-animations",
+    "title": "Animasi bergerak",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang moving animations.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/animation/moving-animations/"
+    }
+  },
+  {
+    "slug": "getting-started-animation-night-mode",
+    "title": "Mode malam",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang night mode.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/animation/night-mode/"
+    }
+  },
+  {
+    "slug": "getting-started-animation-texture-saving",
+    "title": "Menghemat ruang tekstur",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang texture saving.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/animation/texture-saving/"
+    }
+  },
+  {
+    "slug": "getting-started-before-you-begin-copyright",
+    "title": "Hak cipta dan atribusi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang copyright.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/before-you-begin/copyright/"
+    }
+  },
+  {
+    "slug": "getting-started-before-you-begin",
+    "title": "Sebelum memulai",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang before you begin.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/before-you-begin/"
+    }
+  },
+  {
+    "slug": "getting-started-before-you-begin-installation",
+    "title": "Instalasi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang installation.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/before-you-begin/installation/"
+    }
+  },
+  {
+    "slug": "getting-started-before-you-begin-recommended-software",
+    "title": "Perangkat lunak yang direkomendasikan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang recommended software.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/before-you-begin/recommended-software/"
+    }
+  },
+  {
+    "slug": "getting-started-beginner-guide",
+    "title": "Panduan pemula",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang beginner guide.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/beginner-guide/"
+    }
+  },
+  {
+    "slug": "getting-started-beginner-guide-json-syntax-basics",
+    "title": "Dasar sintaks JSON",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang json syntax basics.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/beginner-guide/json-syntax-basics/"
+    }
+  },
+  {
+    "slug": "getting-started-beginner-guide-simple-plugin",
+    "title": "Membuat plugin sederhana",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang simple plugin.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/beginner-guide/simple-plugin/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings-building-plugin-values",
+    "title": "Nilai plugin bangunan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang building plugin values.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/building-plugin-values/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings-compositions",
+    "title": "Komposisi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang compositions.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/compositions/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings",
+    "title": "Bangunan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang buildings.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings-non-square-buildings",
+    "title": "Bangunan nonpersegi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang non square buildings.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/non-square-buildings/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings-requirements",
+    "title": "Persyaratan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang requirements.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/requirements/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings-simple-building-plugin",
+    "title": "Plugin bangunan sederhana",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang simple building plugin.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/simple-building-plugin/"
+    }
+  },
+  {
+    "slug": "getting-started-buildings-upgrades",
+    "title": "Peningkatan bangunan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang upgrades.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/buildings/upgrades/"
+    }
+  },
+  {
+    "slug": "getting-started-in-game-sources-archived-game-assets",
+    "title": "Mengambil tekstur dan JSON dari versi arsip",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang archived game assets.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/in-game-sources/archived-game-assets/"
+    }
+  },
+  {
+    "slug": "getting-started-in-game-sources",
+    "title": "Sumber dari dalam game",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang in game sources.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/in-game-sources/"
+    }
+  },
+  {
+    "slug": "getting-started",
+    "title": "Memulai Pembuatan Plugin TheoTown",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang memulai pembuatan plugin theotown.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-categories",
+    "title": "Kategori",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang categories.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/categories/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-fences",
+    "title": "Pagar",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang fences.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/fences/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-heightmaps",
+    "title": "Heightmap",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang heightmaps.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/heightmaps/"
+    }
+  },
+  {
+    "slug": "getting-started-misc",
+    "title": "Lain-lain",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang misc.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-preview-frames",
+    "title": "Bingkai pratinjau",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang preview frames.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/preview-frames/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-scenarios",
+    "title": "Skenario",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang scenarios.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/scenarios/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-templates",
+    "title": "Templat",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang templates.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/templates/"
+    }
+  },
+  {
+    "slug": "getting-started-misc-zones",
+    "title": "Zona",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang zones.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/misc/zones/"
+    }
+  },
+  {
+    "slug": "getting-started-system-hide-id",
+    "title": "Menyembunyikan ID",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang hide id.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/system/hide-id/"
+    }
+  },
+  {
+    "slug": "getting-started-system-id-overriding",
+    "title": "Mengganti ID",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang id overriding.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/system/id-overriding/"
+    }
+  },
+  {
+    "slug": "getting-started-system",
+    "title": "Sistem",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang system.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/system/"
+    }
+  },
+  {
+    "slug": "getting-started-system-plugin-encryption",
+    "title": "Enkripsi plugin",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang plugin encryption.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/system/plugin-encryption/"
+    }
+  },
+  {
+    "slug": "getting-started-system-translations",
+    "title": "Terjemahan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang translations.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/system/translations/"
+    }
+  },
+  {
+    "slug": "getting-started-terrains-biomes",
+    "title": "Bioma",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang biomes.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/terrains/biomes/"
+    }
+  },
+  {
+    "slug": "getting-started-terrains-custom-background",
+    "title": "Latar belakang kustom",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang custom background.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/terrains/custom-background/"
+    }
+  },
+  {
+    "slug": "getting-started-terrains-custom-decals-terrain",
+    "title": "Dekal dan terrain kustom",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang custom decals terrain.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/terrains/custom-decals-terrain/"
+    }
+  },
+  {
+    "slug": "getting-started-terrains-custom-water",
+    "title": "Air kustom",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang custom water.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/terrains/custom-water/"
+    }
+  },
+  {
+    "slug": "getting-started-terrains",
+    "title": "Terrain dan lingkungan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang terrains.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/terrains/"
+    }
+  },
+  {
+    "slug": "getting-started-terrains-trees",
+    "title": "Pepohonan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang trees.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/terrains/trees/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-airplanes",
+    "title": "Pesawat",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang airplanes.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/airplanes/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-buses",
+    "title": "Bus",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang buses.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/buses/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-helicopters",
+    "title": "Helikopter",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang helicopters.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/helicopters/"
+    }
+  },
+  {
+    "slug": "getting-started-transport",
+    "title": "Transportasi",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang transport.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-pedestrians",
+    "title": "Pejalan kaki",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang pedestrians.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/pedestrians/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-railway-tracks",
+    "title": "Jalur rel",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang railway tracks.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/railway-tracks/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-road-decorations",
+    "title": "Dekorasi jalan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang road decorations.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/road-decorations/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-road-vehicles",
+    "title": "Kendaraan darat",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang road vehicles.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/road-vehicles/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-roads",
+    "title": "Jalan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang roads.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/roads/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-ships",
+    "title": "Kapal",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang ships.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/ships/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-trains",
+    "title": "Kereta",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang trains.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/trains/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-transport-system-extension",
+    "title": "Transport System Extension",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang transport system extension.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/transport-system-extension/"
+    }
+  },
+  {
+    "slug": "getting-started-transport-vehicle-flags-tags",
+    "title": "Flag dan tag kendaraan",
+    "date": "25-11-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang vehicle flags tags.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/getting-started/transport/vehicle-flags-tags/"
+    }
+  },
+  {
+    "slug": "plugin-structure",
+    "title": "Understanding Plugin File Structure",
+    "date": "22-01-26",
+    "description": "Panduan pembuatan plugin TheoTown tentang memahami struktur berkas plugin.",
+    "category": "plugins",
+    "urls": {
+      "Article": "/library/articles/plugin-structure/"
+    }
+  },
+  {
+    "slug": "theotown-tutorials",
+    "title": "Tutorial Umum TheoTown",
+    "date": "25-11-26",
+    "description": "Panduan umum TheoTown tentang tutorial umum theotown.",
+    "category": "general",
+    "urls": {
+      "Article": "/library/articles/theotown-tutorials/"
+    }
+  },
+  {
+    "slug": "theotown-tutorials-installing-maps",
+    "title": "Panduan Instalasi Peta TheoTown",
+    "date": "25-11-26",
+    "description": "Panduan umum TheoTown tentang installing maps.",
+    "category": "general",
+    "urls": {
+      "Article": "/library/articles/theotown-tutorials/installing-maps/"
+    }
+  },
+  {
+    "slug": "theotown-tutorials-installing-plugins",
+    "title": "Panduan Instalasi Plugin TheoTown",
+    "date": "25-11-26",
+    "description": "Panduan umum TheoTown tentang installing plugins.",
+    "category": "general",
+    "urls": {
+      "Article": "/library/articles/theotown-tutorials/installing-plugins/"
     }
   }
 ]
