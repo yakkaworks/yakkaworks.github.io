@@ -21,7 +21,7 @@ Choose a service to jump to its details and pricing:
 7. [Custom Map Creation](#custom-map-creation)
 8. [Terms and Conditions](#terms-and-conditions)
 
-## Full Custom Plugin Development
+## Full Custom Plugin Development {#full-custom-plugin-development}
 
 <small>Starting from **$9.99**. The final price depends on the plugin type, features, complexity, and technical requirements.</small>
 
@@ -60,31 +60,31 @@ For trains, buses, trucks, or cars.
 
 Add-on costs depend on the requested feature and its complexity. Package inclusions and selected add-ons can affect the total. An initial estimate is not a final quote; the final price is confirmed after consultation.
 
-## Plugin Image Creation
+## Plugin Image Creation {#plugin-image-creation}
 
 **$3.99 per frame.**
 
 Creation of sprites or images for TheoTown plugins. Each individual frame is charged separately. Rotation frames also count as individual frames, so the total cost depends on the number of frames required.
 
-## Plugin JSON Creation
+## Plugin JSON Creation {#plugin-json-creation}
 
 **$2.49 for up to 2 JSON files.**
 
 Creation of TheoTown plugin JSON files based on the agreed specifications and features. The first two files are included in the base price. Each additional file costs **$0.50 per file**.
 
-## Plugin JSON Repair
+## Plugin JSON Repair {#plugin-json-repair}
 
 **$2.49 for up to 2 JSON files.**
 
 Inspection and repair of issues in plugin JSON files, provided the problem can be addressed using the supplied files and information. The first two files are included in the base price. Each additional file costs **$0.50 per file**.
 
-## Plugin Image Repair
+## Plugin Image Repair {#plugin-image-repair}
 
 **$3.99 for up to 2 image files.**
 
 Repair or adjustment of existing plugin images within the agreed scope. The first two files are included in the base price. Each additional file costs **$0.50 per file**.
 
-## Plugin Store Rejection Troubleshooting
+## Plugin Store Rejection Troubleshooting {#plugin-store-rejection-troubleshooting}
 
 **Initial diagnosis is FREE. Fixing work starts from $4.99.**
 
@@ -98,7 +98,7 @@ If a plugin is rejected by the TheoTown Plugin Store, Yakka Works can help revie
 
 Ordering and fixing work follow the terms for Full Custom Plugin Development on this page, including request, payment, revision, and licensing policies.
 
-## Custom Map Creation
+## Custom Map Creation {#custom-map-creation}
 
 Custom TheoTown city-map creation based on an agreed concept or reference. Map dimensions must use the map sizes available in the TheoTown game.
 
@@ -110,7 +110,7 @@ Basic custom map creation using an agreed concept and an available in-game map s
 
 Includes roads and the placement of small vanilla prebuilt structures, in addition to the basic map creation.
 
-## Terms and Conditions
+## Terms and Conditions {#terms-and-conditions}
 
 ### Request policy
 
@@ -153,7 +153,7 @@ Commission payments are generally non-refundable. Please make sure the order det
 
 A minimum order of **$50.00** is required to request special copyright terms, use without credit, or an exception to the standard license. Ownership and special licensing arrangements must be discussed and agreed upon before work begins.
 
-The standard license for commissioned work is **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. A custom license can be discussed for specific orders when rights to all included materials allow it. Any special terms must be agreed in writing before work begins. This license applies to commissioned work; other Yakka Works content follows the [general License page](../../license.en.md).
+The standard license for commissioned work is **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. A custom license can be discussed for specific orders when rights to all included materials allow it. Any special terms must be agreed in writing before work begins. This license applies to commissioned work; other Yakka Works content follows the [general License page](../license.en.md).
 
 ### Contact and orders
 

@@ -154,7 +154,7 @@ Pembayaran komisi yang telah dilakukan pada umumnya tidak dapat dikembalikan (no
 
 Minimum pesanan sebesar **Rp250.000** diperlukan untuk mengajukan ketentuan khusus terkait hak cipta, penggunaan tanpa credit, atau pengecualian dari lisensi standar. Kepemilikan dan pengaturan lisensi khusus harus dibahas dan disepakati sebelum pengerjaan dimulai.
 
-Lisensi standar untuk hasil komisi adalah **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. Lisensi khusus dapat dibicarakan untuk pesanan tertentu selama hak atas seluruh materi yang digunakan memungkinkan. Setiap ketentuan khusus harus disepakati secara tertulis sebelum pengerjaan dimulai. Lisensi ini berlaku untuk hasil komisi; konten Yakka Works lainnya mengikuti [halaman Lisensi umum](../../license.md).
+Lisensi standar untuk hasil komisi adalah **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**. Lisensi khusus dapat dibicarakan untuk pesanan tertentu selama hak atas seluruh materi yang digunakan memungkinkan. Setiap ketentuan khusus harus disepakati secara tertulis sebelum pengerjaan dimulai. Lisensi ini berlaku untuk hasil komisi; konten Yakka Works lainnya mengikuti [halaman Lisensi umum](../license.md).
 
 ### Kontak dan pemesanan
 

@@ -40,9 +40,9 @@
       case "maps": return /(^|[, ])maps?([, ]|$)|peta/.test(category) || item.type === "map";
       case "presets": return /preset/.test(category) || item.type === "preset";
       case "plugins": return type === "library" ? /plugin/.test(value) : !/(^|[, ])maps?([, ]|$)|peta|preset/.test(category);
-      case "general": return !/plugin|kustom/.test(value);
-      case "kustom": return /kustom|kwgt|klwp/.test(value);
-      case "misc": return /misc|lainnya|other/.test(value);
+      case "general": return type === "library" ? /(^|[, ])general([, ]|$)/.test(category) : !/plugin|kustom/.test(value);
+      case "kustom": return type === "library" ? /(^|[, ])kustom([, ]|$)/.test(category) : /kustom|kwgt|klwp/.test(value);
+      case "misc": return type === "library" ? /(^|[, ])(?:misc|other|lainnya)([, ]|$)/.test(category) : /misc|lainnya|other/.test(value);
       case "announcements": return /announcement|pengumuman|update|pembaruan/.test(category);
       case "devlogs": return /devlog|development|pengembangan/.test(category);
       case "communities": return /communit|komunitas/.test(category);
