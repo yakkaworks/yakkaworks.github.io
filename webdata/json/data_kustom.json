@@ -1,16 +1,5 @@
 [
   {
-    "slug": "kustom-example",
-    "title": "Contoh Konten Kustom",
-    "date": "20-11-26",
-    "description": "Contoh entri widget, preset, atau konten Kustom.",
-    "category": "kustom",
-    "urls": {
-      "download": [],
-      "details": "/store/items/kustom-example/"
-    }
-  },
-  {
     "slug": "neetscape-v3",
     "category": "kustom",
     "date": "25-11-26",

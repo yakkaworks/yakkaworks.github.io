@@ -990,5 +990,105 @@
       "download": [],
       "details": "/en/store/items/bordered-intercity-connection/"
     }
+  },
+  {
+    "slug": "papua",
+    "title": "Irian Jaya (Papua)",
+    "category": "Maps",
+    "description": "Explore the easternmost region of Indonesia with this TheoTown map of Irian Jaya (Papua), recreated at a 1:30 scale. Build cities, develop infrastructure, and transform the island's diverse landscape into your own urban playground.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../../webdata/img/map-papua.jpg",
+    "download": "https://www.mediafire.com/file/73bndj1fedjwund/Irian_Jaya.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/73bndj1fedjwund/Irian_Jaya.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/papua/"
+    }
+  },
+  {
+    "slug": "java",
+    "title": "Java",
+    "category": "Maps",
+    "description": "Build your own version of Java, one of Indonesia's most densely populated islands. This TheoTown map recreates the island at a 1:11 scale, offering a more detailed geographical playground for building cities, connecting regions, and developing your own urban landscape.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../../webdata/img/map-java.jpg",
+    "download": "https://www.mediafire.com/file/qlxz6bnwaew5r5l/Java.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/qlxz6bnwaew5r5l/Java.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/java/"
+    }
+  },
+  {
+    "slug": "kalimantan",
+    "title": "Borneo (Kalimantan)",
+    "category": "Maps",
+    "description": "Take on the vast landscapes of Borneo with this TheoTown map of Kalimantan, recreated at a 1:30 scale. From extensive forests to coastal areas and river systems, create your own cities and infrastructure across one of Southeast Asia's largest islands.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../../webdata/img/map-kalimantan.jpg",
+    "download": "https://www.mediafire.com/file/qu8ku5s10e4llt9/Kalimantan.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/qu8ku5s10e4llt9/Kalimantan.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/kalimantan/"
+    }
+  },
+  {
+    "slug": "sulawesi",
+    "title": "Sulawesi (Celebes)",
+    "category": "Maps",
+    "description": "Discover the distinctive geography of Sulawesi with this TheoTown map, recreated at a 1:30 scale. Its uniquely shaped coastline and varied landscape provide an interesting foundation for building cities, developing transportation networks, and creating your own regional developments.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../../webdata/img/map-sulawesi.jpg",
+    "download": "https://www.mediafire.com/file/cpgt46mrib7q1cr/Sulawesi.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/cpgt46mrib7q1cr/Sulawesi.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/sulawesi/"
+    }
+  },
+  {
+    "slug": "sumatera",
+    "title": "Sumatera",
+    "category": "Maps",
+    "description": "Explore the diverse landscapes of Sumatera with this TheoTown map, recreated at a 1:30 scale. Build across its extensive terrain, establish new settlements, connect distant regions, and shape your own version of one of Indonesia's largest islands.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../../webdata/img/map-sumatera.jpg",
+    "download": "https://www.mediafire.com/file/hg2gxlixxmrtbcw/Sumatera.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/hg2gxlixxmrtbcw/Sumatera.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/en/store/items/sumatera/"
+    }
   }
 ]

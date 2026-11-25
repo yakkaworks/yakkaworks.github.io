@@ -990,5 +990,105 @@
       "download": [],
       "details": "/store/items/bordered-intercity-connection/"
     }
+  },
+  {
+    "slug": "papua",
+    "title": "Irian Jaya (Papua)",
+    "category": "Maps",
+    "description": "Jelajahi wilayah paling timur Indonesia melalui peta TheoTown Irian Jaya (Papua), yang dibuat ulang dengan skala 1:30. Bangun kota, kembangkan infrastruktur, dan ubah bentang alam pulau yang beragam ini menjadi ruang bermain perkotaanmu sendiri.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../webdata/img/map-papua.jpg",
+    "download": "https://www.mediafire.com/file/73bndj1fedjwund/Irian_Jaya.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/73bndj1fedjwund/Irian_Jaya.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/papua/"
+    }
+  },
+  {
+    "slug": "java",
+    "title": "Java",
+    "category": "Maps",
+    "description": "Bangun versimu sendiri dari Pulau Jawa, salah satu pulau dengan kepadatan penduduk tertinggi di Indonesia. Peta TheoTown ini merekonstruksi pulau tersebut dengan skala 1:11, menghadirkan area geografis yang lebih detail untuk membangun kota, menghubungkan berbagai wilayah, dan mengembangkan lanskap perkotaanmu sendiri.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../webdata/img/map-java.jpg",
+    "download": "https://www.mediafire.com/file/qlxz6bnwaew5r5l/Java.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/qlxz6bnwaew5r5l/Java.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/java/"
+    }
+  },
+  {
+    "slug": "kalimantan",
+    "title": "Borneo (Kalimantan)",
+    "category": "Maps",
+    "description": "Jelajahi bentang alam Kalimantan yang luas melalui peta TheoTown ini, yang dibuat ulang dengan skala 1:30. Dari hutan yang membentang hingga kawasan pesisir dan sistem sungai, bangun kota dan infrastrukturmu di salah satu pulau terbesar di Asia Tenggara.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../webdata/img/map-kalimantan.jpg",
+    "download": "https://www.mediafire.com/file/qu8ku5s10e4llt9/Kalimantan.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/qu8ku5s10e4llt9/Kalimantan.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/kalimantan/"
+    }
+  },
+  {
+    "slug": "sulawesi",
+    "title": "Sulawesi (Celebes)",
+    "category": "Maps",
+    "description": "Kenali geografi Sulawesi yang khas melalui peta TheoTown ini, yang dibuat ulang dengan skala 1:30. Garis pantainya yang unik dan bentang alam yang beragam menjadi dasar menarik untuk membangun kota, mengembangkan jaringan transportasi, dan menciptakan kawasan regional versimu sendiri.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../webdata/img/map-sulawesi.jpg",
+    "download": "https://www.mediafire.com/file/cpgt46mrib7q1cr/Sulawesi.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/cpgt46mrib7q1cr/Sulawesi.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/sulawesi/"
+    }
+  },
+  {
+    "slug": "sumatera",
+    "title": "Sumatera",
+    "category": "Maps",
+    "description": "Jelajahi bentang alam Sumatera yang beragam melalui peta TheoTown ini, yang dibuat ulang dengan skala 1:30. Bangun di wilayahnya yang luas, dirikan permukiman baru, hubungkan daerah-daerah yang berjauhan, dan bentuk versimu sendiri dari salah satu pulau terbesar di Indonesia.",
+    "date": "25-11-26",
+    "type": "map",
+    "thumbnail": "../webdata/img/map-sumatera.jpg",
+    "download": "https://www.mediafire.com/file/hg2gxlixxmrtbcw/Sumatera.zip/file",
+    "status": "active",
+    "urls": {
+      "download": [
+        {
+          "url": "https://www.mediafire.com/file/hg2gxlixxmrtbcw/Sumatera.zip/file",
+          "ver": "1"
+        }
+      ],
+      "details": "/store/items/sumatera/"
+    }
   }
 ]
