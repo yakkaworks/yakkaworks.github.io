@@ -4,14 +4,15 @@
 
 ## TL;DR
 
-As of **2026-11-23**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store migration is complete: 39 catalogue items, 78 bilingual detail pages, and both localized JSON catalogues are populated. No production deployment has been made.
+As of **2026-11-25**: Yakka Works is rebuilding its site with MkDocs Material on the `y2k-dev` branch. The custom Yakka Works layout, suffix-based Indonesian/English pages, and 900px desktop content column remain in place. The TheoTown store migration is complete: 43 catalogue items, 86 bilingual detail pages, and both localized JSON catalogues are populated. No production deployment has been made.
 
 ## Current content state
 
 - TheoTown detail pages: `docs/store/items/<slug>.md` and matching `.en.md` files; routes are `/store/items/<slug>/` and `/en/store/items/<slug>/`.
-- Catalogue data: `webdata/json/data_theotown.json` and `webdata/json/en/data_theotown.json` contain 39 entries each.
+- Catalogue data: `webdata/json/data_theotown.json` and `webdata/json/en/data_theotown.json` contain 43 entries each. The four newly added items are Aria UI, Panelki UI, i3pt UI, and Road Vehicle as Bus.
 - Library examples: four bilingual detail-page pairs under `docs/library/articles/`; Blog examples: three bilingual pairs under `docs/blogs/articles/`.
 - The temporary content-data source and generated staging files were deleted after migration. Use the detail pages and JSON catalogues as the current content source.
+- The four latest plugin entries were added to both localized catalogues on 2026-11-25; their thumbnails are expected at `webdata/img/<slug>.jpg` and are supplied separately by the owner.
 - Product release/update dates remain catalogue metadata; published Markdown pages retain their own `date: dd-mm-yy` front matter.
 
 ## Content presentation
